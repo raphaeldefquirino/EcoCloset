@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+*{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	}
+
+body, html{
+
+	background-color: lightgrey;
+	text-align: center;
+}
+
+
+header{
+
+	background-color: grey;
+	text-align: center;
+}
+
+header > h1{
+
+    padding: 10px;
+	text-align: center;
+
+
+}
+
+span#burguer{
+	background-color: rgb(253, 253, 253);
+	display: block;
+	text-align: center;
+	padding: 10px;
+
+}
+
+span#burguer:hover{
+
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}
+
+
+menu{
+
+	display: flex; 
+	text-align: center;
+	
+}
+
+menu ul {
+
+	list-style-type: none;
+	text-align: center;
+	
+}
+
+menu ul li a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	text-align: center;
+	background-color: grey;
+	color: white;
+	border-top: 2px solid grey;
+
+}
+
+menu ul li{
+	border-bottom: 1px solid white;
+}

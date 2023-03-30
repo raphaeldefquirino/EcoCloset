@@ -5,10 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste</title>
+    <link rel="stylesheet" href="media-query.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>Nicolas Lindo</header>
-    <h1>Teste de github</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quos sunt delectus vero similique, molestias dignissimos dicta voluptate temporibus adipisci aliquid eaque veritatis labore, ducimus optio. Perspiciatis reiciendis id voluptate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, illum sint. Asperiores doloribus error commodi quas enim iste iusto odit, nostrum vel! Quasi aut iusto voluptatibus eos mollitia tempora placeat!</p>
+<body onresize="mudouTamanho()">
+   <header>
+    <h1>Eco Closet</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+
+        <div class=" col-12">
+
+    <menu id="itens">
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Homens</a></li>
+            <li><a href="#">Mulheres</a></li>
+            <li><a href="#">Vender</a></li>
+            <li><a href="#">Perfil</a></li>
+        </ul>
+    </menu>
+</div>
+</header>
+
+<script>
+    function mudouTamanho(){
+        if (window.innerWidth >= 768){
+            itens.style.display = "block"
+        } else {
+            itens.style.display = "none"
+        }
+    }
+
+    function clickMenu(){
+
+        if (itens.style.display == "block"){
+            itens.style.display = "none"
+        } else{
+            itens.style.display = "block"
+        }
+    }
+</script>
 </body>
+   
 </html>
