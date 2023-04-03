@@ -76,3 +76,22 @@ menu ul li{
 	border-bottom: 1px solid white;
 }
 
+.imagem {
+	position: relative;
+  }
+  
+  .texto {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 5em;
+	color: white;
+	font-weight: bolder;
+	text-shadow: 3px 3px 3px black	;
+}
+
+  .texto p{
+	font-size: 0.3em;
+  }
+
