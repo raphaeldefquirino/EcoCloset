@@ -9,7 +9,7 @@
 
 
 body{
-    background-color: grey;
+    background-color: #f1f1f1;
 }
 
 .header{
@@ -404,4 +404,69 @@ color: #f0ffff94;
 .cad{
     background-color: rgb(0, 0, 0);
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+.SobrenosTexto{
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+}
+.TextoSobre{
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    font-weight: 600;
+}
+.conteudo{
+    background-color: white;
+    padding: 10px;
+}
+.ImagemSobre{
+    display: none;
+}
+
+
+@media screen and (min-width:768px) {
+.conteudo-container{
+    display: flex;
+}
+.TextoSobre{
+    margin-left: 50px;
+    margin-right: auto;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    position: absolute;
+}
+.ImagemSobre{
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: auto;
+}
+.ImagemSobre img{
+    margin-left: 350px;
+    max-width: 330px;
+    height: 700px;
+}
+}
+
+@media screen and (min-width:1024px) {
+    .ImagemSobre img{
+        max-width: 500px;
+        height: 700px;
+        margin-left: 450px;
+    }
+    .TextoSobre{
+        max-width: 500px;
+        margin-left: 150px;
+        position: absolute;
+        margin-top: 40px;
+    }
+    
+
+}
+
 
