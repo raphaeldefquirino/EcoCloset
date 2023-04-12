@@ -108,3 +108,42 @@
 }
 
 /* Fim media query footer */
+
+/* pagina do cadastro*/
+
+@media screen and (max-width: 960px) {
+
+  .img-cad{
+      display: none;
+     
+  }
+  
+  .left-login{
+      display: none;
+  }
+  
+  .left-login h1{
+      display: none;
+  }
+  
+  .right-login{
+      width: 100vw;
+  }
+  
+  .card-login{
+      width: 50%;
+  
+  }
+  }
+  
+  @media screen and (max-width: 1200px) {
+  
+     .card-login{
+          width: 70%;
+      }
+  
+      
+      
+      }
+
+      /* Fim media query cadastro */

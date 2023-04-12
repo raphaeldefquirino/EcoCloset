@@ -27,19 +27,17 @@ body{
 
 .logo h1{
     color: black;
-    text-decoration: underline;
+    
 }
 
-.logo a {
-    display:block;
+.logo  {
+    display:flex;
+    align-items: center;
 
 
 }
 
-.logo a img{
-    display: block;
-    width: 100%;
-}
+
 
 .navigation{
 
@@ -284,3 +282,126 @@ footer{
   }
  
   /* Fim footer */
+
+  /* começo do cadastro */
+
+ 
+
+
+.main-login{
+    width: 100%;
+    height: 100%;
+    background-color:#f8f8f8 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.left-login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.left-login > h1{
+    color: black;
+}
+
+.right-login{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-login{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #000000;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+   
+
+
+    
+}
+
+.card-login > h1{
+color: #ffffff;
+font-weight: 800;
+margin: 0;
+}
+
+.textfield{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0x;
+}
+
+.textfield > input{
+    width: 100%;
+    border:none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #747474 ;
+    color: #ffffff;
+    font-size: 12px;
+    box-shadow: 0px 10px 40px #665f5f;
+    outline: none;
+    box-sizing: border-box;
+
+}
+
+.textfield > label{
+    color: #f0ffffde;
+    margin-bottom: 10px;
+
+}
+
+.textfield > input::placeholder{
+color: #f0ffff94;
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #000000;
+    background: purple;
+    cursor: pointer;
+    box-shadow: 0px 5px 25px 0px #781081;
+
+}
+
+ .img-cad{
+    width: 80%;
+   
+}
+
+.cad{
+    background-color: rgb(0, 0, 0);
+}
+
