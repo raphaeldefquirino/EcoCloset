@@ -432,39 +432,75 @@ color: #f0ffff94;
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-.Roupas-Categorias{
-  padding-top:50px;
+.Roupas-Categorias {
+  padding-top: 50px;
   text-align: center;
   font-family: 'Noto Sans', sans-serif;
 }
-.container-conteudo-Categorias{
-    text-align: center;
-    font-family: 'Noto Sans', sans-serif;
+
+.container-conteudo-Categorias {
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
 }
-.Imagem1-Categorias{
-  background-color: white;
+
+.Imagem1-Categorias {
   margin: auto;
   text-align: center;
   width: 300px;
 }
-.Imagem2-Categorias{
-  background-color: white;
+
+.Imagem1-Categorias .Imagem-container-Categorias {
+  overflow: hidden;
+}
+
+.Imagem1-Categorias .Imagem-container-Categorias img {
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+  max-width: 105%;
+}
+
+.Imagem1-Categorias:hover img,
+.Btn-Imagem1-Categorias:hover ~ .Imagem-container-Categorias img {
+  transform: scale(1.5);
+  opacity: 0.7;
+}
+
+.Imagem2-Categorias {
   margin: auto;
   text-align: center;
   width: 300px;
   margin-top: 50px;
 }
-.Text-Imagem-Categorias{
+
+.Imagem2-Categorias .Imagem-container-Categorias {
+  overflow: hidden;
+}
+
+.Imagem2-Categorias .Imagem-container-Categorias img {
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+  max-width: 105%;
+}
+
+.Imagem2-Categorias:hover img,
+.Btn-Imagem1-Categorias:hover ~ .Imagem-container-Categorias img {
+  transform: scale(1.5);
+  opacity: 0.7;
+}
+
+
+.Text-Imagem-Categorias {
   padding-bottom: 10px;
 }
-.Imagem1-Categorias a{
+
+.Imagem1-Categorias a {
   text-decoration: none;
   color: black;
 }
-.Imagem2-Categorias a{
+
+.Imagem2-Categorias a {
   text-decoration: none;
   color: black;
 }
+
 
 /* Fim da estilização  do "Atalhos de categorias" */
 
