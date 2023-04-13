@@ -12,6 +12,10 @@ body{
     background-color: #f1f1f1;
 }
 
+/* ----------------------------------------------- */
+
+/* estilo menu */
+
 .header{
 
     position: relative;
@@ -169,6 +173,10 @@ list-style-type: none;
     box-shadow: -20px 0 40px rgba(0,0,0,0.3);
 }
 
+/* fim estlo menu */
+
+/* ---------------------------------------------------------------- */
+
 /* imagem de fundo */
 
 .imagem {
@@ -192,7 +200,7 @@ list-style-type: none;
   }
 
   .texto #maior{
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   .texto #menor{
@@ -201,6 +209,8 @@ list-style-type: none;
   }
   
   /* fim imagem de fundo */
+
+  /* ---------------------------------------------------------------- */
 
 /* Inicio footer */
 
@@ -283,6 +293,9 @@ footer{
  
   /* Fim footer */
 
+/* ---------------------------------------------------------------- */
+
+
   /* começo do cadastro */
 
  
@@ -363,7 +376,7 @@ margin: 0;
     background: #747474 ;
     color: #ffffff;
     font-size: 12px;
-    box-shadow: 0px 10px 40px #665f5f;
+    box-shadow: 0px 3px 6px #665f5f;
     outline: none;
     box-sizing: border-box;
 
@@ -390,9 +403,9 @@ color: #f0ffff94;
     font-weight: 800;
     letter-spacing: 3px;
     color: #000000;
-    background: purple;
+    background: white;
     cursor: pointer;
-    box-shadow: 0px 5px 25px 0px #781081;
+    box-shadow: 0px 3px 6px white;
 
 }
 
@@ -404,6 +417,13 @@ color: #f0ffff94;
 .cad{
     background-color: rgb(0, 0, 0);
 }
+
+
+/* fim cadastro */
+
+
+/* ---------------------------------------------------------------- */
+
 
 /* Começo da estilização  do "Sobre nós" */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
@@ -427,6 +447,10 @@ color: #f0ffff94;
 }
 
 /* Fim da estilização  do "Sobre nós" */
+
+
+/* ---------------------------------------------------------------- */
+
 
 /* Começo da estilização  do "Atalhos de categorias" */
 
@@ -503,6 +527,10 @@ color: #f0ffff94;
 
 
 /* Fim da estilização  do "Atalhos de categorias" */
+
+
+
+/* ---------------------------------------------------------------- */
 
 
 
