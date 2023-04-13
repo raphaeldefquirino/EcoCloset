@@ -186,13 +186,13 @@
           background-color: rgba(255,255,355,0.8);
         }
             .ImagemSobre img{
-                max-width: 500px;
+                max-width: 450px;
                 height: 700px;
-                margin-left: 300px;
+                margin-left: 400px;
             }
             .TextoSobre{
                 max-width: 500px;
-                margin-left: 150px;
+                margin-left: 200px;
                 position: absolute;
                 margin-top: 40px;
             }
