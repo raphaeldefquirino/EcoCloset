@@ -147,3 +147,85 @@
       }
 
       /* Fim media query cadastro */
+
+
+      /* Inicio media query "Sobre nós" */
+      @media screen and (min-width:768px) {
+        .conteudo-container{
+            display: flex;
+        }
+        .TextoSobre{
+            margin-left: 50px;
+            margin-right: auto;
+            max-width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+            position: absolute;
+        }
+        .ImagemSobre{
+            display: block;
+            margin: auto;
+            text-align: center;
+            width: auto;
+        }
+        .ImagemSobre img{
+            margin-left: 350px;
+            max-width: 330px;
+            height: 700px;
+        }
+        }
+        
+        @media screen and (min-width:1024px) {
+            .ImagemSobre img{
+                max-width: 500px;
+                height: 700px;
+                margin-left: 450px;
+            }
+            .TextoSobre{
+                max-width: 500px;
+                margin-left: 150px;
+                position: absolute;
+                margin-top: 40px;
+            }
+            
+        
+        }
+
+    /* Fim media query "Sobre nós" */
+
+    /* Inicio media query "Atalhos de categorias" */
+
+    @media screen and (min-width:768px) {
+      .container-conteudo-Categorias{
+        display: flex;
+        padding-top: 20px;
+    }
+      .Imagem1-Categorias{
+        width: 300px;
+      }
+      .Imagem2-Categorias{
+        width: 300px;
+        margin-top: 0px;
+        margin-left: -50px;
+      }
+      .Imagem1-Categorias img{
+        width: 300px;
+        height: 300px;
+      }
+      .Imagem2-Categorias img{
+        width: 300px;
+        height: 300px;
+      }
+    }
+    
+    
+    @media screen and (min-width:1024px) {
+      .Imagem2-Categorias{
+        margin-left: -200px;
+      }
+    }
+
+    /* Fim media query "Atalhos de categorias" */
+    

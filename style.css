@@ -405,12 +405,13 @@ color: #f0ffff94;
     background-color: rgb(0, 0, 0);
 }
 
-
+/* Começo da estilização  do "Sobre nós" */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 .SobrenosTexto{
     text-align: center;
     font-family: 'Noto Sans', sans-serif;
+    padding-top: 50px;
 }
 .TextoSobre{
     font-family: 'Noto Sans', sans-serif;
@@ -425,48 +426,47 @@ color: #f0ffff94;
     display: none;
 }
 
+/* Fim da estilização  do "Sobre nós" */
 
-@media screen and (min-width:768px) {
-.conteudo-container{
-    display: flex;
+/* Começo da estilização  do "Atalhos de categorias" */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+.Roupas-Categorias{
+  padding-top:50px;
+  text-align: center;
+  font-family: 'Noto Sans', sans-serif;
 }
-.TextoSobre{
-    margin-left: 50px;
-    margin-right: auto;
-    max-width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-    position: absolute;
-}
-.ImagemSobre{
-    display: block;
-    margin: auto;
+.container-conteudo-Categorias{
     text-align: center;
-    width: auto;
+    font-family: 'Noto Sans', sans-serif;
 }
-.ImagemSobre img{
-    margin-left: 350px;
-    max-width: 330px;
-    height: 700px;
+.Imagem1-Categorias{
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  width: 300px;
 }
+.Imagem2-Categorias{
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  width: 300px;
+  margin-top: 50px;
+}
+.Text-Imagem-Categorias{
+  padding-bottom: 10px;
+}
+.Imagem1-Categorias a{
+  text-decoration: none;
+  color: black;
+}
+.Imagem2-Categorias a{
+  text-decoration: none;
+  color: black;
 }
 
-@media screen and (min-width:1024px) {
-    .ImagemSobre img{
-        max-width: 500px;
-        height: 700px;
-        margin-left: 450px;
-    }
-    .TextoSobre{
-        max-width: 500px;
-        margin-left: 150px;
-        position: absolute;
-        margin-top: 40px;
-    }
-    
+/* Fim da estilização  do "Atalhos de categorias" */
 
-}
 
 
