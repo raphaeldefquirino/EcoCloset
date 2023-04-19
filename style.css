@@ -833,10 +833,9 @@ position: relative;
 }
 .perfil-imagem{
   position: absolute;
-  text-align: center;
   top: 40px;
   right: 41%;
-  margin-top: 80px;
+  margin-top: 40px;
   height: 100%;
 }
 .perfil-imagem img{
