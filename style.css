@@ -495,10 +495,12 @@ color: #f0ffff94;
 .titulo-perfil{
   background-color: white;
   margin: auto;
-  height: 80vh;
+  height: 100vh;
   width: 100%;
+  overflow: hidden;
   position: relative;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 .titulo-perfil h1{
   font-family: 'Noto Sans', sans-serif;
@@ -520,7 +522,7 @@ position: relative;
 .perfil-imagem{
   position: absolute;
   text-align: center;
-  top: 0;
+  top: 40px;
   right: 41%;
   margin-top: 80px;
   height: 100%;
@@ -538,7 +540,7 @@ position: relative;
   position: absolute;
   text-align: center;
   right: 18%;
-  top: 95%;
+  top: 110%;
   transform: translateY(-50%);
   border-radius: 10px;
   color: black;
@@ -570,7 +572,7 @@ font-weight: 800;
 .indicador-perfil{
   position: absolute;
   left: 43%;
-  bottom: 20px;
+  bottom: -10px;
   z-index: 1;
 }
 .btn-perfil{
