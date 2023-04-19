@@ -204,6 +204,52 @@
 
     /* Fim media query "Sobre nós" */
 
+    /* Início media query "Carrossel de criadores" */
+
+    @media screen and (min-width:768px) {
+      .titulo-perfil{
+        height: 100vh;
+        width: 80%;
+        border-radius: 10%;
+        
+    }
+    .perfil-text{
+      width: 520px;
+      margin-top: -50px;
+    }
+    .perfil-text p{
+      font-size: 20px;
+    }
+    .perfil-text p p2{
+      font-size: 20px;
+    }
+    .perfil-text h3{
+      font-size: 20px;
+    }
+    .perfil-imagem{
+      margin-top: 20px;
+    }
+    .indicador-perfil{
+      bottom: 10px;
+      left: 43%;
+    }
+    }
+    
+    
+    @media screen and (min-width:1024px) {
+      
+      .titulo-perfil{
+        height: 100vh;
+    }
+    .perfil-text{
+      width: 550px;
+      right: 16%;
+    }
+    
+    }
+
+    /* Fim media query "Carrossel de criadores" */
+
     /* Inicio media query "Atalhos de categorias" */
 
     @media screen and (min-width:768px) {

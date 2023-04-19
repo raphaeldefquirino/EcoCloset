@@ -114,6 +114,104 @@
 
     <!-- Fim da construção do "Sobre nós"-->
 
+<!-- Início da construção do "Carrossel de criadores" -->
+    <div class="titulo-perfil">
+      <h1>Perfis</h1>
+    
+    <div class="container-perfil">
+      <div class="indicador-perfil">
+        <span class="btn-perfil active-perfil"></span>
+        <span class="btn-perfil"></span>
+        <span class="btn-perfil"></span>
+      </div>
+      <div class="testimonial-perfil">
+      <div class="slide-row" id="slide">
+        <div class="slide-col">
+          <div class="perfil-imagem">
+      <img src="imagens/arthur.jpg" alt="" width="400px" height="400px">
+          </div>
+      
+          <div class="perfil-text">
+            <p>Olá! Eu sou Arthur Bergamaço Alves, um dos criadores e integrante do grupo EcoCloset. Tenho 18 anos e estou cursando o 2TID na escola Alcina Dantas Feijão. 
+              <br><p2>#NEVER GIVE UP</p2></p>
+            <h3>Arthur</h3>
+            <p>EcoCloset</p>
+          </div>
+        </div>
+      
+        <div class="slide-col">
+          <div class="perfil-imagem">
+      <img src="imagens/nicolas.jpg" alt="" width="400px" height="400px">
+          </div>
+      
+          <div class="perfil-text">
+            <p>Olá! Eu sou Nicolas de Lima Pinheiro, um dos criadores e integrante do grupo EcoCloset. Tenho 17 anos e estou cursando o 2TID na escola Alcina Dantas Feijão.
+              <br><p2>#JUST DO IT</p2>
+            </p>
+            <h3>Nicolas</h3>
+            <p>EcoCloset</p>
+          </div>
+        </div>
+      
+        <div class="slide-col">
+          <div class="perfil-imagem">
+      <img src="imagens/raphael.jpg" alt="" width="400px" height="400px">
+          </div>
+      
+          <div class="perfil-text">
+            <p>Olá! Eu sou Raphael de França Quirino, um dos criadores e integrante do grupo EcoCloset. Tenho 18 anos e estou cursando o 2TID na escola Alcina Dantas Feijão.
+              <br><p2>#DO YOUR BEST</p2></p>
+            <h3>Raphael</h3>
+            <p>EcoCloset</p>
+          </div>
+        </div>
+      
+      
+    
+    </div>
+    
+      </div>
+    </div>
+    </div>
+    
+    <script>
+    
+    var btn = document.getElementsByClassName("btn-perfil");
+    var slide = document.getElementById("slide");
+    
+    
+    
+    btn[0].onclick = function(){
+      slide.style.transform = "translateX(0px)";
+      for(i=0; i<3; i++){
+      btn[i].classList.remove("active-perfil");
+    }
+    this.classList.add("active-perfil");
+    }
+    
+    
+    btn[1].onclick = function(){
+      slide.style.transform = "translateX(-800px)";
+      for(i=0; i<3; i++){
+      btn[i].classList.remove("active-perfil");
+    }
+    this.classList.add("active-perfil");
+    }
+    
+    
+    btn[2].onclick = function(){
+      slide.style.transform = "translateX(-1605px)";//Eu coloquei um valor desigual porque não estava ficando completamente no centro//
+      for(i=0; i<3; i++){
+      btn[i].classList.remove("active-perfil");
+    }
+    this.classList.add("active-perfil");
+    }
+    
+    
+    
+    </script>
+    <!-- Fim da construção do "Carrossel de criadores" -->
+
       <!-- Inicio da construção do "FOOTER" -->
       <footer>
         <div class="container-footer">
