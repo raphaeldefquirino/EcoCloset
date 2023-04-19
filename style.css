@@ -359,6 +359,41 @@ font-weight: 800;
 margin: 0;
 }
 
+#icat{
+
+  margin-top: 10px;
+
+
+}
+
+.categoria{
+
+  width: 50%;
+  border:none;
+  border-radius: 10px;
+  padding: 15px;
+  background: #747474 ;
+  color: #ffffff;
+  font-size: 12px;
+  box-shadow: 0px 10px 40px #665f5f;
+  outline: none;
+  box-sizing: border-box;
+  justify-content: space-between;
+  font-size: 0.9em;
+  align-items: center;
+  margin-top: 5px;
+  
+  
+  
+}
+
+input[type=checkbox]{
+
+margin-right: 10px;
+
+}
+
+
 .textfield{
     width: 100%;
     display: flex;
