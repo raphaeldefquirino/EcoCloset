@@ -335,11 +335,12 @@ list-style-type: none;
     border: none;
   }
   
-  /* PRODUCTS */
+  /*----------------------------- slide show de produtos ------------------------------- */
   .product {
     position: relative;
     overflow: hidden;
     padding: 20px;
+    margin-top: 60px;
   }
   
   .product-category {

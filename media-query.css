@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* inicio media query menu */
+/* ---------------------inicio media query menu ----------------*/
 
 @media screen and (max-width: 992px) {
 
@@ -47,10 +47,10 @@
   
 }
 
-/* fim media query menu */
+/* --------------------fim media query menu ----------------*/
 
 
-/* media query imagem de fundo */
+/* --------------------media query imagem de fundo------------------------- */
 
 @media screen and (min-width: 768px){
     .imagem{
@@ -69,9 +69,9 @@
       
 }
 
-/* fim media query imagem de fundo */
+/* -----------------------fim media query imagem de fundo ------------------*/
 
-/* media query footer */
+/*---------------------- media query footer------------------- */
 
 @media screen and (max-width: 700px) {
   .row-footer {
@@ -110,9 +110,9 @@
     
 
 
-/* Fim media query footer */
+/* -------------------------Fim media query footer----------------------- */
 
-/* pagina do cadastro*/
+/* -----------------------------pagina do cadastro----------------------*/
 
 @media screen and (max-width: 960px) {
 
@@ -149,10 +149,10 @@
       
       }
 
-      /* Fim media query cadastro */
+      /* -------------------------------Fim media query cadastro -----------------------------*/
 
 
-      /* Inicio media query "Sobre nós" */
+      /*---------------------------- Inicio media query "Sobre nós" ------------------------*/
       @media screen and (min-width:768px) {
         .conteudo-container{
             display: flex;
@@ -202,9 +202,9 @@
         
         }
 
-    /* Fim media query "Sobre nós" */
+    /* ------------------------im media query "Sobre nós" -------------------*/
 
-    /* Início media query "Carrossel de criadores" */
+    /* --------------------Início media query "Carrossel de criadores" ---------------------------*/
 
     @media screen and (min-width:768px) {
       .titulo-perfil{
@@ -248,9 +248,9 @@
     
     }
 
-    /* Fim media query "Carrossel de criadores" */
+    /*----------------- Fim media query "Carrossel de criadores" ----------------*/
 
-    /* Inicio media query "Atalhos de categorias" */
+    /*--------------------Inicio media query "Atalhos de categorias"-------------- */
 
     @media screen and (min-width:768px) {
       .container-conteudo-Categorias{
@@ -282,5 +282,5 @@
       }
     }
 
-    /* Fim media query "Atalhos de categorias" */
+    /* ---------------Fim media query "Atalhos de categorias" ------------------*/
     
