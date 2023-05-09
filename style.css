@@ -614,7 +614,7 @@ footer{
  
 
 
-.main-login{
+  .main-login{
     width: 100%;
     height: 100%;
     background-color:#f8f8f8 ;
@@ -691,14 +691,14 @@ margin: 0;
 
 .categoria{
 
-  width: 50%;
+  width: 100%;
   border:none;
   border-radius: 10px;
   padding: 15px;
   background: #747474 ;
   color: #ffffff;
   font-size: 12px;
-  box-shadow: 0px 10px 40px #665f5f;
+  box-shadow: 0px 5px 10px #665f5f;
   outline: none;
   box-sizing: border-box;
   justify-content: space-between;
@@ -715,6 +715,7 @@ input[type=checkbox]{
 margin-right: 10px;
 
 }
+
 
 
 .textfield{
@@ -776,7 +777,36 @@ color: #f0ffff94;
     background-color: rgb(0, 0, 0);
 }
 
-
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    content: "✔";
+    position: absolute;
+    top: -1px;
+    left: 2px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  input[type="checkbox"]:focus {
+    outline: none;
+  }
+  
+  input[type="checkbox"]:active {
+    transform: scale(0.9);
+  }
 /* fim cadastro */
 
 
