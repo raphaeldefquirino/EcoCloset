@@ -752,7 +752,7 @@ color: #f0ffff94;
 }
 
 .btn-login{
-    width: 100%;
+    width: 200%;
     padding: 16px 0px;
     margin: 25px;
     border: none;
@@ -777,7 +777,7 @@ color: #f0ffff94;
     background-color: rgb(0, 0, 0);
 }
 
-.checks input[type="checkbox"] {
+.checks input[type="radio"] {
     appearance: none;
     -webkit-appearance: none;
     background-color: #fff;
@@ -791,7 +791,7 @@ color: #f0ffff94;
     margin-right: 10px;
   }
   
-  .checks input[type="checkbox"]:checked::before {
+  .checks input[type="radio"]:checked::before {
     content: "✔";
     position: absolute;
     top: -1px;
@@ -800,11 +800,11 @@ color: #f0ffff94;
     color: #333;
   }
   
-  .checks input[type="checkbox"]:focus {
+  .checks input[type="radio"]:focus {
     outline: none;
   }
   
-  .checks input[type="checkbox"]:active {
+  .checks input[type="radio"]:active {
     transform: scale(0.9);
   }
   
