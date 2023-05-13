@@ -719,12 +719,13 @@ margin-right: 10px;
 
 
 .textfield{
-    width: 100%;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 10px 0x;
+    
 }
 
 .textfield > input{
@@ -752,9 +753,9 @@ color: #f0ffff94;
 }
 
 .btn-login{
-    width: 200%;
-    padding: 16px 0px;
-    margin: 25px;
+    width: 100%;
+    padding: 15px;
+   margin-top: 20px;
     border: none;
     border-radius: 8px;
     outline: none;
@@ -807,6 +808,49 @@ color: #f0ffff94;
   .checks input[type="radio"]:active {
     transform: scale(0.9);
   }
+
+  .caixa-CadastroErro{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bolder;
+    margin: auto;
+    background-color: #f01c1c;
+    text-align: center;
+    width: 55%;
+    height: 20%;
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 15px;
+}
+.menssagemErro{
+    margin: auto;
+}
+.menssagemErro p{
+    color: black;
+    padding-top: 15px;
+}
+
+.caixa-CadastroCerto{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+  margin: auto;
+  background-color: #00FF00;
+  text-align: center;
+  width: 55%;
+  height: 20%;
+  border-radius: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+.menssagemCerto{
+  margin: auto;
+}
+.menssagemCerto p{
+  color: rgb(0, 0, 0);
+  padding-top: 30px;
+ 
+}
   
 
 
