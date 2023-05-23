@@ -117,16 +117,16 @@ include ('verifica-login.php');
                     
                 <br>
                 <div class="checks">
-                <input type="radio" name="categorias" value = "Inferior" id="catinf">
+                <input type="radio" name="categoria" value = "Inferior" id="catinf">
                 <label for="Inferior"> Inferior</label>
                 <br>
-                <input type="radio" name="categorias" value = "Superior" id="catsup">
+                <input type="radio" name="categoria" value = "Superior" id="catsup">
                 <label for="Superior"> Superior</label>
                 <br>
-                <input type="radio" name="categorias" value = "Calçados" id="catcal">
+                <input type="radio" name="categoria" value = "Calçados" id="catcal">
                 <label for="Calçados"> Calçados</label>
                 <br>
-                <input type="radio" name="categorias" value = "Acessórios" id="catinf">
+                <input type="radio" name="categoria" value = "Acessórios" id="catinf">
                 <label for="Acessórios"> Acessórios</label>
             </div>
                 <br>
