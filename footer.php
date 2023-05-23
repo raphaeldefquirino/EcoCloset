@@ -43,7 +43,7 @@
                         <li> <a href=""> Femininas</a> </li>
                         <li> <a href=""> Masculinas</a> </li>
                         <li> <a href=""> Sobre nós</a> </li>
-                        <li> <a href="../produto.php"> Venda</a> </li>
+                        <li> <a href="produto.php"> Venda</a> </li>
                     </ul>
                 </div>
                 <!-- fim coluna footer-->

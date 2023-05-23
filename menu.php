@@ -20,11 +20,11 @@
     <div class="hamburger"></div>
 
   <ul class="menu">
-    <li><a href="../index.php">Home</a></li>
+    <li><a href="index.php">Home</a></li>
     <li><a href="#">Femininas</a></li>
     <li><a href="#">Masculinas</a></li>
-    <li><a href="../produto.php">Vender</a></li>
-    <li><a href="../login-usu.php">Perfil</a></li>
+    <li><a href="produto.php">Vender</a></li>
+    <li><a href="login-usu.php">Perfil</a></li>
 </div>
 
 
