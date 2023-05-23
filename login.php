@@ -20,7 +20,7 @@ $row = mysqli_num_rows($result);
 if ($row == 1){
 
     $_SESSION['email'] = $email;
-    header('Location: painel.php');
+    header('Location: index.php');
     exit();
 
 } else {
