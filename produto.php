@@ -80,6 +80,7 @@ include ('verifica-login.php');
 
             ?>
 
+<form action="cad-prod.php" method="post" enctype="multipart/form-data">
              <div class="textfield">
                 <br>
                 <label for="usuario">Nome</label>
@@ -138,55 +139,14 @@ include ('verifica-login.php');
             <button class="btn-login">Cadastrar</button>
         </div>
     </div>
-
-    
 </div>
+</form>
 
-<footer>
-    <div class="container-footer">
-        <div class="row-footer">
-            <!-- coluna footer -->
-            <div class="footer-col">
-                <div class="logo-title">
-                    <img src="imagens/logoroxamenor.png" alt="Image" height="50" width="50">
-                    <h4>EcoCloset</h4>
-                </div>
-                <ul class="EcoCloset">
-                    <li> <a href=""> Seu Brechó online</a> </li>
-                    <li> <a href=""> "Roupas usadas<br>histórias renovadas"</a> </li>
-                </ul>
-            </div>
-            <!-- fim coluna footer -->
-            <!-- coluna footer-->
-            <div class="footer-col">
-                <h4>Contato</h4>
-                <ul>
-                    <li> <a href=""> EcoCloset@gmail.com</a> </li>
-                    <br>
-                    <ul class="social-icons">
-                        <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
-                      </ul>
-
-                </ul>
-            </div>
-            <!-- fim coluna footer-->
-            <!-- coluna footer-->
-            <div class="footer-col">
-                <h4>Páginas</h4>
-                <ul>
-                    <li> <a href=""> Home</a> </li>
-                    <li> <a href=""> Femininas</a> </li>
-                    <li> <a href=""> Masculinas</a> </li>
-                    <li> <a href=""> Sobre nós</a> </li>
-                    <li> <a href=""> Venda</a> </li>
-                </ul>
-            </div>
-            <!-- fim coluna footer-->
+<?php 
     
-    </div>
-    </div>
-</footer>
+    include("footer.php");
+
+?>
 
 </body>
 </html>
