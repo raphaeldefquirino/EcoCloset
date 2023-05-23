@@ -80,20 +80,20 @@ include ('verifica-login.php');
 
             ?>
 
-<form action="cad-prod.php" method="post" enctype="multipart/form-data">
+            <form action="cad-prod.php" method="post" enctype="multipart/form-data">
              <div class="textfield">
                 <br>
-                <label for="usuario">Nome</label>
-                <input type="text" name="nome" placeholder="Nome">
+                <label for="usuario">Nome do produto</label>
+                <input type="text" name="nome_prod" placeholder="Nome">
             </div>
             <div class="textfield">
                 <br>
-                <label for="usuario">Quantidade</label>
+                <label for="usuario">Quantidade em estoque</label>
                 <input type="text" name="qtd" placeholder="Quantidade">
             </div>
             <div class="textfield">
                 <br>
-                <label for="senha">Valor</label>
+                <label for="senha">Valor do produto</label>
                 <input type="text" name="valor" placeholder="Valor">
             </div>
             <div class="textfield">
@@ -102,25 +102,31 @@ include ('verifica-login.php');
                 <input type="text" name="descr" placeholder="Descrição do Produto">
             </div>
 
+            <div class="textfield">
+                    <br>
+                    <label for="usuario">Telefone</label>
+                    <input type="text" name="telefone" placeholder="Telefone">
+                </div>
+
             <div class="custom">
 
             <div class="textfield">
-                <label for="categoria" id="icat">Categoria</label>
+                <label for="categoria" id="icat">Categoria do produto</label>
                
                 <div class="categoria">
                     
                 <br>
                 <div class="checks">
-                <input type="radio" name="categorias" id="catinf">
+                <input type="radio" name="categorias" value = "Inferior" id="catinf">
                 <label for="Inferior"> Inferior</label>
                 <br>
-                <input type="radio" name="categorias" id="catsup">
+                <input type="radio" name="categorias" value = "Superior" id="catsup">
                 <label for="Superior"> Superior</label>
                 <br>
-                <input type="radio" name="categorias" id="catcal">
+                <input type="radio" name="categorias" value = "Calçados" id="catcal">
                 <label for="Calçados"> Calçados</label>
                 <br>
-                <input type="radio" name="categorias" id="catinf">
+                <input type="radio" name="categorias" value = "Acessórios" id="catinf">
                 <label for="Acessórios"> Acessórios</label>
             </div>
                 <br>
@@ -132,7 +138,7 @@ include ('verifica-login.php');
             <div class="textfield">
                 <br>
                 <label for="usuario">Produto</label>
-                <input type="file" name="image">
+                <input type="file" name="arquivo">
             </div>
             </div>
            
