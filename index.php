@@ -7,35 +7,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media-query.css">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
     <title>EcoCloset</title>
 </head>
 <body>
 
-    <header class="header">
+   <?php 
+   
+   include("menu.php");
 
-        <div class="logo">
-            <img src="imagens/logoroxamenor.png" class="" height="50px" width="50px" alt="">
-            <h1>EcoCloset</h1>
-            
-        </div>
+   ?>
 
-        <div class="navigation">
-
-            <input type="checkbox" class="toggle-menu">
-            <div class="hamburger"></div>
-
-          <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Femininas</a></li>
-            <li><a href="#">Masculinas</a></li>
-            <li><a href="#">Vender</a></li>
-            <li><a href="login.html">Perfil</a></li>
-        </div>
-
-
-    </header>
     <!-- Inicio imagem de fundo -->
     <div class="imagem">
 
@@ -363,54 +346,11 @@
     </script>
     <!-- Fim da construção do "Carrossel de criadores" -->
 
-      <!-- Inicio da construção do "FOOTER" -->
-      <footer>
-        <div class="container-footer">
-            <div class="row-footer">
-                <!-- coluna footer -->
-                <div class="footer-col">
-                    <div class="logo-title">
-                        <img src="imagens/logoroxamenor.png" alt="Image" height="50" width="50">
-                        <h4>EcoCloset</h4>
-                    </div>
-                    <ul class="EcoCloset">
-                        <li> <a href=""> Seu Brechó online</a> </li>
-                        <li> <a href=""> "Roupas usadas<br>histórias renovadas"</a> </li>
-                    </ul>
-                </div>
-                <!-- fim coluna footer -->
-                <!-- coluna footer-->
-                <div class="footer-col">
-                    <h4>Contato</h4>
-                    <ul>
-                        <li> <a href="mailto:ecocloset23@gmail.com?subject=&body="> ecocloset23@gmail.com</a> </li>
-                        <br>
-                        <ul class="social-icons">
-                            <li><a href="https://www.facebook.com/profile.php?id=100092252831400"><i class="fa fa-facebook"></i> Facebook</a></li>
-                            <li><a href="https://www.instagram.com/eco_closet23/"><i class="fa fa-instagram"></i> Instagram</a></li>
-                          </ul>
-
-                    </ul>
-                </div>
-                <!-- fim coluna footer-->
-                <!-- coluna footer-->
-                <div class="footer-col">
-                    <h4>Páginas</h4>
-                    <ul>
-                        <li> <a href=""> Home</a> </li>
-                        <li> <a href=""> Femininas</a> </li>
-                        <li> <a href=""> Masculinas</a> </li>
-                        <li> <a href=""> Sobre nós</a> </li>
-                        <li> <a href=""> Venda</a> </li>
-                    </ul>
-                </div>
-                <!-- fim coluna footer-->
-        
-        </div>
-        </div>
-    </footer>
+    <?php 
     
-    <!-- Fim da construção do "FOOTER" -->
+    include("footer.php")
+    
+    ?>
 
 </body>
 <a href=""></html></a>

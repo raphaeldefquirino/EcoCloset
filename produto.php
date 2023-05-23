@@ -1,39 +1,26 @@
+
+<?php 
+session_start();
+include ('verifica-login.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media-query.css">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
     <title>Cadastro do Produto</title>
 </head>
 <body class="cad">
 
-    <header class="header">
+    <?php 
+    
+    include("menu.php");
 
-        <div class="logo">
-            
-            <img src="imagens/logoroxamenor.png" height="50px" width="50px" alt="">
-            <h1>EcoCloset</h1>
-            
-        </div>
-
-        <div class="navigation">
-
-            <input type="checkbox" class="toggle-menu">
-            <div class="hamburger"></div>
-
-          <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Femininas</a></li>
-            <li><a href="#">Masculinas</a></li>
-            <li><a href="produto.html">Vender</a></li>
-            <li><a href="login.html">Perfil</a></li>
-        </div>
-
-
-    </header>
+    ?>
 
 <div class="main-login">
     <div class="left-login">
@@ -45,8 +32,54 @@
         </div>
     <div class="right-login">
         <div class="card-login">
+            
             <h1>Cadastro</h1>
+
+            <?php
+
+            if(isset($_SESSION['erro_prod'])):
+
+            ?>
+
            
+            <div class="caixa-CadastroErro">
+                <div class="menssagemErro">
+                    
+                    <p>ATENÇÃO!! <br>
+                        Houve um erro ao cadastrar o produto <br>
+                        Verifique os dados e tente novamente</p> 
+        
+                </div>
+            </div>
+
+            <?php 
+            
+                endif;
+                unset($_SESSION['erro_prod']);
+            
+            ?>
+
+            <?php
+
+            if(isset($_SESSION['prod_cadastrado'])):
+
+            ?>    
+
+            <div class="caixa-CadastroCerto">
+                <div class="menssagemCerto">
+                    
+                    <p>Produto cadastrado com sucesso!</p> 
+        
+                </div>
+            </div>
+
+            <?php 
+            
+            endif;
+            unset($_SESSION['prod_cadastrado']);
+
+            ?>
+
              <div class="textfield">
                 <br>
                 <label for="usuario">Nome</label>
