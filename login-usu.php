@@ -30,7 +30,7 @@ session_start();
         <div class="right-login">
             <div class="card-login">
                 <h1>Login</h1>
-                
+                <form action="login.php" method="post">
                 <div class="textfield">
                     <br>
                     <label for="usuario">Email</label>
@@ -43,6 +43,7 @@ session_start();
                 </div>
 
                 <button class="btn-login">Login</button>
+                </form>
                 
                 <p><a href="cadastro.html">Crie sua conta aqui</a></p>
             </div>
