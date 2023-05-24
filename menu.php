@@ -9,7 +9,7 @@
 <header class="header">
 
 <div class="logo">
-    <img src="imagens/logoroxamenor.png" class="" height="50px" width="50px" alt="">
+    <a href="index.php"><img src="imagens/logoroxamenor.png" class="" height="50px" width="50px" alt=""></a>
     <h1>EcoCloset</h1>
     
 </div>
