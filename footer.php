@@ -16,8 +16,8 @@
                         <h4>EcoCloset</h4>
                     </div>
                     <ul class="EcoCloset">
-                        <li> <a href=""> Seu Brechó online</a> </li>
-                        <li> <a href=""> "Roupas usadas<br>histórias renovadas"</a> </li>
+                        <li> <a href="index.php"> Seu Brechó online</a> </li>
+                        <li> <a href="index.php"> "Roupas usadas<br>histórias renovadas"</a> </li>
                     </ul>
                 </div>
                 <!-- fim coluna footer -->
