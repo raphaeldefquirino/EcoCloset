@@ -157,49 +157,56 @@
         .conteudo-container{
             display: flex;
         }
-        .conteudo{
-          background-color: rgba(255,255,355,0.8);
-        }
         .TextoSobre{
-            margin-left: 50px;
-            margin-right: auto;
-            max-width: 400px;
+            left: 10%;
+            width: 50%;
+            height: 692px;
             display: flex;
             justify-content: center;
-            align-items: center;
             padding-top: 10px;
             position: absolute;
+            border-radius: 2%;
+        }
+        .TextoSobre p{
+            margin: auto;
         }
         .ImagemSobre{
             display: block;
             margin: auto;
-            text-align: center;
-            width: auto;
         }
         .ImagemSobre img{
-            margin-left: 350px;
+            margin-left: 400px;
             max-width: 330px;
-            height: 700px;
+            height: 712px;
         }
         }
         
         @media screen and (min-width:1024px) {
-          .conteudo{
-          background-color: rgba(255,255,355,0.8);
-        }
             .ImagemSobre img{
                 max-width: 450px;
-                height: 700px;
-                margin-left: 400px;
+                height: 720px;
+                margin: auto;
+                margin-left: 60%;
             }
             .TextoSobre{
                 max-width: 500px;
-                margin-left: 200px;
+                height: 600px;
+                margin-left: 2%;
                 position: absolute;
-                margin-top: 40px;
+                margin-top: 50px;
+                border-radius: 0%;
             }
-                    
-        
+        }
+
+        @media screen and (min-width:1250px) {
+            .TextoSobre{
+                margin-left: 10%;
+            }
+            .ImagemSobre img{
+                margin-left: 65%;
+            }
+
+
         }
 
     /* ------------------------im media query "Sobre nós" -------------------*/

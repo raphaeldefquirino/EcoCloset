@@ -873,10 +873,10 @@ color: #f0ffff94;
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
     font-weight: 600;
-}
-.conteudo{
-    background-color: white;
+    left: 15%;
+    background-color: #F8F8FF;
     padding: 10px;
+    border-radius: 5%;
 }
 .ImagemSobre{
     display: none;
