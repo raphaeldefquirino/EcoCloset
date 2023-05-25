@@ -111,23 +111,17 @@ include ('verifica-login.php');
             <div class="custom">
 
             <div class="textfield">
-                <label for="categoria" id="icat">Categoria do produto</label>
+                <label for="categoria" id="icat">Tipo do produto</label>
                
                 <div class="categoria">
                     
                 <br>
                 <div class="checks">
-                <input type="radio" name="categoria" value = "Inferior" id="catinf">
-                <label for="Inferior"> Inferior</label>
+                <input type="radio" name="categoria" value = "Masculina" id="catinf">
+                <label for="Inferior">Masculina</label>
                 <br>
-                <input type="radio" name="categoria" value = "Superior" id="catsup">
-                <label for="Superior"> Superior</label>
-                <br>
-                <input type="radio" name="categoria" value = "Calçados" id="catcal">
-                <label for="Calçados"> Calçados</label>
-                <br>
-                <input type="radio" name="categoria" value = "Acessórios" id="catinf">
-                <label for="Acessórios"> Acessórios</label>
+                <input type="radio" name="categoria" value = "Femnina" id="catsup">
+                <label for="Superior">Feminina</label>
             </div>
                 <br>
                 </div>
