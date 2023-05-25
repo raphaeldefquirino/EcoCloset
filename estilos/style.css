@@ -1076,6 +1076,39 @@ font-weight: 800;
 
 /* Fim da estilização  do "Atalhos de categorias" */
 
+/* inicio da página masculia e feminina  */
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 250px;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.catigoria{
+
+  align-items: center;
+  text-align: center;
+}
+
+.product img {
+
+ width: 100%;
+}
+
+.imgprod{
+
+  width: 230px;
+  height: 230px;
+}
+
 
 
 /* ---------------------------------------------------------------- */
