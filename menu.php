@@ -9,8 +9,8 @@
 <header class="header">
 
 <div class="logo">
-    <a href="index.php"><img src="imagens/logoroxamenor.png" class="" height="50px" width="50px" alt="">
-    <h1>EcoCloset</h1></a>
+    <img src="imagens/logoroxamenor.png" class="" height="50px" width="50px" alt="">
+    <h1>EcoCloset</h1>
     
 </div>
 
