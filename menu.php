@@ -9,9 +9,9 @@
 <header class="header">
 
 <div class="logo">
-    <a href="">
-    <img src="imagens/logoroxamenor.png" class="" height="50px" width="50px" alt="">
-    </a>
+    
+    <img src="imagens/logoroxamenor.png" w class="" height="50px" width="50px" alt="">
+    
     <h1>EcoCloset</h1>
     
 </div>
