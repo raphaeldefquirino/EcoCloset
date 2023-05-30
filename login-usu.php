@@ -44,6 +44,7 @@ session_start();
 
                 <button class="btn-login">Login</button>
                 </form>
+                <br>
                 
                 <p><a href="cadastro.php">Crie sua conta aqui</a></p>
             </div>
