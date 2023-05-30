@@ -46,7 +46,7 @@ session_start();
                 </form>
                 <br>
                 
-                <p><a href="cadastro.php">Crie sua conta aqui</a></p>
+                <p class="crieconta" ><a href="cadastro.php">Crie sua conta aqui</a></p>
             </div>
             
         </div> 
