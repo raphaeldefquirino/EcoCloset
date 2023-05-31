@@ -120,7 +120,7 @@ include ('verifica-login.php');
                 <input type="radio" name="categoria" value = "Masculina" id="catinf">
                 <label for="Inferior">Masculina</label>
                 <br>
-                <input type="radio" name="categoria" value = "Femnina" id="catsup">
+                <input type="radio" name="categoria" value = "Feminina" id="catsup">
                 <label for="Superior">Feminina</label>
             </div>
                 <br>
