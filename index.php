@@ -41,7 +41,7 @@
         </div>
             <div class="container-conteudo-Categorias">
                 <div class="Imagem1-Categorias">
-                    <a href="">
+                    <a href="feminina.php">
                       <div class="Imagem-container-Categorias">
                         <img src="imagens/pexels-jeff-denlea-5231463.jpg" alt="Imagem feminina" height="300" width="300">
                       </div>
@@ -52,7 +52,7 @@
                   </div>
                   
                   <div class="Imagem2-Categorias">
-                    <a href="">
+                    <a href="masculina.php">
                       <div class="Imagem-container-Categorias">
                         <img src="imagens/pexels-lucxama-sylvain-2765557.jpg" alt="Imagem masculina" height="300" width="300">
                       </div>

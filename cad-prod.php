@@ -19,7 +19,7 @@ $categoria =  mysqli_real_escape_string($conexao, trim($_POST['categoria']));
     $novoNomeDoArquivo = uniqid();
     $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
 
-    if ($extensao != "jpg" && $extensao != 'png')
+    if ($extensao != "jpg" && $extensao != 'png' && $extensao != 'jpeg')
         die("Tipo de arquivo não aceito");
 
         $path = $pasta . $novoNomeDoArquivo . "." . $extensao;
@@ -27,8 +27,10 @@ $categoria =  mysqli_real_escape_string($conexao, trim($_POST['categoria']));
     $deu_certo = move_uploaded_file($arquivo["tmp_name"], $path);
     
     if($deu_certo){
-        
-        $conexao->query("INSERT INTO cadastro_prod (idproduto, nome_prod, descricao_prod, quantidade, valor, telefone, categoria, path, nome_og_arq) VALUES ('', '$nome_prod', '$descr', '$qtd', '$valor', '$telefone', '$categoria','$path', '$nomeDoArquivo')");
+
+        $id_usuario = $_SESSION['id_usuario'];
+
+        $conexao->query("INSERT INTO cadastro_prod (idproduto, nome_prod, descricao_prod, quantidade, valor, telefone, categoria, path, nome_og_arq, id_usu) VALUES ('', '$nome_prod', '$descr', '$qtd', '$valor', '$telefone', '$categoria','$path', '$nomeDoArquivo', '$id_usuario')");
 
         $_SESSION['prod_cadastrado'] = true;
         header('Location: produto.php');
