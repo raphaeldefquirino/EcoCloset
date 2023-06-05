@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-<footer>
+    <footer>
         <div class="container-footer">
             <div class="row-footer">
                 <!-- coluna footer -->
@@ -30,7 +32,7 @@
                         <ul class="social-icons">
                             <li><a href="https://www.facebook.com/profile.php?id=100092252831400"><i class="fa fa-facebook"></i> Facebook</a></li>
                             <li><a href="https://www.instagram.com/eco_closet23/"><i class="fa fa-instagram"></i> Instagram</a></li>
-                          </ul>
+                        </ul>
 
                     </ul>
                 </div>
@@ -40,16 +42,17 @@
                     <h4>Páginas</h4>
                     <ul>
                         <li> <a href="index.php"> Home</a> </li>
-                        <li> <a href=""> Femininas</a> </li>
-                        <li> <a href=""> Masculinas</a> </li>
-                        <li> <a href=""> Sobre nós</a> </li>
+                        <li> <a href="feminina.php"> Femininas</a> </li>
+                        <li> <a href="masculina.php"> Masculinas</a> </li>
+                        <li> <a href="#sobrenos"> Sobre nós</a> </li>
                         <li> <a href="produto.php"> Venda</a> </li>
                     </ul>
                 </div>
                 <!-- fim coluna footer-->
-        
-        </div>
+
+            </div>
         </div>
     </footer>
 </body>
+
 </html>

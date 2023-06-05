@@ -1,9 +1,9 @@
-<?php 
+<?php
 session_start();
 
 include('conexao.php');
 
-if(empty($_POST['email']) || empty($_POST['senha'])){
+if (empty($_POST['email']) || empty($_POST['senha'])) {
     header('Location: login-usu.php');
     exit();
 }
@@ -15,19 +15,15 @@ $query = "SELECT * FROM cadastro_usuario WHERE email = '{$email}' and senha = '{
 
 $result = mysqli_query($conexao, $query);
 
-$row = mysqli_num_rows($result);
+$row = mysqli_fetch_assoc($result); // Correção: usar mysqli_fetch_assoc para obter os dados
 
-if ($row){
-
+if ($row) {
     $_SESSION['id_usuario'] = $row['idusuario'];
     $_SESSION['email'] = $email;
     header('Location: index.php');
     exit();
-
 } else {
-
     header('Location: login-usu.php');
     exit();
 }
-
 ?>

@@ -26,7 +26,7 @@
     <li><a href="feminina.php">Femininas</a></li>
     <li><a href="masculina.php">Masculinas</a></li>
     <li><a href="produto.php">Vender</a></li>
-    <li><a href="login-usu.php">Perfil</a></li>
+    <li><a href="usuario.php">Perfil</a></li>
 </div>
 
 
