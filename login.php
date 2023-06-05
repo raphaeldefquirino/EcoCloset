@@ -15,7 +15,7 @@ $query = "SELECT * FROM cadastro_usuario WHERE email = '{$email}' and senha = '{
 
 $result = mysqli_query($conexao, $query);
 
-$row = mysqli_fetch_assoc($result); // Correção: usar mysqli_fetch_assoc para obter os dados
+$row = mysqli_fetch_assoc($result); 
 
 if ($row) {
     $_SESSION['id_usuario'] = $row['idusuario'];
