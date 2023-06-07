@@ -829,7 +829,7 @@ color: #f0ffff94;
 }
 .menssagemErro p{
     color: black;
-    padding-top: 15px;
+   
 }
 
 .caixa-CadastroCerto{
@@ -843,14 +843,14 @@ color: #f0ffff94;
   height: 20%;
   border-radius: 10px;
   align-items: center;
-  margin-top: 10px;
+ 
 }
 .menssagemCerto{
   margin: auto;
 }
 .menssagemCerto p{
   color: rgb(0, 0, 0);
-  padding-top: 30px;
+
  
 }
   
