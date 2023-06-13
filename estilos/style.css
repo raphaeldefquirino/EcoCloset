@@ -603,7 +603,7 @@ footer{
 .footer-col ul.EcoCloset li {
     padding-left: 60px;
   }
-  .imagens-footer{
+  .container-imagens-footer {
     margin: auto;
     display: flex;
   }

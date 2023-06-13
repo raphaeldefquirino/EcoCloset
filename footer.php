@@ -49,7 +49,7 @@
                     </ul>
                 </div>
                 <!-- fim coluna footer-->
-<div class="imagens-footer">
+<div class="container-imagens-footer">
     <div class="imagem-Alcina">
 
         <img src="imagens/alcina.jpg" alt="Image" height="50" width="50">
