@@ -52,13 +52,14 @@
 <div class="imagens">
     <div class="imagem-Alcina">
 
-        <a href=""> </a>
+        <img src="" alt="">
 
     </div>
 
     <div class="imagem-Exposoft">
 
-        <a href=""> </a>
+        <img src="Imagem branca.png" alt="">
+       
 
     </div>
 </div>
