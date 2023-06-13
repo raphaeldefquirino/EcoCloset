@@ -58,7 +58,7 @@
 
     <div class="imagem-Exposoft">
 
-        <img src="imagens/pexels-lucxama-sylvain-2765557.jpg" alt="">
+        <img src="imagens/" alt="">
        
 
     </div>
