@@ -604,13 +604,9 @@ footer{
     padding-left: 60px;
   }
   .container-imagens-footer {
-    margin: auto;
-    display: flex;
+    float: right;
   }
-  .imagem-Exposoft{
-    color:#00FF00;
-  }
- 
+  
   /* Fim footer */
 
 /* ---------------------------------------------------------------- */
