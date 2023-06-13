@@ -613,6 +613,11 @@ footer{
     display: flex;
   }
 
+  .ImagensExposoft {
+
+   align-items: center;
+
+  }
 
   
   /* Fim footer */

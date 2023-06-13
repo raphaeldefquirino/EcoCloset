@@ -49,7 +49,7 @@
                     </ul>
                 </div>
                 <!-- fim coluna footer-->
-
+<div class="ImagensExposoft" >
     <div class="imagem-Alcina">
 
         <img src="imagens/alcina.jpg" alt="Image" height="50" width="50">
@@ -60,6 +60,8 @@
 
         <img src="imagens/exposoft.png" alt="Image" height="50" width="50">
 
+
+    </div>
 
     </div>
 
