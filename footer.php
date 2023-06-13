@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+  <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 
 <body>
@@ -58,7 +60,7 @@
 
     <div class="imagem-Exposoft">
 
-        <img style = "margin: auto; display: flex;" src="imagens/exposoft.png" alt="Image" height="50" width="50">
+        <img src="imagens/exposoft.png" alt="Image" height="50" width="50">
        
 
     </div>
