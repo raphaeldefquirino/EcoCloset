@@ -49,7 +49,19 @@
                     </ul>
                 </div>
                 <!-- fim coluna footer-->
+<div class="imagens">
+    <div class="imagem-Alcina">
 
+        <a href=""> </a>
+
+    </div>
+
+    <div class="imagem-Exposoft">
+
+        <a href=""> </a>
+
+    </div>
+</div>
             </div>
         </div>
     </footer>
