@@ -58,7 +58,7 @@
 
     <div class="imagem-Exposoft">
 
-        <img src="imagem/Imagem branca.png" alt="">
+        <img src="imagens/Imagem branca.png" alt="">
        
 
     </div>
