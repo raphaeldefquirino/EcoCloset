@@ -49,16 +49,16 @@
                     </ul>
                 </div>
                 <!-- fim coluna footer-->
-<div class="imagens">
+<div class="imagens-footer">
     <div class="imagem-Alcina">
 
-        <img src="" alt="">
+        <img src="imagens/alcina.jpg" alt="Image" height="50" width="50">
 
     </div>
 
     <div class="imagem-Exposoft">
 
-        <img src="imagens/exposoft.png" alt="">
+        <img src="imagens/exposoft.png" alt="Image" height="50" width="50">
        
 
     </div>

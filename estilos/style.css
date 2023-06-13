@@ -603,6 +603,10 @@ footer{
 .footer-col ul.EcoCloset li {
     padding-left: 60px;
   }
+  .imagens-footer{
+    text-align: center;
+    display: flex;
+  }
  
   /* Fim footer */
 
