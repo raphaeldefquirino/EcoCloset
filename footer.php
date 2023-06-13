@@ -58,7 +58,7 @@
 
     <div class="imagem-Exposoft">
 
-        <img src="imagens/" alt="">
+        <img src="imagens/exposoft.png" alt="">
        
 
     </div>
