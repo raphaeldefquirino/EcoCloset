@@ -49,7 +49,7 @@
                     </ul>
                 </div>
                 <!-- fim coluna footer-->
-<div class="container-imagens-footer">
+
     <div class="imagem-Alcina">
 
         <img src="imagens/alcina.jpg" alt="Image" height="50" width="50">
@@ -59,10 +59,10 @@
     <div class="imagem-Exposoft">
 
         <img src="imagens/exposoft.png" alt="Image" height="50" width="50">
-       oollassas
+
 
     </div>
-</div>
+
             </div>
         </div>
     </footer>
