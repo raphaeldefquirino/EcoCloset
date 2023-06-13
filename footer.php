@@ -58,7 +58,7 @@
 
     <div class="imagem-Exposoft">
 
-        <img src="Imagem branca.png" alt="">
+        eusouumaanimal
        
 
     </div>
