@@ -604,22 +604,10 @@ footer{
     padding-left: 60px;
   }
 
-  .ImagensExposoft {
-    display: flex;
-    justify-content: center; /* Centraliza as imagens horizontalmente */
-    margin-top: 20px;
-}
-
-.ImagensExposoft .imagem-Alcina,
-.ImagensExposoft .imagem-Exposoft {
-    flex: 1;
-    text-align: center;
-    margin: 0 10px; /* Espaçamento entre as imagens */
-}
-
-.ImagensExposoft img {
-    max-width: 100%;
-    height: auto;
+.ImagensExposoft{
+  margin: auto;
+  display: flex;
+  text-align: center;
 }
   
 
