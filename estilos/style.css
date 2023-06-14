@@ -574,7 +574,7 @@ footer{
     transition: all 0.3s ease
 }
 .footer-col ul li a:hover{
-    color: greenyellow;
+    color: red;
     padding-left: 10px;
 }
 .social-icons li {
@@ -616,6 +616,11 @@ footer{
   color: #009688;
   width: 300px;
   padding: 300px;
+}
+.container-imagens-footer{
+  text-align: center;
+  margin: auto;
+  display: flex;
 }
 
   

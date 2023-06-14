@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/style.css?v=1">
     <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 
@@ -56,6 +56,20 @@
                 </div>
                 <!-- fim coluna footer-->
 
+                <div class="container-imagens-footer">
+
+                <div class="Imagem-alcina">
+
+                    <img src="imagens/alcina.jpg" alt="Image" height="50" width="50">
+
+                </div>
+
+                <div class="Imagem-exposoft">
+
+                    <img src="imagens/exposoft.png" alt="Image" height="50" width="50">
+
+                </div>
+                </div>
 
             </div>
         </div>
