@@ -56,25 +56,25 @@
                 </div>
                 <!-- fim coluna footer-->
 
-                <div class="container-imagens-footer">
+                
+
+            </div>
+        </div>
+
+        <div class="container-imagens-footer">
 
                 <div class="Imagem-alcina">
 
-                    <img src="imagens/alcina.jpg" alt="Image" height="50" width="50">
+                    <img src="imagens/alcina.jpg" alt="Image" height="80" width="80">
 
                 </div>
 
                 <div class="Imagem-exposoft">
 
-                    <img src="imagens/exposoft.png" alt="Image" height="50" width="50">
+                    <img src="imagens/exposoft.png" alt="Image" height="80" width="80">
 
                 </div>
                 </div>
-
-            </div>
-        </div>
-
-        
     
     
     </footer>
