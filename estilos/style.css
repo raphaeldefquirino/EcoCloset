@@ -604,7 +604,10 @@ footer{
     padding-left: 60px;
   }
 
-
+.ImagensExposoft{
+  display: flex;
+  margin: auto;
+}
 
   
   /* Fim footer */

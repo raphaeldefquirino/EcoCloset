@@ -45,7 +45,7 @@
     <div class="imagem-Exposoft">
 
         <img src="imagens/exposoft.png" alt="Image" height="50" width="50">
-kfwweg8gafdibgfijhifa
+
 
     </div>
 
@@ -68,21 +68,6 @@ kfwweg8gafdibgfijhifa
 
             </div>
         </div>
-        <div class="ImagensExposoft" >
-    <div class="imagem-Alcina">
-
-        <img src="imagens/alcina.jpg" alt="Image" height="50" width="50">
-
-    </div>
-
-    <div class="imagem-Exposoft">
-
-        <img src="imagens/exposoft.png" alt="Image" height="50" width="50">
-kfwweg8gafdibgfijhifa
-
-    </div>
-
-    </div>
     </footer>
 </body>
 
