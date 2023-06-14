@@ -605,9 +605,8 @@ footer{
   }
 
 .ImagensExposoft{
-  margin: auto;
-  display: flex;
-  text-align: center;
+  
+  left: 500px;
 }
   
 
