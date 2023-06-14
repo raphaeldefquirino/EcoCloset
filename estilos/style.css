@@ -618,9 +618,11 @@ footer{
   padding: 300px;
 }
 .container-imagens-footer{
+  position: relative;
   margin: auto;
   display: flex;
   padding-top: 40px;
+  
 }
 
   
