@@ -603,7 +603,22 @@ footer{
 .footer-col ul.EcoCloset li {
     padding-left: 60px;
   }
- 
+
+.imagem-Alcina{
+  display: flex;
+  margin: auto;
+}
+
+.imagem-Exposof{
+
+  display: flex;
+  margin: auto;
+  color: #009688;
+  width: 300px;
+  padding: 300px;
+}
+
+  
   /* Fim footer */
 
 /* ---------------------------------------------------------------- */

@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media-query.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.mincss">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos/style.css">
+  <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 
 <body>
@@ -38,6 +40,7 @@
                         </ul>
 
                     </ul>
+    
                 </div>
                 <!-- fim coluna footer-->
                 <!-- coluna footer-->
@@ -53,8 +56,25 @@
                 </div>
                 <!-- fim coluna footer-->
 
+
             </div>
         </div>
+
+        
+    <div class="imagem-Alcina">
+
+        <img src="imagens/alcina.jpg" alt="Image" height="50" width="50">
+
+    </div>
+
+    <div class="imagem-Exposoft">
+
+        <img src="imagens/exposoft.png" alt="Image" height="50" width="50">
+
+
+    </div>
+
+    
     </footer>
 </body>
 
