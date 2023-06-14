@@ -63,7 +63,7 @@
     <div class="imagem-Exposoft">
 
         <img src="imagens/exposoft.png" alt="Image" height="50" width="50">
-
+kfwweg8gafdibgfijhifa
 
     </div>
 
