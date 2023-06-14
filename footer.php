@@ -42,6 +42,24 @@
                     </ul>
     
                 </div>
+
+                
+                <div class="container-imagens-footer">
+
+                <div class="Imagem-alcina">
+
+                    <img src="imagens/alcina.jpg" alt="Image" height="80" width="80">
+
+                </div>
+
+                <div class="Imagem-exposoft">
+
+                    <img src="imagens/exposoft.png" alt="Image" height="80" width="80">
+
+                </div>
+                </div>
+
+
                 <!-- fim coluna footer-->
                 <!-- coluna footer-->
                 <div class="footer-col">
