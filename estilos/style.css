@@ -620,6 +620,7 @@ footer{
 .container-imagens-footer{
   text-align: center;
   display: flex;
+  padding-top: 40px;
 }
 
   
