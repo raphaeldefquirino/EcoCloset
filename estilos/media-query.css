@@ -105,7 +105,9 @@
   .footer-col ul.EcoCloset li {
       padding-left: 0px;
     }
-    
+    .container-imagens-footer{
+      padding-right: 0px;
+    }
 }
     
 
