@@ -143,7 +143,7 @@
 
           <div class="slide-col">
             <div class="perfil-imagem">
-              <img src="imagens/raphael.jpg" alt="" width="400px" height="400px">
+              <img src="imagens/criador3.jpg" alt="" width="400px" height="400px">
             </div>
 
             <div class="perfil-text">
