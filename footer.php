@@ -51,7 +51,7 @@
 
 <div class="Imagem-exposoft">
 
-    <img src="imagens/exposoft.png" alt="Image" height="80" width="80">
+    <img src="imagens/expreta.png" alt="Image" height="80" width="80">
 
 </div>
 </div>
