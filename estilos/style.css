@@ -614,13 +614,13 @@ footer{
 .ImagensExposoft .imagem-Exposoft {
     flex: 1;
     text-align: center;
+    margin: 0 10px; /* Espaçamento entre as imagens */
 }
 
 .ImagensExposoft img {
     max-width: 100%;
     height: auto;
 }
- 
   
 
   
