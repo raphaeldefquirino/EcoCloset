@@ -603,21 +603,25 @@ footer{
 .footer-col ul.EcoCloset li {
     padding-left: 60px;
   }
-  .imagem-Exposoft {
-    margin: auto;
-  display: flex;
-  }
-
-  .imagem-Alcina{
-    margin: auto;
-    display: flex;
-  }
 
   .ImagensExposoft {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    margin-top: 20px;
+}
 
-   align-items: center;
+.ImagensExposoft .imagem-Alcina,
+.ImagensExposoft .imagem-Exposoft {
+    flex: 1;
+    text-align: center;
+}
 
-  }
+.ImagensExposoft img {
+    max-width: 100%;
+    height: auto;
+}
+ 
+  
 
   
   /* Fim footer */
