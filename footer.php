@@ -45,13 +45,13 @@
 
 <div class="Imagem-alcina">
 
-    <img src="imagens/alcina.jpg" alt="Image" height="80" width="80">
+<a href=""> <img src="imagens/alcina.jpg" alt="Image" height="80" width="80"> </a>
 
 </div>
 
 <div class="Imagem-exposoft">
 
-    <img src="imagens/expreta.png" alt="Image" height="80" width="80">
+    <a href=""> <img src="imagens/expreta.png" alt="Image" height="80" width="80"> </a>
 
 </div>
 </div>
