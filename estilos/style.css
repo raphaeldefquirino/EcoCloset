@@ -620,9 +620,14 @@ footer{
 .container-imagens-footer{
   display: flex;
   justify-content: center;
-  padding-right: 30px;
   padding-top: 40px;
   
+}
+.Imagem-alcina{
+  padding-right: 15px;
+}
+.Imagem-exposoft{
+  padding-left: 15px;
 }
 
   
