@@ -614,6 +614,8 @@ footer{
   display: flex;
   margin: auto;
   color: #009688;
+  width: 300px;
+  padding: 300px;
 }
 
   
