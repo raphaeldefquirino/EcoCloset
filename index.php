@@ -113,7 +113,7 @@
         <div class="slide-row" id="slide">
           <div class="slide-col">
             <div class="perfil-imagem">
-              <img src="imagens/arthur.jpg" alt="" width="400px" height="400px">
+              <img src="imagens/criador1.jpg" alt="" width="400px" height="400px">
             </div>
 
             <div class="perfil-text">
