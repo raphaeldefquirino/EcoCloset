@@ -128,7 +128,7 @@
 
           <div class="slide-col">
             <div class="perfil-imagem">
-              <img src="imagens/nicolas.jpg" alt="" width="400px" height="400px">
+              <img src="imagens/criador2.jpg" alt="" width="400px" height="400px">
             </div>
 
             <div class="perfil-text">
