@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14-Jun-2023 às 04:10
+-- Tempo de geração: 14-Jun-2023 às 04:21
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -61,7 +61,7 @@ INSERT INTO `cadastro_prod` (`idproduto`, `nome_prod`, `descricao_prod`, `quanti
 (18, 'Saia plissada', 'Saia plissada, cor preta, comprimento midi, tamanho M.', 1, 150.99, '11888888888', 'Feminina', 'uploads/64891a7bee38d.jpg', 'plissada.jpg', 1),
 (19, 'Vestido de festa', 'Vestido longo de festa, cor preto, decote em ligeiro, tamanho P.', 1, 449.99, '11888888888', 'Feminina', 'uploads/64891acf268bb.jpg', 'festa.jpg', 1),
 (20, 'Blusa de seda', 'Blusa de seda, estampa de poá, manga longa, tamanho G.', 1, 29.99, '11888888888', 'Feminina', 'uploads/64891b1782fa1.jpg', 'seda.jpg', 1),
-(21, 'Macacão pantacourt', '119.99', 1, 300.00, '11777777777', 'Feminina', 'uploads/64891b5116eb3.jpg', 'pantacourt.jpg', 1);
+(21, 'Macacão pantacourt', 'Macacão pantacourt, cor preta, alças ajustáveis, tamanho M.', 1, 300.00, '11777777777', 'Feminina', 'uploads/64891b5116eb3.jpg', 'pantacourt.jpg', 1);
 
 -- --------------------------------------------------------
 
