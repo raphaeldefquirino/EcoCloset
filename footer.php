@@ -50,10 +50,7 @@
                 </div>
                 <!-- fim coluna footer-->
 
-
-            </div>
-        </div>
-        <div class="ImagensExposoft" >
+                <div class="ImagensExposoft" >
     <div class="imagem-Alcina">
 
         <img src="imagens/alcina.jpg" alt="Image" height="50" width="50">
@@ -68,6 +65,12 @@ kfwweg8gafdibgfijhifa
     </div>
 
     </div>
+
+
+            </div>
+            
+        </div>
+        
     </footer>
 </body>
 
