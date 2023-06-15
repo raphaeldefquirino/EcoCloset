@@ -33,7 +33,7 @@
                     <h4>Contato</h4>
                     <ul>
                         <li> <a href="mailto:ecocloset23@gmail.com?subject=&body="> ecocloset23@gmail.com</a> </li>
-                        <br>
+                        
                         <ul class="social-icons">
                             <li><a href="https://www.facebook.com/profile.php?id=100092252831400"><i class="fa fa-facebook"></i> Facebook</a></li>
                             <li><a href="https://www.instagram.com/eco_closet23/"><i class="fa fa-instagram"></i> Instagram</a></li>
@@ -70,7 +70,7 @@
                         <li> <a href="index.php"> Home</a> </li>
                         <li> <a href="feminina.php"> Femininas</a> </li>
                         <li> <a href="masculina.php"> Masculinas</a> </li>
-                        <li> <a href="#sobrenos"> Sobre nós</a> </li>
+                        <li> <a href="index.php #sobrenos"> Sobre nós</a> </li>
                         <li> <a href="produto.php"> Venda</a> </li>
                     </ul>
                 </div>
