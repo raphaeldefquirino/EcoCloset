@@ -18,7 +18,7 @@ include ('verifica-login.php');
 
     <?php 
     
-    include("menu.php");
+    include("includes/menu.php");
 
     ?>
 
@@ -144,7 +144,7 @@ include ('verifica-login.php');
 
 <?php 
     
-    include("footer.php");
+    include("includes/footer.php");
 
 ?>
 

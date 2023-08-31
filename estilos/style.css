@@ -8,6 +8,8 @@
 }
 
 
+
+
 body{
     background-color: #f1f1f1;
 }
@@ -236,7 +238,7 @@ list-style-type: none;
     width: 500px;
     cursor: pointer;
   }
-  
+
   .navbar ul li {
     list-style: none;
     display: inline-block;

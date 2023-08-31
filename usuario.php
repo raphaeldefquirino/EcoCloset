@@ -14,7 +14,7 @@
         <title>Tabela deletar</title>
 
         <?php 
-        include("menu.php");
+        include("includes/menu.php");
         ?>
         
     </head>
@@ -33,12 +33,35 @@
                 <tbody>
                 <?php 
 
-                include("conexao.php");
+                include("includes/conexao.php");
 
                 $id_usuario = $_SESSION['id_usuario'];
 
                 $consulta = "SELECT * FROM cadastro_prod WHERE id_usu = '{$id_usuario}'";
+
+                $consultaadm = "SELECT * FROM cadastro_prod";
+
                 $resultado = mysqli_query($conexao, $consulta);
+
+                $resultadoadm = mysqli_query($conexao, $consultaadm);
+
+                if($id_usuario === '3'){
+
+                if(mysqli_num_rows($resultadoadm) > 0){
+
+                    while ($produto = mysqli_fetch_assoc($resultadoadm)){
+
+                        echo '<tr>';
+                        echo '<td data-label="Nome do produto">' . $produto['nome_prod'] . '</td>';
+                        echo '<td data-label="Descrição">' . $produto['descricao_prod'] . '</td>';
+                        echo '<td data-label="Valor">' . $produto['valor'] . '</td>';
+                        echo '<td data-label="Telefone">' . $produto['telefone'] . '</td>';
+                        echo '<td data-label="..."><a href="includes/deletar.php?id=' . $produto['idproduto'] . '" class="deletar">&#10006;</a></td>';
+                        echo '</tr>';
+                    }
+                }
+
+            }
 
                 if(mysqli_num_rows($resultado) > 0){
 
@@ -64,7 +87,7 @@
         </div>
 
         <?php 
-        include("footer.php");
+        include("includes/footer.php");
         ?>
         
     </body>

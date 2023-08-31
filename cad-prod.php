@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("conexao.php");
+include("includes/conexao.php");
 
 $nome_prod = mysqli_real_escape_string($conexao, trim($_POST['nome_prod']));
 $qtd = mysqli_real_escape_string($conexao, trim($_POST['qtd']));
@@ -12,6 +12,7 @@ $arquivo = $_FILES['arquivo'];
 $categoria = mysqli_real_escape_string($conexao, trim($_POST['categoria']));
 
 $pasta = "uploads/";
+
 $nomeDoArquivo = $arquivo['name'];
 $novoNomeDoArquivo = uniqid();
 $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));

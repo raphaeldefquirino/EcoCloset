@@ -15,13 +15,13 @@
 
 <?php 
    
-   include("menu.php");
+   include("includes/menu.php");
 
   ?>
 
   <?php 
 
-    include("conexao.php");
+    include("includes/conexao.php");
 
     $consulta = "SELECT * FROM cadastro_prod WHERE categoria = 'Feminina'";
     $resultado = mysqli_query($conexao, $consulta);
@@ -65,7 +65,7 @@
 
   <?php 
    
-   include("footer.php");
+   include("includes/footer.php");
 
   ?>
 </body>

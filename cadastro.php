@@ -15,7 +15,7 @@ session_start();
 
     <?php 
 
-    include_once('menu.php');
+    include_once('includes/menu.php');
     
     ?>
 
@@ -73,7 +73,7 @@ session_start();
             unset($_SESSION['status_cadastro']);
             ?>
 
-            <form action="cadastrar.php" method="post">
+            <form action="includes/cadastrar.php" method="post">
 
 
             <div class="textfield">
@@ -112,7 +112,7 @@ session_start();
 
 <?php 
 
-include_once('footer.php');
+include_once('includes/footer.php');
 
 ?>
 

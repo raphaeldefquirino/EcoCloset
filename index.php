@@ -17,7 +17,7 @@
 
   <?php
 
-  include("menu.php");
+  include("includes/menu.php");
 
   ?>
 
@@ -200,7 +200,7 @@
 
   <?php
 
-  include("footer.php")
+  include("includes/footer.php")
 
   ?>
 
