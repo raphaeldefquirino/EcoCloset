@@ -14,7 +14,7 @@
   <title>EcoCloset</title>
 </head>
 
-<body>
+<body class="bodyprod">
 
   <?php
 
@@ -35,9 +35,11 @@
 
       echo '<a href="#"><div class="clothing-item">';
       echo '<img src="' . $produto['path'] . '" alt="Calça jeans">';
-      echo '<a href="#"><span class="material-symbols-outlined">add_shopping_cart</span></a>';
+      echo '<br>';
+      echo '<br>';
+      echo '<div class="btncarrinho"><a href="#"><span class="material-symbols-outlined">add_shopping_cart</span></a></div>';
       echo '<div class="clothing-details">';
-      echo '<h3>' . $produto['nome_prod'] . '</h3>';
+      echo '<h3 class="h3produtos">' . $produto['nome_prod'] . '</h3>';
       echo ' <p class="clothing-price"><strong>R$' . $produto['valor'] . ' </strong></p>';
       echo '</div>';
       echo '</div>';

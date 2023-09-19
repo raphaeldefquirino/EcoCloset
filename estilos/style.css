@@ -1267,7 +1267,7 @@ tr{
 /* ------------------------------NOVO FOOTER NICOLAS---------------------------------- */
 
 
-body {
+.bodyprod {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   margin: 0;
@@ -1286,7 +1286,7 @@ h1 {
   margin: 0;
 }
 
-h3 {
+.h3produtos {
   font-size: 17px;
 }
 
@@ -1302,7 +1302,7 @@ h3 {
 }
 
 .clothing-item {
-  width: 200px;
+  width: 250px;
   margin: 8px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -1318,8 +1318,9 @@ h3 {
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 5px;
-  transition: transform 0.3s ease;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+  
 }
 
 .clothing-item:hover img {
@@ -1332,7 +1333,7 @@ h3 {
   border-radius: 5px;
   font-size: 24px;
   position: absolute;
-  top: 175px; /* Posição em relação ao topo */
+  top: 248px; /* Posição em relação ao topo */
   right: 20px; /* Posição em relação à direita */
   cursor: pointer;
    transition: transform 0.3s ease;
@@ -1349,6 +1350,7 @@ h3 {
   font-weight: bolder;
   font-size: 14px;
   color: rgb(175, 78, 175);
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 768px) {
