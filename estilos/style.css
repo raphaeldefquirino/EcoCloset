@@ -1370,7 +1370,7 @@ h1 {
 /* ---------------------------------------------------------------- */
 
 
-/* começo da página de pagamentos*/
+/* começo da página do produto*/
 
 
 
@@ -1378,45 +1378,44 @@ h1 {
 
 
 
-.bodyPagprod{
-  
-  font-family: 'Ubuntu';
-	max-width: 1200px;
-	margin: 0 auto;
-	margin-top: 50px;
-}
-
-.imgPagprod{
-
-  max-width: 100%;
-}
-
-
-main {
+.mainpagprod {
 	display: flex;
-	gap: 30px;
 	margin-bottom: 80px;
 	border-radius: 10px;
-}
-
-.container-img {
-	display: flex;
-	border-radius: 10px;
-
-}
-
-.container-img img {
-	display: flex;
-	border-radius: 10px;
-	width: 450px;
+	background-color: #ffffff;
+	width: 100%;
 	height: auto;
+	align-items: center;
+	margin-right: 20px;
 	
+}
+
+.allcontainer{
+
+	
+	border-radius: 10px;
+	display: flex;
+	padding: 5px;
+
 
 }
+
+.allcontainer img{
+
+	border-radius: 10px;
+	display: flex;
+	border-radius: 30px;
+	width:450px;
+	height: auto;
+	margin-right: 10px;
+}
+
+ 
 .container-info-product {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+	padding: 10px;
 }
 
 .container-price {
@@ -1441,16 +1440,16 @@ main {
 	display: flex;
 	gap: 20px;
 	padding-bottom: 30px;
-	border-bottom: 1px solid #e4e4e4;
+	
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
 
 .btn-add-to-cart {
 	
-	background-color: #252525;
+	background-color: rgb(255, 255, 255);
 	padding: 10px;
-	color: #f7f7f7;
+	color: #AF00FF;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1459,12 +1458,11 @@ main {
 	cursor: pointer;
 	border-radius: 5px;
 	transition: transform 0.7s ease;
+    border-color: #AF00FF;
 	
 }
 
-.btn-add-to-cart:hover {
-	color: #1bbeb4;
-}
+
 
 .hidden {
 	display: none;
@@ -1525,8 +1523,159 @@ main {
 }
 
 .container-buttons-social a:hover {
-	color: #1bbeb4;
+	color: #AF00FF;
 }
 
 
+/* CSS no seu arquivo style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Ubuntu';
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-img img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.container-info-product {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Ajuste o layout para telas menores */
+/* Adicione essas regras ao seu arquivo CSS */
+
+/* Ajuste o layout para telas menores */
+@media (max-width: 768px) {
+    .allcontainer {
+        flex-direction: column;
+        align-items: center;
+		display: flex;
+		
+		padding: 20px;
+    }
+
+	main {
+		display: flex;
+	    width: 100%;
+		align-items: center;
+		
+	}
+
+    .container-img img {
+        width: 100%;
+        max-width: 400px; /* Ajuste o tamanho da imagem conforme necessário */
+        align-items: center;
+    }
+
+	.container-info-product {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .container-price span {
+        font-size: 18px; /* Reduza o tamanho da fonte para telas menores */
+    }
+
+    .container-description {
+        padding: 20px 0;
+    }
+
+    .text-description {
+        font-size: 14px; /* Reduza o tamanho da fonte para telas menores */
+    }
+
+    .container-social {
+        padding: 10px 0;
+    }
+}
+/* Ajuste o layout para telas menores, como celulares */
+@media (max-width: 480px) {
+    .allcontainer {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    main {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .container-img img {
+        width: 100%;
+        max-width: 300px; /* Reduza o tamanho da imagem para telas menores */
+        align-items: center;
+    }
+
+    .container-info-product {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .container-price span {
+        font-size: 16px; /* Reduza o tamanho da fonte para telas menores */
+    }
+
+    .container-description {
+        padding: 10px 0;
+    }
+
+    .text-description {
+        font-size: 14px; /* Reduza o tamanho da fonte para telas menores */
+    }
+
+    .container-social {
+        padding: 10px 0;
+    }
+}
+
+/* Ajuste o layout para telas de tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .allcontainer {
+    display: flex;
+      
+        padding: 5px;
+        width: 100%;
+
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .container-img img {
+        width: 100%;
+        max-width: 400px; /* Tamanho da imagem para tablets */
+    }
+
+    .container-info-product {
+        padding: 20px;
+        text-align: left;
+    }
+
+    .container-description {
+        padding: 20px 0;
+    }
+}
