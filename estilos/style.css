@@ -1528,36 +1528,7 @@ h1 {
 
 
 /* CSS no seu arquivo style.css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Ubuntu';
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 50px;
-    padding: 10px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.container-img img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.container-info-product {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
 /* Ajuste o layout para telas menores */
 /* Adicione essas regras ao seu arquivo CSS */
