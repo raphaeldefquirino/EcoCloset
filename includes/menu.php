@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8ad860e92b.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="header">
@@ -31,7 +32,8 @@
     <li><a href="feminina.php">Femininas</a></li>
     <li><a href="masculina.php">Masculinas</a></li>
     <li><a href="produto.php">Vender</a></li>
-    <li><a href="usuario.php">Perfil</a></li>
+    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+    <li><a href="usuario.php"><i class="fa-regular fa-user"></i></a></li>
 </div>
 
 
