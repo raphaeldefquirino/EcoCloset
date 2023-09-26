@@ -12,24 +12,25 @@
 		<header>
             <?php 
 
-            include_once('includes/menu.php');
+            include ('includes/menu.php');
             
             ?>
 			
 		</header>
-
+		<img src="logo.png" alt="imagen-producto"/>
 		
 
 		<main class="mainpagprod">
 			<div class="allcontainer">
 			<div class="container-img">
-				<img src="img/polonike.jpg" alt="imagen-producto"/>
+				<img src="logo.png" alt="imagen-producto"/>
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">
 					<span>$95.00</span>
 					
 				</div>
+				<img src="logo.png" alt="imagen-producto"/>
 
 				
 
@@ -87,7 +88,7 @@
 
         <?php 
 
-include_once('includes/footer.php');
+include ('includes/footer.php');
 
 ?>
 		
