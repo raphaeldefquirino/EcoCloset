@@ -300,71 +300,25 @@
 /* Media-query da página de roupas masculinas e femininas  */
 
 
-    @media screen and (min-width:700px) {
-
-      .product{
-
-        display: inline-flex;
-        width: 200px;
-        margin: 15px;
-        padding: 30px;
-
-        
-
-
-      }
-
-      .imgprod{
-
-        width: 170px;
-        height: 170px;
-      }
-
-
-    }
-
-    @media screen and (min-width:800px) {
-
-      .product{
-
-        display: inline-flex;
-        width: 200px;
-        margin: 15px;
-        padding: 30px;
-
-        
-
-
-      }
-
-      .imgprod{
-
-        width: 160x;
-        height: 160px;
-      }
-
-
-    }
-
-
-    @media screen and (min-width:900px) {
-
-      .product{
-
-        display: inline-flex;
-        width: 300px;
-        margin: 15px;
-        padding: 30px;
-
-        
-
-
-      }
-
-      .imgprod{
-
-        width: 230px;
-        height: 230px;
-      }
-    }
     
+@media screen and (max-width: 768px) {
+  .clothing-item {
+      flex: 0 0 calc(50% - 20px);
+      width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .clothing-item {
+      flex: 0 0 auto;
+      width: 100%;
+  }
+
+  .cntainer-img img {
+  width: 550px;
+    
+
+  
+  
+}
+}
