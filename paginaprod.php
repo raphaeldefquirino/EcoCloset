@@ -68,6 +68,7 @@
 
 				<div class="condicaoProd">
 					<span>Condição: Novo </span>
+				</div>
 					
 
 				
