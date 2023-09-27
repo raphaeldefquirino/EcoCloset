@@ -113,8 +113,8 @@ include('includes/verifica-login.php');
                                     <input type="radio" name="categoria" value="Feminina" id="catsup">
                                     <label for="Superior">Feminina</label>
                                     <br>
-                                    <input type="radio" name="categoria" value="Infantil" id="catsup">
-                                    <label for="Superior">Infantil</label>
+                                    <input type="radio" name="categoria" value="Kids" id="catsup">
+                                    <label for="Superior">Kids</label>
                                 </div>
                                 <br>
                             </div>
@@ -123,17 +123,52 @@ include('includes/verifica-login.php');
                     <div class="textfield">
                         <br>
                         <label for="">Subcategoria do produto</label>
-                        <select name="" id="">
+                        <select name="subcategoria" id="">
                             <option value="jaqueta">Jaqueta</option>
                             <br>
-                            <p><option value="camisa">Camisa</option></p>
-                            <p><option value="calça">Calça</option></p>
-                            <p><option value="vestido">Vestido</option></p>
-                            <p><option value="shorts">Shorts</option></p>
-                            <p><option value="calçado">Calçado</option></p>
-                            <p><option value="acessório">Acessório</option></p>
+                            <p>
+                                <option value="camisa">Camisa</option>
+                            </p>
+                            <p>
+                                <option value="calça">Calça</option>
+                            </p>
+                            <p>
+                                <option value="vestido">Vestido</option>
+                            </p>
+                            <p>
+                                <option value="shorts">Shorts</option>
+                            </p>
+                            <p>
+                                <option value="calçado">Calçado</option>
+                            </p>
+                            <p>
+                                <option value="acessório">Acessório</option>
+                            </p>
                         </select>
                     </div>
+                    <div class="custom">
+
+                        <div class="textfield">
+                            <label for="categoria" id="icat">Condição do produto</label>
+
+                            <div class="categoria">
+
+                                <br>
+                                <div class="checks">
+                                    <input type="radio" name="condicao" value="Usado" id="catinf">
+                                    <label for="Inferior">Usado</label>
+                                    <br>
+                                    <input type="radio" name="condicao" value="Pouco" id="catsup">
+                                    <label for="Superior">Pouco usado</label>
+                                    <br>
+                                    <input type="radio" name="condicao" value="Novo" id="catsup">
+                                    <label for="Superior">Novo</label>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="anexo">
                         <div class="textfield">
                             <br>

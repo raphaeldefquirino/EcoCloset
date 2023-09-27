@@ -78,28 +78,48 @@ session_start();
 
             <div class="textfield">
                 <br>
-                <label for="usuario">Email</label>
-                <input type="text" name="email" placeholder="Email">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="Email" required>
             </div>
             <div class="textfield">
                 <br>
-                <label for="usuario">Senha</label>
-                <input type="password" name="senha" placeholder="Senha">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="Senha" required>
             </div>
             <div class="textfield">
                 <br>
-                <label for="usuario">Nome Completo</label>
-                <input type="text" name="nome" placeholder="Nome Completo">
+                <label for="confirma-senha">Confirmar senha</label>
+                <input type="password" name="confirmaSenha" id="confirmaSenha" placeholder="Senha" required>
             </div>
             <div class="textfield">
                 <br>
-                <label for="senha">Endereço</label>
-                <input type="text" name="endereco" placeholder="Endereço">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" placeholder="Nome Completo">
             </div>
             <div class="textfield">
                 <br>
-                <label for="usuario">Telefone</label>
-                <input type="text" name="telefone" placeholder="Telefone">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="Nome Completo" required>
+            </div>
+            <div class="textfield">
+                <br>
+                <label for="telefone">Telefone</label>
+                <input type="text" name="telefone" id="telefone" placeholder="Telefone" required>
+            </div>
+            <div class="textfield">
+                <br>
+                <label for="cep">CEP</label>
+                <input type="text" name="cep" id="cep" placeholder="CEP" required>
+            </div>
+            <div class="textfield">
+                <br>
+                <label for="endereco">Endereço</label>
+                <input type="text" name="endereco" id="endereco" placeholder="Endereço" required>
+            </div>
+            <div class="textfield">
+                <br>
+                <label for="complemento">Complemento</label>
+                <input type="text" name="complemento" id="complemento" placeholder="Endereço" required>
             </div>
             <button class="btn-login">Cadastrar</button>
         </div>

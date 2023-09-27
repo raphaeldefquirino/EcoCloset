@@ -9,15 +9,15 @@
 		
 	</head>
 	<body>
-		<header>
+	
             <?php 
 
             include ('includes/menu.php');
             
             ?>
 			
-		</header>
-		<img src="logo.png" alt="imagen-producto"/>
+	
+		<img src="imagens/camisa_branca.jpg" alt="imagen-producto"/>
 		
 
 		<main class="mainpagprod">

@@ -4,12 +4,12 @@ session_start();
 include("includes/conexao.php");
 
 $nome_prod = mysqli_real_escape_string($conexao, trim($_POST['nome_prod']));
-$qtd = mysqli_real_escape_string($conexao, trim($_POST['qtd']));
 $valor = mysqli_real_escape_string($conexao, trim($_POST['valor']));
 $descr = mysqli_real_escape_string($conexao, trim($_POST['descr']));
-$telefone = mysqli_real_escape_string($conexao, trim($_POST['telefone']));
 $arquivo = $_FILES['arquivo'];
 $categoria = mysqli_real_escape_string($conexao, trim($_POST['categoria']));
+$subcategoria = mysqli_real_escape_string($conexao, trim($_POST['subcategoria']));
+$condicao = mysqli_real_escape_string($conexao, trim($_POST['condicao']));
 
 $pasta = "uploads/";
 
@@ -29,7 +29,7 @@ if ($deu_certo) {
 
     $id_usuario = $_SESSION['id_usuario'];
 
-    $conexao->query("INSERT INTO cadastro_prod (idproduto, nome_prod, descricao_prod, quantidade, valor, telefone, categoria, path, nome_og_arq, id_usu) VALUES ('', '$nome_prod', '$descr', '$qtd', '$valor', '$telefone', '$categoria','$path', '$nomeDoArquivo', '$id_usuario')");
+    $conexao->query("INSERT INTO cadastro_prod (idproduto, nome_prod, descricao_prod, valor, categoria, subcategoria, condicao ,path, nome_og_arq, id_usu) VALUES ('', '$nome_prod', '$descr', '$valor', '$categoria', '$subcategoria', '$condicao','$path', '$nomeDoArquivo', '$id_usuario')");
 
     $_SESSION['prod_cadastrado'] = true;
     header('Location: produto.php');

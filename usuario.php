@@ -19,6 +19,7 @@
         
     </head>
     <body>
+        <p><a href="includes/logout.php">Sair</a></p>
         <div class="tabela-usu">
             <table class="table-usu">
                 <thead>
@@ -55,7 +56,6 @@
                         echo '<td data-label="Nome do produto">' . $produto['nome_prod'] . '</td>';
                         echo '<td data-label="Descrição">' . $produto['descricao_prod'] . '</td>';
                         echo '<td data-label="Valor">' . $produto['valor'] . '</td>';
-                        echo '<td data-label="Telefone">' . $produto['telefone'] . '</td>';
                         echo '<td data-label="..."><a href="includes/deletar.php?id=' . $produto['idproduto'] . '" class="deletar">&#10006;</a></td>';
                         echo '</tr>';
                     }
@@ -71,7 +71,6 @@
                         echo '<td data-label="Nome do produto">' . $produto['nome_prod'] . '</td>';
                         echo '<td data-label="Descrição">' . $produto['descricao_prod'] . '</td>';
                         echo '<td data-label="Valor">' . $produto['valor'] . '</td>';
-                        echo '<td data-label="Telefone">' . $produto['telefone'] . '</td>';
                         echo '<td data-label="..."><a href="deletar.php?id=' . $produto['idproduto'] . '" class="deletar">&#10006;</a></td>';
                         echo '</tr>';
                     }
