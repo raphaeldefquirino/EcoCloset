@@ -322,3 +322,124 @@
   
 }
 }
+
+/* Media-query da página dos Produtos  */
+
+
+@media (max-width: 768px) {
+  .allcontainer {
+      flex-direction: column;
+      align-items: center;
+  display: flex;
+  
+  padding: 20px;
+  }
+
+main {
+  display: flex;
+    width: 100%;
+  align-items: center;
+  
+}
+
+  .container-img img {
+      width: 100%;
+      max-width: 400px; /* Ajuste o tamanho da imagem conforme necessário */
+      align-items: center;
+  }
+
+.container-info-product {
+      padding: 20px;
+      text-align: center;
+  }
+  
+  .container-price span {
+      font-size: 18px; /* Reduza o tamanho da fonte para telas menores */
+  }
+
+  .container-description {
+      padding: 20px 0;
+  }
+
+  .text-description {
+      font-size: 14px; /* Reduza o tamanho da fonte para telas menores */
+  }
+
+  .container-social {
+      padding: 10px 0;
+  }
+}
+/* Ajuste o layout para telas menores, como celulares */
+@media (max-width: 480px) {
+  .allcontainer {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+  }
+
+  main {
+      display: flex;
+      width: 100%;
+      align-items: center;
+  }
+
+  .container-img img {
+      width: 100%;
+      max-width: 300px; /* Reduza o tamanho da imagem para telas menores */
+      align-items: center;
+  }
+
+  .container-info-product {
+      padding: 10px;
+      text-align: center;
+  }
+
+  .container-price span {
+      font-size: 16px; /* Reduza o tamanho da fonte para telas menores */
+  }
+
+  .container-description {
+      padding: 10px 0;
+  }
+
+  .text-description {
+      font-size: 14px; /* Reduza o tamanho da fonte para telas menores */
+  }
+
+  .container-social {
+      padding: 10px 0;
+  }
+}
+
+/* Ajuste o layout para telas de tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .allcontainer {
+  display: flex;
+    
+      padding: 5px;
+      width: 100%;
+
+  }
+
+  main {
+      width: 100%;
+      display: flex;
+      align-items: center;
+  }
+
+  .container-img img {
+      width: 100%;
+      max-width: 400px; /* Tamanho da imagem para tablets */
+  }
+
+  .container-info-product {
+      padding: 20px;
+      text-align: left;
+  }
+
+  .container-description {
+      padding: 20px 0;
+  }
+}
+

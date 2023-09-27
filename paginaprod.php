@@ -9,7 +9,7 @@
 		
 	</head>
 	<body>
-	
+		
             <?php 
 
             include ('includes/menu.php');
@@ -17,20 +17,21 @@
             ?>
 			
 	
-		<img src="imagens/camisa_branca.jpg" alt="imagen-producto"/>
+		
 		
 
 		<main class="mainpagprod">
 			<div class="allcontainer">
 			<div class="container-img">
-				<img src="logo.png" alt="imagen-producto"/>
+				<img src="imagens/JAQUETA.webp" />
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">
 					<span>$95.00</span>
 					
+					
 				</div>
-				<img src="logo.png" alt="imagen-producto"/>
+				
 
 				
 
@@ -42,9 +43,11 @@
 					</button>
 				</div>
 
+				
+
 				<div class="container-description">
 					<div class="title-description">
-						<h4>Descrição</h4>
+						<span>Descrição</span>
 						
 					</div>
 					<div class="text-description">
@@ -61,6 +64,13 @@
 						</p>
 					</div>
 				</div>
+				<br>
+
+				<div class="condicaoProd">
+					<span>Condição: Novo </span>
+					<div class="condiprod"></div>
+
+				</div>
 
 				
 
@@ -76,6 +86,7 @@
 			</div>
 		</div>
 		</main>
+		<br><br><br>
 
 		
 

@@ -1385,6 +1385,7 @@ h1 {
 /* ---------------------------------------------------------------- */
 
 
+
 /* começo da página do produto*/
 
 
@@ -1395,13 +1396,16 @@ h1 {
 
 .mainpagprod {
 	display: flex;
-	margin-bottom: 80px;
-	border-radius: 10px;
+  border-radius: 10px;
 	background-color: #ffffff;
-	width: 100%;
-	height: auto;
 	align-items: center;
 	margin-right: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
+  
+
 	
 }
 
@@ -1453,7 +1457,7 @@ h1 {
 
 .container-add-cart {
 	display: flex;
-	gap: 20px;
+	
 	padding-bottom: 30px;
 	
 	margin-bottom: 10px;
@@ -1477,11 +1481,48 @@ h1 {
 	
 }
 
+.condicaoprod{
 
+  padding-bottom: 20px;
+	border-bottom: 1px solid #e4e4e4;
+	display: flex;
+	align-items: center;
+  text-align: center;
+  
 
-.hidden {
-	display: none;
+  
 }
+.condicaoprod span{
+
+  font-size: 24px;
+	font-weight: 300;
+
+
+}
+
+.condicaoProd::after {
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background-color: #e4e4e4;
+  margin-top: 20px; /* Ajuste este valor de acordo com a distância desejada entre a div e a linha */
+  align-items: center;
+  text-align: center;
+}
+.condiprod{
+
+  background-color: #00FF00;
+  display: block;
+  width: 10px;
+  border-radius: 400px;
+
+}
+
+
+
+
+
 
 .container-description,
 .container-additional-information,
@@ -1542,126 +1583,3 @@ h1 {
 }
 
 
-/* CSS no seu arquivo style.css */
-
-
-/* Ajuste o layout para telas menores */
-/* Adicione essas regras ao seu arquivo CSS */
-
-/* Ajuste o layout para telas menores */
-@media (max-width: 768px) {
-    .allcontainer {
-        flex-direction: column;
-        align-items: center;
-		display: flex;
-		
-		padding: 20px;
-    }
-
-	main {
-		display: flex;
-	    width: 100%;
-		align-items: center;
-		
-	}
-
-    .container-img img {
-        width: 100%;
-        max-width: 400px; /* Ajuste o tamanho da imagem conforme necessário */
-        align-items: center;
-    }
-
-	.container-info-product {
-        padding: 20px;
-        text-align: center;
-    }
-    
-    .container-price span {
-        font-size: 18px; /* Reduza o tamanho da fonte para telas menores */
-    }
-
-    .container-description {
-        padding: 20px 0;
-    }
-
-    .text-description {
-        font-size: 14px; /* Reduza o tamanho da fonte para telas menores */
-    }
-
-    .container-social {
-        padding: 10px 0;
-    }
-}
-/* Ajuste o layout para telas menores, como celulares */
-@media (max-width: 480px) {
-    .allcontainer {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        padding: 10px;
-    }
-
-    main {
-        display: flex;
-        width: 100%;
-        align-items: center;
-    }
-
-    .container-img img {
-        width: 100%;
-        max-width: 300px; /* Reduza o tamanho da imagem para telas menores */
-        align-items: center;
-    }
-
-    .container-info-product {
-        padding: 10px;
-        text-align: center;
-    }
-
-    .container-price span {
-        font-size: 16px; /* Reduza o tamanho da fonte para telas menores */
-    }
-
-    .container-description {
-        padding: 10px 0;
-    }
-
-    .text-description {
-        font-size: 14px; /* Reduza o tamanho da fonte para telas menores */
-    }
-
-    .container-social {
-        padding: 10px 0;
-    }
-}
-
-/* Ajuste o layout para telas de tablets */
-@media (min-width: 481px) and (max-width: 1024px) {
-    .allcontainer {
-    display: flex;
-      
-        padding: 5px;
-        width: 100%;
-
-    }
-
-    main {
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    .container-img img {
-        width: 100%;
-        max-width: 400px; /* Tamanho da imagem para tablets */
-    }
-
-    .container-info-product {
-        padding: 20px;
-        text-align: left;
-    }
-
-    .container-description {
-        padding: 20px 0;
-    }
-}
