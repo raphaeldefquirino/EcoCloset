@@ -30,6 +30,7 @@
   <ul class="menu">
     <li><a href="index.php">Home</a></li>
     <li><a href="feminina.php">Femininas</a></li>
+    <li><a href="kids.php">Kids</a></li>
     <li><a href="masculina.php">Masculinas</a></li>
     <li><a href="produto.php">Vender</a></li>
     <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
