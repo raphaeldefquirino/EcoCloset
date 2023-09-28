@@ -33,7 +33,7 @@
     echo  ' <div class="container">';
     while ($produto = mysqli_fetch_assoc($resultado)) {
 
-      echo '<a href="#"><div class="clothing-item">';
+      echo '<a href="paginaprod.php?id=' . $produto['idproduto'] . '"><div class="clothing-item">';
       echo '<img src="' . $produto['path'] . '" alt="Calça jeans">';
       echo '<br>';
       echo '<br>';
@@ -43,6 +43,7 @@
       echo ' <p class="clothing-price"><strong>R$' . $produto['valor'] . ' </strong></p>';
       echo '</div>';
       echo '</div>';
+      echo '</a>';
     }
     echo  '</div>';
   } else {

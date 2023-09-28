@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+include("includes/conexao.php");
+
+$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+$sql = "SELECT * FROM cadastro_prod WHERE idproduto = '{$id}'";
+$result = mysqli_query($conexao, $sql);
+$produto =  mysqli_fetch_assoc($result);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -23,11 +37,11 @@
 		<main class="mainpagprod">
 			<div class="allcontainer">
 			<div class="container-img">
-				<img src="imagens/JAQUETA.webp" />
+				<?php echo '<img src="' . $produto['path'] .'" />'; ?>
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">
-					<span>$95.00</span>
+					<span>R$ <?php echo $produto['valor']?></span>
 					
 					
 				</div>
@@ -52,22 +66,14 @@
 					</div>
 					<div class="text-description">
 						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing
-							elit. Laboriosam iure provident atque voluptatibus
-							reiciendis quae rerum, maxime placeat enim cupiditate
-							voluptatum, temporibus quis iusto. Enim eum qui delectus
-							deleniti similique? Lorem, ipsum dolor sit amet
-							consectetur adipisicing elit. Sint autem magni earum est
-							dolorem saepe perferendis repellat ipsam laudantium cum
-							assumenda quidem quam, vero similique? Iusto officiis
-							quod blanditiis iste?
+							<?php echo $produto['descricao_prod']?>
 						</p>
 					</div>
 				</div>
 				<br>
 
 				<div class="condicaoProd">
-					<span>Condição: Novo </span>
+					<span>Condição: <?php echo $produto['condicao']?> </span>
 				</div>
 					
 
