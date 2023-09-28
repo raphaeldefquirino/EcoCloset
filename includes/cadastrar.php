@@ -22,8 +22,8 @@ if ($row['TOTAL'] == 1) {
     $_SESSION['usuario_existe'] = true;
     header('Location: ../cadastro.php');
     exit;
-} else if ($senha != $confirmaSenha) {
-    echo  "<script>alert('Senhas divergem');</script>";
+} else if ($senha !== $confirmaSenha) {
+    $_SESSION['senhas_divergem'] = true;
     header('Location: ../cadastro.php');
     exit;
 } else {
