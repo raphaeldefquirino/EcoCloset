@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8ad860e92b.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
 <header class="header">
@@ -28,6 +29,12 @@
     <div class="hamburger"></div>
 
   <ul class="menu">
+    <form action="#" method="post">
+    <div class="serch-box">
+        <input class = "search-txt" id="search" type="search" placeholder="Pesquisar..." />
+        <button class = "search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>  
+    </form>
+    </div>
     <li><a href="index.php">Home</a></li>
     <li><a href="feminina.php">Femininas</a></li>
     <li><a href="kids.php">Kids</a></li>

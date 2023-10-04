@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos/style.css">
   <link rel="stylesheet" href="estilos/media-query.css">
+  <script src="https://kit.fontawesome.com/8ad860e92b.js" crossorigin="anonymous"></script>
   <title>EcoCloset</title>
 </head>
 
