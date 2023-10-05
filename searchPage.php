@@ -22,7 +22,7 @@ $buscar = mysqli_real_escape_string($conexao, trim($_POST['buscar']));
 	<title>Document</title>
 </head>
 
-<body>
+<body class="body-searchpage">
 	<?php
 	include("menu.php")
 	?>

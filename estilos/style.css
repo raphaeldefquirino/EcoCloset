@@ -1397,10 +1397,59 @@ width: auto;
 
 
 
-/*-------------------------------------------erro search----------------------------------------------------*/ 
+/*-------------------------------------------ERROR MENSAGE SEARCH PAGE----------------------------------------------------*/ 
 
 .erro-prod-search {
-  display: flex;
   text-align: center;
   align-items: center;
+  padding: 100px;
 }
+
+
+
+/*-------------------------------------------END ERROR MENSAGE SEARCH PAGE----------------------------------------------------*/ 
+
+/*-------------------------------------------FILTER----------------------------------------------------*/ 
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.filter-section label {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.filter-section select {
+  padding: 5px 10px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.filter-button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filter-button:hover {
+  background-color: #45a049; 
+}
+
+
+/*-------------------------------------------END FILTER----------------------------------------------------*/ 
+

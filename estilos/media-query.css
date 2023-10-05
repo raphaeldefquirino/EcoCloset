@@ -443,3 +443,10 @@ main {
   }
 }
 
+/*-------------------------------------------ERROR MENSAGE SEARCH PAGE----------------------------------------------------*/ 
+
+@media (min-width: 760px){
+  .erro-prod-search{
+    padding: 220px;
+  }
+}
