@@ -34,7 +34,7 @@ $produto =  mysqli_fetch_assoc($result);
 
 	<?php
 
-	include('includes/menu.php');
+	include('menu.php');
 
 	?>
 

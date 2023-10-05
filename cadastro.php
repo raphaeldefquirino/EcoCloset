@@ -20,7 +20,7 @@ session_start();
 
     <?php
 
-    include_once('includes/menu.php');
+    include_once('menu.php');
 
     ?>
 

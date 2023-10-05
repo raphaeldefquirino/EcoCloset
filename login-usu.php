@@ -22,7 +22,7 @@ session_start();
 
     <?php
 
-    include("includes/menu.php");
+    include("menu.php");
 
     ?>
 

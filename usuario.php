@@ -19,7 +19,7 @@
         <title>Tabela deletar</title>
 
         <?php
-        include("includes/menu.php");
+        include("menu.php");
         ?>
 
     </head>
@@ -76,7 +76,7 @@
                             echo '<td data-label="Nome do produto">' . $produto['nome_prod'] . '</td>';
                             echo '<td data-label="Descrição">' . $produto['descricao_prod'] . '</td>';
                             echo '<td data-label="Valor">' . $produto['valor'] . '</td>';
-                            echo '<td data-label="..."><a href="deletar.php?id=' . $produto['idproduto'] . '" class="deletar">&#10006;</a></td>';
+                            echo '<td data-label="..."><a href="includes/deletar.php?id=' . $produto['idproduto'] . '" class="deletar">&#10006;</a></td>';
                             echo '</tr>';
                         }
                     } else {

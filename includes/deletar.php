@@ -10,7 +10,7 @@ $resultado = mysqli_query($conexao, $sql);
 
 if(mysqli_affected_rows($conexao)){
 
-    header("Location: usuario.php");
+    header("Location: ../usuario.php");
 
 }
 
