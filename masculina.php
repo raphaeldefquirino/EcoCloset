@@ -22,6 +22,27 @@
 
   ?>
 
+<div class="filter-bar">
+  <div class="merda">
+    <label for="subcategory"  class = "subcategory">Subcategoria:</label>
+    <select name="subcategory" id="subcategory">
+      <option value="">Escolha</option>
+      <option value="shorts">Shorts</option>
+      <option value="jacket">Jaqueta</option>
+      <option value="shoes">Tênis</option>
+      <option value="sweatpants">Calça moletom</option>
+    </select>
+
+    <label for="sort"  class = "subcategory">Classificar por:</label>
+    <select name="sort" id="sort">
+      <option value="lowest">Menor preço</option>
+      <option value="highest">Maior preço</option>
+    </select>
+
+    <button class="filter-button">Filtrar</button>
+</div>
+</div>
+
   <?php
 
   include("includes/conexao.php");

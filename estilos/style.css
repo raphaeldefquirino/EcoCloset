@@ -1111,7 +1111,7 @@ h1 {
 .clothing-price {
   font-weight: bolder;
   font-size: 14px;
-  color: #8705c4;
+  color: #AF00FF;
   margin-bottom: 5px;
 }
 
@@ -1411,45 +1411,40 @@ width: auto;
 
 /*-------------------------------------------FILTER----------------------------------------------------*/ 
 
-.filter-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0;
-  border-bottom: 1px solid #ccc;
+.filter-bar {
+  display: flex ;
+  align-items: left;
+  justify-content: left;
+  padding: 15px;
+  padding-top: 40px;
+  max-width: 1050px;
+  margin: auto;
 }
 
-.filter-section label {
+
+.filter-bar select,
+.filter-bar button {
+  margin-left: 10px;
+  font-size: 14px;
+  padding: 3px;
   margin-right: 10px;
-  font-weight: 600;
-}
-
-.filter-section select {
-  padding: 5px 10px;
-  margin-right: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
+  
 }
 
 .filter-button {
-  background-color: #4CAF50; 
+  background-color: #ffffff;
+  color: #Af00Ff;
   border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 0 2px;
   cursor: pointer;
-  border-radius: 5px;
+  transition: 0.2s;
+  border-radius: 10px;
+  width: 80px;
 }
 
 .filter-button:hover {
-  background-color: #45a049; 
+  background-color: #AF00FF;
+  color: #ffffff;
 }
-
 
 /*-------------------------------------------END FILTER----------------------------------------------------*/ 
 
