@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="estilos/style.css">
   <link rel="stylesheet" href="estilos/media-query.css">
   <title>EcoCloset</title>
@@ -23,24 +24,24 @@
   ?>
 
 <div class="filter-bar">
-  <div class="merda">
+<button class="filter-button mobile-show">Mostrar filtros</button>
+    <form action="#" method="post">
     <label for="subcategory"  class = "subcategory">Subcategoria:</label>
-    <select name="subcategory" id="subcategory">
-      <option value="">Escolha</option>
-      <option value="shorts">Shorts</option>
-      <option value="jacket">Jaqueta</option>
-      <option value="shoes">Tênis</option>
+    <select name="subcategoria" id="subcategory">
+      <option value="Shorts">Shorts</option>
+      <option value="Jaqueta">Jaqueta</option>
+      <option value="Tênis">Tênis</option>
       <option value="sweatpants">Calça moletom</option>
     </select>
 
     <label for="sort"  class = "subcategory">Classificar por:</label>
     <select name="sort" id="sort">
-      <option value="lowest">Menor preço</option>
-      <option value="highest">Maior preço</option>
+      <option value="caro">Menor preço</option>
+      <option value="barato">Maior preço</option>
     </select>
 
-    <button class="filter-button">Filtrar</button>
-</div>
+    <button class="filter-button" name="filtrar"> Filtrar</button>
+    </form>
 </div>
 
   <?php
@@ -83,6 +84,22 @@
   include("includes/footer.php");
 
   ?>
+
+  <script>
+   $(document).ready(function() {
+    $('.filter-bar .mobile-show').on('click', function() {
+        $('.filter-bar form').slideToggle();
+    });
+
+    // Listener para o evento de redimensionamento da janela
+    $(window).resize(function() {
+        if ($(window).width() > 767) {
+            $('.filter-bar form').css('display', 'block');  // Mostra o formulário
+        }
+    });
+});
+
+  </script>
 </body>
 
 </html>

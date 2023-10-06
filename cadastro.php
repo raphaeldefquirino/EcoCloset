@@ -106,7 +106,7 @@ session_start();
                     <div class="textfield">
                         <br>
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" placeholder="Email" required>
+                        <input type="text" name="email" id="email" placeholder="Email" required >
                     </div>
                     <div class="textfield">
                         <br>

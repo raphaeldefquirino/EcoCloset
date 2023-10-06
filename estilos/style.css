@@ -1412,13 +1412,14 @@ width: auto;
 /*-------------------------------------------FILTER----------------------------------------------------*/ 
 
 .filter-bar {
-  display: flex ;
-  align-items: left;
-  justify-content: left;
+
+  align-items: center;
+  justify-content: center;
   padding: 15px;
   padding-top: 40px;
-  max-width: 1050px;
-  margin: auto;
+  display: block;
+  text-align: center;
+  flex-direction: column;
 }
 
 
@@ -1438,13 +1439,49 @@ width: auto;
   cursor: pointer;
   transition: 0.2s;
   border-radius: 10px;
-  width: 80px;
+  width: 90px;
+  height: 30px;
+
 }
 
 .filter-button:hover {
   background-color: #AF00FF;
   color: #ffffff;
 }
+
+.filter-bar form {
+  display: none;
+}
+
+.filter-bar .mobile-show {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .filter-bar form {
+    display: block;
+  }
+
+  .filter-bar .mobile-show {
+    display: none;
+  }
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 767px) {
+  .filter-bar label,
+  .filter-bar select,
+  .filter-bar button {
+      display: block;
+      width: 100%;
+      margin: 10px 0; /* Adiciona margens para espaçar os itens verticalmente */
+  }
+
+  .filter-button {
+    height: 40px;
+  }
+}
+
 
 /*-------------------------------------------END FILTER----------------------------------------------------*/ 
 
