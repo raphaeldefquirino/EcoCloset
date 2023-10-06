@@ -18,8 +18,9 @@ $novoNomeDoArquivo = uniqid();
 $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
 
 if ($extensao != "jpg" && $extensao != 'png' && $extensao != 'jpeg') {
-    die("Tipo de arquivo não aceito");
-}
+    $_SESSION['error_arquivo'] = true;
+    header('Location: produto.php');
+    exit;}
 
 $path = $pasta . $novoNomeDoArquivo . "." . $extensao;
 

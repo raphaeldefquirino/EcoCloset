@@ -64,6 +64,31 @@ include('includes/verifica-login.php');
 
                 ?>
 
+
+                <?php
+
+                if (isset($_SESSION['error_arquivo'])) :
+
+                ?>
+
+
+                    <div class="caixa-CadastroErro">
+                        <div class="menssagemErro">
+
+                            <p>ATENÇÃO!! <br>
+                                Tipo de arquivo não aceito<br></p>
+
+                        </div>
+                    </div>
+
+                <?php
+
+                endif;
+                unset($_SESSION['error_arquivo']);
+
+                ?>
+
+
                 <?php
 
                 if (isset($_SESSION['prod_cadastrado'])) :
