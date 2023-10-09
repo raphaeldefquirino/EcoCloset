@@ -486,6 +486,21 @@ main {
   }
 }
 
+
+
+
+/* Media-query da página dos usuario  */
+
+@media screen and (min-width:850px) {
+    .tudo-tudo-desktop{
+        display: block;
+        display: flex;
+    }
+    .tudo{
+        display: none;
+    }
+}
+
 /*-------------------------------------------ERROR MENSAGE SEARCH PAGE----------------------------------------------------*/ 
 
 @media (min-width: 760px){
