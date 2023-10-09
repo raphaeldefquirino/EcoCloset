@@ -73,41 +73,84 @@
 
 /*---------------------- media query footer------------------- */
 
-@media screen and (max-width: 700px) {
-  .row-footer {
-    flex-direction: column;
-  }
-  .footer-col {
-      order: 1;
+@media screen and (min-width: 700px) {
+
+    .container-footer {
+        display: flex;
+        justify-content: center;
     }
+
+    .row-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .footer-col {
+        order: 1;
+    }
+
     .footer-col:nth-child(2) {
-      order: 3;
+        order: 3;
     }
+
     .footer-col:nth-child(3) {
-      order: 2;
+        order: 2;
     }
-  .footer-col {
-    width: 100%;
-    padding: 0;
-    margin-bottom: 30px;
-  }
-  .container-footer {
-      text-align: center;
-      margin-left: 0;
+
+    .footer-col:nth-child(4) {
+        order: 4;
+        flex: 0 0 100%;
     }
-    .social-icons li a {
-      align-items: center;
+
+    .footer-col:nth-child(1) ul li {
+        padding-left: 30%;
     }
-    .logo-title {
-      display: block;
-      align-items: center;
-  }
-  .footer-col ul.EcoCloset li {
-      padding-left: 0px;
+
+    .footer-col {
+        margin-bottom: 1%;
     }
-    
+    .footer-col h4{
+        margin-bottom: 6%;
+    }
+    .footer-col ul li{
+        padding-bottom: 5px;
+    }
+
+    .container-imagens-footer {
+        display: flex;
+        justify-content: baseline;
+    }
+
+    .Imagem-alcina {
+        padding-right: 0%;
+    }
+
+    .Imagem-exposoft {
+        padding-left: 0%;
+    }
+
+    .logo-title a{
+        display: flex;
+    }
+
 }
+
+@media screen and (min-width: 950px) {
+    .footer-col {
+        width: 33.33%;
+        padding: 0 150px;
+    }
+    .footer-col:nth-child(1) ul li{
+        padding-left: 50px;
+    }
+    .footer-col ul li{
+        padding-bottom: 3px;
+    }
     
+
+}    
 
 
 /* -------------------------Fim media query footer----------------------- */
