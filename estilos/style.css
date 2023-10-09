@@ -864,157 +864,1398 @@ font-weight: 800;
 
 /*-------------------------------------------PAGINA USUARIO----------------------------------------------------*/ 
 
-.tabela-usu {
-  margin: 20px;
-  overflow-x: auto;
-  padding-top: 30px;
-}    
-.table-usu {
-  margin-top: 30px;
-  width: 100%;           
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-tr{
-  padding-top: 30px;
+body{
+    background-color: #f1f1f1;
 }
-
-.table-usu th,
-.table-usu td {
-  padding: 8px;
-  text-align: center;
-  border-bottom: 5px solid #ffffff;
+.tudo{
+    background-color: white;
+    width: 330px;
+    margin: auto;
+    border-radius: 10px;
 }
-
-.table-usu th {
-  background-color: #f2f2f2;
+.carrinho{
+    margin-top: 20px;
 }
-
-.deletar{
-  font-size: 20px;
-  text-decoration: none;
-  color: red;
+.conteudo-carrinho{
+    display: none; /* Display: none; para a tela de "carrinho" não aparecer. */
 }
-
-@media screen and (max-width: 600px) {
-  .table-usu {
-      display: block;               
-  }
-
-  .table-usu thead {
-      display: none;
-  }
-
-  tr{
-  padding-top: 60px;
+.card-carrinho{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 317px;
 }
-
-  .table-usu tbody,
-  .table-usu tr,
-  .table-usu th,
-  .table-usu td {
-      display: block;
-  }
-
-  .table-usu td {
-      border-bottom: 2px solid #ddd;
-      position: relative;
-      padding-left: 50%;
-  }
-
-  .table-usu td:before {
-      position: absolute;
-      top: 6px;
-      left: 6px;
-      width: 45%;
-      padding-right: 10px;
-      white-space: nowrap;
-      content: attr(data-label);
-      font-weight: bold;
-  }
-
+.card-carrinho p{
+    font-size: 20px;
+    font-weight: 600;
 }
-
-/*-------------------------------------------END PAGINA USUARIO----------------------------------------------------*/ 
-
-
-/*-------------------------------------------PAGINA MASCULINA E FEMININA----------------------------------------------------*/ 
-
-.product {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 250px;
-  margin: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  background-color: #ffffff;
-  align-items: center;
-  text-align: center;
-  padding: 35px;
-  text-decoration: none;
-  color: rgb(0, 0, 0); 
-  border-radius: 10px;
+.card-carrinho.active {
+    color: #af00ff;
+    /* Adicione outras propriedades de estilo conforme necessário */
 }
-
-.catigoria{
-
-  
-  align-items: center;
-  text-align: center;
+#shopping_cart{
+    margin-right: 10px;
+    font-size: 30px;
 }
-
-.product img {
-
- width: 100%;
- border-radius: 10px;
+#chevron-carrinho{
+    margin-left: 5px;
+    font-size: 30px;
+    margin-top: 5px;
 }
-
-.imgprod{
-
-  width: 230px;
-  height: 230px;
+#chevron-dados{
+    margin-left: 5px;
+    font-size: 30px;
+    margin-top: 5px;
 }
-
-.preço{
-
-  background-color: #f1f1f1;
-  border-radius: 10px;
-  padding: 5px;
-  width: 110px;
-  height: 30px;
-  font-weight: 700;
-  margin: 0%;
-  right: 80px;
-  color: green;
+#chevron-cadastrados{
+    margin-left: 5px;
+    font-size: 30px;
+    margin-top: 5px;
 }
-
-.descrição{
-  
-  background-color: #f1f1f1;
-  border-radius: 10px;
-  width: 230px;
-  height: 100px;
-  color: rgb(78, 69, 69);
-  text-align: center;
-  align-items: center;
-  padding: 10px;
-  
-
-  
-
-}
-
-.telefone{
-
-  text-decoration: none;
-  background-color: #f1f1f1;
-  border-radius: 10px;
-  color: inherit;
-  
+/* Define a classe para girar as setas para baixo */
+.rotate-down {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease; /* Adicione uma transição suave para a animação */
 }
 
 
+.container-editar-produto{
+    margin-top: 40px;
+}
+.tabela-carrinho{
+    background-color: white;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+.imagem-tabela-carrinho img{
+   border-radius: 20px; 
+   margin-top: 10px;
+   margin-left: 10px;
+}
+.imagem-tabela-carrinho img:hover{
+    transition: opacity 0.4s ease;
+    opacity: 0.6;
+}
+.texto-tabela-carrinho{
+    margin-left: 8px;
+}
+.preco-tabela-carrinho{
+    font-size: 20px;
+    font-weight: 600;
+}
+.desc-tabela-carrinho{
+    font-size: 20px;
+    margin-top: 15px;
+}
+.excluir-tabela-carrinho{
+    margin-left: 35px;
+}
+.excluir-tabela-carrinho span{
+    color: black;
+}
+#delete{
+    font-size: 40px;
+    color: black;
+}
+#delete:hover {
+    color: red; /* Altera a cor para vermelho quando o cursor está sobre o ícone */
+}
+.total-carrinho{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.total-carrinho p{
+    margin-right: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.confirmar-carrinho a{
+    text-decoration: none;
+}
+.texto-confirmar-carrinho{
+    background-color: white;
+    width: 140px;
+    height: 35px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: #af00ff solid 2px;
+}
+.texto-confirmar-carrinho p{
+    color: #af00ff;
+    font-size: 17px;
+    font-weight: 300;
+    height: 32px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
+    padding-top: 5px;
+}
+.texto-confirmar-carrinho p:hover{
+    color: white;
+    transition: background-color 0.4s ease;
+    background-color: #af00ff;
+}
 
+.dados{
+    margin-top: 20px;
+}
+.conteudo-dados{
+    display: none;  /* Display: none; para a tela de "dados" não aparecer. */
+}
+.card-dados{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 190px;
+}
+.card-dados p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.card-dados.active {
+    color: #af00ff;
+    /* Adicione outras propriedades de estilo conforme necessário */
+}
+#database{
+    margin-right: 10px;
+    font-size: 30px;
+}
+.tabela-dados{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    background-color: white;
+}
+.re-email{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.e-email p{
+    font-weight: 600;
+    font-size: 20px
+}
+.u-email{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    
+}
+.re-nome{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-nome{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-nome{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-sobrenome{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-sobrenome{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-sobrenome{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-endereco{
+    display: flex;
+    align-items: baseline;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-endereco{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-endereco{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-cep{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-cep{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-cep{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-complemento{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-complemento{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-complemento{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-tel{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-tel{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-tel{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.editar-dados {
+    background-color: white;
+    border: #af00ff solid 2px;
+    width: 165px;
+    height: 35px;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.editar-dados a{
+    text-decoration: none;
+}
+.editar-dados p{
+    color: #af00ff;
+    font-size: 17px;
+    font-weight: 300;
+    height: 32px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
+    padding-top: 5px;
+}
+.editar-dados p:hover{
+    color: white;
+    transition: background-color 0.4s ease;
+    background-color: #af00ff;
+}
+
+
+.cadastrados{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card-cadastrados{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 281px;
+}
+.card-cadastrados p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.card-cadastrados.active {
+    color: #af00ff;
+    /* Adicione outras propriedades de estilo conforme necessário */
+}
+#bookmark_manager{
+    margin-right: 10px;
+    font-size: 30px;
+}
+.conteudo-dados{
+    background-color: white;
+    display: none;  /* Display: none; para a tela de "dados" não aparecer. */
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+.card-dados{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 190px;
+}
+.card-dados p{
+    font-size: 20px;
+    font-weight: 600;
+}
+#database{
+    margin-right: 10px;
+    font-size: 30px;
+}
+.tabela-dados{
+    margin-bottom: 30px;
+    background-color: ;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.re-email{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.e-email p{
+    font-weight: 600;
+    font-size: 20px
+}
+.u-email{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.re-nome{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.e-nome{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-nome{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.re-sobrenome{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-sobrenome{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-sobrenome{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.re-endereco{
+    display: flex;
+    align-items: baseline;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-endereco{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-endereco{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.re-cep{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-cep{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-cep{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.re-complemento{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-complemento{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-complemento{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.re-tel{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-tel{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-tel{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.espaco-editar-dados{
+    padding-bottom: 10px;
+}
+.editar-dados {
+    background-color: white;
+    border: #af00ff solid 2px;
+    width: 165px;
+    height: 35px;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+}
+.editar-dados a{
+    text-decoration: none;
+}
+.editar-dados p{
+    color: #af00ff;
+    font-size: 17px;
+    font-weight: 300;
+    height: 33px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
+    padding-top: 5px;
+}
+.editar-dados p:hover{
+    color: white;
+    transition: background-color 0.4s ease;
+    background-color: #af00ff;
+}
+
+
+
+
+
+
+.conteudo-carrinho-cadastrados{
+    display: none;   
+}
+.tabela-cadastrados th{
+    flex-direction: column;
+}
+.conteudo-carrinho-cadastrados{
+    display: ;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.editar-tabela-carrinho{
+    margin-left: 20px;
+}
+.editar-tabela-carrinho span{
+    color: #af00ff;
+}
+#edit{
+    font-size: 30px;
+}
+#delete-cad{
+    font-size: 35px;
+}
+#delete-cad:hover{
+    color: red;
+}
+.excluir-tabela-cad{
+    margin-left: 15px;
+}
+.excluir-tabela-cad span{
+    color: black;
+}
+.titulo-preco p{
+    font-weight: 600;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.linha1-editar-produtos{
+    display: flex;
+    margin-bottom: 20px;
+}
+.e-precoO{
+    width: 120px;
+    margin-left: 10px;
+    text-align: center;
+}
+.u-precoO{
+    background-color: #cfcfcf;
+    width: 120px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-top: 7px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid black;
+    opacity: 0.6;
+}
+.col-precoN{
+    margin-left: 40px;
+}
+.e-precoN{
+    width: 120px;
+    margin-left: 10px;
+    text-align: center;
+}
+.u-precoN input[type="text"]{
+    background-color: #e6e6e6;
+    width: 120px;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.linha2-editar-produtos{
+    margin-bottom: 20px;
+}
+.e-nomeS p{
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.u-nomeS input[type="text"]{
+    background-color: #e6e6e6;
+    width: 290px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.linha3-editar-produtos{
+    margin-bottom: 20px;
+}
+.e-desc p{
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.u-desc input[type="text"]{
+    background-color: #e6e6e6;
+    width: 290px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.linha4-editar-produtos{
+    margin-bottom: 20px;
+}
+.e-tipo p{
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.u-tipo{
+    margin-top: 10px;
+}
+.u-tipo input[type="radio"]{
+    appearance: none;
+    background-color: #e6e6e6;
+    border: 2px solid black;
+    height: 20px;
+    width:  20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 4px;
+    display: inline-flex; /* Para alinhar verticalmente o conteúdo */
+    align-items: center; /* Centralizar verticalmente */    
+    cursor: pointer;
+}
+.u-tipo input[type="radio"]:checked::before{
+    content: "✔";
+    color: #af00ff;
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+}
+.u-tipo label {
+    cursor: pointer; /* Para mostrar a mão ao passar o mouse sobre o label */
+    font-size: 18px;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 7px;
+}
+.linha5-editar-produtos{
+    margin-bottom: 20px;
+}
+.e-cond p{
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.u-cond{
+    margin-top: 10px;
+}
+.u-cond input[type="radio"]{
+    appearance: none;
+    background-color: #e6e6e6;
+    border: 2px solid black;
+    height: 20px;
+    width:  20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 4px;
+    display: inline-flex; /* Para alinhar verticalmente o conteúdo */
+    align-items: center; /* Centralizar verticalmente */    
+    cursor: pointer;
+}
+.u-cond input[type="radio"]:checked::before{
+    content: "✔";
+    color: #af00ff;
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+}
+.u-cond label {
+    cursor: pointer; /* Para mostrar a mão ao passar o mouse sobre o label */
+    font-size: 18px;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 7px;
+}
+.linha6-editar-produtos{
+    margin-bottom: 30px;
+}
+.e-sub p{
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.u-sub{
+    margin-top: 10px;
+}
+.u-sub select{
+    background-color: #e6e6e6;
+    border: 2px solid black;
+    font-size: 17px;
+    width: 150px;
+    height: 40px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 4px;
+    display: inline-flex; /* Para alinhar verticalmente o conteúdo */
+    align-items: center; /* Centralizar verticalmente */    
+    cursor: pointer;
+}
+.btn-slavar-alt-prod{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.btn-slavar-alt-prod input[type="submit"]{
+    background-color: white;
+    border: 2px solid #af00ff;
+    width: 165px;
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    color: #af00ff;
+    font-size: 17px;
+    text-decoration: none;
+}
+.btn-slavar-alt-prod input[type="submit"]:hover{
+    background-color: #af00ff;
+    transition: background-color 0.4s ease;
+    color: white;
+}
+#delete-cad{
+    font-size: 35px;
+}
+#delete-cad:hover{
+    color: red;
+}
+#edit{
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tudo-tudo-desktop{
+    display: flex;
+    width: 825px;
+    height: auto;
+    margin: auto;
+    display: none;
+}
+.tudo-card-desktop{
+    background-color: #f1f1f1;
+    width: 330px;
+    height: 165px;
+    border: 3px solid black;
+}
+.card-carrinho-desktop{
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    margin-left: 5px;
+    cursor: pointer;
+    width: 317px;
+}
+.card-carrinho-desktop p{
+    font-size: 20px;
+    font-weight: 600;
+    width: 330px;
+}
+.card-carrinho-desktop.active {
+    color: #af00ff;
+    /* Adicione outras propriedades de estilo conforme necessário */
+}
+#shopping_cart{
+    margin-right: 10px;
+    font-size: 30px;
+}
+#chevron-carrinho{
+    margin-left: 5px;
+    font-size: 30px;
+    margin-top: 5px;
+}
+.card-dados-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    cursor: pointer;
+    width: 190px;
+    margin-top: 10px;
+}
+.card-dados-desktop p{
+    font-size: 20px;
+    font-weight: 600;
+    width: 150px;
+}
+.card-dados-desktop.active {
+    color: #af00ff;
+    /* Adicione outras propriedades de estilo conforme necessário */
+}
+#database{
+    margin-right: 10px;
+    font-size: 30px;
+}
+#chevron-dados{
+    margin-left: 5px;
+    font-size: 30px;
+    margin-top: 5px;
+}
+.card-cadastrados-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    cursor: pointer;
+    width: 281px;
+    margin-top: 10px;
+}
+.card-cadastrados-desktop p{
+    font-size: 20px;
+    font-weight: 600;
+    width: 300px;
+}
+.card-cadastrados-desktop.active {
+    color: #af00ff;
+    /* Adicione outras propriedades de estilo conforme necessário */
+}
+#bookmark_manager{
+    margin-right: 10px;
+    font-size: 30px;
+}
+#chevron-cadastrados{
+    margin-left: 5px;
+    font-size: 30px;
+    margin-top: 5px;
+}
+.tabelas-desktop{
+    background-color: ;
+    width:400px;
+    margin-left: 50px;
+}
+
+
+.conteudo-carrinho-desktop{
+   background-color: white;
+    display: none; /* para não aparecer esta parte*/
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.tabela-carrinho-desktop{
+    background-color: white;
+    margin-bottom: 1px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px 20px 20px 20px;
+}
+.imagem-tabela-carrinho-desktop img{
+   border-radius: 20px; 
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-left: 10px;
+}
+.imagem-tabela-carrinho-desktop img:hover{
+    transition: opacity 0.4s ease;
+    opacity: 0.6;
+}
+.texto-tabela-carrinho-desktop{
+    margin-left: 8px;
+}
+.preco-tabela-carrinho-desktop{
+    font-size: 20px;
+    font-weight: 600;
+}
+.desc-tabela-carrinho-desktop{
+    font-size: 20px;
+    margin-top: 15px;
+}
+.excluir-tabela-carrinho-desktop{
+    margin-left: 40px;
+}
+.excluir-tabela-carrinho-desktop span{
+    color: black;
+}
+#delete{
+    font-size: 40px;
+    color: black;
+}
+#delete:hover {
+    color: red; /* Altera a cor para vermelho quando o cursor está sobre o ícone */
+}
+.total-carrinho-desktop{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+.total-carrinho-desktop p{
+    margin-right: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.confirmar-carrinho-desktop a{
+    text-decoration: none;
+}
+.texto-confirmar-carrinho-desktop{
+    background-color: white;
+    width: 140px;
+    height: 35px;
+    text-align: center;
+    margin: auto;
+    margin-top: 0px;
+    border-radius: 5px;
+    border: #af00ff solid 2px;
+}
+.texto-confirmar-carrinho-desktop p{
+    color: #af00ff;
+    font-size: 17px;
+    font-weight: 300;
+    height: 33px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
+    padding-top: 5px;
+}
+.texto-confirmar-carrinho-desktop p:hover{
+    color: white;
+    transition: background-color 0.4s ease;
+    background-color: #af00ff;
+}
+
+
+
+
+.conteudo-dados-desktop{
+    background-color: white;
+    display: none;  /* Display: none; para a tela de "dados" não aparecer. */
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+.card-dados-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    cursor: pointer;
+    width: 190px;
+}
+.card-dados-desktop p{
+    font-size: 20px;
+    font-weight: 600;
+}
+#database{
+    margin-right: 10px;
+    font-size: 30px;
+}
+.tabela-dados-desktop{
+    margin-bottom: 30px;
+    background-color: ;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.re-email-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.e-email-desktop p{
+    font-weight: 600;
+    font-size: 20px
+}
+.u-email-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.re-nome-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+.e-nome-desktop{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-nome-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.re-sobrenome-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-sobrenome-desktop{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-sobrenome-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.re-endereco-desktop{
+    display: flex;
+    align-items: baseline;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-endereco-desktop{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-endereco-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.re-cep-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-cep-desktop{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-cep-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.re-complemento-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-complemento-desktop{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-complemento-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.re-tel-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.e-tel-desktop{
+    font-weight: 600;
+    font-size: 20px;
+}
+.u-tel-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    margin-right: 10px;
+}
+.espaco-editar-dados-desktop{
+    padding-bottom: 10px;
+}
+.editar-dados-desktop {
+    background-color: white;
+    border: #af00ff solid 2px;
+    width: 165px;
+    height: 35px;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+}
+.editar-dados-desktop a{
+    text-decoration: none;
+}
+.editar-dados-desktop p{
+    color: #af00ff;
+    font-size: 17px;
+    font-weight: 300;
+    height: 33px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
+    padding-top: 5px;
+}
+.editar-dados-desktop p:hover{
+    color: white;
+    transition: background-color 0.4s ease;
+    background-color: #af00ff;
+}
+
+
+
+
+
+
+.container-editar-produto-desktop{
+    display: none;   
+}
+.tabela-cadastrados-desktop th{
+    flex-direction: column;
+}
+.conteudo-carrinho-cadastrados-desktop{
+    display: none;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.editar-tabela-carrinho-desktop{
+    margin-left: 20px;
+}
+.editar-tabela-carrinho-desktop span{
+    color: #af00ff;
+}
+#edit{
+    font-size: 30px;
+}
+#delete-cad-desktop{
+    font-size: 35px;
+}
+#delete-cad-desktop:hover{
+    color: red;
+}
+.excluir-tabela-cad-desktop{
+    margin-left: 15px;
+}
+.excluir-tabela-cad-desktop span{
+    color: black;
+}
+.titulo-preco-desktop p{
+    font-weight: 600;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.linha1-editar-produtos-desktop{
+    display: flex;
+    margin-bottom: 20px;
+}
+.e-precoO-desktop{
+    width: 120px;
+    margin-left: 10px;
+    text-align: center;
+}
+.u-precoO-desktop{
+    background-color: #cfcfcf;
+    width: 120px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-top: 7px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid black;
+    opacity: 0.6;
+}
+.col-precoN-desktop{
+    margin-left: 40px;
+}
+.e-precoN-desktop{
+    width: 120px;
+    margin-left: 10px;
+    text-align: center;
+}
+.u-precoN-desktop input[type="text"]{
+    background-color: #e6e6e6;
+    width: 120px;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.linha2-editar-produtos-desktop{
+    margin-bottom: 20px;
+}
+.e-nomeS-desktop p{
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.u-nomeS-desktop input[type="text"]{
+    background-color: #e6e6e6;
+    width: 290px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.linha3-editar-produtos-desktop{
+    margin-bottom: 20px;
+}
+.e-desc-desktop p{
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.u-desc-desktop input[type="text"]{
+    background-color: #e6e6e6;
+    width: 290px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.linha4-editar-produtos-desktop{
+    margin-bottom: 20px;
+}
+.e-tipo-desktop p{
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.u-tipo-desktop{
+    margin-top: 10px;
+}
+.u-tipo-desktop input[type="radio"]{
+    appearance: none;
+    background-color: #e6e6e6;
+    border: 2px solid black;
+    height: 20px;
+    width:  20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 4px;
+    display: inline-flex; /* Para alinhar verticalmente o conteúdo */
+    align-items: center; /* Centralizar verticalmente */    
+    cursor: pointer;
+}
+.u-tipo-desktop input[type="radio"]:checked::before{
+    content: "✔";
+    color: #af00ff;
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+}
+.u-tipo-desktop label {
+    cursor: pointer; /* Para mostrar a mão ao passar o mouse sobre o label */
+    font-size: 18px;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 7px;
+}
+.linha5-editar-produtos-desktop{
+    margin-bottom: 20px;
+}
+.e-cond-desktop p{
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.u-cond-desktop{
+    margin-top: 10px;
+}
+.u-cond-desktop input[type="radio"]{
+    appearance: none;
+    background-color: #e6e6e6;
+    border: 2px solid black;
+    height: 20px;
+    width:  20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 4px;
+    display: inline-flex; /* Para alinhar verticalmente o conteúdo */
+    align-items: center; /* Centralizar verticalmente */    
+    cursor: pointer;
+}
+.u-cond-desktop input[type="radio"]:checked::before{
+    content: "✔";
+    color: #af00ff;
+    font-weight: 600;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+}
+.u-cond-desktop label {
+    cursor: pointer; /* Para mostrar a mão ao passar o mouse sobre o label */
+    font-size: 18px;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 7px;
+}
+.linha6-editar-produtos-desktop{
+    margin-bottom: 30px;
+}
+.e-sub-desktop p{
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.u-sub-desktop{
+    margin-top: 10px;
+}
+.u-sub-desktop select{
+    background-color: #e6e6e6;
+    border: 2px solid black;
+    font-size: 17px;
+    width: 150px;
+    height: 40px;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 4px;
+    display: inline-flex; /* Para alinhar verticalmente o conteúdo */
+    align-items: center; /* Centralizar verticalmente */    
+    cursor: pointer;
+}
+.btn-slavar-alt-prod-desktop{
+    text-align: center;
+}
+.btn-slavar-alt-prod-desktop input[type="submit"]{
+    background-color: white;
+    border: 2px solid #af00ff;
+    width: 165px;
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    color: #af00ff;
+    font-size: 17px;
+    text-decoration: none;
+}
+.btn-slavar-alt-prod-desktop input[type="submit"]:hover{
+    background-color: #af00ff;
+    transition: background-color 0.4s ease;
+    color: white;
+}
+#delete-cad{
+    font-size: 35px;
+}
+#delete-cad:hover{
+    color: red;
+}
+#edit{
+    font-size: 30px;
+}
 
 /*-------------------------------------------END MASCULINA E FEMININA----------------------------------------------------*/ 
 
