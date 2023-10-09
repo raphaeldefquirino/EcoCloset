@@ -1,98 +1,1544 @@
-    <?php
-    session_start();
-    include('includes/verifica-login.php');
-    ?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+  <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Tabela do usuário</title>
+</head>
+<body>
 
-    <!DOCTYPE html>
-    <html lang="pt-br">
+    <div class="tudo">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="estilos/style.css">
-        <link rel="stylesheet" href="estilos/media-query.css">
-        <script src="https://kit.fontawesome.com/8ad860e92b.js" crossorigin="anonymous"></script>
-        <title>Tabela deletar</title>
+<!-- Começo da parte carrinho -->
+<div class="carrinho">
 
-        <?php
-        include("menu.php");
-        ?>
 
-    </head>
 
-    <body>
-        <p><a href="includes/logout.php">Sair</a></p>
-        <div class="tabela-usu">
-            <table class="table-usu">
-                <thead>
-                    <tr>
-                        <th scope="col">Nome do produto</th>
-                        <th scope="col">Descrição</th>
-                        <th scope="col">Valor</th>
-                        <th scope="col">Telefone</th>
-                        <th scope="col">...</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
+    <div class="card-carrinho" id="card-carrinho">
+        <span class="material-symbols-outlined" id="shopping_cart">shopping_cart</span>
+        <p>Meu carrinho de compras</p>
+        <span class="material-symbols-outlined chevron" id="chevron-carrinho">chevron_right</span>
+    </div>
 
-                    include("includes/conexao.php");
+    <div class="conteudo-carrinho" id="conteudo-carrinho">
 
-                    $id_usuario = $_SESSION['id_usuario'];
 
-                    $consulta = "SELECT * FROM cadastro_prod WHERE id_usu = '{$id_usuario}'";
-
-                    $consultaadm = "SELECT * FROM cadastro_prod";
-
-                    $resultado = mysqli_query($conexao, $consulta);
-
-                    $resultadoadm = mysqli_query($conexao, $consultaadm);
-
-                    if ($id_usuario === '3') {
-
-                        if (mysqli_num_rows($resultadoadm) > 0) {
-
-                            while ($produto = mysqli_fetch_assoc($resultadoadm)) {
-
-                                echo '<tr>';
-                                echo '<td data-label="Nome do produto">' . $produto['nome_prod'] . '</td>';
-                                echo '<td data-label="Descrição">' . $produto['descricao_prod'] . '</td>';
-                                echo '<td data-label="Valor">' . $produto['valor'] . '</td>';
-                                echo '<td data-label="..."><a href="includes/deletar.php?id=' . $produto['idproduto'] . '" class="deletar">&#10006;</a></td>';
-                                echo '</tr>';
-                            }
-                        }
-                    }
-
-                    if (mysqli_num_rows($resultado) > 0) {
-
-                        while ($produto = mysqli_fetch_assoc($resultado)) {
-
-                            echo '<tr>';
-                            echo '<td data-label="Nome do produto">' . $produto['nome_prod'] . '</td>';
-                            echo '<td data-label="Descrição">' . $produto['descricao_prod'] . '</td>';
-                            echo '<td data-label="Valor">' . $produto['valor'] . '</td>';
-                            echo '<td data-label="..."><a href="includes/deletar.php?id=' . $produto['idproduto'] . '" class="deletar">&#10006;</a></td>';
-                            echo '</tr>';
-                        }
-                    } else {
-                        echo '<tr><td colspan="5">Nenhum produto encontrado.</td></tr>';
-                    }
-
-                    mysqli_close($conexao);
-                    ?>
-                </tbody>
-            </table>
+        <div class="conteudo-total-tabela-carrinho">
+        <div class="tabela-carrinho">
+    
+        <div class="imagem-tabela-carrinho">
+            <a href=""><img src="pexels-ray-piedra-1464625.jpg" alt="" height="110px" width="100px"></a>
+        </div>
+    
+        <div class="texto-tabela-carrinho">
+        <div class="preco-tabela-carrinho">
+            <p>R$ 50,00</p>
+        </div>
+        <div class="desc-tabela-carrinho">
+            <p>Tenis NIKE branco</p>
+        </div>
+        </div>
+    
+        <div class="excluir-tabela-carrinho">
+            <a href=""><span class="material-symbols-outlined" id="delete">delete</span></a>
         </div>
 
-        <?php
-        include("includes/footer.php");
-        ?>
+        </div>
+        <div class="confirmar-carrinho">
+            <a href=""><div class="texto-confirmar-carrinho">
+                <p>Fechar compra</p>
+            </div></a></div>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <div class="conteudo-total-tabela-carrinho">
+            <div class="tabela-carrinho">
+        
+            <div class="imagem-tabela-carrinho">
+                <a href=""><img src="pexels-ray-piedra-1464625.jpg" alt="" height="110px" width="100px"></a>
+            </div>
+        
+            <div class="texto-tabela-carrinho">
+            <div class="preco-tabela-carrinho">
+                <p>R$ 50,00</p>
+            </div>
+            <div class="desc-tabela-carrinho">
+                <p>Tenis NIKE branco</p>
+            </div>
+            </div>
+        
+            <div class="excluir-tabela-carrinho">
+                <a href=""><span class="material-symbols-outlined" id="delete">delete</span></a>
+            </div>
 
-    </body>
+            </div>
+            <div class="confirmar-carrinho">
+                <a href=""><div class="texto-confirmar-carrinho">
+                    <p>Fechar compra</p>
+                </div></a></div>
+            </div>
+    
+    
+    
+    <!-- Parte do botão de fechar compra -->
+            <div class="conclusao-carrinho">
+    
+                <div class="total-carrinho">
+                    <p>TOTAL:</p> <p>R$ 00,00</p>
+                </div>
+    
+                
+    
+            </div>
+    
+    <!-- Fim parte do botão de fechar compra -->
+    
+        </div> 
 
-    </html>
+
+</div>
+<!-- Fim da parte carrinho -->
+
+<!-- Começo da parte dados -->
+<div class="dados">
+
+
+
+
+    <div class="card-dados" id="card-dados">
+        <span class="material-symbols-outlined" id="database">database</span>
+        <p>Meus dados</p>
+        <span class="material-symbols-outlined chevron" id="chevron-dados">chevron_right</span>
+    </div>
+
+        <div class="conteudo-dados" id="conteudo-dados">
+
+
+
+
+    <div class="tabela-dados">
+
+        <div class="re-nome">
+
+            <div class="e-nome">
+            <p>Nome: </p>
+            </div>
+            <div class="u-nome">
+            <p>Arthur </p>
+            </div>
+            
+                </div>
+
+        <div class="re-sobrenome">
+
+            <div class="e-sobrenome">
+            <p>Sobrenome: </p>
+            </div>
+            <div class="u-sobrenome">
+            <p>Bergamaço Alves</p>
+            </div>
+                    
+                </div>
+
+        <div class="re-email">
+
+<div class="e-email">
+<p>Email: </p>
+</div>
+<div class="u-email">
+<p>arthurbergamaco.alves@scseduca.com.br</p>
+</div>
+
+        </div>
+
+        <div class="re-cep">
+
+            <div class="e-cep">
+            <p>CEP: </p>
+            </div>
+            <div class="u-cep">
+            <p>09061580</p>
+            </div>
+            
+                </div>
+
+    <div class="re-endereco">
+
+<div class="e-endereco">
+<p>Endereço: </p>
+</div>
+<div class="u-endereco">
+<p>São Paulo, São Caetano do Sul, Bairro Boa Vista, Rua Epitácio Pessoa, 216</p>
+</div>
+
+    </div>
+
+
+    <div class="re-complemento">
+
+<div class="e-complemento">
+<p>Complemento: </p>
+</div>
+<div class="u-complemento">
+<p>Apto. 31</p>
+</div>
+    </div>
+
+    <div class="re-tel">
+
+<div class="e-tel">
+<p>Telefone/cell: </p>
+</div>
+<div class="u-tel">
+<p>(11) 99407-1725</p>
+</div>
+
+    </div>
+
+
+    </div>
+
+
+    <div class="editar-dados">
+
+        <a href=""><p>Editar seus dados</p></a>
+
+    </div>
+
+</div>
+
+</div>
+<!-- Fim da parte dados -->
+
+<!-- Começo da parte cadastrados -->
+<!-- Começo da parte cadastrados -->
+<div class="cadastrados">
+    <div class="card-cadastrados" id="card-cadastrados">
+        <span class="material-symbols-outlined" id="bookmark_manager">bookmark_manager</span>
+        <p>Produtos cadastrados</p>
+        <span class="material-symbols-outlined chevron" id="chevron-cadastrados">chevron_right</span>
+    </div>
+
+    <!-- Tabela de produtos cadastrados -->
+    
+
+
+
+<!-- Começo de um produto cadastrado -->
+
+<div class="conteudo-cadastrados" id="conteudo-cadastrados">
+
+    <div class="tabela-cadastrados" id="tabela-cadastrados">
+
+        <div class="conteudo-carrinho-cadastrados">
+
+
+
+<div class="tabela-carrinho">
+    
+<div class="imagem-tabela-carrinho">
+    <a href=""><img src="pexels-ray-piedra-1464625.jpg" alt="" height="110px" width="100px"></a>
+</div>
+
+<div class="texto-tabela-carrinho">
+<div class="preco-tabela-carrinho">
+    <p>R$ 50,00</p>
+</div>
+<div class="desc-tabela-carrinho">
+    <p>Tenis NIKE branco</p>
+</div>
+</div>
+
+<div class="editar-tabela-carrinho">
+    <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
+</div>
+
+<div class="excluir-tabela-cad">
+    <a href=""><span class="material-symbols-outlined" id="delete-cad">delete</span></a>
+</div>
+
+</div>
+
+
+<!-- Começo do editar cadastrados -->
+
+<div class="container-editar-produto">
+<form action="" method="post">
+
+<div class="titulo-preco">
+<p>Preço</p>
+</div>
+
+<div class="linha1-editar-produtos">
+
+<div class="col-precoO">
+<div class="e-precoO">
+<p>Preço original:</p>
+</div>
+<div class="u-precoO">
+<p>R$ 50,00</p>
+</div>
+</div>
+
+<div class="col-precoN">
+<div class="e-precoN">
+<p>Novo preço:</p>
+</div>
+<div class="u-precoN">
+<input type="text" id="u-precoN">
+</div>
+</div>
+
+</div>
+
+
+<div class="linha2-editar-produtos">
+
+<div class="col-nomeS">
+<div class="e-nomeS">
+<p>Nome simples: </p>
+</div>
+<div class="u-nomeS">
+<input type="text" id="u-nomesS">
+</div>
+</div>
+
+</div>
+
+
+<div class="linha3-editar-produtos">
+
+<div class="col-desc">
+<div class="e-desc">
+<p>Descrição: </p>
+</div>
+<div class="u-desc">
+<input type="text" id="u-desc">
+</div>
+</div>
+
+</div>
+
+
+<div class="linha4-editar-produtos">
+
+<div class="col-tipo">
+<div class="e-tipo">
+<p>Tipo do produto: </p>
+</div>
+<div class="u-tipo">
+
+<input type="radio" name="a" id="a" ><label for="a">Masculino</label><br>
+<input type="radio" name="a" id="b" ><label for="b">Feminino</label><br>
+<input type="radio" name="a" id="c" ><label for="c">Infantil</label><br>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="linha5-editar-produtos">
+
+<div class="col-cond">
+<div class="e-cond">
+<p>Condição do produto: </p>
+</div>
+<div class="u-cond">
+
+<input type="radio" name="b" id="d" ><label for="d">Usado</label><br>
+<input type="radio" name="b" id="e" ><label for="e">Pouco usado</label><br>
+<input type="radio" name="b" id="f" ><label for="f">Novo</label><br>
+
+</div>
+</div>
+</div>
+
+
+<div class="linha6-editar-produtos-">
+
+<div class="col-sub">
+<div class="e-sub">
+<p>SubCategoria: </p>
+</div>
+<div class="u-sub">
+<select name="" id="">
+    <option value="">Nenhum</option>
+    <option value="">Jaqueta</option>
+    <option value="">Camisa</option>
+    <option value="">Calça</option>
+    <option value="">Vestido</option>
+    <option value="">Shorts</option>
+    <option value="">Calçado</option>
+    <option value="">Acessório</option>
+</select>
+</div>
+</div>
+</div>
+
+<div class="salvar-alt-prod">
+<div class="btn-slavar-alt-prod">
+<input type="submit" value="Salvar alterações">
+</div>
+</div>
+
+</form>
+</div>
+    
+<!-- Fim de um produto cadastrado -->
+
+
+<!-- Começo de um produto cadastrado -->
+
+
+
+
+
+<div class="tabela-carrinho">
+    
+<div class="imagem-tabela-carrinho">
+    <a href=""><img src="pexels-ray-piedra-1464625.jpg" alt="" height="110px" width="100px"></a>
+</div>
+
+<div class="texto-tabela-carrinho">
+<div class="preco-tabela-carrinho">
+    <p>R$ 50,00</p>
+</div>
+<div class="desc-tabela-carrinho">
+    <p>Tenis NIKE branco</p>
+</div>
+</div>
+
+<div class="editar-tabela-carrinho">
+    <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
+</div>
+
+<div class="excluir-tabela-cad">
+    <a href=""><span class="material-symbols-outlined" id="delete-cad">delete</span></a>
+</div>
+
+</div>
+
+
+<!-- Começo do editar cadastrados -->
+
+<div class="container-editar-produto">
+<form action="" method="post">
+
+<div class="titulo-preco">
+<p>Preço</p>
+</div>
+
+<div class="linha1-editar-produtos">
+
+<div class="col-precoO">
+<div class="e-precoO">
+<p>Preço original:</p>
+</div>
+<div class="u-precoO">
+<p>R$ 50,00</p>
+</div>
+</div>
+
+<div class="col-precoN">
+<div class="e-precoN">
+<p>Novo preço:</p>
+</div>
+<div class="u-precoN">
+<input type="text" id="u-precoN">
+</div>
+</div>
+
+</div>
+
+
+<div class="linha2-editar-produtos">
+
+<div class="col-nomeS">
+<div class="e-nomeS">
+<p>Nome simples: </p>
+</div>
+<div class="u-nomeS">
+<input type="text" id="u-nomesS">
+</div>
+</div>
+
+</div>
+
+
+<div class="linha3-editar-produtos">
+
+<div class="col-desc">
+<div class="e-desc">
+<p>Descrição: </p>
+</div>
+<div class="u-desc">
+<input type="text" id="u-desc">
+</div>
+</div>
+
+</div>
+
+
+<div class="linha4-editar-produtos">
+
+<div class="col-tipo">
+<div class="e-tipo">
+<p>Tipo do produto: </p>
+</div>
+<div class="u-tipo">
+
+<input type="radio" name="a" id="a" ><label for="a">Masculino</label><br>
+<input type="radio" name="a" id="b" ><label for="b">Feminino</label><br>
+<input type="radio" name="a" id="c" ><label for="c">Infantil</label><br>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="linha5-editar-produtos">
+
+<div class="col-cond">
+<div class="e-cond">
+<p>Condição do produto: </p>
+</div>
+<div class="u-cond">
+
+<input type="radio" name="b" id="d" ><label for="d">Usado</label><br>
+<input type="radio" name="b" id="e" ><label for="e">Pouco usado</label><br>
+<input type="radio" name="b" id="f" ><label for="f">Novo</label><br>
+
+</div>
+</div>
+</div>
+
+
+<div class="linha6-editar-produtos-">
+
+<div class="col-sub">
+<div class="e-sub">
+<p>SubCategoria: </p>
+</div>
+<div class="u-sub">
+<select name="" id="">
+    <option value="">Nenhum</option>
+    <option value="">Jaqueta</option>
+    <option value="">Camisa</option>
+    <option value="">Calça</option>
+    <option value="">Vestido</option>
+    <option value="">Shorts</option>
+    <option value="">Calçado</option>
+    <option value="">Acessório</option>
+</select>
+</div>
+</div>
+</div>
+
+<div class="salvar-alt-prod">
+<div class="btn-slavar-alt-prod">
+<input type="submit" value="Salvar alterações">
+</div>
+</div>
+
+</form>
+</div>
+    
+<!-- Fim de um produto cadastrado -->
+    
+    
+    
+    
+    
+    
+            
+    
+    
+    
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    
+</div>
+<!-- Fim de produtos cadastrados -->
+
+<!-- Fim da parte cadastrados -->
+
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="tudo-tudo-desktop">
+        <div class="tudo-card-desktop">
+
+        <div class="card-desktop">
+
+            
+            
+        <div class="card-carrinho-desktop">
+
+            <div class="card-carrinho-desktop" id="card-carrinho-desktop">
+                <span class="material-symbols-outlined" id="shopping_cart">shopping_cart</span>
+                <p>Meu carrinho de compras</p>
+                <span class="material-symbols-outlined chevron" id="chevron-carrinho">chevron_right</span>
+            </div>
+
+        </div>
+
+        </div>
+
+        
+
+        <div class="card-dados-desktop">
+
+            <div class="card-dados-desktop" id="card-dados-desktop">
+                <span class="material-symbols-outlined" id="database">database</span>
+                <p>Meus dados</p>
+                <span class="material-symbols-outlined chevron" id="chevron-dados">chevron_right</span>
+            </div>
+
+        </div>
+
+        
+
+        
+        <div class="card-cadastrados-desktop">
+
+            <div class="card-cadastrados-desktop" id="card-cadastrados-desktop">
+                <span class="material-symbols-outlined" id="bookmark_manager">bookmark_manager</span>
+                <p>Produtos cadastrados</p>
+                <span class="material-symbols-outlined chevron" id="chevron-cadastrados">chevron_right</span>
+            </div>
+
+        </div>
+    
+        </div>
+
+        
+        
+        <!-- Fim do card -->
+
+        <div class="TESTE">
+            
+
+        <div class="tabelas-desktop">
+
+
+            <div class="conteudo-carrinho-desktop" id="conteudo-carrinho-desktop">
+
+
+                <div class="conteudo-total-tabela-carrinho-desktop">
+                <div class="tabela-carrinho-desktop">
+            
+                <div class="imagem-tabela-carrinho-desktop">
+                    <a href=""><img src="pexels-ray-piedra-1464625.jpg" alt="" height="110px" width="100px"></a>
+                </div>
+            
+                <div class="texto-tabela-carrinho-desktop">
+                <div class="preco-tabela-carrinho-desktop">
+                    <p>R$ 50,00</p>
+                </div>
+                <div class="desc-tabela-carrinho-desktop">
+                    <p>Tenis NIKE branco</p>
+                </div>
+                </div>
+            
+                <div class="excluir-tabela-carrinho-desktop">
+                    <a href=""><span class="material-symbols-outlined" id="delete">delete</span></a>
+                </div>
+
+                </div>
+                <div class="confirmar-carrinho-desktop">
+                    <a href=""><div class="texto-confirmar-carrinho-desktop">
+                        <p>Fechar compra</p>
+                    </div></a></div>
+                </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                <div class="conteudo-total-tabela-carrinho-desktop">
+                    <div class="tabela-carrinho-desktop">
+                
+                    <div class="imagem-tabela-carrinho-desktop">
+                        <a href=""><img src="pexels-ray-piedra-1464625.jpg" alt="" height="110px" width="100px"></a>
+                    </div>
+                
+                    <div class="texto-tabela-carrinho-desktop">
+                    <div class="preco-tabela-carrinho-desktop">
+                        <p>R$ 50,00</p>
+                    </div>
+                    <div class="desc-tabela-carrinho-desktop">
+                        <p>Tenis NIKE branco</p>
+                    </div>
+                    </div>
+                
+                    <div class="excluir-tabela-carrinho-desktop">
+                        <a href=""><span class="material-symbols-outlined" id="delete">delete</span></a>
+                    </div>
+    
+                    </div>
+                    <div class="confirmar-carrinho-desktop">
+                        <a href=""><div class="texto-confirmar-carrinho-desktop">
+                            <p>Fechar compra</p>
+                        </div></a></div>
+                    </div>
+            
+            
+            
+            <!-- Parte do botão de fechar compra -->
+                    <div class="conclusao-carrinho-desktop">
+            
+                        <div class="total-carrinho-desktop">
+                            <p>TOTAL:</p> <p>R$ 00,00</p>
+                        </div>
+            
+                        
+            
+                    </div>
+            
+            <!-- Fim parte do botão de fechar compra -->
+            
+                </div> 
+
+        <!-- Fim carrinho -->
+
+
+
+                <div class="conteudo-dados-desktop" id="conteudo-dados-desktop">
+
+
+
+
+                    <div class="tabela-dados-desktop">
+                
+                        <div class="re-nome-desktop">
+                
+                            <div class="e-nome-desktop">
+                            <p>Nome: </p>
+                            </div>
+                            <div class="u-nome-desktop">
+                            <p>Arthur </p>
+                            </div>
+                            
+                                </div>
+                
+                        <div class="re-sobrenome-desktop">
+                
+                            <div class="e-sobrenome-desktop">
+                            <p>Sobrenome: </p>
+                            </div>
+                            <div class="u-sobrenome-desktop">
+                            <p>Bergamaço Alves</p>
+                            </div>
+                                    
+                                </div>
+                
+                        <div class="re-email-desktop">
+                
+                <div class="e-email-desktop">
+                <p>Email: </p>
+                </div>
+                <div class="u-email-desktop">
+                <p>arthurbergamaco.alves@gmail.com.br</p>
+                </div>
+                
+                        </div>
+                
+                        <div class="re-cep-desktop">
+                
+                            <div class="e-cep-desktop">
+                            <p>CEP: </p>
+                            </div>
+                            <div class="u-cep-desktop">
+                            <p>09061580</p>
+                            </div>
+                            
+                                </div>
+                
+                    <div class="re-endereco-desktop">
+                
+                <div class="e-endereco-desktop">
+                <p>Endereço: </p>
+                </div>
+                <div class="u-endereco-desktop">
+                <p>São Paulo, São Caetano do Sul, Bairro Boa Vista, Rua Epitácio Pessoa, 216</p>
+                </div>
+                
+                    </div>
+                
+                
+                    <div class="re-complemento-desktop">
+                
+                <div class="e-complemento-desktop">
+                <p>Complemento: </p>
+                </div>
+                <div class="u-complemento-desktop">
+                <p>Apto. 31</p>
+                </div>
+                    </div>
+                
+                    <div class="re-tel-desktop">
+                
+                <div class="e-tel-desktop">
+                <p>Telefone/cell: </p>
+                </div>
+                <div class="u-tel-desktop">
+                <p>(11) 99407-1725</p>
+                </div>
+                
+                    </div>
+                
+                
+                    </div>
+                
+                <div class="espaco-editar-dados-desktop">
+                    <div class="editar-dados-desktop">
+                
+                        <a href=""><p>Editar seus dados</p></a>
+                
+                    </div>
+
+                </div>
+                
+                </div>
+
+
+                
+        
+        
+        <!-- Fim dados -->
+
+
+        <div class="conteudo-cadastrados-desktop" id="conteudo-cadastrados-desktop">
+
+            <div class="tabela-cadastrados-desktop" id="tabela-cadastrados-desktop">
+        
+                <div class="conteudo-carrinho-cadastrados-desktop">
+        
+
+                     <!-- Começo de um produto cadastrado -->
+                    <div class="tabela-carrinho-desktop">
+                
+                    <div class="imagem-tabela-carrinho-desktop">
+                        <a href=""><img src="pexels-ray-piedra-1464625.jpg" alt="" height="110px" width="100px"></a>
+                    </div>
+                
+                    <div class="texto-tabela-carrinho-desktop">
+                    <div class="preco-tabela-carrinho-desktop">
+                        <p>R$ 50,00</p>
+                    </div>
+                    <div class="desc-tabela-carrinho-desktop">
+                        <p>Tenis NIKE branco</p>
+                    </div>
+                    </div>
+                
+                    <div class="editar-tabela-carrinho-desktop">
+                        <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
+                    </div>
+        
+                    <div class="excluir-tabela-cad-desktop">
+                        <a href=""><span class="material-symbols-outlined" id="delete-cad">delete</span></a>
+                    </div>
+                
+                    </div>
+                
+        
+        <!-- Começo do editar cadastrados -->
+        
+        <div class="container-editar-produto-desktop">
+            <form action="" method="post">
+        
+            <div class="titulo-preco-desktop">
+                <p>Preço</p>
+            </div>
+        
+        <div class="linha1-editar-produtos-desktop">
+        
+            <div class="col-precoO-desktop">
+            <div class="e-precoO-desktop">
+                <p>Preço original:</p>
+            </div>
+            <div class="u-precoO-desktop">
+                <p>R$ 50,00</p>
+            </div>
+        </div>
+        
+            <div class="col-precoN-desktop">
+                <div class="e-precoN-desktop">
+                    <p>Novo preço:</p>
+                </div>
+                <div class="u-precoN-desktop">
+                    <input type="text" id="u-precoN-desktop">
+                </div>
+            </div>
+        
+        </div>
+        
+        
+        <div class="linha2-editar-produtos-desktop">
+        
+            <div class="col-nomeS-desktop">
+                <div class="e-nomeS-desktop">
+                    <p>Nome simples: </p>
+                </div>
+                <div class="u-nomeS-desktop">
+                    <input type="text" id="u-nomesS-desktop">
+                </div>
+            </div>
+        
+        </div>
+        
+        
+        <div class="linha3-editar-produtos-desktop">
+        
+            <div class="col-desc-desktop">
+                <div class="e-desc-desktop">
+                    <p>Descrição: </p>
+                </div>
+                <div class="u-desc-desktop">
+                    <input type="text" id="u-desc-desktop">
+                </div>
+            </div>
+        
+        </div>
+        
+        
+        <div class="linha4-editar-produtos-desktop">
+        
+            <div class="col-tipo-desktop">
+                <div class="e-tipo-desktop">
+                    <p>Tipo do produto: </p>
+                </div>
+                <div class="u-tipo-desktop">
+        
+                    <input type="radio" name="a" id="a" ><label for="a">Masculino</label><br>
+                    <input type="radio" name="a" id="b" ><label for="b">Feminino</label><br>
+                    <input type="radio" name="a" id="c" ><label for="c">Infantil</label><br>
+        
+                </div>
+            </div>
+        
+        </div>
+        
+        
+        <div class="linha5-editar-produtos-desktop">
+        
+            <div class="col-cond-desktop">
+                <div class="e-cond-desktop">
+                    <p>Condição do produto: </p>
+                </div>
+                <div class="u-cond-desktop">
+        
+                    <input type="radio" name="b" id="d" ><label for="d">Usado</label><br>
+                    <input type="radio" name="b" id="e" ><label for="e">Pouco usado</label><br>
+                    <input type="radio" name="b" id="f" ><label for="f">Novo</label><br>
+        
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="linha6-editar-produtos-desktop">
+        
+            <div class="col-sub-desktop">
+                <div class="e-sub-desktop">
+                    <p>SubCategoria: </p>
+                </div>
+                <div class="u-sub-desktop">
+                    <select name="" id="">
+                        <option value="">Nenhum</option>
+                        <option value="">Jaqueta</option>
+                        <option value="">Camisa</option>
+                        <option value="">Calça</option>
+                        <option value="">Vestido</option>
+                        <option value="">Shorts</option>
+                        <option value="">Calçado</option>
+                        <option value="">Acessório</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="salvar-alt-prod-desktop">
+            <div class="btn-slavar-alt-prod-desktop">
+                <input type="submit" value="Salvar alterações">
+            </div>
+        </div>
+        
+    </form>
+        </div>
+        <!-- Fim do editar cadastrados -->
+        <!-- Fim de um produto cadastrado -->
+        
+        
+        
+        
+            <!-- Começo de um produto cadastrado -->
+
+<div class="tabela-carrinho-desktop">
+        
+    <div class="imagem-tabela-carrinho-desktop">
+        <a href=""><img src="pexels-ray-piedra-1464625.jpg" alt="" height="110px" width="100px"></a>
+    </div>
+
+    <div class="texto-tabela-carrinho-desktop">
+    <div class="preco-tabela-carrinho-desktop">
+        <p>R$ 50,00</p>
+    </div>
+    <div class="desc-tabela-carrinho-desktop">
+        <p>Tenis NIKE branco</p>
+    </div>
+    </div>
+
+    <div class="editar-tabela-carrinho-desktop">
+        <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
+    </div>
+
+    <div class="excluir-tabela-cad-desktop">
+        <a href=""><span class="material-symbols-outlined" id="delete-cad">delete</span></a>
+    </div>
+
+    </div>
+
+
+<!-- Começo do editar cadastrados -->
+
+<div class="container-editar-produto-desktop">
+<form action="" method="post">
+
+<div class="titulo-preco-desktop">
+<p>Preço</p>
+</div>
+
+<div class="linha1-editar-produtos-desktop">
+
+<div class="col-precoO-desktop">
+<div class="e-precoO-desktop">
+<p>Preço original:</p>
+</div>
+<div class="u-precoO-desktop">
+<p>R$ 50,00</p>
+</div>
+</div>
+
+<div class="col-precoN-desktop">
+<div class="e-precoN-desktop">
+    <p>Novo preço:</p>
+</div>
+<div class="u-precoN-desktop">
+    <input type="text" id="u-precoN-desktop">
+</div>
+</div>
+
+</div>
+
+
+<div class="linha2-editar-produtos-desktop">
+
+<div class="col-nomeS-desktop">
+<div class="e-nomeS-desktop">
+    <p>Nome simples: </p>
+</div>
+<div class="u-nomeS-desktop">
+    <input type="text" id="u-nomesS-desktop">
+</div>
+</div>
+
+</div>
+
+
+<div class="linha3-editar-produtos-desktop">
+
+<div class="col-desc-desktop">
+<div class="e-desc-desktop">
+    <p>Descrição: </p>
+</div>
+<div class="u-desc-desktop">
+    <input type="text" id="u-desc-desktop">
+</div>
+</div>
+
+</div>
+
+
+<div class="linha4-editar-produtos-desktop">
+
+<div class="col-tipo-desktop">
+<div class="e-tipo-desktop">
+    <p>Tipo do produto: </p>
+</div>
+<div class="u-tipo-desktop">
+
+    <input type="radio" name="a" id="a" ><label for="a">Masculino</label><br>
+    <input type="radio" name="a" id="b" ><label for="b">Feminino</label><br>
+    <input type="radio" name="a" id="c" ><label for="c">Infantil</label><br>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="linha5-editar-produtos-desktop">
+
+<div class="col-cond-desktop">
+<div class="e-cond-desktop">
+    <p>Condição do produto: </p>
+</div>
+<div class="u-cond-desktop">
+
+    <input type="radio" name="b" id="d" ><label for="d">Usado</label><br>
+    <input type="radio" name="b" id="e" ><label for="e">Pouco usado</label><br>
+    <input type="radio" name="b" id="f" ><label for="f">Novo</label><br>
+
+</div>
+</div>
+</div>
+
+
+<div class="linha6-editar-produtos-desktop">
+
+<div class="col-sub-desktop">
+<div class="e-sub-desktop">
+    <p>SubCategoria: </p>
+</div>
+<div class="u-sub-desktop">
+    <select name="" id="">
+        <option value="">Nenhum</option>
+        <option value="">Jaqueta</option>
+        <option value="">Camisa</option>
+        <option value="">Calça</option>
+        <option value="">Vestido</option>
+        <option value="">Shorts</option>
+        <option value="">Calçado</option>
+        <option value="">Acessório</option>
+    </select>
+</div>
+</div>
+</div>
+
+<div class="salvar-alt-prod-desktop">
+<div class="btn-slavar-alt-prod-desktop">
+<input type="submit" value="Salvar alterações">
+</div>
+</div>
+
+</form>
+</div>
+        
+<!-- Fim de um produto cadastrado -->
+
+
+<!-- Começo de um produto cadastrado -->
+
+<div class="tabela-carrinho-desktop">
+        
+    <div class="imagem-tabela-carrinho-desktop">
+        <a href=""><img src="pexels-ray-piedra-1464625.jpg" alt="" height="110px" width="100px"></a>
+    </div>
+
+    <div class="texto-tabela-carrinho-desktop">
+    <div class="preco-tabela-carrinho-desktop">
+        <p>R$ 50,00</p>
+    </div>
+    <div class="desc-tabela-carrinho-desktop">
+        <p>Tenis NIKE branco</p>
+    </div>
+    </div>
+
+    <div class="editar-tabela-carrinho-desktop">
+        <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
+    </div>
+
+    <div class="excluir-tabela-cad-desktop">
+        <a href=""><span class="material-symbols-outlined" id="delete-cad">delete</span></a>
+    </div>
+
+    </div>
+
+
+<!-- Começo do editar cadastrados -->
+
+<div class="container-editar-produto-desktop">
+<form action="" method="post">
+
+<div class="titulo-preco-desktop">
+<p>Preço</p>
+</div>
+
+<div class="linha1-editar-produtos-desktop">
+
+<div class="col-precoO-desktop">
+<div class="e-precoO-desktop">
+<p>Preço original:</p>
+</div>
+<div class="u-precoO-desktop">
+<p>R$ 50,00</p>
+</div>
+</div>
+
+<div class="col-precoN-desktop">
+<div class="e-precoN-desktop">
+    <p>Novo preço:</p>
+</div>
+<div class="u-precoN-desktop">
+    <input type="text" id="u-precoN-desktop">
+</div>
+</div>
+
+</div>
+
+
+<div class="linha2-editar-produtos-desktop">
+
+<div class="col-nomeS-desktop">
+<div class="e-nomeS-desktop">
+    <p>Nome simples: </p>
+</div>
+<div class="u-nomeS-desktop">
+    <input type="text" id="u-nomesS-desktop">
+</div>
+</div>
+
+</div>
+
+
+<div class="linha3-editar-produtos-desktop">
+
+<div class="col-desc-desktop">
+<div class="e-desc-desktop">
+    <p>Descrição: </p>
+</div>
+<div class="u-desc-desktop">
+    <input type="text" id="u-desc-desktop">
+</div>
+</div>
+
+</div>
+
+
+<div class="linha4-editar-produtos-desktop">
+
+<div class="col-tipo-desktop">
+<div class="e-tipo-desktop">
+    <p>Tipo do produto: </p>
+</div>
+<div class="u-tipo-desktop">
+
+    <input type="radio" name="a" id="a" ><label for="a">Masculino</label><br>
+    <input type="radio" name="a" id="b" ><label for="b">Feminino</label><br>
+    <input type="radio" name="a" id="c" ><label for="c">Infantil</label><br>
+
+</div>
+</div>
+
+</div>
+
+
+<div class="linha5-editar-produtos-desktop">
+
+<div class="col-cond-desktop">
+<div class="e-cond-desktop">
+    <p>Condição do produto: </p>
+</div>
+<div class="u-cond-desktop">
+
+    <input type="radio" name="b" id="d" ><label for="d">Usado</label><br>
+    <input type="radio" name="b" id="e" ><label for="e">Pouco usado</label><br>
+    <input type="radio" name="b" id="f" ><label for="f">Novo</label><br>
+
+</div>
+</div>
+</div>
+
+
+<div class="linha6-editar-produtos-desktop">
+
+<div class="col-sub-desktop">
+<div class="e-sub-desktop">
+    <p>SubCategoria: </p>
+</div>
+<div class="u-sub-desktop">
+    <select name="" id="">
+        <option value="">Nenhum</option>
+        <option value="">Jaqueta</option>
+        <option value="">Camisa</option>
+        <option value="">Calça</option>
+        <option value="">Vestido</option>
+        <option value="">Shorts</option>
+        <option value="">Calçado</option>
+        <option value="">Acessório</option>
+    </select>
+</div>
+</div>
+</div>
+
+<div class="salvar-alt-prod-desktop">
+<div class="btn-slavar-alt-prod-desktop">
+<input type="submit" value="Salvar alterações">
+</div>
+</div>
+
+</form>
+</div>
+        
+<!-- Fim de um produto cadastrado -->
+        
+        
+        
+        
+        
+        
+                
+        
+        
+        
+        </div>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        
+    </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    // Código para dispositivos móveis
+    const cardCarrinho = document.querySelector(".card-carrinho");
+    const cardDados = document.querySelector(".card-dados");
+    const cardCadastrados = document.querySelector(".card-cadastrados");
+    const conteudoCarrinho = document.getElementById("conteudo-carrinho");
+    const conteudoDados = document.getElementById("conteudo-dados");
+    const conteudoCarrinhoCadastrados = document.querySelector(".conteudo-carrinho-cadastrados");
+    const botõesEditar = document.querySelectorAll(".editar-tabela-carrinho");
+    const formulários = document.querySelectorAll(".container-editar-produto");
+    const chevronCarrinho = document.getElementById("chevron-carrinho");
+    const chevronDados = document.getElementById("chevron-dados");
+    const chevronCadastrados = document.getElementById("chevron-cadastrados");
+
+    function removeActiveClasses() {
+        cardCarrinho.classList.remove('active');
+        cardDados.classList.remove('active');
+        cardCadastrados.classList.remove('active');
+        conteudoCarrinho.style.display = "none";
+        conteudoDados.style.display = "none";
+        conteudoCarrinhoCadastrados.style.display = "none";
+        formulários.forEach(form => {
+            form.style.display = "none";
+        });
+        chevronCarrinho.classList.remove('rotate-down');
+        chevronDados.classList.remove('rotate-down');
+        chevronCadastrados.classList.remove('rotate-down');
+    }
+
+    cardCarrinho.addEventListener("click", function () {
+        if (cardCarrinho.classList.contains('active')) {
+            removeActiveClasses();
+        } else {
+            removeActiveClasses();
+            cardCarrinho.classList.add('active');
+            chevronCarrinho.classList.add('rotate-down');
+            conteudoCarrinho.style.display = "block";
+        }
+    });
+
+    cardDados.addEventListener("click", function () {
+        if (cardDados.classList.contains('active')) {
+            removeActiveClasses();
+        } else {
+            removeActiveClasses();
+            cardDados.classList.add('active');
+            chevronDados.classList.add('rotate-down');
+            conteudoDados.style.display = "block";
+        }
+    });
+
+    cardCadastrados.addEventListener("click", function () {
+        if (cardCadastrados.classList.contains('active')) {
+            removeActiveClasses();
+        } else {
+            removeActiveClasses();
+            cardCadastrados.classList.add('active');
+            chevronCadastrados.classList.add('rotate-down');
+            conteudoCarrinhoCadastrados.style.display = "block";
+        }
+    });
+
+    botõesEditar.forEach((botão, index) => {
+        botão.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            if (formulários[index].style.display === "block") {
+                formulários[index].style.display = "none";
+            } else {
+                formulários.forEach(form => {
+                    form.style.display = "none";
+                });
+                formulários[index].style.display = "block";
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Código para desktop
+    const cardCarrinho = document.querySelector(".card-carrinho-desktop");
+    const cardDados = document.querySelector(".card-dados-desktop");
+    const cardCadastrados = document.querySelector(".card-cadastrados-desktop");
+    const conteudoCarrinho = document.getElementById("conteudo-carrinho-desktop");
+    const conteudoDados = document.getElementById("conteudo-dados-desktop");
+    const conteudoCarrinhoCadastrados = document.querySelector(".conteudo-carrinho-cadastrados-desktop");
+    const botõesEditar = document.querySelectorAll(".editar-tabela-carrinho-desktop");
+    const formulários = document.querySelectorAll(".container-editar-produto-desktop");
+
+    function removeActiveClasses() {
+        cardCarrinho.classList.remove('active');
+        cardDados.classList.remove('active');
+        cardCadastrados.classList.remove('active');
+        conteudoCarrinho.style.display = "none";
+        conteudoDados.style.display = "none";
+        conteudoCarrinhoCadastrados.style.display = "none";
+        formulários.forEach(form => {
+            form.style.display = "none";
+        });
+    }
+
+    cardCarrinho.addEventListener("click", function () {
+        if (cardCarrinho.classList.contains('active')) {
+            removeActiveClasses();
+        } else {
+            removeActiveClasses();
+            cardCarrinho.classList.add('active');
+            conteudoCarrinho.style.display = "block";
+        }
+    });
+
+    cardDados.addEventListener("click", function () {
+        if (cardDados.classList.contains('active')) {
+            removeActiveClasses();
+        } else {
+            removeActiveClasses();
+            cardDados.classList.add('active');
+            conteudoDados.style.display = "block";
+        }
+    });
+
+    cardCadastrados.addEventListener("click", function () {
+        if (cardCadastrados.classList.contains('active')) {
+            removeActiveClasses();
+        } else {
+            removeActiveClasses();
+            cardCadastrados.classList.add('active');
+            conteudoCarrinhoCadastrados.style.display = "block";
+        }
+    });
+
+    botõesEditar.forEach((botão, index) => {
+        botão.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            if (formulários[index].style.display === "block") {
+                formulários[index].style.display = "none";
+            } else {
+                formulários.forEach(form => {
+                    form.style.display = "none";
+                });
+                formulários[index].style.display = "block";
+            }
+        });
+    });
+});
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
