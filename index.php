@@ -57,6 +57,17 @@
     <div class="Imagem2-Categorias">
       <a href="masculina.php">
         <div class="Imagem-container-Categorias">
+          <img src="imagens/meninos da criança dois tons bolso com aba Camisa & Shorts sem camiseta.jfif" alt="Imagem masculina"  height="300" width="300" >
+        </div>
+        <div class="Text-Imagem-Categorias">
+          <h2>Kids</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="Imagem2-Categorias">
+      <a href="masculina.php">
+        <div class="Imagem-container-Categorias">
           <img src="imagens/pexels-lucxama-sylvain-2765557.jpg" alt="Imagem masculina" height="300" width="300">
         </div>
         <div class="Text-Imagem-Categorias">

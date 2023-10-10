@@ -314,12 +314,78 @@
         padding-top: 20px;
     }
       .Imagem1-Categorias{
+        width: 220px;
+      }
+      .Imagem2-Categorias{
+        width: 220px;
+        margin-top: 0px;
+        margin-left: -30px;
+      }
+      .Imagem1-Categorias img{
+        width: 250px;
+        height: 220px;
+      }
+      .Imagem2-Categorias img{
+        width: 220px;
+        height: 220px;
+      }
+    }
+
+    @media screen and (min-width:1200px) {
+      .Imagem2-Categorias{
+        width: 280px;
+        margin-top: 0px;
+        margin-left: -90px;
+      }
+
+      .Imagem1-Categorias{
+        width: 280px;
+      }
+      
+      .Imagem1-Categorias img{
+        width: 280px;
+        height: 280px;
+      }
+      .Imagem2-Categorias img{
+        width: 280px;
+        height: 280px;
+      }
+    }
+
+    @media screen and (min-width:1000px) {
+      .Imagem2-Categorias{
+        width: 270px;
+        margin-top: 0px;
+        margin-left: -70px;
+      }
+
+      .Imagem1-Categorias{
+        width: 270px;
+      }
+      
+      .Imagem1-Categorias img{
+        width: 270px;
+        height: 270px;
+      }
+      .Imagem2-Categorias img{
+        width: 270px;
+        height: 270px;
+      }
+    }
+    
+    
+    
+    @media screen and (min-width:1500px) {
+      .Imagem2-Categorias{
+        margin-left: -60px;
+      }
+      .Imagem1-Categorias{
         width: 300px;
       }
       .Imagem2-Categorias{
         width: 300px;
         margin-top: 0px;
-        margin-left: -50px;
+        margin-left: -180px;
       }
       .Imagem1-Categorias img{
         width: 300px;
@@ -331,12 +397,6 @@
       }
     }
     
-    
-    @media screen and (min-width:1024px) {
-      .Imagem2-Categorias{
-        margin-left: -200px;
-      }
-    }
 
     /* ---------------Fim media query "Atalhos de categorias" ------------------*/
 
@@ -492,11 +552,11 @@ main {
 /* Media-query da página dos usuario  */
 
 @media screen and (min-width:850px) {
-    .tudo-tudo-desktop-usu{
+    .tudo-tudo-desktop{
         display: block;
         display: flex;
     }
-    .tudo-usu{
+    .tudo{
         display: none;
     }
 }
@@ -506,5 +566,16 @@ main {
 @media (min-width: 760px){
   .erro-prod-search{
     padding: 220px;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------------------*/ 
+@media screen and (min-width:790px) {
+  .tudo-tudo-desktop{
+      display: block;
+      display: flex;
+  }
+  .tudo{
+      display: none;
   }
 }

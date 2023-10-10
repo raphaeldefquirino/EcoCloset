@@ -27,24 +27,26 @@
 
   ?>
 
-  <div class="filter-section">
-    <label for="subcategory">Subcategoria:</label>
-    <select name="subcategory" id="subcategory">
-      <option value="">Escolha</option>
-      <option value="shorts">Shorts</option>
-      <option value="jacket">Jaqueta</option>
-      <option value="shoes">Tênis</option>
+<div class="filter-bar">
+<button class="filter-button mobile-show">Mostrar filtros</button>
+    <form action="#" method="post">
+    <label for="subcategory"  class = "subcategory">Subcategoria:</label>
+    <select name="subcategoria" id="subcategory">
+      <option value="Shorts">Shorts</option>
+      <option value="Jaqueta">Jaqueta</option>
+      <option value="Tênis">Tênis</option>
       <option value="sweatpants">Calça moletom</option>
     </select>
 
-    <label for="sort">Classificar por:</label>
+    <label for="sort"  class = "subcategory">Classificar por:</label>
     <select name="sort" id="sort">
-      <option value="lowest">Menor preço</option>
-      <option value="highest">Maior preço</option>
+      <option value="caro">Menor preço</option>
+      <option value="barato">Maior preço</option>
     </select>
 
-    <button class="filter-button">Filtrar</button>
-  </div>
+    <button class="filter-button" name="filtrar"> Filtrar</button>
+    </form>
+</div>
 
   <?php
 
@@ -61,7 +63,7 @@
       echo '<img src="' . $produto['path'] . '" alt="Calça jeans">';
       echo '<br>';
       echo '<br>';
-      echo '<div class="btncarrinho"><a href="#"><span class="material-symbols-outlined">add_shopping_cart</span></a></div>';
+      echo '<div class="btncarrinho"><a href="#"><span class="material-symbols-outlined" id = "prod-neckklace">add_shopping_cart</span></a></div>';
       echo '<div class="clothing-details">';
       echo '<h3 class="h3produtos">' . $produto['nome_prod'] . '</h3>';
       echo ' <p class="clothing-price"><strong>R$' . $produto['valor'] . ' </strong></p>';
