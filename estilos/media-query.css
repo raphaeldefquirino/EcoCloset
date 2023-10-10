@@ -492,11 +492,11 @@ main {
 /* Media-query da página dos usuario  */
 
 @media screen and (min-width:850px) {
-    .tudo-tudo-desktop{
+    .tudo-tudo-desktop-usu{
         display: block;
         display: flex;
     }
-    .tudo{
+    .tudo-usu{
         display: none;
     }
 }
