@@ -867,48 +867,48 @@ font-weight: 800;
 body{
     background-color: #f1f1f1;
 }
-.tudo{
+.tudo-usu{
     background-color: white;
     width: 330px;
     margin: auto;
     border-radius: 10px;
 }
-.carrinho{
+.carrinho-usu{
     margin-top: 20px;
 }
-.conteudo-carrinho{
+.conteudo-carrinho-usu{
     display: none; /* Display: none; para a tela de "carrinho" não aparecer. */
 }
-.card-carrinho{
+.card-carrinho-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     cursor: pointer;
     width: 317px;
 }
-.card-carrinho p{
+.card-carrinho-usu p{
     font-size: 20px;
     font-weight: 600;
 }
-.card-carrinho.active {
+.card-carrinho-usu.active {
     color: #af00ff;
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-#shopping_cart{
+#shoppin-usug_cart-usu{
     margin-right: 10px;
     font-size: 30px;
 }
-#chevron-carrinho{
+#chevron-carrinho-usu{
     margin-left: 5px;
     font-size: 30px;
     margin-top: 5px;
 }
-#chevron-dados{
+#chevron-dados-usu{
     margin-left: 5px;
     font-size: 30px;
     margin-top: 5px;
 }
-#chevron-cadastrados{
+#chevron-cadastrados-usu{
     margin-left: 5px;
     font-size: 30px;
     margin-top: 5px;
@@ -920,62 +920,62 @@ body{
 }
 
 
-.container-editar-produto{
+.container-editar-produto-usu{
     margin-top: 40px;
 }
-.tabela-carrinho{
+.tabela-carrinho-usu{
     background-color: white;
     margin-top: 15px;
     display: flex;
     align-items: center;
 }
-.imagem-tabela-carrinho img{
+.imagem-tabela-carrinho-usu img{
    border-radius: 20px; 
    margin-top: 10px;
    margin-left: 10px;
 }
-.imagem-tabela-carrinho img:hover{
+.imagem-tabela-carrinho-usu img:hover{
     transition: opacity 0.4s ease;
     opacity: 0.6;
 }
-.texto-tabela-carrinho{
+.texto-tabela-carrinho-usu{
     margin-left: 8px;
 }
-.preco-tabela-carrinho{
+.preco-tabela-carrinho-usu{
     font-size: 20px;
     font-weight: 600;
 }
-.desc-tabela-carrinho{
+.desc-tabela-carrinho-usu{
     font-size: 20px;
     margin-top: 15px;
 }
-.excluir-tabela-carrinho{
+.excluir-tabela-carrinho-usu{
     margin-left: 35px;
 }
-.excluir-tabela-carrinho span{
+.excluir-tabela-carrinho-usu span{
     color: black;
 }
-#delete{
+#delete-usu{
     font-size: 40px;
     color: black;
 }
-#delete:hover {
+#delete-usu:hover {
     color: red; /* Altera a cor para vermelho quando o cursor está sobre o ícone */
 }
-.total-carrinho{
+.total-carrinho-usu{
     display: flex;
     margin-top: 20px;
     margin-left: 10px;
 }
-.total-carrinho p{
+.total-carrinho-usu p{
     margin-right: 5px;
     font-size: 20px;
     font-weight: 600;
 }
-.confirmar-carrinho a{
+.confirmar-carrinho-usu a{
     text-decoration: none;
 }
-.texto-confirmar-carrinho{
+.texto-confirmar-carrinho-usu{
     background-color: white;
     width: 140px;
     height: 35px;
@@ -985,156 +985,156 @@ body{
     border-radius: 5px;
     border: #af00ff solid 2px;
 }
-.texto-confirmar-carrinho p{
+.texto-confirmar-carrinho-usu p{
     color: #af00ff;
     font-size: 17px;
     font-weight: 300;
     height: 32px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
     padding-top: 5px;
 }
-.texto-confirmar-carrinho p:hover{
+.texto-confirmar-carrinho-usu p:hover{
     color: white;
     transition: background-color 0.4s ease;
     background-color: #af00ff;
 }
 
-.dados{
+.dados-usu{
     margin-top: 20px;
 }
-.conteudo-dados{
+.conteudo-dados-usu{
     display: none;  /* Display: none; para a tela de "dados" não aparecer. */
 }
-.card-dados{
+.card-dados-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     cursor: pointer;
     width: 190px;
 }
-.card-dados p{
+.card-dados-usu p{
     font-size: 20px;
     font-weight: 600;
 }
-.card-dados.active {
+.card-dados-usu.active {
     color: #af00ff;
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-#database{
+#database-usu{
     margin-right: 10px;
     font-size: 30px;
 }
-.tabela-dados{
+.tabela-dados-usu{
     margin-top: 15px;
     margin-bottom: 30px;
     background-color: white;
 }
-.re-email{
+.re-email-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 15px;
 }
-.e-email p{
+.e-email-usu p{
     font-weight: 600;
     font-size: 20px
 }
-.u-email{
+.u-email-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     
 }
-.re-nome{
+.re-nome-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-nome{
+.e-nome-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-nome{
+.u-nome-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
 }
-.re-sobrenome{
+.re-sobrenome-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-sobrenome{
+.e-sobrenome-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-sobrenome{
+.u-sobrenome-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
 }
-.re-endereco{
+.re-endereco-usu{
     display: flex;
     align-items: baseline;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-endereco{
+.e-endereco-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-endereco{
+.u-endereco-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
 }
-.re-cep{
+.re-cep-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-cep{
+.e-cep-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-cep{
+.u-cep-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
 }
-.re-complemento{
+.re-complemento-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-complemento{
+.e-complemento-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-complemento{
+.u-complemento-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
 }
-.re-tel{
+.re-tel-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-tel{
+.e-tel-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-tel{
+.u-tel-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
 }
-.editar-dados {
+.editar-dados-usu {
     background-color: white;
     border: #af00ff solid 2px;
     width: 165px;
@@ -1144,188 +1144,188 @@ body{
     border-radius: 5px;
     margin-bottom: 30px;
 }
-.editar-dados a{
+.editar-dados-usu a{
     text-decoration: none;
 }
-.editar-dados p{
+.editar-dados-usu p{
     color: #af00ff;
     font-size: 17px;
     font-weight: 300;
     height: 32px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
     padding-top: 5px;
 }
-.editar-dados p:hover{
+.editar-dados-usu p:hover{
     color: white;
     transition: background-color 0.4s ease;
     background-color: #af00ff;
 }
 
 
-.cadastrados{
+.cadastrados-usu{
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.card-cadastrados{
+.card-cadastrados-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     cursor: pointer;
     width: 281px;
 }
-.card-cadastrados p{
+.card-cadastrados-usu p{
     font-size: 20px;
     font-weight: 600;
 }
-.card-cadastrados.active {
+.card-cadastrados-usu.active {
     color: #af00ff;
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-#bookmark_manager{
+#bookmark_manager-usu{
     margin-right: 10px;
     font-size: 30px;
 }
-.conteudo-dados{
+.conteudo-dados-usu{
     background-color: white;
     display: none;  /* Display: none; para a tela de "dados" não aparecer. */
     padding-bottom: 10px;
     border-radius: 20px;
 }
-.card-dados{
+.card-dados-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     cursor: pointer;
     width: 190px;
 }
-.card-dados p{
+.card-dados-usu p{
     font-size: 20px;
     font-weight: 600;
 }
-#database{
+#database-usu{
     margin-right: 10px;
     font-size: 30px;
 }
-.tabela-dados{
+.tabela-dados-usu{
     margin-bottom: 30px;
     background-color: ;
     padding-left: 10px;
     padding-right: 10px;
 }
-.re-email{
+.re-email-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 15px;
 }
-.e-email p{
+.e-email-usu p{
     font-weight: 600;
     font-size: 20px
 }
-.u-email{
+.u-email-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-nome{
+.re-nome-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
 }
-.e-nome{
+.e-nome-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-nome{
+.u-nome-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-sobrenome{
+.re-sobrenome-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-sobrenome{
+.e-sobrenome-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-sobrenome{
+.u-sobrenome-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-endereco{
+.re-endereco-usu{
     display: flex;
     align-items: baseline;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-endereco{
+.e-endereco-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-endereco{
+.u-endereco-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-cep{
+.re-cep-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-cep{
+.e-cep-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-cep{
+.u-cep-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-complemento{
+.re-complemento-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-complemento{
+.e-complemento-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-complemento{
+.u-complemento-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-tel{
+.re-tel-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-tel{
+.e-tel-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-tel{
+.u-tel-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.espaco-editar-dados{
+.espaco-editar-dados-usu{
     padding-bottom: 10px;
 }
-.editar-dados {
+.editar-dados-usu {
     background-color: white;
     border: #af00ff solid 2px;
     width: 165px;
@@ -1334,17 +1334,17 @@ body{
     margin: auto;
     border-radius: 5px;
 }
-.editar-dados a{
+.editar-dados-usu a{
     text-decoration: none;
 }
-.editar-dados p{
+.editar-dados-usu p{
     color: #af00ff;
     font-size: 17px;
     font-weight: 300;
     height: 33px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
     padding-top: 5px;
 }
-.editar-dados p:hover{
+.editar-dados-usu p:hover{
     color: white;
     transition: background-color 0.4s ease;
     background-color: #af00ff;
@@ -1355,13 +1355,13 @@ body{
 
 
 
-.conteudo-carrinho-cadastrados{
+.conteudo-carrinho-cadastrados-usu{
     display: none;   
 }
-.tabela-cadastrados th{
+.tabela-cadastrados-usu th{
     flex-direction: column;
 }
-.conteudo-carrinho-cadastrados{
+.conteudo-carrinho-cadastrados-usu{
     display: ;
     background-color: white;
     border-radius: 20px;
@@ -1370,43 +1370,43 @@ body{
     padding-left: 10px;
     padding-right: 20px;
 }
-.editar-tabela-carrinho{
+.editar-tabela-carrinho-usu{
     margin-left: 20px;
 }
-.editar-tabela-carrinho span{
+.editar-tabela-carrinho-usu span{
     color: #af00ff;
 }
-#edit{
+#edit-usu{
     font-size: 30px;
 }
-#delete-cad{
+#delete-cad-usu{
     font-size: 35px;
 }
-#delete-cad:hover{
+#delete-cad-usu:hover{
     color: red;
 }
-.excluir-tabela-cad{
+.excluir-tabela-cad-usu{
     margin-left: 15px;
 }
-.excluir-tabela-cad span{
+.excluir-tabela-cad-usu span{
     color: black;
 }
-.titulo-preco p{
+.titulo-preco-usu p{
     font-weight: 600;
     margin-left: 15px;
     margin-bottom: 10px;
     font-size: 20px;
 }
-.linha1-editar-produtos{
+.linha1-editar-produtos-usu{
     display: flex;
     margin-bottom: 20px;
 }
-.e-precoO{
+.e-precoO-usu{
     width: 120px;
     margin-left: 10px;
     text-align: center;
 }
-.u-precoO{
+.u-precoO-usu{
     background-color: #cfcfcf;
     width: 120px;
     margin-top: 10px;
@@ -1418,15 +1418,15 @@ body{
     border: 2px solid black;
     opacity: 0.6;
 }
-.col-precoN{
+.col-precoN-usu{
     margin-left: 40px;
 }
-.e-precoN{
+.e-precoN-usu{
     width: 120px;
     margin-left: 10px;
     text-align: center;
 }
-.u-precoN input[type="text"]{
+.u-precoN-usu input[type="text"]{
     background-color: #e6e6e6;
     width: 120px;
     margin-top: 10px;
@@ -1436,15 +1436,15 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
-.linha2-editar-produtos{
+.linha2-editar-produtos-usu{
     margin-bottom: 20px;
 }
-.e-nomeS p{
+.e-nomeS-usu p{
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-nomeS input[type="text"]{
+.u-nomeS-usu input[type="text"]{
     background-color: #e6e6e6;
     width: 290px;
     height: 40px;
@@ -1454,15 +1454,15 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
-.linha3-editar-produtos{
+.linha3-editar-produtos-usu{
     margin-bottom: 20px;
 }
-.e-desc p{
+.e-desc-usu p{
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-desc input[type="text"]{
+.u-desc-usu input[type="text"]{
     background-color: #e6e6e6;
     width: 290px;
     height: 40px;
@@ -1472,18 +1472,18 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
-.linha4-editar-produtos{
+.linha4-editar-produtos-usu{
     margin-bottom: 20px;
 }
-.e-tipo p{
+.e-tipo-usu p{
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-tipo{
+.u-tipo-usu{
     margin-top: 10px;
 }
-.u-tipo input[type="radio"]{
+.u-tipo-usu input[type="radio"]{
     appearance: none;
     background-color: #e6e6e6;
     border: 2px solid black;
@@ -1497,7 +1497,7 @@ body{
     align-items: center; /* Centralizar verticalmente */    
     cursor: pointer;
 }
-.u-tipo input[type="radio"]:checked::before{
+.u-tipo-usu input[type="radio"]:checked::before{
     content: "✔";
     color: #af00ff;
     font-weight: 600;
@@ -1505,25 +1505,25 @@ body{
     text-align: center;
     font-size: 20px;
 }
-.u-tipo label {
+.u-tipo-usu label {
     cursor: pointer; /* Para mostrar a mão ao passar o mouse sobre o label */
     font-size: 18px;
     position: absolute;
     margin-left: 5px;
     margin-top: 7px;
 }
-.linha5-editar-produtos{
+.linha5-editar-produtos-usu{
     margin-bottom: 20px;
 }
-.e-cond p{
+.e-cond-usu p{
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-cond{
+.u-cond-usu{
     margin-top: 10px;
 }
-.u-cond input[type="radio"]{
+.u-cond-usu input[type="radio"]{
     appearance: none;
     background-color: #e6e6e6;
     border: 2px solid black;
@@ -1537,7 +1537,7 @@ body{
     align-items: center; /* Centralizar verticalmente */    
     cursor: pointer;
 }
-.u-cond input[type="radio"]:checked::before{
+.u-cond-usu input[type="radio"]:checked::before{
     content: "✔";
     color: #af00ff;
     font-weight: 600;
@@ -1545,25 +1545,25 @@ body{
     text-align: center;
     font-size: 20px;
 }
-.u-cond label {
+.u-cond-usu label {
     cursor: pointer; /* Para mostrar a mão ao passar o mouse sobre o label */
     font-size: 18px;
     position: absolute;
     margin-left: 5px;
     margin-top: 7px;
 }
-.linha6-editar-produtos{
+.linha6-editar-produtos-usu{
     margin-bottom: 30px;
 }
-.e-sub p{
+.e-sub-usu p{
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-sub{
+.u-sub-usu{
     margin-top: 10px;
 }
-.u-sub select{
+.u-sub-usu select{
     background-color: #e6e6e6;
     border: 2px solid black;
     font-size: 17px;
@@ -1576,12 +1576,12 @@ body{
     align-items: center; /* Centralizar verticalmente */    
     cursor: pointer;
 }
-.btn-slavar-alt-prod{
+.btn-slavar-alt-prod-usu{
     text-align: center;
     margin-top: 30px;
     margin-bottom: 10px;
 }
-.btn-slavar-alt-prod input[type="submit"]{
+.btn-slavar-alt-prod-usu input[type="submit"]{
     background-color: white;
     border: 2px solid #af00ff;
     width: 165px;
@@ -1593,18 +1593,18 @@ body{
     font-size: 17px;
     text-decoration: none;
 }
-.btn-slavar-alt-prod input[type="submit"]:hover{
+.btn-slavar-alt-prod-usu input[type="submit"]:hover{
     background-color: #af00ff;
     transition: background-color 0.4s ease;
     color: white;
 }
-#delete-cad{
+#delete-cad-usu{
     font-size: 35px;
 }
-#delete-cad:hover{
+#delete-cad-usu:hover{
     color: red;
 }
-#edit{
+#edit-usu{
     font-size: 30px;
 }
 
@@ -1639,20 +1639,20 @@ body{
 
 
 
-.tudo-tudo-desktop{
+.tudo-tudo-desktop-usu{
     display: flex;
     width: 825px;
     height: auto;
     margin: auto;
     display: none;
 }
-.tudo-card-desktop{
+.tudo-card-desktop-usu{
     background-color: #f1f1f1;
     width: 330px;
     height: 165px;
     border: 3px solid black;
 }
-.card-carrinho-desktop{
+.card-carrinho-desktop-usu{
     display: flex;
     margin-top: 5px;
     align-items: center;
@@ -1660,25 +1660,25 @@ body{
     cursor: pointer;
     width: 317px;
 }
-.card-carrinho-desktop p{
+.card-carrinho-desktop-usu p{
     font-size: 20px;
     font-weight: 600;
     width: 330px;
 }
-.card-carrinho-desktop.active {
+.card-carrinho-desktop-usu.active {
     color: #af00ff;
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-#shopping_cart{
+#shopping_cart-usu{
     margin-right: 10px;
     font-size: 30px;
 }
-#chevron-carrinho{
+#chevron-carrinho-usu{
     margin-left: 5px;
     font-size: 30px;
     margin-top: 5px;
 }
-.card-dados-desktop{
+.card-dados-desktop-usu{
     display: flex;
     align-items: center;
     margin-left: 5px;
@@ -1686,25 +1686,25 @@ body{
     width: 190px;
     margin-top: 10px;
 }
-.card-dados-desktop p{
+.card-dados-desktop-usu p{
     font-size: 20px;
     font-weight: 600;
     width: 150px;
 }
-.card-dados-desktop.active {
+.card-dados-desktop-usu.active {
     color: #af00ff;
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-#database{
+#database-usu{
     margin-right: 10px;
     font-size: 30px;
 }
-#chevron-dados{
+#chevron-dados-usu{
     margin-left: 5px;
     font-size: 30px;
     margin-top: 5px;
 }
-.card-cadastrados-desktop{
+.card-cadastrados-desktop-usu{
     display: flex;
     align-items: center;
     margin-left: 5px;
@@ -1712,94 +1712,94 @@ body{
     width: 281px;
     margin-top: 10px;
 }
-.card-cadastrados-desktop p{
+.card-cadastrados-desktop-usu p{
     font-size: 20px;
     font-weight: 600;
     width: 300px;
 }
-.card-cadastrados-desktop.active {
+.card-cadastrados-desktop-usu.active {
     color: #af00ff;
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-#bookmark_manager{
+#bookmark_manager-usu{
     margin-right: 10px;
     font-size: 30px;
 }
-#chevron-cadastrados{
+#chevron-cadastrados-usu{
     margin-left: 5px;
     font-size: 30px;
     margin-top: 5px;
 }
-.tabelas-desktop{
+.tabelas-desktop-usu{
     background-color: ;
     width:400px;
     margin-left: 50px;
 }
 
 
-.conteudo-carrinho-desktop{
+.conteudo-carrinho-desktop-usu{
    background-color: white;
     display: none; /* para não aparecer esta parte*/
     border-radius: 20px;
     padding-top: 10px;
     padding-left: 10px;
 }
-.tabela-carrinho-desktop{
+.tabela-carrinho-desktop-usu{
     background-color: white;
     margin-bottom: 1px;
     display: flex;
     align-items: center;
     border-radius: 20px 20px 20px 20px;
 }
-.imagem-tabela-carrinho-desktop img{
+.imagem-tabela-carrinho-desktop-usu img{
    border-radius: 20px; 
    margin-top: 10px;
    margin-bottom: 10px;
    margin-left: 10px;
 }
-.imagem-tabela-carrinho-desktop img:hover{
+.imagem-tabela-carrinho-desktop-usu img:hover{
     transition: opacity 0.4s ease;
     opacity: 0.6;
 }
-.texto-tabela-carrinho-desktop{
+.texto-tabela-carrinho-desktop-usu{
     margin-left: 8px;
 }
-.preco-tabela-carrinho-desktop{
+.preco-tabela-carrinho-desktop-usu{
     font-size: 20px;
     font-weight: 600;
 }
-.desc-tabela-carrinho-desktop{
+.desc-tabela-carrinho-desktop-usu{
     font-size: 20px;
     margin-top: 15px;
 }
-.excluir-tabela-carrinho-desktop{
+.excluir-tabela-carrinho-desktop-usu{
     margin-left: 40px;
 }
-.excluir-tabela-carrinho-desktop span{
+.excluir-tabela-carrinho-desktop-usu span{
     color: black;
 }
-#delete{
+#delete-usu{
     font-size: 40px;
     color: black;
 }
-#delete:hover {
+#delete-usu:hover {
     color: red; /* Altera a cor para vermelho quando o cursor está sobre o ícone */
 }
-.total-carrinho-desktop{
+.total-carrinho-desktop-usu{
     display: flex;
     margin-top: 20px;
     margin-left: 20px;
     padding-bottom: 20px;
 }
-.total-carrinho-desktop p{
+.total-carrinho-desktop-usu p{
     margin-right: 5px;
     font-size: 20px;
     font-weight: 600;
 }
-.confirmar-carrinho-desktop a{
+.confirmar-carrinho-desktop-usu a{
     text-decoration: none;
 }
-.texto-confirmar-carrinho-desktop{
+.texto-confirmar-carrinho-desktop-usu{
     background-color: white;
     width: 140px;
     height: 35px;
@@ -1809,14 +1809,14 @@ body{
     border-radius: 5px;
     border: #af00ff solid 2px;
 }
-.texto-confirmar-carrinho-desktop p{
+.texto-confirmar-carrinho-desktop-usu p{
     color: #af00ff;
     font-size: 17px;
     font-weight: 300;
     height: 33px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
     padding-top: 5px;
 }
-.texto-confirmar-carrinho-desktop p:hover{
+.texto-confirmar-carrinho-desktop-usu p:hover{
     color: white;
     transition: background-color 0.4s ease;
     background-color: #af00ff;
@@ -1825,150 +1825,150 @@ body{
 
 
 
-.conteudo-dados-desktop{
+.conteudo-dados-desktop-usu{
     background-color: white;
     display: none;  /* Display: none; para a tela de "dados" não aparecer. */
     padding-bottom: 10px;
     border-radius: 20px;
 }
-.card-dados-desktop{
+.card-dados-desktop-usu{
     display: flex;
     align-items: center;
     margin-left: 5px;
     cursor: pointer;
     width: 190px;
 }
-.card-dados-desktop p{
+.card-dados-desktop-usu p{
     font-size: 20px;
     font-weight: 600;
 }
-#database{
+#database-usu{
     margin-right: 10px;
     font-size: 30px;
 }
-.tabela-dados-desktop{
+.tabela-dados-desktop-usu{
     margin-bottom: 30px;
     background-color: ;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
 }
-.re-email-desktop{
+.re-email-desktop-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 15px;
 }
-.e-email-desktop p{
+.e-email-desktop-usu p{
     font-weight: 600;
     font-size: 20px
 }
-.u-email-desktop{
+.u-email-desktop-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-nome-desktop{
+.re-nome-desktop-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     padding-top: 10px;
 }
-.e-nome-desktop{
+.e-nome-desktop-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-nome-desktop{
+.u-nome-desktop-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-sobrenome-desktop{
+.re-sobrenome-desktop-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-sobrenome-desktop{
+.e-sobrenome-desktop-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-sobrenome-desktop{
+.u-sobrenome-desktop-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-endereco-desktop{
+.re-endereco-desktop-usu{
     display: flex;
     align-items: baseline;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-endereco-desktop{
+.e-endereco-desktop-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-endereco-desktop{
+.u-endereco-desktop-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-cep-desktop{
+.re-cep-desktop-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-cep-desktop{
+.e-cep-desktop-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-cep-desktop{
+.u-cep-desktop-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-complemento-desktop{
+.re-complemento-desktop-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-complemento-desktop{
+.e-complemento-desktop-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-complemento-desktop{
+.u-complemento-desktop-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-tel-desktop{
+.re-tel-desktop-usu{
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-tel-desktop{
+.e-tel-desktop-usu{
     font-weight: 600;
     font-size: 20px;
 }
-.u-tel-desktop{
+.u-tel-desktop-usu{
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.espaco-editar-dados-desktop{
+.espaco-editar-dados-desktop-usu{
     padding-bottom: 10px;
 }
-.editar-dados-desktop {
+.editar-dados-desktop-usu {
     background-color: white;
     border: #af00ff solid 2px;
     width: 165px;
@@ -1977,17 +1977,17 @@ body{
     margin: auto;
     border-radius: 5px;
 }
-.editar-dados-desktop a{
+.editar-dados-desktop-usu a{
     text-decoration: none;
 }
-.editar-dados-desktop p{
+.editar-dados-desktop-usu p{
     color: #af00ff;
     font-size: 17px;
     font-weight: 300;
     height: 33px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
     padding-top: 5px;
 }
-.editar-dados-desktop p:hover{
+.editar-dados-desktop-usu p:hover{
     color: white;
     transition: background-color 0.4s ease;
     background-color: #af00ff;
@@ -1998,13 +1998,13 @@ body{
 
 
 
-.container-editar-produto-desktop{
+.container-editar-produto-desktop-usu{
     display: none;   
 }
-.tabela-cadastrados-desktop th{
+.tabela-cadastrados-desktop-usu th{
     flex-direction: column;
 }
-.conteudo-carrinho-cadastrados-desktop{
+.conteudo-carrinho-cadastrados-desktop-usu{
     display: none;
     background-color: white;
     border-radius: 20px;
@@ -2013,43 +2013,43 @@ body{
     padding-left: 10px;
     padding-right: 20px;
 }
-.editar-tabela-carrinho-desktop{
+.editar-tabela-carrinho-desktop-usu{
     margin-left: 20px;
 }
-.editar-tabela-carrinho-desktop span{
+.editar-tabela-carrinho-desktop-usu span{
     color: #af00ff;
 }
-#edit{
+#edit-usu{
     font-size: 30px;
 }
-#delete-cad-desktop{
+#delete-cad-desktop-usu{
     font-size: 35px;
 }
-#delete-cad-desktop:hover{
+#delete-cad-desktop-usu:hover{
     color: red;
 }
-.excluir-tabela-cad-desktop{
+.excluir-tabela-cad-desktop-usu{
     margin-left: 15px;
 }
-.excluir-tabela-cad-desktop span{
+.excluir-tabela-cad-desktop-usu span{
     color: black;
 }
-.titulo-preco-desktop p{
+.titulo-preco-desktop-usu p{
     font-weight: 600;
     margin-left: 15px;
     margin-bottom: 10px;
     font-size: 20px;
 }
-.linha1-editar-produtos-desktop{
+.linha1-editar-produtos-desktop-usu{
     display: flex;
     margin-bottom: 20px;
 }
-.e-precoO-desktop{
+.e-precoO-desktop-usu{
     width: 120px;
     margin-left: 10px;
     text-align: center;
 }
-.u-precoO-desktop{
+.u-precoO-desktop-usu{
     background-color: #cfcfcf;
     width: 120px;
     margin-top: 10px;
@@ -2061,15 +2061,15 @@ body{
     border: 2px solid black;
     opacity: 0.6;
 }
-.col-precoN-desktop{
+.col-precoN-desktop-usu{
     margin-left: 40px;
 }
-.e-precoN-desktop{
+.e-precoN-desktop-usu{
     width: 120px;
     margin-left: 10px;
     text-align: center;
 }
-.u-precoN-desktop input[type="text"]{
+.u-precoN-desktop-usu input[type="text"]{
     background-color: #e6e6e6;
     width: 120px;
     margin-top: 10px;
@@ -2079,15 +2079,15 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
-.linha2-editar-produtos-desktop{
+.linha2-editar-produtos-desktop-usu{
     margin-bottom: 20px;
 }
-.e-nomeS-desktop p{
+.e-nomeS-desktop-usu p{
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-nomeS-desktop input[type="text"]{
+.u-nomeS-desktop-usu input[type="text"]{
     background-color: #e6e6e6;
     width: 290px;
     height: 40px;
@@ -2097,15 +2097,15 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
-.linha3-editar-produtos-desktop{
+.linha3-editar-produtos-desktop-usu{
     margin-bottom: 20px;
 }
-.e-desc-desktop p{
+.e-desc-desktop-usu p{
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-desc-desktop input[type="text"]{
+.u-desc-desktop-usu input[type="text"]{
     background-color: #e6e6e6;
     width: 290px;
     height: 40px;
@@ -2115,18 +2115,18 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
-.linha4-editar-produtos-desktop{
+.linha4-editar-produtos-desktop-usu{
     margin-bottom: 20px;
 }
-.e-tipo-desktop p{
+.e-tipo-desktop-usu p{
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-tipo-desktop{
+.u-tipo-desktop-usu{
     margin-top: 10px;
 }
-.u-tipo-desktop input[type="radio"]{
+.u-tipo-desktop-usu input[type="radio"]{
     appearance: none;
     background-color: #e6e6e6;
     border: 2px solid black;
@@ -2140,7 +2140,7 @@ body{
     align-items: center; /* Centralizar verticalmente */    
     cursor: pointer;
 }
-.u-tipo-desktop input[type="radio"]:checked::before{
+.u-tipo-desktop-usu input[type="radio"]:checked::before{
     content: "✔";
     color: #af00ff;
     font-weight: 600;
@@ -2148,25 +2148,25 @@ body{
     text-align: center;
     font-size: 20px;
 }
-.u-tipo-desktop label {
+.u-tipo-desktop-usu label {
     cursor: pointer; /* Para mostrar a mão ao passar o mouse sobre o label */
     font-size: 18px;
     position: absolute;
     margin-left: 5px;
     margin-top: 7px;
 }
-.linha5-editar-produtos-desktop{
+.linha5-editar-produtos-desktop-usu{
     margin-bottom: 20px;
 }
-.e-cond-desktop p{
+.e-cond-desktop-usu p{
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-cond-desktop{
+.u-cond-desktop-usu{
     margin-top: 10px;
 }
-.u-cond-desktop input[type="radio"]{
+.u-cond-desktop-usu input[type="radio"]{
     appearance: none;
     background-color: #e6e6e6;
     border: 2px solid black;
@@ -2180,7 +2180,7 @@ body{
     align-items: center; /* Centralizar verticalmente */    
     cursor: pointer;
 }
-.u-cond-desktop input[type="radio"]:checked::before{
+.u-cond-desktop-usu input[type="radio"]:checked::before{
     content: "✔";
     color: #af00ff;
     font-weight: 600;
@@ -2188,25 +2188,25 @@ body{
     text-align: center;
     font-size: 20px;
 }
-.u-cond-desktop label {
+.u-cond-desktop-usu label {
     cursor: pointer; /* Para mostrar a mão ao passar o mouse sobre o label */
     font-size: 18px;
     position: absolute;
     margin-left: 5px;
     margin-top: 7px;
 }
-.linha6-editar-produtos-desktop{
+.linha6-editar-produtos-desktop-usu{
     margin-bottom: 30px;
 }
-.e-sub-desktop p{
+.e-sub-desktop-usu p{
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-sub-desktop{
+.u-sub-desktop-usu{
     margin-top: 10px;
 }
-.u-sub-desktop select{
+.u-sub-desktop-usu select{
     background-color: #e6e6e6;
     border: 2px solid black;
     font-size: 17px;
@@ -2219,10 +2219,10 @@ body{
     align-items: center; /* Centralizar verticalmente */    
     cursor: pointer;
 }
-.btn-slavar-alt-prod-desktop{
+.btn-slavar-alt-prod-desktop-usu{
     text-align: center;
 }
-.btn-slavar-alt-prod-desktop input[type="submit"]{
+.btn-slavar-alt-prod-desktop-usu input[type="submit"]{
     background-color: white;
     border: 2px solid #af00ff;
     width: 165px;
@@ -2234,18 +2234,18 @@ body{
     font-size: 17px;
     text-decoration: none;
 }
-.btn-slavar-alt-prod-desktop input[type="submit"]:hover{
+.btn-slavar-alt-prod-desktop-usu input[type="submit"]:hover{
     background-color: #af00ff;
     transition: background-color 0.4s ease;
     color: white;
 }
-#delete-cad{
+#delete-cad-usu{
     font-size: 35px;
 }
-#delete-cad:hover{
+#delete-cad-usu:hover{
     color: red;
 }
-#edit{
+#edit-usu{
     font-size: 30px;
 }
 
