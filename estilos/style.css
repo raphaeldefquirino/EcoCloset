@@ -864,14 +864,6 @@ font-weight: 800;
 
 /*-------------------------------------------PAGINA USUARIO----------------------------------------------------*/ 
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
-* {
-    font-family: 'Noto Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body{
     background-color: #f1f1f1;
 }
