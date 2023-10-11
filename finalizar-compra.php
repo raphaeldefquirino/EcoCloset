@@ -97,14 +97,14 @@
             <div class="card-number-box"></div>
             <div class="flexbox">
                 <div class="box">
-                    <span>card holder</span>
-                    <div class="card-holder-name">full name</div>
+                    <span>Número do Cartão</span>
+                    <div class="card-holder-name">Nome do Cartão</div>
                 </div>
                 <div class="box">
-                    <span>expires</span>
+                    <span>expira</span>
                     <div class="expiration">
                         <span class="exp-month">mm</span>
-                        <span class="exp-year">yy</span>
+                        <span class="exp-year">aa</span>
                     </div>
                 </div>
             </div>
