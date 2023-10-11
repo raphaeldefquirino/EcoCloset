@@ -14,6 +14,12 @@
 </head>
 <body>
 
+    <?php
+
+  include("menu.php");
+
+  ?>
+
 <div class="container-pag-cad">
 
 
@@ -285,7 +291,11 @@ document.querySelector('.pix-copy-btn').addEventListener('click', function() {
 
 
 
+<?php
 
+  include("includes/footer.php")
+
+  ?>
 
 </body>
 </html>
