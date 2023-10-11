@@ -579,3 +579,45 @@ main {
       display: none;
   }
 }
+
+
+
+/* começo do media-query da página finalizar-pag        */
+
+/* Ajustando para telas menores que 768px (tablets e smartphones) */
+@media (max-width: 700px) {
+  .container-pag-cad form {
+      width: 85%; /* Ajustando a largura para 90% da tela */
+      padding-top: 50px; /* Reduzindo o padding */
+      height: 800px;
+      padding-top: 300px;
+      
+    
+  }
+
+  .container-pag-cad .card-container{
+
+      width: 380px;
+      height: 230px;
+  }
+
+  .boleto-container {
+
+  width: 85%;
+  height: auto;
+  
+  margin-left: 40px;
+
+  }
+  .boleto-container img{
+
+  margin-left: 40px;
+
+ 
+
+}
+
+
+}
+
+/* FIMMMMMMMMMMM do media-query da página finalizar-pag        */
