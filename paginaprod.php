@@ -61,7 +61,7 @@ $produto =  mysqli_fetch_assoc($result);
 
 					<button class="btn-add-to-cart">
 						<i class="fa-solid fa-plus"></i>
-						Adicionar ao carrinho
+						  Adicionar ao carrinho
 					</button>
 				</div>
 

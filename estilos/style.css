@@ -1082,6 +1082,223 @@ font-weight: 800;
   }
   
   /*-------------------------------------------END CARD NICOLAS----------------------------------------------------*/ 
+
+  
+.mainpagprod {
+	display: flex;
+  border-radius: 10px;
+	background-color: #ffffff;
+	align-items: center;
+	margin-right: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
+  
+
+	
+}
+
+.allcontainer{
+
+	
+	border-radius: 10px;
+	display: flex;
+	padding: 5px;
+  width: 100%;
+  height: auto;
+  
+
+
+}
+
+.allcontainer img{
+
+	border-radius: 10px;
+	display: flex;
+	border-radius: 30px;
+	width:450px;
+	height: 600px;
+	margin-right: 10px;
+}
+
+.container-img{
+
+
+align-items: center;
+width: auto;
+}
+
+
+
+ 
+.container-info-product {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.container-price {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e4e4e4;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.container-price span {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.container-details-product {
+	padding: 30px 0;
+}
+
+
+.container-add-cart {
+	display: flex;
+	
+	padding-bottom: 30px;
+	
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.btn-add-to-cart {
+	
+	background-color: rgb(255, 255, 255);
+	padding: 10px;
+	color: #AF00FF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	font-weight: 700;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: transform 0.7s ease;
+    border-color: #AF00FF;
+	
+}
+
+.btn-add-to-cart:hover {
+  background-color: #AF00FF;
+  color: #ffffff;
+  border-color: #AF00FF;
+}
+
+.condicaoprod{
+
+  padding-bottom: 20px;
+	border-bottom: 1px solid #e4e4e4;
+	display: flex;
+	align-items: center;
+  text-align: center;
+  
+
+  
+}
+.condicaoprod span{
+
+  font-size: 24px;
+	font-weight: 300;
+
+
+}
+
+.condicaoProd::after {
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background-color: #e4e4e4;
+  margin-top: 20px; /* Ajuste este valor de acordo com a distância desejada entre a div e a linha */
+  align-items: center;
+  text-align: center;
+  display: block;
+}
+
+
+
+
+
+
+
+.container-description,
+.container-additional-information,
+.container-reviews {
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid #e4e4e4;
+	padding: 10px 0;
+  
+ 
+}
+
+.title-description {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+  
+}
+
+.container-description{
+
+  height: 300px; /* Adjust the height as per your design */
+  overflow: hidden;
+}
+
+.title-description h4 {
+	font-weight: 300;
+	color: #666;
+	font-size: 14px;
+}
+
+.text-description {
+	font-size: 13px;
+	color: #252525;
+	line-height: 22px;
+	margin-top: 25px;
+  flex-grow: 1;
+ 
+}
+
+.text-description-container {
+  
+  overflow-y: auto;
+}
+
+.container-social {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0;
+	align-items: center;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.container-social span {
+	font-weight: 300;
+	color: #252525;
+}
+
+.container-buttons-social {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+}
+
+.container-buttons-social a:link,
+.container-buttons-social a:visited {
+	color: #666;
+	font-size: 15px;
+}
+
+.container-buttons-social a:hover {
+	color: #AF00FF;
+}
   
 
 
@@ -1179,6 +1396,7 @@ body{
 .desc-tabela-carrinho{
     font-size: 20px;
     margin-top: 15px;
+    
 }
 .excluir-tabela-carrinho{
     margin-left: 35px;
@@ -1837,37 +2055,6 @@ body{
     font-size: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .tudo-tudo-desktop{
     display: flex;
     width: 780px;
@@ -1999,6 +2186,7 @@ body{
 .desc-tabela-carrinho-desktop{
     font-size: 20px;
     margin-top: 15px;
+    width: 158px;
 }
 .excluir-tabela-carrinho-desktop{
     margin-left: 40px;
@@ -2475,320 +2663,3 @@ body{
 #edit{
     font-size: 30px;
 }
-
-
-
-
-
-
-
-
-
-.container-pag-cad{
-    min-height: 100vh;
-    background: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    padding-bottom: 60px;
-}
-
-/* Adicionando estilos personalizados para os botões de seleção */
-.payment-methods label {
-    display: flex;
-    align-items: center;
-    background-color: #b8b8b8;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    color: white;
-}
-
-.payment-methods label:hover {
-    background-color: #636363;
-}
-
-/* Ocultando os radio buttons originais */
-.payment-methods input[type="radio"] {
-    display: none;
-}
-.payment-methods input[type="radio"]:checked + label {
-    background-color: #af00ff;
-    color: #fff; /* ou qualquer outra cor que você queira para o texto */
-}
-.payment-methods label {
-    transition: background-color 0.3s ease-out;
-}
-
-
-
-
-/* Nicolas   Página finazilar pedido\ cadastrar cartão*/
-
-
-
-
-
-.container-pag-cad form{
-    background: #000000;
-    border-radius: 5px;
-    box-shadow: 0 10px 15px rgba(0,0,0,.1);
-    padding: 20px;
-    width: 600px;
-    padding-top: 310px;
-}
-
-.container-pag-cad form .inputBox{
-    margin-top: 20px;
-}
-
-.container-pag-cad form .inputBox span{
-    display: block;
-    color:#999;
-    padding-bottom: 5px;
-}
-
-.container-pag-cad form .inputBox input,
-.container-pag-cad form .inputBox select{
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border:1px solid rgba(0,0,0,.3);
-    color:#e7e4e4;
-    background-color: #747474;
-}
-.container-pag-cad form .flexbox{
-    display: flex;
-    gap:15px;
-    align-items: center;
-    justify-content: center;
-}
-
-.container-pag-cad form .flexbox .inputBox{
-    flex:1 1 150px;
-}
-
-.container-pag-cad form .submit-btn{
-    width: 100%;
-    background-color: white;
-    margin-top: 20px;
-    padding: 10px;
-    font-size: 20px;
-    color:#af00ff;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .2s linear;
-    border:solid 2px #af00ff;
-}
-.inputBox ::placeholder{
-    color: #f0ffff94;
-}
-
-.container-pag-cad form .submit-btn:hover{
-    background-color: #af00ff;
-    color: white;
-}
-
-
-.flexbox {
-    color: #f0ffff94;
-    align-items: center;
-    justify-content: center;
-
-    
-}
-
-.Parcelas{
-
-    display: block;
-
-}
-
-.payment-methods {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-    align-items: center;
-}
-
-.pix-container,
-.boleto-container {
-    display: none; /* Inicialmente escondidos */
-    background: #000000;
-    border-radius: 5px;
-    box-shadow: 0 10px 15px rgba(0,0,0,.1);
-    padding: 20px;
-    width: 100%;
-    height: auto;
-    padding-top: 50px;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.qrcode-container {
-    display: flex; /* Muda o display para flex */
-    flex-direction: column; /* Direção da coluna para organizar os itens verticalmente */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
-    width: 450px;
-}
-
-.pix-qrcode {
-    width: 240px; /* Você pode ajustar conforme necessário */
-    height: 240px;
-    align-items: center;
-    
-    
-    
-}
-
-.pix-copy-btn button{
-    width: 300px;
-    border: none;
-    background-color: black;
-    padding: 5px;
-    font-size: 20px;
-    color:#ffffff;
-    cursor: pointer;
-    align-items: center;
-    border-radius: 10px;
-   
-    }
-
-  
-
-.pix-finalizar{
-width: 100%;
-background-color: white;
-margin-top: 20px;
-padding: 10px;
-font-size: 20px;
-color:#af00ff;
-border-radius: 10px;
-cursor: pointer;
-transition: .2s linear;
-border:solid 2px #af00ff;
-}
-
-
-.pix-finalizar:hover{
-
-    background-color: #af00ff;
-    color: white;
- 
-}
-
-.boleto-container img {
-
-    margin-left: 23%;
-}
-
-
-
-
-.container-pag-cad .card-container{
-    margin-bottom: 410px;
-    position: absolute;
-    height: 250px;
-    width: 400px;
-}
-
-.container-pag-cad .card-container .front{
-    position: relative;
-    height:100%;
-    width: 100%;
-    align-items: center;
-    background:linear-gradient(45deg, rgb(97, 38, 151), rgb(143, 109, 221));
-    border-radius: 5px;
-    backface-visibility: hidden;
-    padding:20px;
-    transform:perspective(1000px) rotateY(0deg);
-    transition:transform .4s ease-out;
-}
-
-.container-pag-cad .card-container .front .image{
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
-    padding-top: 10px;
-}
-
-.container-pag-cad .card-container .front .image img{
-    height: 50px;
-}
-
-.container-pag-cad .card-container .front .card-number-box{
-    padding:30px 0;
-    font-size: 22px;
-    color:#fff;
-}
-
-.container-pag-cad .card-container .front .flexbox{
-    display: flex;
-}
-
-.container-pag-cad .card-container .front .flexbox .box:nth-child(1){
-    margin-right: auto;
-}
-
-.container-pag-cad .card-container .front .flexbox .box{
-    font-size: 15px;
-    color:#fff;
-}
-.container-pag-cad .card-container .back{
-    position: absolute;
-    top:0; left: 0;
-    height: 100%;
-    width: 100%;
-    background:linear-gradient(45deg, rgb(97, 38, 151), rgb(143, 109, 221));
-    border-radius: 5px;
-    padding: 20px 0;
-    text-align: right;
-    backface-visibility: hidden;
-    box-shadow: 0 15px 25px rgba(0,0,0,.2);
-    transform:perspective(1000px) rotateY(180deg);
-    transition:transform .4s ease-out;
-}
-
-.container-pag-cad .card-container .back .stripe{
-    background: #000;
-    width: 100%;
-    margin: 10px 0;
-    height: 50px;
-}
-
-.container-pag-cad .card-container .back .box{
-    padding: 0 20px;
-}
-
-.container-pag-cad.card-container .back .box span{
-    color:#fff;
-    font-size: 15px;
-}
-
-.container-pag-cad.card-container .back .box .cvv-box{
-    height: 50px;
-    padding: 10px;
-    margin-top: 5px;
-    color:#333;
-    background: #fff;
-    border-radius: 5px;
-    width: 100%;
-}
-
-.total-pag-finalizar{
-    color: #eee;
-}
-
-
-
-.container-pag-cad .card-container .back .box img{
-    margin-top: 30px;
-    height: 30px;
-}
-
-
-/* ... seu CSS atual ... */

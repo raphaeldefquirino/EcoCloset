@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04/10/2023 às 00:07
+-- Tempo de geração: 15/10/2023 às 22:49
 -- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.0.28
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -46,14 +46,11 @@ CREATE TABLE `cadastro_prod` (
 
 INSERT INTO `cadastro_prod` (`idproduto`, `nome_prod`, `descricao_prod`, `valor`, `categoria`, `subcategoria`, `condicao`, `path`, `nome_og_arq`, `id_usu`) VALUES
 (1, 'Camiseta básica', 'Camiseta de algodão de manga curta, cor branca, tamanho M.', 29.99, 'Masculina', '', '', 'uploads/648912c30a3f1.jpg', 'camisa-preta-1.jpg', 1),
-(2, 'Calça jeans', 'Calça jeans reta, lavagem clara, tamanho 32.', 99.99, 'Masculina', '', '', 'uploads/64891330ea0ae.jpg', 'calca-jeans-masculina.jpg', 1),
-(3, 'Moletom com capuz', 'Moletom com capuz, cor preto, bolso canguru, tamanho M.', 69.99, 'Masculina', '', '', 'uploads/648913933faa8.jpg', 'moletom-masculino.jpg', 1),
 (4, 'Camisa esportiva', 'Camiseta de poliéster, tamanho G.', 39.99, '', '', '', 'uploads/64891410ba1e1.jpg', 'camisa-do-milan.jpg', 1),
 (5, 'Camisa do Corinth', 'Camisa do timão, dri-fit, pouco usada, super confortável, ótima para e', 150.99, 'Masculina', '', '', 'uploads/6489144d80863.jpg', 'camisa-corinthians-masculina.jpg', 1),
 (6, 'Corta vento', 'Corta vento estilo e perfeito para aquele rolê com os amigos', 75.50, 'Masculina', '', '', 'uploads/648914933c226.jpg', 'corta-vento.jpg', 1),
 (7, 'Meia da nike', 'Meia importada, cano alto e macia', 50.00, 'Masculina', '', '', 'uploads/6489150b0b778.jpg', 'meia-nike.jpg', 1),
 (8, 'Camisa do Inter de Milão', 'Camisa do ineter de milão importada original', 249.99, 'Masculina', '', '', 'uploads/648915690d242.jpg', 'camisa-do-milan.jpg', 1),
-(9, 'Jaqueta puffer', 'Jaqueta puffer preta estilosa', 300.00, 'Masculina', '', '', 'uploads/648915e4ddc53.jpg', 'bobojaco.jpg', 1),
 (12, 'Corta vento', 'Corta vento rosa, impermeável lindo e veste super bem', 449.99, 'Feminina', '', '', 'uploads/6489177e289ea.jpg', 'corta-vento-femino.jpg', 1),
 (15, 'Jaqueta', 'Jaqueta verde muito linda', 150.99, 'Feminina', '', '', 'uploads/6489192cebe5b.png', 'jaqueta-feminan-verde.png', 1),
 (16, 'Vestido floral', 'Vestido estampado floral, alças finas, tamanho M.', 79.99, 'Feminina', '', '', 'uploads/648919dcd61d4.jpg', 'floral.jpg', 1),
@@ -87,9 +84,22 @@ CREATE TABLE `cadastro_usuario` (
 --
 
 INSERT INTO `cadastro_usuario` (`idusuario`, `email`, `senha`, `nome`, `sobrenome`, `telefone`, `CEP`, `endereco`, `complemento`) VALUES
-(1, 'rapha@gmail.com', '123', 'Raphael', '', '11900000000', '', '', ''),
+(1, 'raphina@gmail.com', '123', 'Rapel', 'Quirinin', '(11)42245249', '0754390-1', 'Rua do sobre e desc e ', 'casa 1 '),
 (2, 'arthur@gmail.com', '123', 'Arthut Bergamaço', '', '11777777777', '', '', ''),
-(3, 'kaue@gmail.com', '123', 'Kaue', 'Fidido', '45909', '48946549', 'rua', 'casa 2');
+(3, 'kaue@gmail.com', '123', 'Kaue', 'Fedido', '45909', '48946549', 'rua', 'casa 2');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `pedidos`
+--
+
+CREATE TABLE `pedidos` (
+  `idpedido` int(11) NOT NULL,
+  `idusuario` int(11) NOT NULL,
+  `status` varchar(15) NOT NULL,
+  `idproduto` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Índices para tabelas despejadas
@@ -109,6 +119,12 @@ ALTER TABLE `cadastro_usuario`
   ADD PRIMARY KEY (`idusuario`);
 
 --
+-- Índices de tabela `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD PRIMARY KEY (`idpedido`);
+
+--
 -- AUTO_INCREMENT para tabelas despejadas
 --
 
@@ -123,6 +139,12 @@ ALTER TABLE `cadastro_prod`
 --
 ALTER TABLE `cadastro_usuario`
   MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de tabela `pedidos`
+--
+ALTER TABLE `pedidos`
+  MODIFY `idpedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Restrições para tabelas despejadas
