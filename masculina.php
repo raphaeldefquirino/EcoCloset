@@ -25,7 +25,7 @@
 
 <div class="filter-bar">
 <button class="filter-button mobile-show">Mostrar filtros</button>
-    <form action="#" method="post">
+    <form action="filterPage.php" method="post">
     <label for="subcategory"  class = "subcategory">Subcategoria:</label>
     <select name="subcategoria" id="subcategory">
       <option value="Shorts">Shorts</option>
