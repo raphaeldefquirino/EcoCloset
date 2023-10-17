@@ -38,7 +38,7 @@
 
 
 
-div class="tudo-perfil-usuario">
+<div class="tudo-perfil-usuario">
 
         <div class="container-perfil-usuario">
 
@@ -50,7 +50,7 @@ div class="tudo-perfil-usuario">
 
                     <div class="imagem-perfil-usuario">
 
-                    <img src="pexels-andrea-piacquadio-774909.jpg" alt="imagem de usuário" height="200px" width="200px">
+                    <img src="imagens/foto-user-exe.png" alt="imagem de usuário" height="200px" width="200px">
 
                     </div>
 
@@ -77,7 +77,7 @@ div class="tudo-perfil-usuario">
 
                     <div class="btn-sair-perfil-usuario">
 
-                        <a href="#"> <p>Sair</p> </a>
+                        <a href="includes/logout.php"> <p>Sair</p> </a>
     
                         </div>
 
@@ -93,9 +93,6 @@ div class="tudo-perfil-usuario">
 
     </div>
 
-
-
-<a href="includes/logout.php">sair</a>
         <div class="tudo">
 
             <!-- Começo da parte carrinho -->
