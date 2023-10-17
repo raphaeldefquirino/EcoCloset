@@ -12,7 +12,22 @@
     $resultadoCadProd = mysqli_query($conexao, $consultaCadProd);
     $CadProd = mysqli_fetch_assoc($resultadoCadProd);
 
+    $consultaDados = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
+    $resultadoDados = mysqli_query($conexao, $consultaDados);
+    $dados = mysqli_fetch_assoc($resultadoDados);
 
+    /*-------------------------------DESK----------------------*/ 
+
+    $consultaCarrinhoDesk = "SELECT * FROM pedidos WHERE idusuario = '$id_usuario' AND status = 'carrinho'";
+    $resultadoCarrinhoDesk = mysqli_query($conexao, $consultaCarrinhoDesk);
+
+    $consultaCadProdDesk = "SELECT * FROM cadastro_prod WHERE id_usu = '$id_usuario'";
+    $resultadoCadProdDesk = mysqli_query($conexao, $consultaCadProdDesk);
+    $CadProdDesk = mysqli_fetch_assoc($resultadoCadProdDesk);
+
+    $consultaDadosDesk = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
+    $resultadoDadosDesk = mysqli_query($conexao, $consultaDadosDesk);
+    $dadosDesk = mysqli_fetch_assoc($resultadoDadosDesk);
 
     ?>
 
@@ -36,8 +51,6 @@
         include('menu.php');
         ?>
 
-
-
 <div class="tudo-perfil-usuario">
 
         <div class="container-perfil-usuario">
@@ -50,7 +63,7 @@
 
                     <div class="imagem-perfil-usuario">
 
-                    <img src="imagens/foto-user-exe.png" alt="imagem de usuário" height="200px" width="200px">
+                    <img src="<?=$dados['path_user']?>" alt="imagem de usuário" height="200px" width="200px">
 
                     </div>
 
@@ -59,16 +72,13 @@
                         <a href=""><span class="material-symbols-outlined" id="edit-perfil-usuario">edit</span></a>
 
                     </div>
-
-                    
-
                 </div>
             </div>
 
                 <div class="textos-perfil-usuario">
 
                     <div class="ola-perfil-usuario">
-                    <p>Olá, Raphael!</p>
+                    <p>Olá, <?= $dados['nome'] ?></p>
                     </div>
 
                     <div class="mensagem-perfil-usuario">
@@ -82,13 +92,7 @@
                         </div>
 
                 </div>
-                
-                
-
             </div>
-
-            
-
         </div>
 
     </div>
@@ -97,9 +101,6 @@
 
             <!-- Começo da parte carrinho -->
             <div class="carrinho">
-
-
-
                 <div class="card-carrinho" id="card-carrinho">
                     <span class="material-symbols-outlined" id="shopping_cart">shopping_cart</span>
                     <p>Meu carrinho de compras</p>
@@ -107,26 +108,34 @@
                 </div>
 
                 <div class="conteudo-carrinho" id="conteudo-carrinho">
-
+                <?php while ($itemCarrinho = mysqli_fetch_assoc($resultadoCarrinho)) : ?>
+                            <?php
+                            $idproduto = $itemCarrinho['idproduto'];
+                            $consultaProduto = "SELECT * FROM cadastro_prod WHERE idproduto = '$idproduto'";
+                            $resultadoProduto = mysqli_query($conexao, $consultaProduto);
+                            $produto = mysqli_fetch_assoc($resultadoProduto);
+                            ?>
 
                     <div class="conteudo-total-tabela-carrinho">
                         <div class="tabela-carrinho">
 
                             <div class="imagem-tabela-carrinho">
-                                <a href=""><img src="pexels-ray-piedra-1464625.jpg" alt="" height="110px" width="100px"></a>
+                                <a href=""><img src="<?= $produto['path'] ?>" alt="" height="110px" width="100px"></a>
                             </div>
 
                             <div class="texto-tabela-carrinho">
                                 <div class="preco-tabela-carrinho">
-                                    <p>R$ 50,00</p>
+                                    <p>R$ <?= $produto['valor'] ?></p>
                                 </div>
                                 <div class="desc-tabela-carrinho">
-                                    <p>Tenis NIKE branco</p>
+                                    <p><?= $produto['nome_prod'] ?></p>
                                 </div>
                             </div>
 
                             <div class="excluir-tabela-carrinho">
-                                <a href=""><span class="material-symbols-outlined" id="delete">delete</span></a>
+                            <?php
+                                        echo '<a href="includes/deletar.php?id= ' . $produto['idproduto'] . '"><span class="material-symbols-outlined" id="delete">delete</span></a>';
+                                        ?>
                             </div>
 
                         </div>
@@ -138,57 +147,12 @@
                             </a>
                         </div>
                     </div>
-
-
-                    <div class="conteudo-total-tabela-carrinho">
-                        <div class="tabela-carrinho">
-
-                            <div class="imagem-tabela-carrinho">
-                                <a href=""><img src="pexels-ray-piedra-1464625.jpg" alt="" height="110px" width="100px"></a>
-                            </div>
-
-                            <div class="texto-tabela-carrinho">
-                                <div class="preco-tabela-carrinho">
-                                    <p>R$ 50,00</p>
-                                </div>
-                                <div class="desc-tabela-carrinho">
-                                    <p>Tenis NIKE branco</p>
-                                </div>
-                            </div>
-
-                            <div class="excluir-tabela-carrinho">
-                                <a href=""><span class="material-symbols-outlined" id="delete">delete</span></a>
-                            </div>
-
-                        </div>
-                        <div class="confirmar-carrinho">
-                            <a href="">
-                                <div class="texto-confirmar-carrinho">
-                                    <p>Fechar compra</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-
-
+                    <?php endwhile; ?>
                     <!-- Parte do botão de fechar compra -->
-                    <div class="conclusao-carrinho">
-
-                        <div class="total-carrinho">
-                            <p>TOTAL:</p>
-                            <p>R$ 00,00</p>
-                        </div>
-
-                    </div>
-
                     <!-- Fim parte do botão de fechar compra -->
-
                 </div>
-
             </div>
             <!-- Fim da parte carrinho -->
-
             <!-- Começo da parte dados -->
             <div class="dados">
 
@@ -200,9 +164,6 @@
 
                 <div class="conteudo-dados" id="conteudo-dados">
 
-
-
-
                     <div class="tabela-dados">
 
                         <div class="re-nome">
@@ -211,7 +172,7 @@
                                 <p>Nome: </p>
                             </div>
                             <div class="u-nome">
-                                <p>Arthur </p>
+                                <p><?= $dados['nome'] ?> </p>
                             </div>
 
                         </div>
@@ -222,7 +183,7 @@
                                 <p>Sobrenome: </p>
                             </div>
                             <div class="u-sobrenome">
-                                <p>Bergamaço Alves</p>
+                                <p><?= $dados['sobrenome'] ?></p>
                             </div>
 
                         </div>
@@ -233,7 +194,7 @@
                                 <p>Email: </p>
                             </div>
                             <div class="u-email">
-                                <p>arthurbergamaco.alves@scseduca.com.br</p>
+                                <p><?= $dados['email'] ?></p>
                             </div>
 
                         </div>
@@ -244,7 +205,7 @@
                                 <p>CEP: </p>
                             </div>
                             <div class="u-cep">
-                                <p>09061580</p>
+                                <p><?= $dados['CEP'] ?></p>
                             </div>
 
                         </div>
@@ -255,19 +216,17 @@
                                 <p>Endereço: </p>
                             </div>
                             <div class="u-endereco">
-                                <p>São Paulo, São Caetano do Sul, Bairro Boa Vista, Rua Epitácio Pessoa, 216</p>
+                                <p><?= $dados['endereco'] ?></p>
                             </div>
 
                         </div>
-
-
                         <div class="re-complemento">
 
                             <div class="e-complemento">
                                 <p>Complemento: </p>
                             </div>
                             <div class="u-complemento">
-                                <p>Apto. 31</p>
+                                <p><?= $dados['complemento'] ?></p>
                             </div>
                         </div>
 
@@ -277,18 +236,16 @@
                                 <p>Telefone/cell: </p>
                             </div>
                             <div class="u-tel">
-                                <p>(11) 99407-1725</p>
+                                <p><?= $dados['telefone'] ?></p>
                             </div>
 
                         </div>
 
-
                     </div>
-
 
                     <div class="editar-dados">
 
-                        <a href="">
+                        <a href="editaDados.php">
                             <p>Editar seus dados</p>
                         </a>
 
@@ -310,9 +267,6 @@
 
                 <!-- Tabela de produtos cadastrados -->
 
-
-
-
                 <!-- Começo de um produto cadastrado -->
 
                 <div class="conteudo-cadastrados" id="conteudo-cadastrados">
@@ -321,20 +275,23 @@
 
                         <div class="conteudo-carrinho-cadastrados">
 
-
+                        <?php while ($itemCadProd = mysqli_fetch_assoc($resultadoCadProd)) : ?>
+                            <?php
+                            $idproduto = $itemCadProd['idproduto'];
+                            ?>
 
                             <div class="tabela-carrinho">
 
                                 <div class="imagem-tabela-carrinho">
-                                    <a href=""><img src="pexels-ray-piedra-1464625.jpg" alt="" height="110px" width="100px"></a>
+                                    <a href=""><img src="<?= $itemCadProd['path'] ?>" alt="" height="110px" width="100px"></a>
                                 </div>
 
                                 <div class="texto-tabela-carrinho">
                                     <div class="preco-tabela-carrinho">
-                                        <p>R$ 50,00</p>
+                                        <p>R$ <?= $itemCadProd['valor'] ?></p>
                                     </div>
                                     <div class="desc-tabela-carrinho">
-                                        <p>Tenis NIKE branco</p>
+                                        <p><?= $itemCadProd['nome_prod'] ?></p>
                                     </div>
                                 </div>
 
@@ -343,16 +300,17 @@
                                 </div>
 
                                 <div class="excluir-tabela-cad">
-                                    <a href=""><span class="material-symbols-outlined" id="delete-cad">delete</span></a>
+                                <?php
+                                            echo '<a href="includes/deletaProd.php?id= ' . $itemCadProd['idproduto'] . '"><span class="material-symbols-outlined" id="delete-cad">delete</span></a>';
+                                            ?>
                                 </div>
 
                             </div>
 
-
                             <!-- Começo do editar cadastrados -->
 
                             <div class="container-editar-produto">
-                                <form action="" method="post">
+                                <form action="includes/editaProd.php?id=<?= $itemCadProd['idproduto']?>" method="post">
 
                                     <div class="titulo-preco">
                                         <p>Preço</p>
@@ -365,7 +323,7 @@
                                                 <p>Preço original:</p>
                                             </div>
                                             <div class="u-precoO">
-                                                <p>R$ 50,00</p>
+                                                <p><?= $itemCadProd['valor'] ?></p>
                                             </div>
                                         </div>
 
@@ -374,7 +332,7 @@
                                                 <p>Novo preço:</p>
                                             </div>
                                             <div class="u-precoN">
-                                                <input type="text" id="u-precoN">
+                                                <input type="text" id="u-precoN" name="novoPreco" >
                                             </div>
                                         </div>
 
@@ -388,12 +346,11 @@
                                                 <p>Nome simples: </p>
                                             </div>
                                             <div class="u-nomeS">
-                                                <input type="text" id="u-nomesS">
+                                                <input type="text" id="u-nomesS" name="novoNome">
                                             </div>
                                         </div>
 
                                     </div>
-
 
                                     <div class="linha3-editar-produtos">
 
@@ -402,12 +359,11 @@
                                                 <p>Descrição: </p>
                                             </div>
                                             <div class="u-desc">
-                                                <input type="text" id="u-desc">
+                                                <input type="text" id="u-desc" name="novaDesc">
                                             </div>
                                         </div>
 
                                     </div>
-
 
                                     <div class="linha4-editar-produtos">
 
@@ -417,16 +373,14 @@
                                             </div>
                                             <div class="u-tipo">
 
-                                                <input type="radio" name="a" id="a"><label for="a">Masculino</label><br>
-                                                <input type="radio" name="a" id="b"><label for="b">Feminino</label><br>
-                                                <input type="radio" name="a" id="c"><label for="c">Infantil</label><br>
+                                                <input type="radio" id="a" name="categoria" value="Masculina"><label for="a">Masculina</label><br>
+                                                <input type="radio" id="b" name="categoria" value="Feminina"><label for="b">Feminino</label><br>
+                                                <input type="radio" id="c" name="categoria" value="Kids"><label for="c">Kids</label><br>
 
                                             </div>
                                         </div>
 
                                     </div>
-
-
                                     <div class="linha5-editar-produtos">
 
                                         <div class="col-cond">
@@ -435,15 +389,13 @@
                                             </div>
                                             <div class="u-cond">
 
-                                                <input type="radio" name="b" id="d"><label for="d">Usado</label><br>
-                                                <input type="radio" name="b" id="e"><label for="e">Pouco usado</label><br>
-                                                <input type="radio" name="b" id="f"><label for="f">Novo</label><br>
+                                                <input type="radio" name="condicao" id="d" value="Usado"><label for="d">Usado</label><br>
+                                                <input type="radio" name="condicao" id="e" value="Pouco usado"><label for="e">Pouco usado</label><br>
+                                                <input type="radio" name="condicao" id="f" value="Novo"><label for="f">Novo</label><br>
 
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <div class="linha6-editar-produtos-">
 
                                         <div class="col-sub">
@@ -451,15 +403,14 @@
                                                 <p>SubCategoria: </p>
                                             </div>
                                             <div class="u-sub">
-                                                <select name="" id="">
-                                                    <option value="">Nenhum</option>
-                                                    <option value="">Jaqueta</option>
-                                                    <option value="">Camisa</option>
-                                                    <option value="">Calça</option>
-                                                    <option value="">Vestido</option>
-                                                    <option value="">Shorts</option>
-                                                    <option value="">Calçado</option>
-                                                    <option value="">Acessório</option>
+                                                <select name="" id="" name = "subcategoria">
+                                                    <option value="Jaqueta">Jaqueta</option>
+                                                    <option value="Camisa">Camisa</option>
+                                                    <option value="Calça">Calça</option>
+                                                    <option value="Vestido">Vestido</option>
+                                                    <option value="Shorts">Shorts</option>
+                                                    <option value="Calçado">Calçado</option>
+                                                    <option value="Acessório">Acessório</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -478,157 +429,7 @@
 
                             <!-- Começo de um produto cadastrado -->
 
-                            <div class="tabela-carrinho">
-
-                                <div class="imagem-tabela-carrinho">
-                                    <a href=""><img src="pexels-ray-piedra-1464625.jpg" alt="" height="110px" width="100px"></a>
-                                </div>
-
-                                <div class="texto-tabela-carrinho">
-                                    <div class="preco-tabela-carrinho">
-                                        <p>R$ 50,00</p>
-                                    </div>
-                                    <div class="desc-tabela-carrinho">
-                                        <p>Tenis NIKE branco</p>
-                                    </div>
-                                </div>
-
-                                <div class="editar-tabela-carrinho">
-                                    <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
-                                </div>
-
-                                <div class="excluir-tabela-cad">
-                                    <a href=""><span class="material-symbols-outlined" id="delete-cad">delete</span></a>
-                                </div>
-
-                            </div>
-
-
-                            <!-- Começo do editar cadastrados -->
-
-                            <div class="container-editar-produto">
-                                <form action="" method="post">
-
-                                    <div class="titulo-preco">
-                                        <p>Preço</p>
-                                    </div>
-
-                                    <div class="linha1-editar-produtos">
-
-                                        <div class="col-precoO">
-                                            <div class="e-precoO">
-                                                <p>Preço original:</p>
-                                            </div>
-                                            <div class="u-precoO">
-                                                <p>R$ 50,00</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-precoN">
-                                            <div class="e-precoN">
-                                                <p>Novo preço:</p>
-                                            </div>
-                                            <div class="u-precoN">
-                                                <input type="text" id="u-precoN">
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                    <div class="linha2-editar-produtos">
-
-                                        <div class="col-nomeS">
-                                            <div class="e-nomeS">
-                                                <p>Nome simples: </p>
-                                            </div>
-                                            <div class="u-nomeS">
-                                                <input type="text" id="u-nomesS">
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                    <div class="linha3-editar-produtos">
-
-                                        <div class="col-desc">
-                                            <div class="e-desc">
-                                                <p>Descrição: </p>
-                                            </div>
-                                            <div class="u-desc">
-                                                <input type="text" id="u-desc">
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                    <div class="linha4-editar-produtos">
-
-                                        <div class="col-tipo">
-                                            <div class="e-tipo">
-                                                <p>Tipo do produto: </p>
-                                            </div>
-                                            <div class="u-tipo">
-
-                                                <input type="radio" name="a" id="a"><label for="a">Masculino</label><br>
-                                                <input type="radio" name="a" id="b"><label for="b">Feminino</label><br>
-                                                <input type="radio" name="a" id="c"><label for="c">Infantil</label><br>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                    <div class="linha5-editar-produtos">
-
-                                        <div class="col-cond">
-                                            <div class="e-cond">
-                                                <p>Condição do produto: </p>
-                                            </div>
-                                            <div class="u-cond">
-
-                                                <input type="radio" name="b" id="d"><label for="d">Usado</label><br>
-                                                <input type="radio" name="b" id="e"><label for="e">Pouco usado</label><br>
-                                                <input type="radio" name="b" id="f"><label for="f">Novo</label><br>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="linha6-editar-produtos-">
-
-                                        <div class="col-sub">
-                                            <div class="e-sub">
-                                                <p>SubCategoria: </p>
-                                            </div>
-                                            <div class="u-sub">
-                                                <select name="" id="">
-                                                    <option value="">Nenhum</option>
-                                                    <option value="">Jaqueta</option>
-                                                    <option value="">Camisa</option>
-                                                    <option value="">Calça</option>
-                                                    <option value="">Vestido</option>
-                                                    <option value="">Shorts</option>
-                                                    <option value="">Calçado</option>
-                                                    <option value="">Acessório</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="salvar-alt-prod">
-                                        <div class="btn-slavar-alt-prod">
-                                            <input type="submit" value="Salvar alterações">
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-
+                            <?php endwhile; ?>
                             <!-- Fim de um produto cadastrado -->
 
                         </div>
@@ -648,8 +449,6 @@
             <div class="tudo-card-desktop">
 
                 <div class="card-desktop">
-
-
 
                     <div class="card-carrinho-desktop">
 
@@ -689,20 +488,18 @@
 
             <div class="TESTE">
 
-
                 <div class="tabelas-desktop">
-
 
                     <div class="conteudo-carrinho-desktop" id="conteudo-carrinho-desktop">
 
                         <!-- começo carrinho -->
                     
-                        <?php while ($itemCarrinho = mysqli_fetch_assoc($resultadoCarrinho)) : ?>
+                        <?php while ($itemCarrinhoDesk = mysqli_fetch_assoc($resultadoCarrinhoDesk)) : ?>
                             <?php
-                            $idproduto = $itemCarrinho['idproduto'];
-                            $consultaProduto = "SELECT * FROM cadastro_prod WHERE idproduto = '$idproduto'";
-                            $resultadoProduto = mysqli_query($conexao, $consultaProduto);
-                            $produto = mysqli_fetch_assoc($resultadoProduto);
+                            $idprodutoDesk = $itemCarrinhoDesk['idproduto'];
+                            $consultaProdutoDesk = "SELECT * FROM cadastro_prod WHERE idproduto = '$idprodutoDesk'";
+                            $resultadoProdutoDesk = mysqli_query($conexao, $consultaProdutoDesk);
+                            $produtoDesk = mysqli_fetch_assoc($resultadoProdutoDesk);
                             ?>
 
                             <div class="conteudo-total-tabela-carrinho-desktop">
@@ -710,21 +507,21 @@
                                 <div class="tabela-carrinho-desktop">
 
                                     <div class="imagem-tabela-carrinho-desktop">
-                                        <a href=""><img src="<?= $produto['path'] ?>" alt="" height="110px" width="100px"></a>
+                                        <a href=""><img src="<?= $produtoDesk['path'] ?>" alt="" height="110px" width="100px"></a>
                                     </div>
 
                                     <div class="texto-tabela-carrinho-desktop">
                                         <div class="preco-tabela-carrinho-desktop">
-                                            <p>R$ <?= $produto['valor'] ?></p>
+                                            <p>R$ <?= $produtoDesk['valor'] ?></p>
                                         </div>
                                         <div class="desc-tabela-carrinho-desktop">
-                                            <p><?= $produto['nome_prod'] ?></p>
+                                            <p><?= $produtoDesk['nome_prod'] ?></p>
                                         </div>
                                     </div>
 
                                     <div class="excluir-tabela-carrinho-desktop">
                                         <?php
-                                        echo '<a href="includes/deletar.php?id= ' . $produto['idproduto'] . '"><span class="material-symbols-outlined" id="delete">delete</span></a>';
+                                        echo '<a href="includes/deletar.php?id= ' . $produtoDesk['idproduto'] . '"><span class="material-symbols-outlined" id="delete">delete</span></a>';
                                         ?>
                                     </div>
 
@@ -741,7 +538,6 @@
                         <?php endwhile; ?>
                         <!-- Parte do botão de fechar compra -->
 
-
                         <!-- Fim parte do botão de fechar compra -->
 
                     </div>
@@ -749,13 +545,12 @@
                     <!-- Fim carrinho -->
 
                     <?php
-                    $consultaDados = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
-                    $resultadoDados = mysqli_query($conexao, $consultaDados);
-                    $dados = mysqli_fetch_assoc($resultadoDados);
+                    $consultaDadosDesk = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
+                    $resultadoDadosDesk = mysqli_query($conexao, $consultaDadosDesk);
+                    $dadosDesk = mysqli_fetch_assoc($resultadoDadosDesk);
                     ?>
 
                     <div class="conteudo-dados-desktop" id="conteudo-dados-desktop">
-
 
                         <div class="tabela-dados-desktop">
 
@@ -765,7 +560,7 @@
                                     <p>Nome: </p>
                                 </div>
                                 <div class="u-nome-desktop">
-                                    <p><?= $dados['nome'] ?> </p>
+                                    <p><?= $dadosDesk['nome'] ?> </p>
                                 </div>
                             </div>
 
@@ -775,9 +570,8 @@
                                     <p>Sobrenome: </p>
                                 </div>
                                 <div class="u-sobrenome-desktop">
-                                    <p><?= $dados['sobrenome'] ?></p>
+                                    <p><?= $dadosDesk['sobrenome'] ?></p>
                                 </div>
-
                             </div>
 
                             <div class="re-email-desktop">
@@ -786,18 +580,17 @@
                                     <p>Email: </p>
                                 </div>
                                 <div class="u-email-desktop">
-                                    <p><?= $dados['email'] ?></p>
+                                    <p><?= $dadosDesk['email'] ?></p>
                                 </div>
 
                             </div>
-
                             <div class="re-cep-desktop">
 
                                 <div class="e-cep-desktop">
                                     <p>CEP: </p>
                                 </div>
                                 <div class="u-cep-desktop">
-                                    <p><?= $dados['CEP'] ?></p>
+                                    <p><?= $dadosDesk['CEP'] ?></p>
                                 </div>
 
                             </div>
@@ -808,7 +601,7 @@
                                     <p>Endereço: </p>
                                 </div>
                                 <div class="u-endereco-desktop">
-                                    <p><?= $dados['endereco'] ?></p>
+                                    <p><?= $dadosDesk['endereco'] ?></p>
                                 </div>
 
                             </div>
@@ -819,7 +612,7 @@
                                     <p>Complemento: </p>
                                 </div>
                                 <div class="u-complemento-desktop">
-                                    <p><?= $dados['complemento'] ?></p>
+                                    <p><?= $dadosDesk['complemento'] ?></p>
                                 </div>
                             </div>
 
@@ -829,11 +622,10 @@
                                     <p>Telefone/cell: </p>
                                 </div>
                                 <div class="u-tel-desktop">
-                                    <p><?= $dados['telefone'] ?></p>
+                                    <p><?= $dadosDesk['telefone'] ?></p>
                                 </div>
 
                             </div>
-
 
                         </div>
 
@@ -852,34 +644,29 @@
 
                     <!-- Fim dados -->
 
-                    
                     <div class="conteudo-cadastrados-desktop" id="conteudo-cadastrados-desktop">
-
-                    
 
                             <div class="tabela-cadastrados-desktop" id="tabela-cadastrados-desktop">
 
                                 <div class="conteudo-carrinho-cadastrados-desktop">
 
-                                <?php while ($itemCadProd = mysqli_fetch_assoc($resultadoCadProd)) : ?>
+                                <?php while ($itemCadProdDesk = mysqli_fetch_assoc($resultadoCadProdDesk)) : ?>
                             <?php
-                            $idproduto = $itemCadProd['idproduto'];
+                            $idprodutoDesk = $itemCadProdDesk['idproduto'];
                             ?>
-
-
                                     <!-- Começo de um produto cadastrado -->
                                     <div class="tabela-carrinho-desktop">
 
                                         <div class="imagem-tabela-carrinho-desktop">
-                                            <a href=""><img src="<?= $itemCadProd['path'] ?>" alt="" height="110px" width="100px"></a>
+                                            <a href=""><img src="<?= $itemCadProdDesk['path'] ?>" alt="" height="110px" width="100px"></a>
                                         </div>
 
                                         <div class="texto-tabela-carrinho-desktop">
                                             <div class="preco-tabela-carrinho-desktop">
-                                                <p><?= $itemCadProd['valor'] ?></p>
+                                                <p> R$ <?= $itemCadProdDesk['valor'] ?></p>
                                             </div>
                                             <div class="desc-tabela-carrinho-desktop">
-                                                <p><?= $itemCadProd['nome_prod'] ?></p>
+                                                <p><?= $itemCadProdDesk['nome_prod'] ?></p>
                                             </div>
                                         </div>
 
@@ -889,20 +676,15 @@
 
                                         <div class="excluir-tabela-cad-desktop">
                                             <?php
-                                            echo '<a href="includes/deletaProd.php?id= ' . $itemCadProd['idproduto'] . '"><span class="material-symbols-outlined" id="delete-cad">delete</span></a>';
+                                            echo '<a href="includes/deletaProd.php?id= ' . $itemCadProdDesk['idproduto'] . '"><span class="material-symbols-outlined" id="delete-cad">delete</span></a>';
                                             ?>
                                             </div>
 
                                     </div>
-
-
                                     <!-- Começo do editar cadastrados -->
 
-
-
-
                                     <div class="container-editar-produto-desktop">
-                                        <form action="includes/editaProd.php?id=<?= $itemCadProd['idproduto']?>" method="post">
+                                        <form action="includes/editaProd.php?id=<?= $itemCadProdDesk['idproduto']?>" method="post">
 
                                             <div class="titulo-preco-desktop">
                                                 <p>Preço</p>
@@ -915,7 +697,7 @@
                                                         <p>Preço original:</p>
                                                     </div>
                                                     <div class="u-precoO-desktop">
-                                                        <p><?= $itemCadProd['valor'] ?></p>
+                                                        <p><?= $itemCadProdDesk['valor'] ?></p>
                                                     </div>
                                                 </div>
 
@@ -930,7 +712,6 @@
 
                                             </div>
 
-
                                             <div class="linha2-editar-produtos-desktop">
 
                                                 <div class="col-nomeS-desktop">
@@ -943,8 +724,6 @@
                                                 </div>
 
                                             </div>
-
-
                                             <div class="linha3-editar-produtos-desktop">
 
                                                 <div class="col-desc-desktop">
@@ -957,8 +736,6 @@
                                                 </div>
 
                                             </div>
-
-
                                             <div class="linha4-editar-produtos-desktop">
 
                                                 <div class="col-tipo-desktop">
@@ -974,8 +751,6 @@
                                                 </div>
 
                                             </div>
-
-
                                             <div class="linha5-editar-produtos-desktop">
 
                                                 <div class="col-cond-desktop">
@@ -991,8 +766,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
                                             <div class="linha6-editar-produtos-desktop">
 
                                                 <div class="col-sub-desktop">
@@ -1012,7 +785,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                             <div class="salvar-alt-prod-desktop">
                                                 <div class="btn-slavar-alt-prod-desktop">
                                                     <input type="submit" value="Salvar alterações">
