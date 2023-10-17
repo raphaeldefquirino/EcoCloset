@@ -1315,6 +1315,72 @@ width: auto;
 body{
     background-color: #f1f1f1;
 }
+
+.tudo-perfil-usuario{
+    margin-top: 50px;
+    margin-bottom: 45px;
+}
+.parte-perfil-usuario{
+    display: flex;
+    align-items: center;
+}
+.container-imagem-usuario{
+    width: 200px;
+    height: 200px;
+}
+.container-imagem-sair-perfil-usuario{
+    text-align: center;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.imagem-perfil-usuario{
+    border-radius: 50%;
+    position: absolute;
+    margin-right: 500px;
+}
+.imagem-perfil-usuario img{
+    border-radius: 50%;
+}
+.sobrepondo-imagem-perfil-usuario{
+    text-align: center;
+    margin-top: 80%;
+    margin-left: 75%;
+    background-color: #af00ff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    z-index: 2;
+}
+#edit-perfil-usuario{
+    margin-top: 2px;
+    font-size: 30px;
+    font-weight: 100;
+    color: white;
+}
+.textos-perfil-usuario{
+    margin-left: 20px;
+}
+.ola-perfil-usuario p{
+    font-size: 30px;
+    font-weight: 600;
+}
+.mensagem-perfil-usuario{
+    margin-top: 10px;
+}
+.mensagem-perfil-usuario p{
+    font-size: 18px;
+}
+.btn-sair-perfil-usuario{
+    margin-top: 20px;
+}
+.btn-sair-perfil-usuario a{
+    
+    font-size: 18px; 
+}
+
+
 .tudo{
     background-color: white;
     width: 330px;

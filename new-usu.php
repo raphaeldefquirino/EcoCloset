@@ -36,6 +36,65 @@
         include('menu.php');
         ?>
 
+
+
+div class="tudo-perfil-usuario">
+
+        <div class="container-perfil-usuario">
+
+            <div class="parte-perfil-usuario">
+
+                <div class="container-imagem-usuario">
+
+                <div class="container-imagem-sair-perfil-usuario">
+
+                    <div class="imagem-perfil-usuario">
+
+                    <img src="pexels-andrea-piacquadio-774909.jpg" alt="imagem de usuário" height="200px" width="200px">
+
+                    </div>
+
+                    <div class="sobrepondo-imagem-perfil-usuario">
+
+                        <a href=""><span class="material-symbols-outlined" id="edit-perfil-usuario">edit</span></a>
+
+                    </div>
+
+                    
+
+                </div>
+            </div>
+
+                <div class="textos-perfil-usuario">
+
+                    <div class="ola-perfil-usuario">
+                    <p>Olá, Raphael!</p>
+                    </div>
+
+                    <div class="mensagem-perfil-usuario">
+                        <p>"Seja a moda sustentável que você quer ver no mundo. Escolha o EcoCloset!"</p>
+                    </div>
+
+                    <div class="btn-sair-perfil-usuario">
+
+                        <a href="#"> <p>Sair</p> </a>
+    
+                        </div>
+
+                </div>
+                
+                
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+
+
 <a href="includes/logout.php">sair</a>
         <div class="tudo">
 

@@ -551,6 +551,28 @@ main {
 
 /* Media-query da página dos usuario  */
 
+@media screen and (max-width:810px) {
+  .parte-perfil-usuario{
+   flex-direction: column;
+  }
+  .textos-perfil-usuario{
+   margin-top: 30px;
+  }
+  .btn-sair-perfil-usuario{
+     margin-top: 20px;
+     text-align: center;
+ }
+}
+
+@media screen and (min-width:880px) {
+  .tudo-perfil-usuario{
+     margin: auto;
+     margin-top: 50px;
+     margin-bottom: 50px;
+   width: 900px;
+ }
+}
+
 @media screen and (min-width:850px) {
     .tudo-tudo-desktop{
         display: block;
