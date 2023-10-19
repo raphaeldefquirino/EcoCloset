@@ -27,7 +27,7 @@ if ($row['TOTAL'] == 1) {
     header('Location: ../cadastro.php');
     exit;
 } else {
-    $sql = "INSERT INTO cadastro_usuario (idusuario, email, senha, nome, sobrenome,telefone, CEP, endereco, complemento) VALUES ('', '$email', '$senha', '$nome', '$sobrenome', '$telefone', '$cep', '$endereco', '$complemento')";
+    $sql = "INSERT INTO cadastro_usuario (idusuario, email, senha, nome, sobrenome,telefone, CEP, endereco, complemento, path_user) VALUES ('', '$email', '$senha', '$nome', '$sobrenome', '$telefone', '$cep', '$endereco', '$complemento', 'uploads/foto-user-exe.png')";
     if ($conexao->query($sql) === TRUE) {
         $_SESSION['status_cadastro'] = true;
         $conexao->close();
