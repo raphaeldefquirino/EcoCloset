@@ -156,22 +156,22 @@ include('includes/verifica-login.php');
                             <option value="jaqueta">Jaqueta</option>
                             <br>
                             <p>
-                                <option value="camisa">Camisa</option>
+                                <option value="Camisa">Camisa</option>
                             </p>
                             <p>
-                                <option value="calça">Calça</option>
+                                <option value="Calça">Calça</option>
                             </p>
                             <p>
-                                <option value="vestido">Vestido</option>
+                                <option value="Vestido">Vestido</option>
                             </p>
                             <p>
-                                <option value="shorts">Shorts</option>
+                                <option value="Shorts">Shorts</option>
                             </p>
                             <p>
-                                <option value="calçado">Calçado</option>
+                                <option value="Calçado">Calçado</option>
                             </p>
                             <p>
-                                <option value="acessório">Acessório</option>
+                                <option value="Acessório">Acessório</option>
                             </p>
                         </select>
                     </div>

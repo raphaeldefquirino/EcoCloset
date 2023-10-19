@@ -40,7 +40,7 @@
       <option value="barato">Maior preço</option>
     </select>
 
-    <button class="filter-button" name="filtrar"> Filtrar</button>
+    <button class="filter-button" name="filtrar" value="Masculina"> Filtrar</button>
     </form>
 </div>
 

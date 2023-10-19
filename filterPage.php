@@ -32,6 +32,7 @@
                 <option value="Jaqueta">Jaqueta</option>
                 <option value="Tênis">Tênis</option>
                 <option value="Calça de moletom">Calça de moletom</option>
+                <option value="Calça">Calça </option>
             </select>
 
             <label for="sort" class="subcategory">Classificar por:</label>
@@ -48,14 +49,18 @@
 
     include("includes/conexao.php");
 
+    $page = mysqli_real_escape_string($conexao, trim($_POST['filtrar']));
+
+   
+
     $subcategoria = mysqli_real_escape_string($conexao, trim($_POST['subcategoria']));
     $preco = mysqli_real_escape_string($conexao, trim($_POST['sort']));
    
 
-    $consultaCaro = "SELECT * FROM cadastro_prod WHERE categoria = 'Masculina' AND subcategoria = '$subcategoria' ORDER BY valor ASC";
+    $consultaCaro = "SELECT * FROM cadastro_prod WHERE categoria = '$page' AND subcategoria = '$subcategoria' ORDER BY valor ASC";
     $resultadoCaro = mysqli_query($conexao, $consultaCaro);
 
-    $consultaBarato = "SELECT * FROM cadastro_prod WHERE categoria = 'Masculina' AND subcategoria = '$subcategoria' ORDER BY valor DESC";
+    $consultaBarato = "SELECT * FROM cadastro_prod WHERE categoria = '$page' AND subcategoria = '$subcategoria' ORDER BY valor DESC";
     $resultadoBarato = mysqli_query($conexao, $consultaBarato);
 
     if ($preco == 'caro'){
