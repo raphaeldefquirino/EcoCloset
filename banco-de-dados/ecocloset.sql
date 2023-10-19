@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15/10/2023 às 22:49
+-- Tempo de geração: 20/10/2023 às 00:06
 -- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.2.4
+-- Versão do PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -59,7 +59,11 @@ INSERT INTO `cadastro_prod` (`idproduto`, `nome_prod`, `descricao_prod`, `valor`
 (19, 'Vestido de festa', 'Vestido longo de festa, cor preto, decote em ligeiro, tamanho P.', 449.99, 'Feminina', '', '', 'uploads/64891acf268bb.jpg', 'festa.jpg', 1),
 (20, 'Blusa de seda', 'Blusa de seda, estampa de poá, manga longa, tamanho G.', 29.99, 'Feminina', '', '', 'uploads/64891b1782fa1.jpg', 'seda.jpg', 1),
 (21, 'Macacão pantacourt', 'Macacão pantacourt, cor preta, alças ajustáveis, tamanho M.', 300.00, 'Feminina', '', '', 'uploads/64891b5116eb3.jpg', 'pantacourt.jpg', 1),
-(23, 'Body de vaquiinha', 'Body de vaquinh muito fofo e confortavel', 79.99, 'Kids', 'camisa', 'Novo', 'uploads/6514ad06cfa72.jpg', 'bodyvaquinha.jpg', 1);
+(23, 'Body de vaquiinha', 'Body de vaquinh muito fofo e confortavel', 79.99, 'Kids', 'camisa', 'Novo', 'uploads/6514ad06cfa72.jpg', 'bodyvaquinha.jpg', 1),
+(24, 'MAICON', 'Body de vaquinh muito fofo e confortavel', 55.60, 'Masculina', 'vestido', 'Pouco', 'uploads/652ddb5cbcd27.png', 'cadastro.png', 2),
+(25, 'tese', 'teste', 79.99, 'Feminina', 'calçado', 'Pouco', 'uploads/652ddc23c9030.png', 'pesquisando-dados-no-banco-de-dados.png', 3),
+(26, 'df', 'df', 35.00, 'Kids', 'Calçado', 'Novo', 'uploads/652ddd0e114c3.jpg', 'kids-pic-2.jpg', 1),
+(29, 'Body de vaquiinha', 'teste', 79.99, 'Feminina', 'vestido', 'Pouco', 'uploads/652dddd4d13eb.png', 'proximo.png', 2);
 
 -- --------------------------------------------------------
 
@@ -76,17 +80,18 @@ CREATE TABLE `cadastro_usuario` (
   `telefone` varchar(15) NOT NULL,
   `CEP` varchar(9) NOT NULL,
   `endereco` varchar(50) NOT NULL,
-  `complemento` varchar(25) NOT NULL
+  `complemento` varchar(25) NOT NULL,
+  `path_user` varchar(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `cadastro_usuario`
 --
 
-INSERT INTO `cadastro_usuario` (`idusuario`, `email`, `senha`, `nome`, `sobrenome`, `telefone`, `CEP`, `endereco`, `complemento`) VALUES
-(1, 'raphina@gmail.com', '123', 'Rapel', 'Quirinin', '(11)42245249', '0754390-1', 'Rua do sobre e desc e ', 'casa 1 '),
-(2, 'arthur@gmail.com', '123', 'Arthut Bergamaço', '', '11777777777', '', '', ''),
-(3, 'kaue@gmail.com', '123', 'Kaue', 'Fedido', '45909', '48946549', 'rua', 'casa 2');
+INSERT INTO `cadastro_usuario` (`idusuario`, `email`, `senha`, `nome`, `sobrenome`, `telefone`, `CEP`, `endereco`, `complemento`, `path_user`) VALUES
+(1, 'rapha@gmail.com', '123', 'Raphael', 'de França Quirnio', '(11)42245249', '095604-01', 'Rua cavalheiro Ernesto Juliano, Vila Olimpia, São ', 'AP 55, Bloco b', 'uploads/6531a6639147c.jpg'),
+(2, 'arthur@gmail.com', '123', 'Arthut Bergamaço', '', '11777777777', '', '', '', 'uploads/65307bd3c1f23.jpg'),
+(3, 'kaue@gmail.com', '123', 'Kaue', 'Fedido', '45909', '48946549', 'rua', 'casa 2', 'uploads/foto-user-exe.png');
 
 -- --------------------------------------------------------
 
@@ -100,6 +105,14 @@ CREATE TABLE `pedidos` (
   `status` varchar(15) NOT NULL,
   `idproduto` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Despejando dados para a tabela `pedidos`
+--
+
+INSERT INTO `pedidos` (`idpedido`, `idusuario`, `status`, `idproduto`) VALUES
+(30, 3, 'carrinho', 6),
+(31, 2, 'carrinho', 6);
 
 --
 -- Índices para tabelas despejadas
@@ -132,7 +145,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de tabela `cadastro_prod`
 --
 ALTER TABLE `cadastro_prod`
-  MODIFY `idproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `idproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de tabela `cadastro_usuario`
@@ -144,7 +157,7 @@ ALTER TABLE `cadastro_usuario`
 -- AUTO_INCREMENT de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `idpedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `idpedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- Restrições para tabelas despejadas
