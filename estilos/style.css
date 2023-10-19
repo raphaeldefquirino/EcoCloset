@@ -1358,7 +1358,7 @@ body{
 .imagem-perfil-usuario img{
     border-radius: 50%;
 }
-.sobrepondo-imagem-perfil-usuario{
+.sobrepondo-imagem-perfil-usuario {
     text-align: center;
     margin-top: 80%;
     margin-left: 75%;
@@ -1367,12 +1367,25 @@ body{
     height: 35px;
     border-radius: 50%;
     z-index: 2;
+    position: relative; /* Adicione esta linha */
 }
-#edit-perfil-usuario{
+
+#edit-perfil-usuario {
     margin-top: 2px;
     font-size: 30px;
     font-weight: 100;
     color: white;
+}
+
+.file-upload {
+    position: absolute;
+    top: -20px;
+    right: 0; /* Mudança aqui para direita */
+    width: 40px;
+    height: 60px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3; /* Garante que o input esteja acima do ícone de edição */
 }
 .textos-perfil-usuario{
     margin-left: 20px;
