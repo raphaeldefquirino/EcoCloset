@@ -124,7 +124,7 @@
     <form  action="cad-prod.php" method="post" enctype="multipart/form-data">
         <div class="total-pag-finalizar">
             
-            <p>TOTAL : R$00,00</p>
+            <p class="TotalFinalizar">TOTAL : R$00,00</p>
         </div>
         <div class="inputBox">
             <span>Número do Cartão</span>
@@ -180,7 +180,7 @@
         
         <div class="inputBox">
             <div class="Parcelas">
-    <label for="">Parcelas</label>
+    <span>Parcelas</span>
     <select name="subcategoria" id="">
         <option value="1x">1x de R$100,00 (a vista)</option>
         
