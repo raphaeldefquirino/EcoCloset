@@ -657,25 +657,29 @@ color: #f0ffff94;
 
 
 /* Começo da estilização  do "Sobre nós" */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
-.SobrenosTexto{
+.SobrenosTexto h1{
     text-align: center;
-    font-family: 'Noto Sans', sans-serif;
-    padding-top: 50px;
-    text-decoration: underline;
+    margin-top: 30px;
 }
-.TextoSobre{
-    font-family: 'Noto Sans', sans-serif;
+.TextoSobrenos{
+    background-color: white;
+    width: 500px;
+    padding: 15px;
     text-align: center;
-    font-weight: 600;
-    left: 15%;
-    background-color: #F8F8FF;
-    padding: 10px;
-    border-radius: 5%;
+    position: absolute;
 }
-.ImagemSobre{
-    display: none;
+.TextoSobrenos p{
+    font-size: 18px;
+}
+.conteudo-container-sobrenos{
+    height: 850px;
+    padding-right: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ImagemSobrenos{
+    margin-left: 800px;
 }
 
 

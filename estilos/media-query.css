@@ -202,61 +202,18 @@
 
 
       /*---------------------------- Inicio media query "Sobre nós" ------------------------*/
-      @media screen and (min-width:768px) {
-        .conteudo-container{
-            display: flex;
+      @media screen and (max-width:1030px) {
+        .ImagemSobrenos{
+            display: none;
         }
-        .TextoSobre{
-            left: 10%;
-            width: 50%;
-            height: 692px;
-            display: flex;
-            justify-content: center;
-            padding-top: 10px;
-            position: absolute;
-            border-radius: 2%;
+        .conteudo-container-sobrenos{
+            height: 750px;
+            padding-right: 0px;
         }
-        .TextoSobre p{
-            margin: auto;
+        .TextoSobrenos{
+            border-radius: 10px;
         }
-        .ImagemSobre{
-            display: block;
-            margin: auto;
-        }
-        .ImagemSobre img{
-            margin-left: 400px;
-            max-width: 330px;
-            height: 712px;
-        }
-        }
-        
-        @media screen and (min-width:1024px) {
-            .ImagemSobre img{
-                max-width: 450px;
-                height: 720px;
-                margin: auto;
-                margin-left: 60%;
-            }
-            .TextoSobre{
-                max-width: 500px;
-                height: 600px;
-                margin-left: 2%;
-                position: absolute;
-                margin-top: 50px;
-                border-radius: 0%;
-            }
-        }
-
-        @media screen and (min-width:1250px) {
-            .TextoSobre{
-                margin-left: 10%;
-            }
-            .ImagemSobre img{
-                margin-left: 65%;
-            }
-
-
-        }
+     }
 
     /* ------------------------im media query "Sobre nós" -------------------*/
 

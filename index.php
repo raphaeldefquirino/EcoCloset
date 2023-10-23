@@ -88,9 +88,9 @@
     <br>
   </div>
 
-  <div class="conteudo-container">
+  <div class="conteudo-container-sobrenos">
 
-    <div class="TextoSobre">
+    <div class="TextoSobrenos">
 
       <p>Nosso projeto é uma iniciativa escolar de uma plataforma online para compras e vendas de roupas e acessórios de segunda mão, com o objetivo de incentivar um consumo mais consciente e sustentável. Ao comprar roupas usadas, os usuários podem economizar dinheiro e ter acesso a peças únicas e de qualidade, ao mesmo tempo em que contribuem para a redução do impacto ambiental causado pelo consumo excessivo de roupas.
         <br><br>
@@ -102,9 +102,9 @@
       </p>
     </div>
 
-    <div class="ImagemSobre">
+    <div class="ImagemSobrenos">
 
-      <img src="imagens/pexels-david-bartus-615003.jpg" alt="Image" height="600" width="450">
+      <img src="pexels-david-bartus-615003.jpg" alt="Image" height="800" width="550">
 
     </div>
   </div>
