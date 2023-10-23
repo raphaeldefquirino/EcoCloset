@@ -69,8 +69,10 @@
                             </div>
 
                             <div class="sobrepondo-imagem-perfil-usuario">
+                                <form id="uploadForm" action="editaImagemUser.php"  method="POST" enctype="multipart/form-data">
+                                <input type="file" class="file-upload" name="imagemUser"  id="fileInput"    onchange="submitForm()">
                                 <span class="material-symbols-outlined" id="edit-perfil-usuario">edit</span>
-                                <input type="file" class="file-upload">
+                                </form>
                             </div>
 
                         </div>
