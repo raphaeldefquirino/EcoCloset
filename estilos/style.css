@@ -2827,7 +2827,6 @@ body{
     border-radius: 10px;
     cursor: pointer;
     transition: .2s linear;
-    border:solid 2px #af00ff;
 }
 .inputBox ::placeholder{
     color: #f0ffff94;

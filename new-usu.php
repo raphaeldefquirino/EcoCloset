@@ -21,6 +21,7 @@
     $consultaCarrinhoDesk = "SELECT * FROM pedidos WHERE idusuario = '$id_usuario' AND status = 'carrinho'";
     $resultadoCarrinhoDesk = mysqli_query($conexao, $consultaCarrinhoDesk);
 
+
     $consultaCadProdDesk = "SELECT * FROM cadastro_prod WHERE id_usu = '$id_usuario'";
     $resultadoCadProdDesk = mysqli_query($conexao, $consultaCadProdDesk);
     $CadProdDesk = mysqli_fetch_assoc($resultadoCadProdDesk);
@@ -68,9 +69,9 @@
                             </div>
 
                             <div class="sobrepondo-imagem-perfil-usuario">
-                        <span class="material-symbols-outlined" id="edit-perfil-usuario">edit</span>
-                        <input type="file" class="file-upload">
-                    </div>
+                                <span class="material-symbols-outlined" id="edit-perfil-usuario">edit</span>
+                                <input type="file" class="file-upload">
+                            </div>
 
                         </div>
                     </div>
@@ -110,6 +111,27 @@
                 </div>
 
                 <div class="conteudo-carrinho" id="conteudo-carrinho">
+                <?php if (mysqli_num_rows($resultadoCarrinhoDesk) == 0) {
+                            $_SESSION['carrinho-vazio'] = true;
+                        }
+                        ?>
+
+                        <?php
+
+                        if (isset($_SESSION['carrinho-vazio'])) :
+
+                        ?>
+
+
+                            <div class="carrinho-vazio">
+                                    <p>O seu carrinho está vazio!</p>
+                                </div>
+                            
+
+                        <?php
+                        endif;
+                        unset($_SESSION['carrinho-vazio']);
+                        ?>
                     <?php while ($itemCarrinho = mysqli_fetch_assoc($resultadoCarrinho)) : ?>
                         <?php
                         $idproduto = $itemCarrinho['idproduto'];
@@ -495,8 +517,31 @@
                     <div class="conteudo-carrinho-desktop" id="conteudo-carrinho-desktop">
 
                         <!-- começo carrinho -->
+                        <?php if (mysqli_num_rows($resultadoCarrinhoDesk) == 0) {
+                            $_SESSION['carrinho-vazio'] = true;
+                        }
+                        ?>
 
-                        <?php while ($itemCarrinhoDesk = mysqli_fetch_assoc($resultadoCarrinhoDesk)) : ?>
+                        <?php
+
+                        if (isset($_SESSION['carrinho-vazio'])) :
+
+                        ?>
+
+
+                            <div class="carrinho-vazio">
+                                    <p>O seu carrinho está vazio!</p>
+                                </div>
+                            
+
+                        <?php
+                        endif;
+                        unset($_SESSION['carrinho-vazio']);
+                        ?>
+
+                        <?php 
+                          unset($_SESSION['usuario_existe']);
+                        while ($itemCarrinhoDesk = mysqli_fetch_assoc($resultadoCarrinhoDesk)) : ?>
                             <?php
                             $idprodutoDesk = $itemCarrinhoDesk['idproduto'];
                             $consultaProdutoDesk = "SELECT * FROM cadastro_prod WHERE idproduto = '$idprodutoDesk'";
@@ -507,6 +552,8 @@
                             <div class="conteudo-total-tabela-carrinho-desktop">
 
                                 <div class="tabela-carrinho-desktop">
+
+
 
                                     <div class="imagem-tabela-carrinho-desktop">
                                         <a href=""><img src="<?= $produtoDesk['path'] ?>" alt="" height="110px" width="100px"></a>
@@ -536,6 +583,7 @@
                                     </a>
                                 </div>
                             </div>
+
 
                         <?php endwhile; ?>
                         <!-- Parte do botão de fechar compra -->
@@ -969,9 +1017,8 @@
         });
 
         function submitForm() {
-    document.getElementById("uploadForm").submit();
-}
-
+            document.getElementById("uploadForm").submit();
+        }
     </script>
 
 

@@ -221,7 +221,7 @@
     </select>
 </div>
     </div>
-        <input type="submit" value="submit" class="submit-btn">
+        <input type="submit" value="Finalizar compra" class="submit-btn">
         
     </form>
 
