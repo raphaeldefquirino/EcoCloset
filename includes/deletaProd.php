@@ -11,10 +11,8 @@ $resultado = mysqli_query($conexao, $sql);
 $sql2 = "DELETE FROM pedidos WHERE idproduto = '{$id}'";
 $resultado2 = mysqli_query($conexao, $sql2);
 
-if(mysqli_affected_rows($conexao)){
-
     header("Location: ../new-usu.php");
 
-}
+
 
 ?>

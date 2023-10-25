@@ -1,4 +1,4 @@
-    <?php
+<?php
     session_start();
     include('includes/conexao.php');
     include('includes/verifica-login.php');
@@ -16,11 +16,14 @@
     $resultadoDados = mysqli_query($conexao, $consultaDados);
     $dados = mysqli_fetch_assoc($resultadoDados);
 
+    $consultaCadProdAdm = "SELECT * FROM cadastro_prod";
+    $resultadoCadProdAdm = mysqli_query($conexao, $consultaCadProdAdm);
+    $CadProdAdm = mysqli_fetch_assoc($resultadoCadProdAdm);
+
     /*-------------------------------DESK----------------------*/
 
     $consultaCarrinhoDesk = "SELECT * FROM pedidos WHERE idusuario = '$id_usuario' AND status = 'carrinho'";
     $resultadoCarrinhoDesk = mysqli_query($conexao, $consultaCarrinhoDesk);
-
 
     $consultaCadProdDesk = "SELECT * FROM cadastro_prod WHERE id_usu = '$id_usuario'";
     $resultadoCadProdDesk = mysqli_query($conexao, $consultaCadProdDesk);
@@ -29,6 +32,10 @@
     $consultaDadosDesk = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
     $resultadoDadosDesk = mysqli_query($conexao, $consultaDadosDesk);
     $dadosDesk = mysqli_fetch_assoc($resultadoDadosDesk);
+
+    $consultaCadProdDeskAdm = "SELECT * FROM cadastro_prod";
+    $resultadoCadProdDeskAdm = mysqli_query($conexao, $consultaCadProdDeskAdm);
+    $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
     ?>
 
@@ -300,8 +307,166 @@
                     <div class="tabela-cadastrados" id="tabela-cadastrados">
 
                         <div class="conteudo-carrinho-cadastrados">
+                            <?php if($id_usuario == 3):?>
+                            <?php while ($itemCadProdAdm = mysqli_fetch_assoc($resultadoCadProdAdm)) : ?>
+                                <?php
+                                $idproduto = $itemCadProdAdm['idproduto'];
+                                ?>
 
-                            <?php while ($itemCadProd = mysqli_fetch_assoc($resultadoCadProd)) : ?>
+                                <div class="tabela-carrinho">
+
+                                    <div class="imagem-tabela-carrinho">
+                                        <a href=""><img src="<?= $itemCadProdAdm['path'] ?>" alt="" height="110px" width="100px"></a>
+                                    </div>
+
+                                    <div class="texto-tabela-carrinho">
+                                        <div class="preco-tabela-carrinho">
+                                            <p>R$ <?= $itemCadProdAdm['valor'] ?></p>
+                                        </div>
+                                        <div class="desc-tabela-carrinho">
+                                            <p><?= $itemCadProdAdm['nome_prod'] ?></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="editar-tabela-carrinho">
+                                        <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
+                                    </div>
+
+                                    <div class="excluir-tabela-cad">
+                                        <?php
+                                        echo '<a href="includes/deletaProd.php?id= ' . $itemCadProdAdm['idproduto'] . '"><span class="material-symbols-outlined" id="delete-cad">delete</span></a>';
+                                        ?>
+                                    </div>
+
+                                </div>
+
+                                <!-- Começo do editar cadastrados -->
+
+                                <div class="container-editar-produto">
+                                    <form action="includes/editaProd.php?id=<?= $itemCadProdAdm['idproduto'] ?>" method="post">
+
+                                        <div class="titulo-preco">
+                                            <p>Preço</p>
+                                        </div>
+
+                                        <div class="linha1-editar-produtos">
+
+                                            <div class="col-precoO">
+                                                <div class="e-precoO">
+                                                    <p>Preço original:</p>
+                                                </div>
+                                                <div class="u-precoO">
+                                                    <p><?= $itemCadProdAdm['valor'] ?></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-precoN">
+                                                <div class="e-precoN">
+                                                    <p>Novo preço:</p>
+                                                </div>
+                                                <div class="u-precoN">
+                                                    <input type="text" id="u-precoN" name="novoPreco">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="linha2-editar-produtos">
+
+                                            <div class="col-nomeS">
+                                                <div class="e-nomeS">
+                                                    <p>Nome simples: </p>
+                                                </div>
+                                                <div class="u-nomeS">
+                                                    <input type="text" id="u-nomesS" name="novoNome">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="linha3-editar-produtos">
+
+                                            <div class="col-desc">
+                                                <div class="e-desc">
+                                                    <p>Descrição: </p>
+                                                </div>
+                                                <div class="u-desc">
+                                                    <input type="text" id="u-desc" name="novaDesc">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="linha4-editar-produtos">
+
+                                            <div class="col-tipo">
+                                                <div class="e-tipo">
+                                                    <p>Tipo do produto: </p>
+                                                </div>
+                                                <div class="u-tipo">
+
+                                                    <input type="radio" id="a" name="categoria" value="Masculina"><label for="a">Masculina</label><br>
+                                                    <input type="radio" id="b" name="categoria" value="Feminina"><label for="b">Feminino</label><br>
+                                                    <input type="radio" id="c" name="categoria" value="Kids"><label for="c">Kids</label><br>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="linha5-editar-produtos">
+
+                                            <div class="col-cond">
+                                                <div class="e-cond">
+                                                    <p>Condição do produto: </p>
+                                                </div>
+                                                <div class="u-cond">
+
+                                                    <input type="radio" name="condicao" id="d" value="Usado"><label for="d">Usado</label><br>
+                                                    <input type="radio" name="condicao" id="e" value="Pouco usado"><label for="e">Pouco usado</label><br>
+                                                    <input type="radio" name="condicao" id="f" value="Novo"><label for="f">Novo</label><br>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="linha6-editar-produtos-">
+
+                                            <div class="col-sub">
+                                                <div class="e-sub">
+                                                    <p>SubCategoria: </p>
+                                                </div>
+                                                <div class="u-sub">
+                                                    <select name="" id="" name="subcategoria">
+                                                        <option value="Jaqueta">Jaqueta</option>
+                                                        <option value="Camisa">Camisa</option>
+                                                        <option value="Calça">Calça</option>
+                                                        <option value="Vestido">Vestido</option>
+                                                        <option value="Shorts">Shorts</option>
+                                                        <option value="Calçado">Calçado</option>
+                                                        <option value="Acessório">Acessório</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="salvar-alt-prod">
+                                            <div class="btn-slavar-alt-prod">
+                                                <input type="submit" value="Salvar alterações">
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                                <!-- Fim de um produto cadastrado -->
+
+                                <!-- Começo de um produto cadastrado -->
+
+                            <?php endwhile; ?>
+
+                            <?php else:?>
+
+                                <?php while ($itemCadProd = mysqli_fetch_assoc($resultadoCadProd)) : ?>
                                 <?php
                                 $idproduto = $itemCadProd['idproduto'];
                                 ?>
@@ -456,6 +621,7 @@
                                 <!-- Começo de um produto cadastrado -->
 
                             <?php endwhile; ?>
+                            <?php endif;?>
                             <!-- Fim de um produto cadastrado -->
 
                         </div>
@@ -702,6 +868,154 @@
 
                             <div class="conteudo-carrinho-cadastrados-desktop">
 
+                                <?php if($id_usuario == 3):?>
+                                <?php while ($itemCadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm)) : ?>
+                                    <?php
+                                    $idprodutoDesk = $itemCadProdDeskAdm['idproduto'];
+                                    ?>
+                                    <!-- Começo de um produto cadastrado -->
+                                    <div class="tabela-carrinho-desktop">
+
+                                        <div class="imagem-tabela-carrinho-desktop">
+                                            <a href=""><img src="<?= $itemCadProdDeskAdm['path'] ?>" alt="" height="110px" width="100px"></a>
+                                        </div>
+
+                                        <div class="texto-tabela-carrinho-desktop">
+                                            <div class="preco-tabela-carrinho-desktop">
+                                                <p> R$ <?= $itemCadProdDeskAdm['valor'] ?></p>
+                                            </div>
+                                            <div class="desc-tabela-carrinho-desktop">
+                                                <p><?= $itemCadProdDeskAdm['nome_prod'] ?></p>
+                                            </div>
+                                        </div>
+
+                                        <div class="editar-tabela-carrinho-desktop">
+                                            <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
+                                        </div>
+
+                                        <div class="excluir-tabela-cad-desktop">
+                                            <?php
+                                            echo '<a href="includes/deletaProd.php?id= ' . $itemCadProdDeskAdm['idproduto'] . '"><span class="material-symbols-outlined" id="delete-cad">delete</span></a>';
+                                            ?>
+                                        </div>
+
+                                    </div>
+                                    <!-- Começo do editar cadastrados -->
+
+                                    <div class="container-editar-produto-desktop">
+                                        <form action="includes/editaProd.php?id=<?= $itemCadProdDeskAdm['idproduto'] ?>" method="post">
+
+                                            <div class="titulo-preco-desktop">
+                                                <p>Preço</p>
+                                            </div>
+
+                                            <div class="linha1-editar-produtos-desktop">
+
+                                                <div class="col-precoO-desktop">
+                                                    <div class="e-precoO-desktop">
+                                                        <p>Preço original:</p>
+                                                    </div>
+                                                    <div class="u-precoO-desktop">
+                                                        <p><?= $itemCadProdDeskAdm['valor'] ?></p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-precoN-desktop">
+                                                    <div class="e-precoN-desktop">
+                                                        <p>Novo preço:</p>
+                                                    </div>
+                                                    <div class="u-precoN-desktop">
+                                                        <input type="text" id="u-precoN-desktop" name="novoPreco">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="linha2-editar-produtos-desktop">
+
+                                                <div class="col-nomeS-desktop">
+                                                    <div class="e-nomeS-desktop">
+                                                        <p>Nome simples: </p>
+                                                    </div>
+                                                    <div class="u-nomeS-desktop">
+                                                        <input type="text" id="u-nomesS-desktop" name="novoNome">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="linha3-editar-produtos-desktop">
+
+                                                <div class="col-desc-desktop">
+                                                    <div class="e-desc-desktop">
+                                                        <p>Descrição: </p>
+                                                    </div>
+                                                    <div class="u-desc-desktop">
+                                                        <input type="text" id="u-desc-desktop" name="novaDesc">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="linha4-editar-produtos-desktop">
+
+                                                <div class="col-tipo-desktop">
+                                                    <div class="e-tipo-desktop">
+                                                        <p>Tipo do produto: </p>
+                                                    </div>
+                                                    <div class="u-tipo-desktop">
+                                                        <input type="radio" name="categoria" id="a" value="Masculina"><label for="a">Masculina</label><br>
+                                                        <input type="radio" name="categoria" id="b" value="Feminina"><label for="b">Feminina</label><br>
+                                                        <input type="radio" name="categoria" id="c" value="Kids"><label for="c">Kids</label><br>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="linha5-editar-produtos-desktop">
+
+                                                <div class="col-cond-desktop">
+                                                    <div class="e-cond-desktop">
+                                                        <p>Condição do produto: </p>
+                                                    </div>
+                                                    <div class="u-cond-desktop">
+
+                                                        <input type="radio" name="condicao" id="d" value="Usado"><label for="d">Usado</label><br>
+                                                        <input type="radio" name="condicao" id="e" value="Pouco usado"><label for="e">Pouco usado</label><br>
+                                                        <input type="radio" name="condicao" id="f" value="Novo"><label for="f">Novo</label><br>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="linha6-editar-produtos-desktop">
+
+                                                <div class="col-sub-desktop">
+                                                    <div class="e-sub-desktop">
+                                                        <p>SubCategoria: </p>
+                                                    </div>
+                                                    <div class="u-sub-desktop">
+                                                        <select name="subcategoria" id="">
+                                                            <option value="Jaqueta">Jaqueta</option>
+                                                            <option value="Camisa">Camisa</option>
+                                                            <option value="Calça">Calça</option>
+                                                            <option value="Vestido">Vestido</option>
+                                                            <option value="Shorts">Shorts</option>
+                                                            <option value="Calçado">Calçado</option>
+                                                            <option value="Acessório">Acessório</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="salvar-alt-prod-desktop">
+                                                <div class="btn-slavar-alt-prod-desktop">
+                                                    <input type="submit" value="Salvar alterações">
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                    <!-- Fim do editar cadastrados -->
+                                    <!-- Fim de um produto cadastrado -->
+                                <?php endwhile;?>
+                                <?php else:?>
                                 <?php while ($itemCadProdDesk = mysqli_fetch_assoc($resultadoCadProdDesk)) : ?>
                                     <?php
                                     $idprodutoDesk = $itemCadProdDesk['idproduto'];
@@ -847,7 +1161,8 @@
                                     </div>
                                     <!-- Fim do editar cadastrados -->
                                     <!-- Fim de um produto cadastrado -->
-                                <?php endwhile; ?>
+                                <?php endwhile;?>
+                                <?php endif;?>
                             </div>
 
 
