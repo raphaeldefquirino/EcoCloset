@@ -3070,3 +3070,175 @@ border:solid 2px #af00ff;
 .payment-methods label:hover {
     transform: translateY(-3px);
 }
+
+/*Página criadores--------------------------------------------------*/
+
+.textocriadores{
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.container-pag-criadores{
+
+	width: 950px;
+	align-items: center;
+	margin: auto;
+	height: 550px;
+}
+
+.box-area {
+	padding: 30px;
+	position: relative;
+	display: block;
+	background: #fff;
+	color: #000;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px 5px;
+	margin: 40px 0;
+	width: 900px;
+	height: 500px;
+	margin: auto;
+	margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+   
+}
+.box-area h5 {
+	font-size: 25px;
+	margin-top: 190px;
+	margin-bottom: 5px;
+	letter-spacing: 1px;
+}
+
+.box-area .content {
+	color: #262626;
+	font-size: 18px;
+    margin-top: 30px;
+}
+.box-area .img-area {
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 15px;
+	left: 0;
+	bottom: 0;
+	margin: 0 auto;
+	right: 0;
+	z-index: 1;
+	border-radius: 50%;
+	box-shadow: 0 5px 4px rgba(0, 0, 1, 0);
+	border: none;
+	background:none;
+    margin-top: 20px;
+}
+.box-area .img-area img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+.socials {
+	margin-top: 25px;
+}
+.socials i {
+	margin: 0 20px;
+	color: #af00ff;
+	font-size: 18px;
+}
+#testimonial_area .owl-nav {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+}
+#testimonial_area .owl-prev, #testimonial_area .owl-next {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	color: #af00ff;
+	border-radius: 50%;
+	text-align: center;
+	background: #fff;
+	position: absolute;
+}
+#testimonial_area .owl-prev {
+	left: -60px;
+	top: -30px;
+}
+#testimonial_area .owl-next {
+	right: -60px;
+	top: -30px;
+}
+@media only screen and (max-width: 991px) {
+
+	.container-pag-criadores{
+		width: 700px;
+		align-items: center;
+		
+		margin: auto;
+		height: 550px;
+		
+	}
+
+	.box-area {
+		
+		width: 690px;
+		height: 540px;
+		margin: auto;
+        margin-top: 20px;
+    margin-bottom: 20px;
+		
+	}
+	
+}
+@media only screen and (max-width: 767px) {
+	.owl-nav {
+		display: none;
+	}
+	
+	.container-pag-criadores{
+		width: 500px;
+		align-items: center;
+		margin: auto;
+		height: 350px;
+        margin-bottom: 90px;
+		margin-top: 30px;
+       
+	}
+
+	.box-area {
+		
+		width: 470px;
+		height: 340px;
+		margin: auto;
+        margin-top: 50px;
+    margin-bottom: 280px;
+    
+		
+	}
+
+	.box-area .img-area {
+		width: 90px;
+		height: 90px;
+		top: -20px;
+	
+	}
+
+	.box-area .img-area img {
+		width: 90px;
+		height: 90px;
+		border-radius: 50%;
+	}
+
+	.box-area h5{
+		margin-top: 60px;
+		font-size: 25px;
+
+	}
+
+	.box-area .content {
+		
+		font-size: 17px;
+	}
+	
+}
+
+/*END PáGIANa CRIADORES_________________________________________________*/

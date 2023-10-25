@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="estilos/style.css">
   <link rel="stylesheet" href="estilos/media-query.css">
   <script src="https://kit.fontawesome.com/8ad860e92b.js" crossorigin="anonymous"></script>
@@ -86,6 +90,7 @@
     <br>
     <h1>Sobre nós</h1>
     <br>
+    <br>
   </div>
 
   <div class="conteudo-container-sobrenos">
@@ -111,105 +116,123 @@
 
   <!-- Fim da construção do "Sobre nós"-->
 
-  <!-- Início da construção do "Carrossel de criadores" -->
-  <div class="titulo-perfil">
-    <h1>Criadores</h1>
-
-    <div class="container-perfil">
-      <div class="indicador-perfil">
-        <span class="btn-perfil active-perfil"></span>
-        <span class="btn-perfil"></span>
-        <span class="btn-perfil"></span>
-      </div>
-      <div class="testimonial-perfil">
-        <div class="slide-row" id="slide">
-          <div class="slide-col">
-            <div class="perfil-imagem">
-              <img src="imagens/criador1.jpg" alt="" width="400px" height="400px">
-            </div>
-
-            <div class="perfil-text">
-              <p>Olá! Eu sou Arthur Bergamaço Alves, um dos criadores e integrante do grupo EcoCloset. Tenho 18 anos e estou cursando o 2TID na escola Alcina Dantas Feijão.
-                <br>
-                <p2>#NEVER GIVE UP</p2>
-              </p>
-              <h3>Arthur</h3>
-              <p>EcoCloset</p>
-            </div>
-          </div>
-
-          <div class="slide-col">
-            <div class="perfil-imagem">
-              <img src="imagens/criador2.jpg" alt="" width="400px" height="400px">
-            </div>
-
-            <div class="perfil-text">
-              <p>Olá! Eu sou Nicolas de Lima Pinheiro, um dos criadores e integrante do grupo EcoCloset. Tenho 17 anos e estou cursando o 2TID na escola Alcina Dantas Feijão.
-                <br>
-                <p2>#JUST DO IT</p2>
-              </p>
-              <h3>Nicolas</h3>
-              <p>EcoCloset</p>
-            </div>
-          </div>
-
-          <div class="slide-col">
-            <div class="perfil-imagem">
-              <img src="imagens/criador3.jpg" alt="" width="400px" height="400px">
-            </div>
-
-            <div class="perfil-text">
-              <p>Olá! Eu sou Raphael de França Quirino, um dos criadores e integrante do grupo EcoCloset. Tenho 18 anos e estou cursando o 2TID na escola Alcina Dantas Feijão.
-                <br>
-                <p2>#DO YOUR BEST</p2>
-              </p>
-              <h3>Raphael</h3>
-              <p>EcoCloset</p>
-            </div>
-          </div>
-
-
-
-        </div>
-
-      </div>
-    </div>
+   <!-- Início da construção do "Carrossel de criadores" -->
+   <div class="textocriadores">
+      <h1>Criadores</h1>
   </div>
+   <br>
+   <section id="testimonial_area" class="section_padding">
+				<div class="container-pag-criadores">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="testmonial_slider_area text-center owl-carousel">
+								<div class="box-area">	
+									<div class="img-area">
+										<img src="imagens/criador1.jpg" alt="">
+									</div>	
+									
+									<h5>Arthur Bergamaço Alves</h5>
+                  <br>
+                  
+																		
+									<p class="content">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque illo, ea unde rem natus voluptatum accusamus laboriosam quis autem odio aliquid quod veniam sed sint error non ipsum odit.
+										
+									</p>
+                  <br>
+                 
+									<h6 class="socials">
+									    <i class="fa fa-instagram"></i>
+									    <i class="fa fa-facebook"></i>
+									    <i class="fa fa-linkedin"></i>
+									    <i class="fa fa-youtube"></i>
+									</h6>
+								</div> 
+							
+								<div class="box-area">	
+									<div class="img-area">
+										<img src="imagens/criador2.jpg" alt="">
+									</div>
+										
+									<h5>Nicolas de Lima Pinheiro</h5>
+                  <br>
+																		
+									<p class="content">
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nisi dolores perferendis asperiores repudiandae voluptatum vero placeat, iste id ipsum necessitatibus culpa tenetur aliquid, aliquam atque magnam amet sit facilis!
+								
+									</p>
+									<h6 class="socials">
+									    <i class="fa fa-instagram"></i>
+									    <i class="fa fa-facebook"></i>
+									    <i class="fa fa-linkedin"></i>
+									    <i class="fa fa-youtube"></i>
+									</h6>
+								</div> 
+							
+								<div class="box-area">	
+									<div class="img-area">
+										<img src="imagens/criador3.jpg" alt="">
+									</div>	
+									
+									<h5>Rapahel de França Quirino</h5>
+                  <br>
+									
+									<p class="content">
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi quod fugit soluta quibusdam inventore iure quis vitae, exercitationem cupiditate sunt a illo accusamus incidunt expedita molestiae minima, doloremque dolore vel?
+									
+									</p>
+									<h6 class="socials">
+									    <i class="fa fa-instagram"></i>
+									    <i class="fa fa-facebook"></i>
+									    <i class="fa fa-linkedin"></i>
+									    <i class="fa fa-youtube"></i>
+									</h6>
+								</div> 
+							
+							 
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+		<script>
+        $(".testmonial_slider_area").owlCarousel({
+				
+				slideSpeed:1000,
+				items : 1,
+				loop: true,
+				nav:true,
+				navText:['<i class="fa fa-arrow-left"></i>','<i class="fa fa-arrow-right"></i>'],
+				margin: 30,
+				dots: true,
+				responsive:{
+					320:{
+						items:1
+					},
+					767:{
+						items:1
+					},
+					600:{
+						items:1
+					},
+					1000:{
+						items:1
+					}
+				}
+				
+			});
+    </script>
 
-  <script>
-    var btn = document.getElementsByClassName("btn-perfil");
-    var slide = document.getElementById("slide");
 
 
+        
 
-    btn[0].onclick = function() {
-      slide.style.transform = "translateX(0px)";
-      for (i = 0; i < 3; i++) {
-        btn[i].classList.remove("active-perfil");
-      }
-      this.classList.add("active-perfil");
-    }
-
-
-    btn[1].onclick = function() {
-      slide.style.transform = "translateX(-800px)";
-      for (i = 0; i < 3; i++) {
-        btn[i].classList.remove("active-perfil");
-      }
-      this.classList.add("active-perfil");
-    }
-
-
-    btn[2].onclick = function() {
-      slide.style.transform = "translateX(-1605px)"; //Eu coloquei um valor desigual porque não estava ficando completamente no centro//
-      for (i = 0; i < 3; i++) {
-        btn[i].classList.remove("active-perfil");
-      }
-      this.classList.add("active-perfil");
-    }
-  </script>
+     
   <!-- Fim da construção do "Carrossel de criadores" -->
-
   <?php
 
   include("includes/footer.php")
