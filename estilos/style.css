@@ -2510,7 +2510,15 @@ body{
     transition: background-color 0.4s ease;
     background-color: #af00ff;
 }
-
+.carrinho-vazio{
+    text-align: center;
+    margin-top: 12px;
+    font-size: 18px;
+}
+.carrinho-vazio-desktop{
+    text-align: center;
+    font-size: 18px;
+}
 
 
 

@@ -697,7 +697,7 @@
                         ?>
 
 
-                            <div class="carrinho-vazio">
+                            <div class="carrinho-vazio-desktop">
                                     <p>O seu carrinho está vazio!</p>
                                 </div>
                             
