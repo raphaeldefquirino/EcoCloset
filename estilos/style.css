@@ -3323,17 +3323,12 @@ border:solid 2px #af00ff;
     margin-bottom: 100px;
 }
 .ecocloset-compra-finalizada{
-    margin-top: 600px;
     margin: auto;
     display: flex;
     align-items: center;
     width: 222px;
 }
-<<<<<<< HEAD
 .ecoclosetm-compra-finalizada p{
-=======
-.menssagem-compra-finalizada p{
->>>>>>> 1004e3d15062726489a3672e5a5141d4c610042a
     font-size: 30px;
     font-weight: 600;
     margin-top: 15px;
@@ -3441,7 +3436,9 @@ border:solid 2px #af00ff;
     transform-origin: 100% 50%;
     transform: rotate(var(--r));
   }
-
+  .order .truck:before {
+    top: 4px;
+  }
   .order .truck:after {
     --r: 90deg;
     bottom: 4px;

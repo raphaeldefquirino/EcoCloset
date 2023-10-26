@@ -3,58 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="compra-finalizada.css">
     <title>compra finalizada</title>
 </head>
 <body>
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:compra-finalizada.html
->>>>>>> 1004e3d15062726489a3672e5a5141d4c610042a
     
-
-  <?php
-
-  include("menu.php");
-
-<<<<<<< HEAD
-=======
-========
-  
-  <?php
-  include('menu.php');
->>>>>>>> 1004e3d15062726489a3672e5a5141d4c610042a:compra-finalizada.php
->>>>>>> 1004e3d15062726489a3672e5a5141d4c610042a
-  ?>
-
-
-
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:compra-finalizada.html
-========
-
-
->>>>>>>> 1004e3d15062726489a3672e5a5141d4c610042a:compra-finalizada.php
->>>>>>> 1004e3d15062726489a3672e5a5141d4c610042a
    <div class="conteudo-compra-finalizada">
 
 
     <div class="ecocloset-compra-finalizada">
 
         <div class="imagem-compra-finalizada">
-            <img src="imagens/logoroxamenor.png" alt="Image" height="70" width="70">
+            <img src="logoroxamenor.png" alt="Image" height="70" width="70">
         </div>
 
-<<<<<<< HEAD
         <div class="ecoclosetm-compra-finalizada">
-=======
-<<<<<<<< HEAD:compra-finalizada.html
-        <div class="ecoclosetm-compra-finalizada">
-========
-        <div class="menssagem-compra-finalizada">
->>>>>>>> 1004e3d15062726489a3672e5a5141d4c610042a:compra-finalizada.php
->>>>>>> 1004e3d15062726489a3672e5a5141d4c610042a
             <p>EcoCloset</p>
         </div>
             
@@ -92,29 +55,6 @@
    </div>
    
 
-
-   <?php
-
-  include("includes/footer.php")
-
-  ?>
-
-
-
-
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-   <?php
-   include('includes/footer.php');
-   ?>
-
->>>>>>> 1004e3d15062726489a3672e5a5141d4c610042a
 </body>
 </html>
 
