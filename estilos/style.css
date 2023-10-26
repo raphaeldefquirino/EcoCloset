@@ -3318,20 +3318,9 @@ border:solid 2px #af00ff;
 
 /* começo compra finalizada */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
-* {
-    font-family: 'Noto Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: #f1f1f1;
-}
 .conteudo-compra-finalizada{
-    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 .ecocloset-compra-finalizada{
     margin: auto;
@@ -3339,7 +3328,7 @@ body{
     align-items: center;
     width: 222px;
 }
-.ecocloset-compra-finalizada p{
+.ecoclosetm-compra-finalizada p{
     font-size: 30px;
     font-weight: 600;
     margin-top: 15px;
@@ -3711,6 +3700,6 @@ body{
       opacity: 0;
     }
   }
-  
+
   /* end compra finalizada */
  
