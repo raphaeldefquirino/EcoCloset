@@ -8,6 +8,14 @@
 </head>
 <body>
     
+
+<?php
+
+  include("menu.php");
+
+  ?>
+
+
    <div class="conteudo-compra-finalizada">
 
 
@@ -54,6 +62,11 @@
 
    </div>
    
+   <?php
+
+include("includes/footer.php")
+
+?>
 
 </body>
 </html>
