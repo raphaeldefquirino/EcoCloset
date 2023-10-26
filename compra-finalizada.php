@@ -1,3 +1,15 @@
+<?php 
+session_start();
+include('includes/conexao.php');
+
+$id_usuario = $_SESSION['id_usuario'];
+
+$consultaDados = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
+$resultadoDados = mysqli_query($conexao, $consultaDados);
+$dados = mysqli_fetch_assoc($resultadoDados);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,7 +34,7 @@
     <div class="ecocloset-compra-finalizada">
 
         <div class="imagem-compra-finalizada">
-            <img src="logoroxamenor.png" alt="Image" height="70" width="70">
+            <img src="imagens/logoroxamenor.png" alt="Image" height="70" width="70">
         </div>
 
         <div class="ecoclosetm-compra-finalizada">
@@ -32,7 +44,7 @@
     </div>
 
     <div class="agradecimento-compra-finalizada">
-        <p>Obrigado Arthur, por comprar conosco!</p>
+        <p>Obrigado <?php echo $dados['nome']?>, por comprar conosco!</p>
     </div>
 
     <div class="mensagem-compra-finalizada">
