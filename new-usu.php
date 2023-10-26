@@ -724,7 +724,7 @@
 
 
                                     <div class="imagem-tabela-carrinho-desktop">
-                                        <a href=""><img src="<?= $produtoDesk['path'] ?>" alt="" height="110px" width="100px"></a>
+                                        <?php echo '<a href="">'?><img src="<?= $produtoDesk['path'] ?>" alt="" height="110px" width="100px"></a>
                                     </div>
 
                                     <div class="texto-tabela-carrinho-desktop">
@@ -744,7 +744,8 @@
 
                                 </div>
                                 <div class="confirmar-carrinho-desktop">
-                                    <a href="">
+                                    <?php echo '<a href="finalizar-compra.php?id= ' . $produtoDesk['idproduto'] . '">';
+                                    ?>
                                         <div class="texto-confirmar-carrinho-desktop">
                                             <p>Fechar compra</p>
                                         </div>

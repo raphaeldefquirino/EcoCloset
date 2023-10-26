@@ -1,5 +1,16 @@
+<?php 
+session_start();
+include('includes/conexao.php');
+
+$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+$sql = "SELECT * FROM cadastro_prod WHERE idproduto = '$id'";
+$query = mysqli_query($conexao, $sql); 
+$row= mysqli_fetch_assoc($query);
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,15 +60,15 @@
     <div class="tabela-carrinho-pag-cad">
     
         <div class="imagem-tabela-carrinho-pag-cad">
-            <a href=""><img src="imagens/JAQUETA.webp" alt="" height="110px" width="100px"></a>
+           <?php  echo '<img src="' . $row['path'] . '" alt="" height="110px" width="100px">' ?>
         </div>
     
         <div class="texto-tabela-carrinho-pag-cad">
         <div class="preco-tabela-carrinho-pag-cad">
-            <p>R$ 50,00</p>
+            <p>R$ <?php echo $row['valor'] ?></p>
         </div>
         <div class="desc-tabela-carrinho-pag-cad">
-            <p>Tenis NIKE branco</p>
+            <p><?php echo $row['nome_prod'] ?></p>
         </div>
         </div>
     
@@ -146,7 +157,7 @@
     <form  action="cad-prod.php" method="post" enctype="multipart/form-data">
         <div class="total-pag-finalizar">
             
-            <p class="TotalFinalizar">TOTAL : R$00,00</p>
+            <p class="TotalFinalizar">TOTAL : R$<?php echo $row['valor'] ?></p>
         </div>
         <div class="inputBox">
             <span>Número do Cartão</span>
@@ -204,40 +215,34 @@
             <div class="Parcelas">
     <span>Parcelas</span>
     <select name="subcategoria" id="">
-        <option value="1x">1x de R$100,00 (a vista)</option>
+        <option value="1x">1x de R$<?php echo $row['valor'] ?></option>
         
         <p>
-        <option value="2x">2x de R$50,00</option>
+        <option value="2x">2x de R$<?php echo $row['valor'] / 2 ?></option>
         </p>
         <p>
-        <option value="3x">2x de R$50,00</option>
+        <option value="3x">2x de R$<?php echo $row['valor'] / 3 ?></option>
         </p>
         <p>
-        <option value="4x">2x de R$50,00</option>
+        <option value="4x">2x de R$<?php echo $row['valor'] / 4 ?></option>
         </p>
         <p>
-        <option value="5x">2x de R$50,00</option>
+        <option value="5x">2x de R$<?php echo $row['valor'] / 5 ?></option>
         </p>
         <p>
-        <option value="6x">2x de R$50,00</option>
+        <option value="6x">2x de R$<?php echo $row['valor'] / 6 ?></option>
         </p>
         <p>
-        <option value="7x">2x de R$50,00</option>
+        <option value="7x">2x de R$<?php echo $row['valor'] / 7 ?></option>
         </p>
         <p>
-        <option value="8x">2x de R$50,00</option>
+        <option value="8x">2x de R$<?php echo $row['valor'] / 8 ?></option>
         </p>
         <p>
-        <option value="9x">2x de R$50,00</option>
+        <option value="9x">2x de R$<?php echo $row['valor'] / 9 ?></option>
         </p>
         <p>
-        <option value="10x">2x de R$50,00</option>
-        </p>
-        <p>
-        <option value="11x">2x de R$50,00</option>
-        </p>
-        <p>
-        <option value="12x">2x de R$50,00</option>
+        <option value="10x">2x de R$<?php echo $row['valor'] / 10 ?></option>
         </p>
      
     </select>
