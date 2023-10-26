@@ -25,7 +25,7 @@
             <img src="imagens/logoroxamenor.png" alt="Image" height="70" width="70">
         </div>
 
-        <div class="ecocloset-compra-finalizada">
+        <div class="menssagem-compra-finalizada">
             <p>EcoCloset</p>
         </div>
             
