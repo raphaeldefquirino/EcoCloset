@@ -3331,13 +3331,10 @@ body{
     background-color: #f1f1f1;
 }
 .conteudo-compra-finalizada{
-    margin-top: 600px;
-    margin-bottom: 600px;
     margin: auto;
-    height: 700px;
-    background-color: red;
 }
 .ecocloset-compra-finalizada{
+    margin-top: 600px;
     margin: auto;
     display: flex;
     align-items: center;
