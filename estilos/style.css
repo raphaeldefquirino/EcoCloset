@@ -3448,7 +3448,9 @@ body{
     transform-origin: 100% 50%;
     transform: rotate(var(--r));
   }
-
+  .order .truck:before {
+    top: 4px;
+  }
   .order .truck:after {
     --r: 90deg;
     bottom: 4px;
