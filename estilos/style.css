@@ -2775,16 +2775,53 @@ body{
     font-size: 30px;
 }
 
-/*finalizar-compra */
+/*finalizar-compra----------------------------------------------- */
+
+
+
+.tabela-carrinho-pag-cad{
+    background-color: white;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px 3px;
+   border-radius: 10px;
+   padding: 8px;
+
+}
+.imagem-tabela-carrinho-pag-cad img{
+   border-radius: 20px; 
+   margin-top: 10px;
+   margin-left: 10px;
+}
+.imagem-tabela-carrinho-pag-cad img:hover{
+    transition: opacity 0.4s ease;
+    opacity: 0.6;
+}
+.texto-tabela-carrinho-pag-cad{
+    margin-left: 8px;
+}
+.preco-tabela-carrinho-pag-cad{
+    font-size: 20px;
+    font-weight: 600;
+}
+.desc-tabela-carrinho-pag-cad{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+
 
 .container-pag-cad{
     min-height: 100vh;
-    background: #eee;
+    background: #f1f1f1;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
     padding-bottom: 60px;
+
+   
 }
 
 
@@ -2960,7 +2997,7 @@ border:solid 2px #af00ff;
 
 
 .container-pag-cad .card-container{
-    margin-bottom: 390px;
+    margin-bottom: 220px;
     position: absolute;
     height: 250px;
     width: 400px;
@@ -3080,6 +3117,32 @@ border:solid 2px #af00ff;
 .payment-methods label:hover {
     transform: translateY(-3px);
 }
+
+
+@media only screen and (max-width: 767px) {
+	.container-pag-cad .card-container{
+        height: 210px;
+        width: 360px;
+    }
+
+    .container-pag-cad form{
+    
+        width: 470px;
+        padding-top: 300px;
+    }
+
+    .boleto-container {
+       
+        width: 450px;
+    }
+
+    .boleto-container img {
+
+        margin: auto;
+        margin-left: 55px;
+    }
+}
+
 
 /*Página criadores--------------------------------------------------*/
 

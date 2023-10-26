@@ -14,13 +14,14 @@
 </head>
 <body>
 
+    
     <?php
 
   include("menu.php");
 
   ?>
 
-<div class="container-pag-cad">
+  <div class="container-pag-cad">
 
 
     
@@ -44,6 +45,27 @@
             </span>
         </label>
     </div>
+
+    <div class="tabela-carrinho-pag-cad">
+    
+        <div class="imagem-tabela-carrinho-pag-cad">
+            <a href=""><img src="imagens/JAQUETA.webp" alt="" height="110px" width="100px"></a>
+        </div>
+    
+        <div class="texto-tabela-carrinho-pag-cad">
+        <div class="preco-tabela-carrinho-pag-cad">
+            <p>R$ 50,00</p>
+        </div>
+        <div class="desc-tabela-carrinho-pag-cad">
+            <p>Tenis NIKE branco</p>
+        </div>
+        </div>
+    
+        
+
+        </div>
+
+        <br><br>
 
 
     <div class="flexbox">
@@ -226,7 +248,9 @@
     </form>
 
 </div>    
-    
+</div>
+
+
 
 
 
