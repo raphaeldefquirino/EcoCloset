@@ -113,6 +113,7 @@
 
     </div>
   </div>
+  <br>
 
   <!-- Fim da construção do "Sobre nós"-->
 
@@ -120,7 +121,7 @@
    <div class="textocriadores">
       <h1>Criadores</h1>
   </div>
-   <br>
+   
    <section id="testimonial_area" class="section_padding">
 				<div class="container-pag-criadores">
 					<div class="row">
@@ -130,22 +131,23 @@
 									<div class="img-area">
 										<img src="imagens/criador1.jpg" alt="">
 									</div>	
-									
-									<h5>Arthur Bergamaço Alves</h5>
                   <br>
+								
+									<h5>Arthur Bergamaço Alves</h5>
+                  
                   
 																		
 									<p class="content">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque illo, ea unde rem natus voluptatum accusamus laboriosam quis autem odio aliquid quod veniam sed sint error non ipsum odit.
 										
 									</p>
-                  <br>
+                  
                  
 									<h6 class="socials">
 									    <i class="fa fa-instagram"></i>
 									    <i class="fa fa-facebook"></i>
 									    <i class="fa fa-linkedin"></i>
-									    <i class="fa fa-youtube"></i>
+									   
 									</h6>
 								</div> 
 							
@@ -153,9 +155,9 @@
 									<div class="img-area">
 										<img src="imagens/criador2.jpg" alt="">
 									</div>
-										
+										<br>
 									<h5>Nicolas de Lima Pinheiro</h5>
-                  <br>
+                  
 																		
 									<p class="content">
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nisi dolores perferendis asperiores repudiandae voluptatum vero placeat, iste id ipsum necessitatibus culpa tenetur aliquid, aliquam atque magnam amet sit facilis!
@@ -165,7 +167,7 @@
 									    <i class="fa fa-instagram"></i>
 									    <i class="fa fa-facebook"></i>
 									    <i class="fa fa-linkedin"></i>
-									    <i class="fa fa-youtube"></i>
+									  
 									</h6>
 								</div> 
 							
@@ -173,9 +175,9 @@
 									<div class="img-area">
 										<img src="imagens/criador3.jpg" alt="">
 									</div>	
-									
+									<br>
 									<h5>Rapahel de França Quirino</h5>
-                  <br>
+                  
 									
 									<p class="content">
 										Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi quod fugit soluta quibusdam inventore iure quis vitae, exercitationem cupiditate sunt a illo accusamus incidunt expedita molestiae minima, doloremque dolore vel?
@@ -185,7 +187,7 @@
 									    <i class="fa fa-instagram"></i>
 									    <i class="fa fa-facebook"></i>
 									    <i class="fa fa-linkedin"></i>
-									    <i class="fa fa-youtube"></i>
+									   
 									</h6>
 								</div> 
 							
@@ -226,6 +228,7 @@
 				
 			});
     </script>
+    <br><br><br>
 
 
 

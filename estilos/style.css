@@ -3148,7 +3148,7 @@ border:solid 2px #af00ff;
 
 .textocriadores{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 
@@ -3210,7 +3210,7 @@ border:solid 2px #af00ff;
 	border-radius: 50%;
 }
 .socials {
-	margin-top: 25px;
+	margin-top: 55px;
 }
 .socials i {
 	margin: 0 20px;
@@ -3266,13 +3266,22 @@ border:solid 2px #af00ff;
 	.owl-nav {
 		display: none;
 	}
+
+    .socials {
+        margin-top: 30px;
+    }
+
+    .img-area {
+        padding: 10px;
+    }
 	
+
 	.container-pag-criadores{
 		width: 500px;
 		align-items: center;
 		margin: auto;
 		height: 350px;
-        margin-bottom: 90px;
+        margin-bottom: 80px;
 		margin-top: 30px;
        
 	}
@@ -3280,10 +3289,11 @@ border:solid 2px #af00ff;
 	.box-area {
 		
 		width: 470px;
-		height: 340px;
+		height: 370px;
 		margin: auto;
         margin-top: 50px;
     margin-bottom: 280px;
+   
     
 		
 	}
@@ -3291,14 +3301,15 @@ border:solid 2px #af00ff;
 	.box-area .img-area {
 		width: 90px;
 		height: 90px;
-		top: -20px;
-	
+		top: -10px;
+        
 	}
 
 	.box-area .img-area img {
 		width: 90px;
 		height: 90px;
 		border-radius: 50%;
+      
 	}
 
 	.box-area h5{
@@ -3313,7 +3324,6 @@ border:solid 2px #af00ff;
 	}
 	
 }
-
 /*END PáGIANa CRIADORES_________________________________________________*/
 
 /* começo compra finalizada */
