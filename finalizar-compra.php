@@ -1,259 +1,277 @@
-<?php 
+<?php
 session_start();
 include('includes/conexao.php');
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 $sql = "SELECT * FROM cadastro_prod WHERE idproduto = '$id'";
-$query = mysqli_query($conexao, $sql); 
-$row= mysqli_fetch_assoc($query);
+$query = mysqli_query($conexao, $sql);
+$row = mysqli_fetch_assoc($query);
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- custom css file link  -->
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 </head>
+
 <body>
 
-    
+
     <?php
 
-  include("menu.php");
+    include("menu.php");
 
-  ?>
+    ?>
 
-  <div class="container-pag-cad">
+    <div class="container-pag-cad">
 
 
-    
-    <div class="payment-methods">
-        <label>
-            <span>
-                <input type="radio" name="paymentMethod" value="card" checked>
-                Cartão
-            </span>
-        </label>
-        <label>
-            <span>
-                <input type="radio" name="paymentMethod" value="pix">
-                Pix
-            </span>
-        </label>
-        <label>
-            <span>
-                <input type="radio" name="paymentMethod" value="boleto">
-                Boleto
-            </span>
-        </label>
-    </div>
 
-    <div class="tabela-carrinho-pag-cad">
-    
-        <div class="imagem-tabela-carrinho-pag-cad">
-           <?php  echo '<img src="' . $row['path'] . '" alt="" height="110px" width="100px">' ?>
+        <div class="payment-methods">
+            <label>
+                <span>
+                    <input type="radio" name="paymentMethod" value="card" checked>
+                    Cartão
+                </span>
+            </label>
+            <label>
+                <span>
+                    <input type="radio" name="paymentMethod" value="pix">
+                    Pix
+                </span>
+            </label>
+            <label>
+                <span>
+                    <input type="radio" name="paymentMethod" value="boleto">
+                    Boleto
+                </span>
+            </label>
         </div>
-    
-        <div class="texto-tabela-carrinho-pag-cad">
-        <div class="preco-tabela-carrinho-pag-cad">
-            <p>R$ <?php echo $row['valor'] ?></p>
-        </div>
-        <div class="desc-tabela-carrinho-pag-cad">
-            <p><?php echo $row['nome_prod'] ?></p>
-        </div>
-        </div>
-    
-        
+
+        <div class="tabela-carrinho-pag-cad">
+
+            <div class="imagem-tabela-carrinho-pag-cad">
+                <?php echo '<img src="' . $row['path'] . '" alt="" height="110px" width="100px">' ?>
+            </div>
+
+            <div class="texto-tabela-carrinho-pag-cad">
+                <div class="preco-tabela-carrinho-pag-cad">
+                    <p>R$ <?php echo $row['valor'] ?></p>
+                </div>
+                <div class="desc-tabela-carrinho-pag-cad">
+                    <p><?php echo $row['nome_prod'] ?></p>
+                </div>
+            </div>
+
+
 
         </div>
 
         <br><br>
 
 
-    <div class="flexbox">
-    <div class="pix-container">
-        
-        <div class="qrcode-container">
-            <img src="imagens/qrcode.png" alt="QR Code PIX" class="pix-qrcode">
-            <br>
+        <div class="flexbox">
+            <div class="pix-container">
 
-            <div class="pix-copy-btn">
+                <div class="qrcode-container">
+                    <img src="imagens/qrcode.png" alt="QR Code PIX" class="pix-qrcode">
+                    <br>
 
-                
-                <button data-pix-key="Chave do pixxx"><span class="material-symbols-outlined">
-                    content_copy </span>Pix copia e cola</button>
-           
-        </div>        
-            
-        </div>
-       
-       
-        <button class="pix-finalizar">Finalizar Compra</button>
+                    <div class="pix-copy-btn">
 
-    </div>
-    </div>
-    
-    <!-- Formulário Boleto -->
-    <div class="flexbox">
-    <div class="boleto-container">
-        <img src="imagens/boleto.png" alt="">
-        <br>
-        <br>
-        <br>
-        <p>Seu boleto será gerado e enviado por email após a finalização da compra.</p>
-        <br>
-        <p>Todas as informações da sua compra será enviada para o seu email cadastrato</p>
-        <br>
-        <button class="pix-finalizar">Finalizar Compra</button>
 
-        
-    </div>
-</div>
+                        <button data-pix-key="Chave do pixxx"><span class="material-symbols-outlined">
+                                content_copy </span>Pix copia e cola</button>
 
-    <div class="card-container">
+                    </div>
 
-        <div class="front">
-            <div class="image">
-                <img src="imagens/chip.png" alt="">
-                <img src="imagens/visa.png" alt="">
-            </div>
-            
-            <div class="card-number-box"></div>
-            <div class="flexbox">
-                <div class="box">
-                    <span>Número do Cartão</span>
-                    <div class="card-holder-name">Nome do Cartão</div>
                 </div>
-                <div class="box">
-                    <span>expira</span>
-                    <div class="expiration">
-                        <span class="exp-month">mm</span>
-                        <span class="exp-year">aa</span>
+
+
+                <button class="pix-finalizar">Finalizar Compra</button>
+
+            </div>
+        </div>
+
+        <!-- Formulário Boleto -->
+        <div class="flexbox">
+            <div class="boleto-container">
+                <img src="imagens/boleto.png" alt="">
+                <br>
+                <br>
+                <br>
+                <p>Seu boleto será gerado e enviado por email após a finalização da compra.</p>
+                <br>
+                <p>Todas as informações da sua compra será enviada para o seu email cadastrato</p>
+                <br>
+                <button class="pix-finalizar">Finalizar Compra</button>
+
+
+            </div>
+        </div>
+
+        <div class="card-container">
+
+            <div class="front">
+                <div class="image">
+                    <img src="imagens/chip.png" alt="">
+                    <img src="imagens/visa.png" alt="">
+                </div>
+
+                <div class="card-number-box"></div>
+                <div class="flexbox">
+                    <div class="box">
+                        <span>Número do Cartão</span>
+                        <div class="card-holder-name">Nome do Cartão</div>
+                    </div>
+                    <div class="box">
+                        <span>expira</span>
+                        <div class="expiration">
+                            <span class="exp-month">mm</span>
+                            <span class="exp-year">aa</span>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="back">
+                <div class="stripe"></div>
+                <div class="box">
+                    <span>cvv</span>
+                    <div class="cvv-box"></div>
+                    <img src="imagens/visa.png" alt="">
+                </div>
+            </div>
+
         </div>
 
-        <div class="back">
-            <div class="stripe"></div>
-            <div class="box">
-                <span>cvv</span>
-                <div class="cvv-box"></div>
-                <img src="imagens/visa.png" alt="">
+        <form action="cad-prod.php" method="post" enctype="multipart/form-data">
+            <div class="total-pag-finalizar">
+
+                <p class="TotalFinalizar">TOTAL : R$<?php echo $row['valor'] ?></p>
             </div>
-        </div>
+            <div class="inputBox">
+                <span>Número do Cartão</span>
+                <input type="text" maxlength="16" class="card-number-input" placeholder="Número do Cartão">
+            </div>
+            <div class="inputBox">
+                <span>Nome do Titular</span>
+                <input type="text" class="card-holder-input" placeholder="Nome do Titular">
+            </div>
+            <div class="flexbox">
+                <div class="inputBox">
+                    <span>Validade mm</span>
+                    <select name="" id="" class="month-input">
+                        <option value="month" selected disabled>Mês</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span>Ano</span>
+                    <select name="" id="" class="year-input">
+                        <option value="year" selected disabled>Ano</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </div>
+
+
+                <div class="inputBox">
+                    <span>cvv</span>
+                    <input type="text" maxlength="4" class="cvv-input" placeholder="cvv">
+                </div>
+            </div>
+
+
+            <div class="inputBox">
+                <div class="Parcelas">
+                    <span>Parcelas</span>
+                    <select name="subcategoria" id="">
+                        <option value="1x">1x de R$<?php echo $row['valor'] ?></option>
+
+                        <p>
+                            <option value="2x">2x de R$
+                                <?php
+                                $valor = $row['valor'] / 2;
+                               echo number_format($valor, 2, ',', '.'); 
+                               ?>
+                               </option>
+                        </p>
+                        <p>
+                            <option value="3x">3x de R$<?php
+                                $valor = $row['valor'] / 3;
+                               echo number_format($valor, 2, ',', '.'); 
+                               ?></option>
+                        </p>
+                        <p>
+                            <option value="4x">4x de R$<?php
+                                $valor = $row['valor'] / 4;
+                               echo number_format($valor, 2, ',', '.'); 
+                               ?></option>
+                        </p>
+                        <p>
+                            <option value="5x">5x de R$<?php
+                                $valor = $row['valor'] / 5;
+                               echo number_format($valor, 2, ',', '.'); 
+                               ?></option>
+                        </p>
+                        <p>
+                            <option value="6x">6x de R$<?php
+                                $valor = $row['valor'] / 6;
+                               echo number_format($valor, 2, ',', '.'); 
+                               ?></option>
+                        </p>
+                        <p>
+                            <option value="7x">7x de R$<?php
+                                $valor = $row['valor'] / 7;
+                               echo number_format($valor, 2, ',', '.'); 
+                               ?></option>
+                        </p>
+                        <p>
+                            <option value="8x">8x de R$<?php
+                                $valor = $row['valor'] / 8;
+                               echo number_format($valor, 2, ',', '.'); 
+                               ?></option>
+                        </p>
+                    </select>
+                </div>
+            </div>
+            <input type="submit" value="Finalizar compra" class="submit-btn">
+
+        </form>
 
     </div>
-
-    <form  action="cad-prod.php" method="post" enctype="multipart/form-data">
-        <div class="total-pag-finalizar">
-            
-            <p class="TotalFinalizar">TOTAL : R$<?php echo $row['valor'] ?></p>
-        </div>
-        <div class="inputBox">
-            <span>Número do Cartão</span>
-            <input type="text" maxlength="16" class="card-number-input" placeholder="Número do Cartão">
-        </div>
-        <div class="inputBox">
-            <span>Nome do Titular</span>
-            <input type="text" class="card-holder-input" placeholder="Nome do Titular">
-        </div>
-        <div class="flexbox">
-            <div class="inputBox">
-                <span>Validade mm</span>
-                <select name="" id="" class="month-input">
-                    <option value="month" selected disabled>Mês</option>
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                </select>
-            </div>
-            <div class="inputBox">
-                <span>Ano</span>
-                <select name="" id="" class="year-input">
-                    <option value="year" selected disabled>Ano</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
-                    <option value="2026">2026</option>
-                    <option value="2027">2027</option>
-                    <option value="2028">2028</option>
-                    <option value="2029">2029</option>
-                    <option value="2030">2030</option>
-                </select>
-            </div>
-            
-               
-            <div class="inputBox">
-                <span>cvv</span>
-                <input type="text" maxlength="4" class="cvv-input" placeholder="cvv">
-            </div>
-        </div>
-
-        
-        <div class="inputBox">
-            <div class="Parcelas">
-    <span>Parcelas</span>
-    <select name="subcategoria" id="">
-        <option value="1x">1x de R$<?php echo $row['valor'] ?></option>
-        
-        <p>
-        <option value="2x">2x de R$<?php echo $row['valor'] / 2 ?></option>
-        </p>
-        <p>
-        <option value="3x">2x de R$<?php echo $row['valor'] / 3 ?></option>
-        </p>
-        <p>
-        <option value="4x">2x de R$<?php echo $row['valor'] / 4 ?></option>
-        </p>
-        <p>
-        <option value="5x">2x de R$<?php echo $row['valor'] / 5 ?></option>
-        </p>
-        <p>
-        <option value="6x">2x de R$<?php echo $row['valor'] / 6 ?></option>
-        </p>
-        <p>
-        <option value="7x">2x de R$<?php echo $row['valor'] / 7 ?></option>
-        </p>
-        <p>
-        <option value="8x">2x de R$<?php echo $row['valor'] / 8 ?></option>
-        </p>
-        <p>
-        <option value="9x">2x de R$<?php echo $row['valor'] / 9 ?></option>
-        </p>
-        <p>
-        <option value="10x">2x de R$<?php echo $row['valor'] / 10 ?></option>
-        </p>
-     
-    </select>
-</div>
     </div>
-        <input type="submit" value="Finalizar compra" class="submit-btn">
-        
-    </form>
-
-</div>    
-</div>
 
 
 
@@ -261,71 +279,69 @@ $row= mysqli_fetch_assoc($query);
 
 
 
-<script>
+    <script>
+        document.querySelector('.card-number-input').oninput = () => {
+            document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
+        }
 
-document.querySelector('.card-number-input').oninput = () =>{
-    document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
-}
+        document.querySelector('.card-holder-input').oninput = () => {
+            document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
+        }
 
-document.querySelector('.card-holder-input').oninput = () =>{
-    document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
-}
+        document.querySelector('.month-input').oninput = () => {
+            document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
+        }
 
-document.querySelector('.month-input').oninput = () =>{
-    document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
-}
+        document.querySelector('.year-input').oninput = () => {
+            document.querySelector('.exp-year').innerText = document.querySelector('.year-input').value;
+        }
 
-document.querySelector('.year-input').oninput = () =>{
-    document.querySelector('.exp-year').innerText = document.querySelector('.year-input').value;
-}
+        document.querySelector('.cvv-input').addEventListener('focus', () => {
+            document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+            document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+        });
 
-document.querySelector('.cvv-input').addEventListener('focus', () => {
-    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
-    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
-});
-
-document.querySelector('.cvv-input').addEventListener('blur', () => {
-    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
-    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
-});
-
-
-document.querySelector('.cvv-input').oninput = () =>{
-    document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
-}
-
-document.querySelectorAll('input[name="paymentMethod"]').forEach(input => {
-    input.addEventListener('change', function() {
-        document.querySelector('.container-pag-cad form').style.display = this.value === 'card' ? 'block' : 'none';
-        document.querySelector('.card-container').style.display = this.value === 'card' ? 'block' : 'none';
-        document.querySelector('.pix-container').style.display = this.value === 'pix' ? 'block' : 'none';
-        document.querySelector('.boleto-container').style.display = this.value === 'boleto' ? 'block' : 'none';
-    });
-});
-
-document.querySelector('.pix-copy-btn').addEventListener('click', function() {
-    const pixKey = this.getAttribute('data-pix-key');
-    const textarea = document.createElement('textarea');
-    textarea.value = pixKey;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-    alert('Chave PIX copiada com sucesso!');
-});
+        document.querySelector('.cvv-input').addEventListener('blur', () => {
+            document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+            document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+        });
 
 
-</script>
+        document.querySelector('.cvv-input').oninput = () => {
+            document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
+        }
+
+        document.querySelectorAll('input[name="paymentMethod"]').forEach(input => {
+            input.addEventListener('change', function() {
+                document.querySelector('.container-pag-cad form').style.display = this.value === 'card' ? 'block' : 'none';
+                document.querySelector('.card-container').style.display = this.value === 'card' ? 'block' : 'none';
+                document.querySelector('.pix-container').style.display = this.value === 'pix' ? 'block' : 'none';
+                document.querySelector('.boleto-container').style.display = this.value === 'boleto' ? 'block' : 'none';
+            });
+        });
+
+        document.querySelector('.pix-copy-btn').addEventListener('click', function() {
+            const pixKey = this.getAttribute('data-pix-key');
+            const textarea = document.createElement('textarea');
+            textarea.value = pixKey;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Chave PIX copiada com sucesso!');
+        });
+    </script>
 
 
 
 
 
-<?php
+    <?php
 
-  include("includes/footer.php")
+    include("includes/footer.php")
 
-  ?>
+    ?>
 
 </body>
+
 </html>
