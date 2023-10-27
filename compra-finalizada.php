@@ -18,7 +18,7 @@ $dados = mysqli_fetch_assoc($resultadoDados);
     <link rel="stylesheet" href="compra-finalizada.css">
     <title>compra finalizada</title>
 </head>
-<body class="body-compra-finalizada">
+<body>
     
 
 <?php
@@ -27,6 +27,9 @@ $dados = mysqli_fetch_assoc($resultadoDados);
 
   ?>
 
+
+
+<div class="body-compra-finalizada">
 
 
 <div class="tela-carregamento">
@@ -86,6 +89,7 @@ $dados = mysqli_fetch_assoc($resultadoDados);
 
 
    </div>
+</div>
    
    <?php
 
