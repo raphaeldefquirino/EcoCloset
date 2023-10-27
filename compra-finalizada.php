@@ -18,7 +18,7 @@ $dados = mysqli_fetch_assoc($resultadoDados);
     <link rel="stylesheet" href="compra-finalizada.css">
     <title>compra finalizada</title>
 </head>
-<body>
+<body class="body-compra-finalizada">
     
 
 <?php
@@ -26,6 +26,19 @@ $dados = mysqli_fetch_assoc($resultadoDados);
   include("menu.php");
 
   ?>
+
+
+
+<div class="tela-carregamento">
+
+<div class="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+</div>
+
 
 
    <div class="conteudo-compra-finalizada">
@@ -108,6 +121,23 @@ function init() {
 }
 
 init();
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const telaCarregamento = document.querySelector('.tela-carregamento');
+
+    setTimeout(function() {
+        telaCarregamento.style.display = 'none';
+    }, 7000); // 7000 milissegundos = 7 segundos
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        const conteudoCompraFinalizada = document.querySelector('.conteudo-compra-finalizada');
+        conteudoCompraFinalizada.style.display = 'block';
+    }, 6000); // 5000 milissegundos = 5 segundos
+});
 
 
 </script>

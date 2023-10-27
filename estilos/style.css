@@ -3318,9 +3318,22 @@ border:solid 2px #af00ff;
 
 /* começo compra finalizada */
 
-.conteudo-compra-finalizada{
-    margin-top: 100px;
-    margin-bottom: 100px;
+.body-compra-finalizada{
+    background-color: #f1f1f1;
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.conteudo-compra-finalizada {
+  display: none;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 450px;
+  z-index: 0; /* Isso garante que a div de conteúdo fique abaixo da div de carregamento */
 }
 .ecocloset-compra-finalizada{
     margin: auto;
@@ -3336,7 +3349,7 @@ border:solid 2px #af00ff;
 }
 .agradecimento-compra-finalizada{
     margin: auto;
-    width: 505px;
+    width: 450px;
     text-align: center;
     margin-top: 40px;
 }
@@ -3699,7 +3712,60 @@ border:solid 2px #af00ff;
       transform: translateX(0px);
       opacity: 0;
     }
-  } 
+  }
+  
+ 
+
+
+
+
+
+  .tela-carregamento {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    position: absolute; /* A div de carregamento ficará sobreposta */
+    z-index: 1; /* Isso garante que a div de carregamento fique em cima da outra div */
+}
+
+.loading{
+  margin: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 380px;
+    width: 500px;
+    
+
+}
+.loading span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    margin: 8px;
+    margin-top: 35%;
+}
+.loading span{
+animation: bounce .6s cubic-bezier(0.6,0.1,1,0.4);
+animation-iteration-count: infinite;
+animation-direction: alternate;
+} 
+.loading span:nth-child(1){
+    animation-delay: .1s;
+}
+.loading span:nth-child(2){
+    animation-delay: .2s;
+}
+.loading span:nth-child(3){
+    animation-delay: .3s;
+}
+
+@keyframes bounce{
+    to{
+        transform: translateY(50px);
+    }
+}
 
   /* end compra finalizada */
  
