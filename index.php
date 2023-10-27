@@ -109,7 +109,7 @@
 
     <div class="ImagemSobrenos">
 
-      <img src="imagens/pexels-david-bartus-615003.jpg" alt="Image" height="800" width="550">
+      <img src="imagens/pexels-david-bartus-615003.jpg" alt="Image" height="850" width="550">
 
     </div>
   </div>
