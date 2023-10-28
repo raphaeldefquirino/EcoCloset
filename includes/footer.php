@@ -50,7 +50,7 @@
                         <li> <a href="kids.php"> Kids</a> </li>
                         <li> <a href="index.php #sobrenos"> Sobre nós</a> </li>
                         <li> <a href="produto.php"> Venda</a> </li>
-                        <li> <a href="perfil.php"> Perfil</a> </li>
+                        <li> <a href="new-usu.php"> Perfil</a> </li>
                     </ul>
 
                 </div>
