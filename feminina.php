@@ -32,7 +32,6 @@
       <option value="Jaqueta">Jaqueta</option>
       <option value="Tênis">Tênis</option>
       <option value="sweatpants">Calça moletom</option>
-      <option value="Calça">Calça</option>
     </select>
 
     <label for="sort"  class = "subcategory">Classificar por:</label>
@@ -41,7 +40,7 @@
       <option value="barato">Maior preço</option>
     </select>
 
-    <button class="filter-button" name="filtrar" value="Feminina"> Filtrar</button>
+    <button class="filter-button" name="filtrar" value="Masculina"> Filtrar</button>
     </form>
 </div>
 

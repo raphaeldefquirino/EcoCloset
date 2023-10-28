@@ -47,7 +47,7 @@
                         <li> <a href="index.php"> Home</a> </li>
                         <li> <a href="feminina.php"> Femininas</a> </li>
                         <li> <a href="masculina.php"> Masculinas</a> </li>
-                        <li> <a href="infantil.php"> Infantil</a> </li>
+                        <li> <a href="kids.php"> Kids</a> </li>
                         <li> <a href="index.php #sobrenos"> Sobre nós</a> </li>
                         <li> <a href="produto.php"> Venda</a> </li>
                         <li> <a href="perfil.php"> Perfil</a> </li>

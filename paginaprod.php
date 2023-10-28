@@ -58,11 +58,12 @@ $produto =  mysqli_fetch_assoc($result);
 
 
 				<div class="container-add-cart">
-
+					<?php echo '<a href="adicionaCarrinho.php?idproduto = ' . $produto['idproduto'] . '">' ?>
 					<button class="btn-add-to-cart">
 						<i class="fa-solid fa-plus"></i>
 						  Adicionar ao carrinho
 					</button>
+					</a>
 				</div>
 
 

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('includes/conexao.php');
+include('includes/verifica-login.php');
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 

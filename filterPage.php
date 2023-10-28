@@ -23,28 +23,26 @@
 
     ?>
 
-    <div class="filter-bar">
-        <button class="filter-button mobile-show">Mostrar filtros</button>
-        <form action="filterPage.php" method="post">
-            <label for="subcategory" class="subcategory">Subcategoria:</label>
-            <select name="subcategoria" id="subcategory">
-                <option value="Shorts">Shorts</option>
-                <option value="Jaqueta">Jaqueta</option>
-                <option value="Tênis">Tênis</option>
-                <option value="Calça de moletom">Calça de moletom</option>
-                <option value="Calça">Calça </option>
-            </select>
+<div class="filter-bar">
+<button class="filter-button mobile-show">Mostrar filtros</button>
+    <form action="filterPage.php" method="post">
+    <label for="subcategory"  class = "subcategory">Subcategoria:</label>
+    <select name="subcategoria" id="subcategory">
+      <option value="Shorts">Shorts</option>
+      <option value="Jaqueta">Jaqueta</option>
+      <option value="Tênis">Tênis</option>
+      <option value="sweatpants">Calça moletom</option>
+    </select>
 
-            <label for="sort" class="subcategory">Classificar por:</label>
-            <select name="sort" id="sort">
-                <option value="caro">Menor preço</option>
-                <option value="barato">Maior preço</option>
-            </select>
+    <label for="sort"  class = "subcategory">Classificar por:</label>
+    <select name="sort" id="sort">
+      <option value="caro">Menor preço</option>
+      <option value="barato">Maior preço</option>
+    </select>
 
-            <button class="filter-button" name="filtrar"> Filtrar</button>
-        </form>
-    </div>
-
+    <button class="filter-button" name="filtrar" value="Masculina"> Filtrar</button>
+    </form>
+</div>
     <?php
 
     include("includes/conexao.php");
@@ -60,8 +58,10 @@
     $consultaCaro = "SELECT * FROM cadastro_prod WHERE categoria = '$page' AND subcategoria = '$subcategoria' ORDER BY valor ASC";
     $resultadoCaro = mysqli_query($conexao, $consultaCaro);
 
+
     $consultaBarato = "SELECT * FROM cadastro_prod WHERE categoria = '$page' AND subcategoria = '$subcategoria' ORDER BY valor DESC";
     $resultadoBarato = mysqli_query($conexao, $consultaBarato);
+
 
     if ($preco == 'caro'){
     if (mysqli_num_rows($resultadoCaro) > 0) {
@@ -104,9 +104,11 @@
         echo  '</div>';
 
        
-    } else {
-        echo "Nenhum produto encontrado"; 
-    }
+    } 
+
+    if(mysqli_num_rows($resultadoBarato) == 0 &&  mysqli_num_rows($resultadoCaro) == 0){
+        echo '<div class = "product-found">Ops, não encontramos o produto especificado. </div>.'; 
+    } 
 
 
     mysqli_close($conexao);
