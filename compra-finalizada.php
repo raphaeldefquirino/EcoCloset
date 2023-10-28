@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
         const conteudoCompraFinalizada = document.querySelector('.conteudo-compra-finalizada');
         conteudoCompraFinalizada.style.display = 'block';
-    }, 6000); // 5000 milissegundos = 5 segundos
+    }, 6500); // 5000 milissegundos = 5 segundos
 });
 
 
