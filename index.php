@@ -138,7 +138,8 @@
                   
 																		
 									<p class="content">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. At cumque illo, ea unde rem natus voluptatum accusamus laboriosam quis autem odio aliquid quod veniam sed sint error non ipsum odit.
+                  "A paixão por criar e inovar é o que me move todos os dias. Mesmo com apenas 18 anos, sinto que cada projeto é uma nova jornada. Aqui, compartilho uma parte de mim com todos vocês. Espero que gostem."
+
 										
 									</p>
                   
@@ -160,7 +161,7 @@
                   
 																		
 									<p class="content">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nisi dolores perferendis asperiores repudiandae voluptatum vero placeat, iste id ipsum necessitatibus culpa tenetur aliquid, aliquam atque magnam amet sit facilis!
+                  "Desde pequeno, sempre fui curioso e questionador. Aos 18 anos, essa curiosidade se transformou em criar e dar vida às ideias. Estou entusiasmado por fazer parte desta aventura e espero que vocês apreciem nosso trabalho."  
 								
 									</p>
 									<h6 class="socials">
@@ -180,7 +181,7 @@
                   
 									
 									<p class="content">
-										Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi quod fugit soluta quibusdam inventore iure quis vitae, exercitationem cupiditate sunt a illo accusamus incidunt expedita molestiae minima, doloremque dolore vel?
+                  "Com 19 anos, acredito que a verdadeira magia acontece quando colocamos nosso coração e alma em algo. Esta plataforma é um reflexo do nosso esforço e dedicação. Juntos, esperamos iluminar e inspirar sua jornada."
 									
 									</p>
 									<h6 class="socials">

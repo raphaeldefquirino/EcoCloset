@@ -18,7 +18,7 @@
     </a>
 
     <a href="index.php" style="text-decoration: none;">
-        <h1 > EcoCloset</h1>
+        <h1 style="font-weight:bolder;"> EcoCloset</h1>
     </a>
     
 </div>

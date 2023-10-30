@@ -74,7 +74,7 @@
       echo '<img src="' . $produto['path'] . '" alt="Calça jeans">';
       echo '<br>';
       echo '<br>';
-      echo '<div class="btncarrinho"><a href="adicionaCarrinho.php?idproduto=' . $produto['idproduto'] . '"><span class="material-symbols-outlined" id="prod-neckklace">add_shopping_cart</span></a></div>';
+      echo '<div class="btncarrinho"><a  href="adicionaCarrinho.php?idproduto=' . $produto['idproduto'] . '"><span class="material-symbols-outlined" id="prod-neckklace">add_shopping_cart</span></a></div>';
       echo '<div class="clothing-details">';
       echo '<h3 class="h3produtos">' . $produto['nome_prod'] . '</h3>';
       echo ' <p class="clothing-price"><strong>R$' . $produto['valor'] . ' </strong></p>';

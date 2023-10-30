@@ -1070,6 +1070,8 @@ font-weight: 800;
     right: 20px; /* Posição em relação à direita */
     cursor: pointer;
      transition: transform 0.3s ease;
+     text-decoration: none;
+     color: #AF00FF;
   }
   
   .clothing-details {
@@ -1077,6 +1079,7 @@ font-weight: 800;
     align-items: left;
     font-size: 12px;
     margin-top: -7px;
+    
   }
   
   .clothing-price {
@@ -1136,16 +1139,17 @@ font-weight: 800;
 	border-radius: 10px;
 	display: flex;
 	border-radius: 30px;
-	width:450px;
-	height: 600px;
-	margin-right: 10px;
+	width:430px;
+	height: 580px;
+	margin: auto;
 }
 
 .container-img{
 
 
 align-items: center;
-width: auto;
+width: 450px;
+height: 600px;
 }
 
 
