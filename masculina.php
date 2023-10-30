@@ -23,26 +23,40 @@
 
   ?>
 
-<div class="filter-bar">
-<button class="filter-button mobile-show">Mostrar filtros</button>
+  <div class="filter-bar">
+    <button class="filter-button mobile-show">Mostrar filtros</button>
     <form action="filterPage.php" method="post">
-    <label for="subcategory"  class = "subcategory">Subcategoria:</label>
-    <select name="subcategoria" id="subcategory">
-      <option value="Shorts">Shorts</option>
-      <option value="Jaqueta">Jaqueta</option>
-      <option value="Tênis">Tênis</option>
-      <option value="sweatpants">Calça moletom</option>
-    </select>
+      <label for="subcategory" class="subcategory">Subcategoria:</label>
+      <select name="subcategoria" id="subcategory">
+        <option value="Jaqueta">Jaqueta</option>
+        <option value="Camisa">Camisa</option>
+        <option value="Calça">Calça</option>
+        <option value="Vestido">Vestido</option>
+        <option value="Shorts">Shorts</option>
+        <option value="Calçado">Calçado</option>
+        <option value="Acessório">Acessório</option>
+        <option value="Saia">Saia</option>
+        <option value="Blusa">Blusa</option>
+        <option value="Terno">Terno</option>
+        <option value="Blazer">Blazer</option>
+        <option value="Legging">Legging</option>
+        <option value="Biquini">Bíquini</option>
+        <option value="Pijama">Pijama</option>
+        <option value="Sueter">Suéter</option>
+        <option value="Cinto">Cinto</option>
+        <option value="Macacao">Macacão</option>
+        <option value="Cropped">Cropped</option>
+      </select>
 
-    <label for="sort"  class = "subcategory">Classificar por:</label>
-    <select name="sort" id="sort">
-      <option value="caro">Menor preço</option>
-      <option value="barato">Maior preço</option>
-    </select>
+      <label for="sort" class="subcategory">Classificar por:</label>
+      <select name="sort" id="sort">
+        <option value="caro">Menor preço</option>
+        <option value="barato">Maior preço</option>
+      </select>
 
-    <button class="filter-button" name="filtrar" value="Masculina"> Filtrar</button>
+      <button class="filter-button" name="filtrar" value="Masculina"> Filtrar</button>
     </form>
-</div>
+  </div>
 
   <?php
 
@@ -87,19 +101,18 @@
   ?>
 
   <script>
-   $(document).ready(function() {
-    $('.filter-bar .mobile-show').on('click', function() {
+    $(document).ready(function() {
+      $('.filter-bar .mobile-show').on('click', function() {
         $('.filter-bar form').slideToggle();
-    });
+      });
 
-    // Listener para o evento de redimensionamento da janela
-    $(window).resize(function() {
+      // Listener para o evento de redimensionamento da janela
+      $(window).resize(function() {
         if ($(window).width() > 767) {
-            $('.filter-bar form').css('display', 'block');  // Mostra o formulário
+          $('.filter-bar form').css('display', 'block'); // Mostra o formulário
         }
+      });
     });
-});
-
   </script>
 </body>
 

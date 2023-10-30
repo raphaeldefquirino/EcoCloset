@@ -14,7 +14,9 @@ $novoNomeDoArquivo = uniqid();
 $extensao = strtolower(pathinfo($nomeDoArquivo, PATHINFO_EXTENSION));
 
 if ($extensao != "jpg" && $extensao != 'png' && $extensao != 'jpeg') {
-    echo 'Tipo de arquivo não aceito'; 
+    $_SESSION['erro_perfil'] = true;
+    header('Location: new-usu.php');
+    exit;
 }
 
 $path = $pasta . $novoNomeDoArquivo . "." . $extensao;

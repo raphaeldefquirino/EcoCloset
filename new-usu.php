@@ -1,313 +1,313 @@
 <?php
-    session_start();
-    include('includes/conexao.php');
-    include('includes/verifica-login.php');
+session_start();
+include('includes/conexao.php');
+include('includes/verifica-login.php');
 
-    $id_usuario = $_SESSION['id_usuario'];
+$id_usuario = $_SESSION['id_usuario'];
 
-    $consultaCarrinho = "SELECT * FROM pedidos WHERE idusuario = '$id_usuario' AND status = 'carrinho'";
-    $resultadoCarrinho = mysqli_query($conexao, $consultaCarrinho);
+$consultaCarrinho = "SELECT * FROM pedidos WHERE idusuario = '$id_usuario' AND status = 'carrinho'";
+$resultadoCarrinho = mysqli_query($conexao, $consultaCarrinho);
 
-    $consultaCadProd = "SELECT * FROM cadastro_prod WHERE id_usu = '$id_usuario'";
-    $resultadoCadProd = mysqli_query($conexao, $consultaCadProd);
-    $CadProd = mysqli_fetch_assoc($resultadoCadProd);
+$consultaCadProd = "SELECT * FROM cadastro_prod WHERE id_usu = '$id_usuario'";
+$resultadoCadProd = mysqli_query($conexao, $consultaCadProd);
+$CadProd = mysqli_fetch_assoc($resultadoCadProd);
 
-    $consultaDados = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
-    $resultadoDados = mysqli_query($conexao, $consultaDados);
-    $dados = mysqli_fetch_assoc($resultadoDados);
+$consultaDados = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
+$resultadoDados = mysqli_query($conexao, $consultaDados);
+$dados = mysqli_fetch_assoc($resultadoDados);
 
-    $consultaCadProdAdm = "SELECT * FROM cadastro_prod";
-    $resultadoCadProdAdm = mysqli_query($conexao, $consultaCadProdAdm);
-    $CadProdAdm = mysqli_fetch_assoc($resultadoCadProdAdm);
+$consultaCadProdAdm = "SELECT * FROM cadastro_prod";
+$resultadoCadProdAdm = mysqli_query($conexao, $consultaCadProdAdm);
+$CadProdAdm = mysqli_fetch_assoc($resultadoCadProdAdm);
 
-    /*-------------------------------DESK----------------------*/
+/*-------------------------------DESK----------------------*/
 
-    $consultaCarrinhoDesk = "SELECT * FROM pedidos WHERE idusuario = '$id_usuario' AND status = 'carrinho'";
-    $resultadoCarrinhoDesk = mysqli_query($conexao, $consultaCarrinhoDesk);
+$consultaCarrinhoDesk = "SELECT * FROM pedidos WHERE idusuario = '$id_usuario' AND status = 'carrinho'";
+$resultadoCarrinhoDesk = mysqli_query($conexao, $consultaCarrinhoDesk);
 
-    $consultaCadProdDesk = "SELECT * FROM cadastro_prod WHERE id_usu = '$id_usuario'";
-    $resultadoCadProdDesk = mysqli_query($conexao, $consultaCadProdDesk);
-    $CadProdDesk = mysqli_fetch_assoc($resultadoCadProdDesk);
+$consultaCadProdDesk = "SELECT * FROM cadastro_prod WHERE id_usu = '$id_usuario'";
+$resultadoCadProdDesk = mysqli_query($conexao, $consultaCadProdDesk);
+$CadProdDesk = mysqli_fetch_assoc($resultadoCadProdDesk);
 
-    $consultaDadosDesk = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
-    $resultadoDadosDesk = mysqli_query($conexao, $consultaDadosDesk);
-    $dadosDesk = mysqli_fetch_assoc($resultadoDadosDesk);
+$consultaDadosDesk = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
+$resultadoDadosDesk = mysqli_query($conexao, $consultaDadosDesk);
+$dadosDesk = mysqli_fetch_assoc($resultadoDadosDesk);
 
-    $consultaCadProdDeskAdm = "SELECT * FROM cadastro_prod";
-    $resultadoCadProdDeskAdm = mysqli_query($conexao, $consultaCadProdDeskAdm);
-    $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
+$consultaCadProdDeskAdm = "SELECT * FROM cadastro_prod";
+$resultadoCadProdDeskAdm = mysqli_query($conexao, $consultaCadProdDeskAdm);
+$CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="usuario.css">
+    <link rel="stylesheet" href="estilos/style-user.css">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Tabela do usuário</title>
+</head>
+
+<body>
+    <?php
+    include('menu.php');
     ?>
 
-    <!DOCTYPE html>
-    <html lang="pt-br">
+    <div class="tudo-perfil-usuario">
 
+        <div class="container-perfil-usuario">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="usuario.css">
-        <link rel="stylesheet" href="estilos/style-user.css">
-        <link rel="stylesheet" href="estilos/style.css">
-        <link rel="stylesheet" href="estilos/media-query.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <title>Tabela do usuário</title>
-    </head>
+            <div class="parte-perfil-usuario">
 
-    <body>
-        <?php
-        include('menu.php');
-        ?>
+                <div class="container-imagem-usuario">
 
-        <div class="tudo-perfil-usuario">
+                    <div class="container-imagem-sair-perfil-usuario">
 
-            <div class="container-perfil-usuario">
+                        <div class="imagem-perfil-usuario">
 
-                <div class="parte-perfil-usuario">
+                            <img src="<?= $dados['path_user'] ?>" alt="imagem de usuário" height="200px" width="200px">
 
-                    <div class="container-imagem-usuario">
+                        </div>
 
-                        <div class="container-imagem-sair-perfil-usuario">
-
-                            <div class="imagem-perfil-usuario">
-
-                                <img src="<?= $dados['path_user'] ?>" alt="imagem de usuário" height="200px" width="200px">
-
-                            </div>
-
-                            <div class="sobrepondo-imagem-perfil-usuario">
-                                <form id="uploadForm" action="editaImagemUser.php"  method="POST" enctype="multipart/form-data">
-                                <input type="file" class="file-upload" name="imagemUser"  id="fileInput"    onchange="submitForm()">
+                        <div class="sobrepondo-imagem-perfil-usuario">
+                            <form id="uploadForm" action="editaImagemUser.php" method="POST" enctype="multipart/form-data">
+                                <input type="file" class="file-upload" name="imagemUser" id="fileInput" onchange="submitForm()">
                                 <span class="material-symbols-outlined" id="edit-perfil-usuario">edit</span>
-                                </form>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="textos-perfil-usuario">
-
-                        <div class="ola-perfil-usuario">
-                            <p>Olá, <?= $dados['nome'] ?></p>
-                        </div>
-
-                        <div class="mensagem-perfil-usuario">
-                            <p>"Seja a moda sustentável que você quer ver no mundo. Escolha o EcoCloset!"</p>
-                        </div>
-
-                        <div class="btn-sair-perfil-usuario">
-
-                            <a href="includes/logout.php">
-                                <p>Sair</p>
-                            </a>
-
+                            </form>
                         </div>
 
                     </div>
                 </div>
-            </div>
 
-        </div>
+                <div class="textos-perfil-usuario">
 
-        <div class="tudo">
-
-            <!-- Começo da parte carrinho -->
-            <div class="carrinho">
-                <div class="card-carrinho" id="card-carrinho">
-                    <span class="material-symbols-outlined" id="shopping_cart">shopping_cart</span>
-                    <p>Meu carrinho de compras</p>
-                    <span class="material-symbols-outlined chevron" id="chevron-carrinho">chevron_right</span>
-                </div>
-
-                <div class="conteudo-carrinho" id="conteudo-carrinho">
-                <?php if (mysqli_num_rows($resultadoCarrinhoDesk) == 0) {
-                            $_SESSION['carrinho-vazio'] = true;
-                        }
-                        ?>
-
-                        <?php
-
-                        if (isset($_SESSION['carrinho-vazio'])) :
-
-                        ?>
-
-
-                            <div class="carrinho-vazio">
-                                    <p>O seu carrinho está vazio!</p>
-                                </div>
-                            
-
-                        <?php
-                        endif;
-                        unset($_SESSION['carrinho-vazio']);
-                        ?>
-                    <?php while ($itemCarrinho = mysqli_fetch_assoc($resultadoCarrinho)) : ?>
-                        <?php
-                        $idproduto = $itemCarrinho['idproduto'];
-                        $consultaProduto = "SELECT * FROM cadastro_prod WHERE idproduto = '$idproduto'";
-                        $resultadoProduto = mysqli_query($conexao, $consultaProduto);
-                        $produto = mysqli_fetch_assoc($resultadoProduto);
-                        ?>
-
-                        <div class="conteudo-total-tabela-carrinho">
-                            <div class="tabela-carrinho">
-
-                                <div class="imagem-tabela-carrinho">
-                                    <a href=""><img src="<?= $produto['path'] ?>" alt="" height="110px" width="100px"></a>
-                                </div>
-
-                                <div class="texto-tabela-carrinho">
-                                    <div class="preco-tabela-carrinho">
-                                        <p>R$ <?= $produto['valor'] ?></p>
-                                    </div>
-                                    <div class="desc-tabela-carrinho">
-                                        <p><?= $produto['nome_prod'] ?></p>
-                                    </div>
-                                </div>
-
-                                <div class="excluir-tabela-carrinho">
-                                    <?php
-                                    echo '<a href="includes/deletar.php?id= ' . $produto['idproduto'] . '"><span class="material-symbols-outlined" id="delete">delete</span></a>';
-                                    ?>
-                                </div>
-
-                            </div>
-                            <div class="confirmar-carrinho">
-                                <a href="">
-                                    <div class="texto-confirmar-carrinho">
-                                        <p>Fechar compra</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    <?php endwhile; ?>
-                    <!-- Parte do botão de fechar compra -->
-                    <!-- Fim parte do botão de fechar compra -->
-                </div>
-            </div>
-            <!-- Fim da parte carrinho -->
-            <!-- Começo da parte dados -->
-            <div class="dados">
-
-                <div class="card-dados" id="card-dados">
-                    <span class="material-symbols-outlined" id="database">database</span>
-                    <p>Meus dados</p>
-                    <span class="material-symbols-outlined chevron" id="chevron-dados">chevron_right</span>
-                </div>
-
-                <div class="conteudo-dados" id="conteudo-dados">
-
-                    <div class="tabela-dados">
-
-                        <div class="re-nome">
-
-                            <div class="e-nome">
-                                <p>Nome: </p>
-                            </div>
-                            <div class="u-nome">
-                                <p><?= $dados['nome'] ?> </p>
-                            </div>
-
-                        </div>
-
-                        <div class="re-sobrenome">
-
-                            <div class="e-sobrenome">
-                                <p>Sobrenome: </p>
-                            </div>
-                            <div class="u-sobrenome">
-                                <p><?= $dados['sobrenome'] ?></p>
-                            </div>
-
-                        </div>
-
-                        <div class="re-email">
-
-                            <div class="e-email">
-                                <p>Email: </p>
-                            </div>
-                            <div class="u-email">
-                                <p><?= $dados['email'] ?></p>
-                            </div>
-
-                        </div>
-
-                        <div class="re-cep">
-
-                            <div class="e-cep">
-                                <p>CEP: </p>
-                            </div>
-                            <div class="u-cep">
-                                <p><?= $dados['CEP'] ?></p>
-                            </div>
-
-                        </div>
-
-                        <div class="re-endereco">
-
-                            <div class="e-endereco">
-                                <p>Endereço: </p>
-                            </div>
-                            <div class="u-endereco">
-                                <p><?= $dados['endereco'] ?></p>
-                            </div>
-
-                        </div>
-                        <div class="re-complemento">
-
-                            <div class="e-complemento">
-                                <p>Complemento: </p>
-                            </div>
-                            <div class="u-complemento">
-                                <p><?= $dados['complemento'] ?></p>
-                            </div>
-                        </div>
-
-                        <div class="re-tel">
-
-                            <div class="e-tel">
-                                <p>Telefone/cell: </p>
-                            </div>
-                            <div class="u-tel">
-                                <p><?= $dados['telefone'] ?></p>
-                            </div>
-
-                        </div>
-
+                    <div class="ola-perfil-usuario">
+                        <p>Olá, <?= $dados['nome'] ?></p>
                     </div>
 
-                    <div class="editar-dados">
+                    <div class="mensagem-perfil-usuario">
+                        <p>"Seja a moda sustentável que você quer ver no mundo. Escolha o EcoCloset!"</p>
+                    </div>
 
-                        <a href="editaDados.php">
-                            <p>Editar seus dados</p>
+                    <div class="btn-sair-perfil-usuario">
+
+                        <a href="includes/logout.php">
+                            <p>Sair</p>
                         </a>
 
                     </div>
 
                 </div>
-
             </div>
-            <!-- Fim da parte dados -->
+        </div>
 
-            <!-- Começo da parte cadastrados -->
-            <!-- Começo da parte cadastrados -->
-            <div class="cadastrados">
-                <div class="card-cadastrados" id="card-cadastrados">
-                    <span class="material-symbols-outlined" id="bookmark_manager">bookmark_manager</span>
-                    <p>Produtos cadastrados</p>
-                    <span class="material-symbols-outlined chevron" id="chevron-cadastrados">chevron_right</span>
+    </div>
+
+    <div class="tudo">
+
+        <!-- Começo da parte carrinho -->
+        <div class="carrinho">
+            <div class="card-carrinho" id="card-carrinho">
+                <span class="material-symbols-outlined" id="shopping_cart">shopping_cart</span>
+                <p>Meu carrinho de compras</p>
+                <span class="material-symbols-outlined chevron" id="chevron-carrinho">chevron_right</span>
+            </div>
+
+            <div class="conteudo-carrinho" id="conteudo-carrinho">
+                <?php if (mysqli_num_rows($resultadoCarrinhoDesk) == 0) {
+                    $_SESSION['carrinho-vazio'] = true;
+                }
+                ?>
+
+                <?php
+
+                if (isset($_SESSION['carrinho-vazio'])) :
+
+                ?>
+
+
+                    <div class="carrinho-vazio">
+                        <p>O seu carrinho está vazio!</p>
+                    </div>
+
+
+                <?php
+                endif;
+                unset($_SESSION['carrinho-vazio']);
+                ?>
+                <?php while ($itemCarrinho = mysqli_fetch_assoc($resultadoCarrinho)) : ?>
+                    <?php
+                    $idproduto = $itemCarrinho['idproduto'];
+                    $consultaProduto = "SELECT * FROM cadastro_prod WHERE idproduto = '$idproduto'";
+                    $resultadoProduto = mysqli_query($conexao, $consultaProduto);
+                    $produto = mysqli_fetch_assoc($resultadoProduto);
+                    ?>
+
+                    <div class="conteudo-total-tabela-carrinho">
+                        <div class="tabela-carrinho">
+
+                            <div class="imagem-tabela-carrinho">
+                                <a href=""><img src="<?= $produto['path'] ?>" alt="" height="110px" width="100px"></a>
+                            </div>
+
+                            <div class="texto-tabela-carrinho">
+                                <div class="preco-tabela-carrinho">
+                                    <p>R$ <?= $produto['valor'] ?></p>
+                                </div>
+                                <div class="desc-tabela-carrinho">
+                                    <p><?= $produto['nome_prod'] ?></p>
+                                </div>
+                            </div>
+
+                            <div class="excluir-tabela-carrinho">
+                                <?php
+                                echo '<a href="includes/deletar.php?id= ' . $produto['idproduto'] . '"><span class="material-symbols-outlined" id="delete">delete</span></a>';
+                                ?>
+                            </div>
+
+                        </div>
+                        <div class="confirmar-carrinho">
+                            <a href="">
+                                <div class="texto-confirmar-carrinho">
+                                    <p>Fechar compra</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+                <!-- Parte do botão de fechar compra -->
+                <!-- Fim parte do botão de fechar compra -->
+            </div>
+        </div>
+        <!-- Fim da parte carrinho -->
+        <!-- Começo da parte dados -->
+        <div class="dados">
+
+            <div class="card-dados" id="card-dados">
+                <span class="material-symbols-outlined" id="database">database</span>
+                <p>Meus dados</p>
+                <span class="material-symbols-outlined chevron" id="chevron-dados">chevron_right</span>
+            </div>
+
+            <div class="conteudo-dados" id="conteudo-dados">
+
+                <div class="tabela-dados">
+
+                    <div class="re-nome">
+
+                        <div class="e-nome">
+                            <p>Nome: </p>
+                        </div>
+                        <div class="u-nome">
+                            <p><?= $dados['nome'] ?> </p>
+                        </div>
+
+                    </div>
+
+                    <div class="re-sobrenome">
+
+                        <div class="e-sobrenome">
+                            <p>Sobrenome: </p>
+                        </div>
+                        <div class="u-sobrenome">
+                            <p><?= $dados['sobrenome'] ?></p>
+                        </div>
+
+                    </div>
+
+                    <div class="re-email">
+
+                        <div class="e-email">
+                            <p>Email: </p>
+                        </div>
+                        <div class="u-email">
+                            <p><?= $dados['email'] ?></p>
+                        </div>
+
+                    </div>
+
+                    <div class="re-cep">
+
+                        <div class="e-cep">
+                            <p>CEP: </p>
+                        </div>
+                        <div class="u-cep">
+                            <p><?= $dados['CEP'] ?></p>
+                        </div>
+
+                    </div>
+
+                    <div class="re-endereco">
+
+                        <div class="e-endereco">
+                            <p>Endereço: </p>
+                        </div>
+                        <div class="u-endereco">
+                            <p><?= $dados['endereco'] ?></p>
+                        </div>
+
+                    </div>
+                    <div class="re-complemento">
+
+                        <div class="e-complemento">
+                            <p>Complemento: </p>
+                        </div>
+                        <div class="u-complemento">
+                            <p><?= $dados['complemento'] ?></p>
+                        </div>
+                    </div>
+
+                    <div class="re-tel">
+
+                        <div class="e-tel">
+                            <p>Telefone/cell: </p>
+                        </div>
+                        <div class="u-tel">
+                            <p><?= $dados['telefone'] ?></p>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <!-- Tabela de produtos cadastrados -->
+                <div class="editar-dados">
 
-                <!-- Começo de um produto cadastrado -->
+                    <a href="editaDados.php">
+                        <p>Editar seus dados</p>
+                    </a>
 
-                <div class="conteudo-cadastrados" id="conteudo-cadastrados">
+                </div>
 
-                    <div class="tabela-cadastrados" id="tabela-cadastrados">
+            </div>
 
-                        <div class="conteudo-carrinho-cadastrados">
-                            <?php if($id_usuario == 3):?>
+        </div>
+        <!-- Fim da parte dados -->
+
+        <!-- Começo da parte cadastrados -->
+        <!-- Começo da parte cadastrados -->
+        <div class="cadastrados">
+            <div class="card-cadastrados" id="card-cadastrados">
+                <span class="material-symbols-outlined" id="bookmark_manager">bookmark_manager</span>
+                <p>Produtos cadastrados</p>
+                <span class="material-symbols-outlined chevron" id="chevron-cadastrados">chevron_right</span>
+            </div>
+
+            <!-- Tabela de produtos cadastrados -->
+
+            <!-- Começo de um produto cadastrado -->
+
+            <div class="conteudo-cadastrados" id="conteudo-cadastrados">
+
+                <div class="tabela-cadastrados" id="tabela-cadastrados">
+
+                    <div class="conteudo-carrinho-cadastrados">
+                        <?php if ($id_usuario == 3) : ?>
                             <?php while ($itemCadProdAdm = mysqli_fetch_assoc($resultadoCadProdAdm)) : ?>
                                 <?php
                                 $idproduto = $itemCadProdAdm['idproduto'];
@@ -464,9 +464,9 @@
 
                             <?php endwhile; ?>
 
-                            <?php else:?>
+                        <?php else : ?>
 
-                                <?php while ($itemCadProd = mysqli_fetch_assoc($resultadoCadProd)) : ?>
+                            <?php while ($itemCadProd = mysqli_fetch_assoc($resultadoCadProd)) : ?>
                                 <?php
                                 $idproduto = $itemCadProd['idproduto'];
                                 ?>
@@ -602,6 +602,17 @@
                                                         <option value="Shorts">Shorts</option>
                                                         <option value="Calçado">Calçado</option>
                                                         <option value="Acessório">Acessório</option>
+                                                        <option value="Saia">Saia</option>
+                                                        <option value="Blusa">Blusa</option>
+                                                        <option value="Terno">Terno</option>
+                                                        <option value="Blazer">Blazer</option>
+                                                        <option value="Legging">Legging</option>
+                                                        <option value="Biquini">Bíquini</option>
+                                                        <option value="Pijama">Pijama</option>
+                                                        <option value="Sueter">Suéter</option>
+                                                        <option value="Cinto">Cinto</option>
+                                                        <option value="Macacao">Macacão</option>
+                                                        <option value="Cropped">Cropped</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -621,255 +632,255 @@
                                 <!-- Começo de um produto cadastrado -->
 
                             <?php endwhile; ?>
-                            <?php endif;?>
-                            <!-- Fim de um produto cadastrado -->
-
-                        </div>
+                        <?php endif; ?>
+                        <!-- Fim de um produto cadastrado -->
 
                     </div>
 
                 </div>
-                <!-- Fim de produtos cadastrados -->
 
-                <!-- Fim da parte cadastrados -->
+            </div>
+            <!-- Fim de produtos cadastrados -->
+
+            <!-- Fim da parte cadastrados -->
+
+        </div>
+
+    </div>
+
+    <div class="tudo-tudo-desktop">
+        <div class="tudo-card-desktop">
+
+            <div class="card-desktop">
+
+                <div class="card-carrinho-desktop">
+
+                    <div class="card-carrinho-desktop" id="card-carrinho-desktop">
+                        <span class="material-symbols-outlined" id="shopping_cart">shopping_cart</span>
+                        <p>Meu carrinho de compras</p>
+                        <span class="material-symbols-outlined chevron" id="chevron-carrinho">chevron_right</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-dados-desktop">
+
+                <div class="card-dados-desktop" id="card-dados-desktop">
+                    <span class="material-symbols-outlined" id="database">database</span>
+                    <p>Meus dados</p>
+                    <span class="material-symbols-outlined chevron" id="chevron-dados">chevron_right</span>
+                </div>
+
+            </div>
+
+            <div class="card-cadastrados-desktop">
+
+                <div class="card-cadastrados-desktop" id="card-cadastrados-desktop">
+                    <span class="material-symbols-outlined" id="bookmark_manager">bookmark_manager</span>
+                    <p>Produtos cadastrados</p>
+                    <span class="material-symbols-outlined chevron" id="chevron-cadastrados">chevron_right</span>
+                </div>
 
             </div>
 
         </div>
 
-        <div class="tudo-tudo-desktop">
-            <div class="tudo-card-desktop">
+        <!-- Fim do card -->
 
-                <div class="card-desktop">
+        <div class="TESTE">
 
-                    <div class="card-carrinho-desktop">
+            <div class="tabelas-desktop">
 
-                        <div class="card-carrinho-desktop" id="card-carrinho-desktop">
-                            <span class="material-symbols-outlined" id="shopping_cart">shopping_cart</span>
-                            <p>Meu carrinho de compras</p>
-                            <span class="material-symbols-outlined chevron" id="chevron-carrinho">chevron_right</span>
-                        </div>
+                <div class="conteudo-carrinho-desktop" id="conteudo-carrinho-desktop">
 
-                    </div>
-
-                </div>
-
-                <div class="card-dados-desktop">
-
-                    <div class="card-dados-desktop" id="card-dados-desktop">
-                        <span class="material-symbols-outlined" id="database">database</span>
-                        <p>Meus dados</p>
-                        <span class="material-symbols-outlined chevron" id="chevron-dados">chevron_right</span>
-                    </div>
-
-                </div>
-
-                <div class="card-cadastrados-desktop">
-
-                    <div class="card-cadastrados-desktop" id="card-cadastrados-desktop">
-                        <span class="material-symbols-outlined" id="bookmark_manager">bookmark_manager</span>
-                        <p>Produtos cadastrados</p>
-                        <span class="material-symbols-outlined chevron" id="chevron-cadastrados">chevron_right</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Fim do card -->
-
-            <div class="TESTE">
-
-                <div class="tabelas-desktop">
-
-                    <div class="conteudo-carrinho-desktop" id="conteudo-carrinho-desktop">
-
-                        <!-- começo carrinho -->
-                        <?php if (mysqli_num_rows($resultadoCarrinhoDesk) == 0) {
-                            $_SESSION['carrinho-vazio'] = true;
-                        }
-                        ?>
-
-                        <?php
-
-                        if (isset($_SESSION['carrinho-vazio'])) :
-
-                        ?>
-
-
-                            <div class="carrinho-vazio-desktop">
-                                    <p>O seu carrinho está vazio!</p>
-                                </div>
-                            
-
-                        <?php
-                        endif;
-                        unset($_SESSION['carrinho-vazio']);
-                        ?>
-
-                        <?php 
-                          unset($_SESSION['usuario_existe']);
-                        while ($itemCarrinhoDesk = mysqli_fetch_assoc($resultadoCarrinhoDesk)) : ?>
-                            <?php
-                            $idprodutoDesk = $itemCarrinhoDesk['idproduto'];
-                            $consultaProdutoDesk = "SELECT * FROM cadastro_prod WHERE idproduto = '$idprodutoDesk'";
-                            $resultadoProdutoDesk = mysqli_query($conexao, $consultaProdutoDesk);
-                            $produtoDesk = mysqli_fetch_assoc($resultadoProdutoDesk);
-                            ?>
-
-                            <div class="conteudo-total-tabela-carrinho-desktop">
-
-                                <div class="tabela-carrinho-desktop">
-
-
-
-                                    <div class="imagem-tabela-carrinho-desktop">
-                                        <?php echo '<a href="">'?><img src="<?= $produtoDesk['path'] ?>" alt="" height="110px" width="100px"></a>
-                                    </div>
-
-                                    <div class="texto-tabela-carrinho-desktop">
-                                        <div class="preco-tabela-carrinho-desktop">
-                                            <p>R$ <?= $produtoDesk['valor'] ?></p>
-                                        </div>
-                                        <div class="desc-tabela-carrinho-desktop">
-                                            <p><?= $produtoDesk['nome_prod'] ?></p>
-                                        </div>
-                                    </div>
-
-                                    <div class="excluir-tabela-carrinho-desktop">
-                                        <?php
-                                        echo '<a href="includes/deletar.php?id= ' . $produtoDesk['idproduto'] . '"><span class="material-symbols-outlined" id="delete">delete</span></a>';
-                                        ?>
-                                    </div>
-
-                                </div>
-                                <div class="confirmar-carrinho-desktop">
-                                    <?php echo '<a href="finalizar-compra.php?id= ' . $produtoDesk['idproduto'] . '">';
-                                    ?>
-                                        <div class="texto-confirmar-carrinho-desktop">
-                                            <p>Fechar compra</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-
-                        <?php endwhile; ?>
-                        <!-- Parte do botão de fechar compra -->
-
-                        <!-- Fim parte do botão de fechar compra -->
-
-                    </div>
-
-                    <!-- Fim carrinho -->
-
-                    <?php
-                    $consultaDadosDesk = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
-                    $resultadoDadosDesk = mysqli_query($conexao, $consultaDadosDesk);
-                    $dadosDesk = mysqli_fetch_assoc($resultadoDadosDesk);
+                    <!-- começo carrinho -->
+                    <?php if (mysqli_num_rows($resultadoCarrinhoDesk) == 0) {
+                        $_SESSION['carrinho-vazio'] = true;
+                    }
                     ?>
 
-                    <div class="conteudo-dados-desktop" id="conteudo-dados-desktop">
+                    <?php
 
-                        <div class="tabela-dados-desktop">
+                    if (isset($_SESSION['carrinho-vazio'])) :
 
-                            <div class="re-nome-desktop">
+                    ?>
 
-                                <div class="e-nome-desktop">
-                                    <p>Nome: </p>
-                                </div>
-                                <div class="u-nome-desktop">
-                                    <p><?= $dadosDesk['nome'] ?> </p>
-                                </div>
-                            </div>
 
-                            <div class="re-sobrenome-desktop">
+                        <div class="carrinho-vazio-desktop">
+                            <p>O seu carrinho está vazio!</p>
+                        </div>
 
-                                <div class="e-sobrenome-desktop">
-                                    <p>Sobrenome: </p>
-                                </div>
-                                <div class="u-sobrenome-desktop">
-                                    <p><?= $dadosDesk['sobrenome'] ?></p>
-                                </div>
-                            </div>
 
-                            <div class="re-email-desktop">
+                    <?php
+                    endif;
+                    unset($_SESSION['carrinho-vazio']);
+                    ?>
 
-                                <div class="e-email-desktop">
-                                    <p>Email: </p>
-                                </div>
-                                <div class="u-email-desktop">
-                                    <p><?= $dadosDesk['email'] ?></p>
-                                </div>
+                    <?php
+                    unset($_SESSION['usuario_existe']);
+                    while ($itemCarrinhoDesk = mysqli_fetch_assoc($resultadoCarrinhoDesk)) : ?>
+                        <?php
+                        $idprodutoDesk = $itemCarrinhoDesk['idproduto'];
+                        $consultaProdutoDesk = "SELECT * FROM cadastro_prod WHERE idproduto = '$idprodutoDesk'";
+                        $resultadoProdutoDesk = mysqli_query($conexao, $consultaProdutoDesk);
+                        $produtoDesk = mysqli_fetch_assoc($resultadoProdutoDesk);
+                        ?>
 
-                            </div>
-                            <div class="re-cep-desktop">
+                        <div class="conteudo-total-tabela-carrinho-desktop">
 
-                                <div class="e-cep-desktop">
-                                    <p>CEP: </p>
-                                </div>
-                                <div class="u-cep-desktop">
-                                    <p><?= $dadosDesk['CEP'] ?></p>
+                            <div class="tabela-carrinho-desktop">
+
+
+
+                                <div class="imagem-tabela-carrinho-desktop">
+                                    <?php echo '<a href="">' ?><img src="<?= $produtoDesk['path'] ?>" alt="" height="110px" width="100px"></a>
                                 </div>
 
-                            </div>
-
-                            <div class="re-endereco-desktop">
-
-                                <div class="e-endereco-desktop">
-                                    <p>Endereço: </p>
+                                <div class="texto-tabela-carrinho-desktop">
+                                    <div class="preco-tabela-carrinho-desktop">
+                                        <p>R$ <?= $produtoDesk['valor'] ?></p>
+                                    </div>
+                                    <div class="desc-tabela-carrinho-desktop">
+                                        <p><?= $produtoDesk['nome_prod'] ?></p>
+                                    </div>
                                 </div>
-                                <div class="u-endereco-desktop">
-                                    <p><?= $dadosDesk['endereco'] ?></p>
+
+                                <div class="excluir-tabela-carrinho-desktop">
+                                    <?php
+                                    echo '<a href="includes/deletar.php?id= ' . $produtoDesk['idproduto'] . '"><span class="material-symbols-outlined" id="delete">delete</span></a>';
+                                    ?>
                                 </div>
 
                             </div>
-
-                            <div class="re-complemento-desktop">
-
-                                <div class="e-complemento-desktop">
-                                    <p>Complemento: </p>
+                            <div class="confirmar-carrinho-desktop">
+                                <?php echo '<a href="finalizar-compra.php?id= ' . $produtoDesk['idproduto'] . '">';
+                                ?>
+                                <div class="texto-confirmar-carrinho-desktop">
+                                    <p>Fechar compra</p>
                                 </div>
-                                <div class="u-complemento-desktop">
-                                    <p><?= $dadosDesk['complemento'] ?></p>
-                                </div>
+                                </a>
+                            </div>
+                        </div>
+
+
+                    <?php endwhile; ?>
+                    <!-- Parte do botão de fechar compra -->
+
+                    <!-- Fim parte do botão de fechar compra -->
+
+                </div>
+
+                <!-- Fim carrinho -->
+
+                <?php
+                $consultaDadosDesk = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
+                $resultadoDadosDesk = mysqli_query($conexao, $consultaDadosDesk);
+                $dadosDesk = mysqli_fetch_assoc($resultadoDadosDesk);
+                ?>
+
+                <div class="conteudo-dados-desktop" id="conteudo-dados-desktop">
+
+                    <div class="tabela-dados-desktop">
+
+                        <div class="re-nome-desktop">
+
+                            <div class="e-nome-desktop">
+                                <p>Nome: </p>
+                            </div>
+                            <div class="u-nome-desktop">
+                                <p><?= $dadosDesk['nome'] ?> </p>
+                            </div>
+                        </div>
+
+                        <div class="re-sobrenome-desktop">
+
+                            <div class="e-sobrenome-desktop">
+                                <p>Sobrenome: </p>
+                            </div>
+                            <div class="u-sobrenome-desktop">
+                                <p><?= $dadosDesk['sobrenome'] ?></p>
+                            </div>
+                        </div>
+
+                        <div class="re-email-desktop">
+
+                            <div class="e-email-desktop">
+                                <p>Email: </p>
+                            </div>
+                            <div class="u-email-desktop">
+                                <p><?= $dadosDesk['email'] ?></p>
                             </div>
 
-                            <div class="re-tel-desktop">
+                        </div>
+                        <div class="re-cep-desktop">
 
-                                <div class="e-tel-desktop">
-                                    <p>Telefone/cell: </p>
-                                </div>
-                                <div class="u-tel-desktop">
-                                    <p><?= $dadosDesk['telefone'] ?></p>
-                                </div>
-
+                            <div class="e-cep-desktop">
+                                <p>CEP: </p>
+                            </div>
+                            <div class="u-cep-desktop">
+                                <p><?= $dadosDesk['CEP'] ?></p>
                             </div>
 
                         </div>
 
-                        <div class="espaco-editar-dados-desktop">
-                            <div class="editar-dados-desktop">
+                        <div class="re-endereco-desktop">
 
-                                <a href="editaDados.php">
-                                    <p>Editar seus dados</p>
-                                </a>
+                            <div class="e-endereco-desktop">
+                                <p>Endereço: </p>
+                            </div>
+                            <div class="u-endereco-desktop">
+                                <p><?= $dadosDesk['endereco'] ?></p>
+                            </div>
 
+                        </div>
+
+                        <div class="re-complemento-desktop">
+
+                            <div class="e-complemento-desktop">
+                                <p>Complemento: </p>
+                            </div>
+                            <div class="u-complemento-desktop">
+                                <p><?= $dadosDesk['complemento'] ?></p>
+                            </div>
+                        </div>
+
+                        <div class="re-tel-desktop">
+
+                            <div class="e-tel-desktop">
+                                <p>Telefone/cell: </p>
+                            </div>
+                            <div class="u-tel-desktop">
+                                <p><?= $dadosDesk['telefone'] ?></p>
                             </div>
 
                         </div>
 
                     </div>
 
-                    <!-- Fim dados -->
+                    <div class="espaco-editar-dados-desktop">
+                        <div class="editar-dados-desktop">
 
-                    <div class="conteudo-cadastrados-desktop" id="conteudo-cadastrados-desktop">
+                            <a href="editaDados.php">
+                                <p>Editar seus dados</p>
+                            </a>
 
-                        <div class="tabela-cadastrados-desktop" id="tabela-cadastrados-desktop">
+                        </div>
 
-                            <div class="conteudo-carrinho-cadastrados-desktop">
+                    </div>
 
-                                <?php if($id_usuario == 3):?>
+                </div>
+
+                <!-- Fim dados -->
+
+                <div class="conteudo-cadastrados-desktop" id="conteudo-cadastrados-desktop">
+
+                    <div class="tabela-cadastrados-desktop" id="tabela-cadastrados-desktop">
+
+                        <div class="conteudo-carrinho-cadastrados-desktop">
+
+                            <?php if ($id_usuario == 3) : ?>
                                 <?php while ($itemCadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm)) : ?>
                                     <?php
                                     $idprodutoDesk = $itemCadProdDeskAdm['idproduto'];
@@ -1015,8 +1026,8 @@
                                     </div>
                                     <!-- Fim do editar cadastrados -->
                                     <!-- Fim de um produto cadastrado -->
-                                <?php endwhile;?>
-                                <?php else:?>
+                                <?php endwhile; ?>
+                            <?php else : ?>
                                 <?php while ($itemCadProdDesk = mysqli_fetch_assoc($resultadoCadProdDesk)) : ?>
                                     <?php
                                     $idprodutoDesk = $itemCadProdDesk['idproduto'];
@@ -1141,6 +1152,7 @@
                                                     </div>
                                                     <div class="u-sub-desktop">
                                                         <select name="subcategoria" id="">
+
                                                             <option value="Jaqueta">Jaqueta</option>
                                                             <option value="Camisa">Camisa</option>
                                                             <option value="Calça">Calça</option>
@@ -1148,6 +1160,18 @@
                                                             <option value="Shorts">Shorts</option>
                                                             <option value="Calçado">Calçado</option>
                                                             <option value="Acessório">Acessório</option>
+                                                            <option value="Saia">Saia</option>
+                                                            <option value="Blusa">Blusa</option>
+                                                            <option value="Terno">Terno</option>
+                                                            <option value="Blazer">Blazer</option>
+                                                            <option value="Legging">Legging</option>
+                                                            <option value="Biquini">Bíquini</option>
+                                                            <option value="Pijama">Pijama</option>
+                                                            <option value="Sueter">Suéter</option>
+                                                            <option value="Cinto">Cinto</option>
+                                                            <option value="Macacao">Macacão</option>
+                                                            <option value="Cropped">Cropped</option>
+
                                                         </select>
                                                     </div>
                                                 </div>
@@ -1162,187 +1186,193 @@
                                     </div>
                                     <!-- Fim do editar cadastrados -->
                                     <!-- Fim de um produto cadastrado -->
-                                <?php endwhile;?>
-                                <?php endif;?>
-                            </div>
-
-
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                         </div>
+
 
                     </div>
 
-
                 </div>
-            </div>
 
+
+            </div>
         </div>
 
-        <?php
-        include('includes/footer.php');
-        ?>
+    </div>
 
-    </body>
+    <?php
+    include('includes/footer.php');
+    ?>
 
-    </html>
+</body>
+
+</html>
 
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Código para dispositivos móveis
-            const cardCarrinho = document.querySelector(".card-carrinho");
-            const cardDados = document.querySelector(".card-dados");
-            const cardCadastrados = document.querySelector(".card-cadastrados");
-            const conteudoCarrinho = document.getElementById("conteudo-carrinho");
-            const conteudoDados = document.getElementById("conteudo-dados");
-            const conteudoCarrinhoCadastrados = document.querySelector(".conteudo-carrinho-cadastrados");
-            const botõesEditar = document.querySelectorAll(".editar-tabela-carrinho");
-            const formulários = document.querySelectorAll(".container-editar-produto");
-            const chevronCarrinho = document.getElementById("chevron-carrinho");
-            const chevronDados = document.getElementById("chevron-dados");
-            const chevronCadastrados = document.getElementById("chevron-cadastrados");
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Código para dispositivos móveis
+        const cardCarrinho = document.querySelector(".card-carrinho");
+        const cardDados = document.querySelector(".card-dados");
+        const cardCadastrados = document.querySelector(".card-cadastrados");
+        const conteudoCarrinho = document.getElementById("conteudo-carrinho");
+        const conteudoDados = document.getElementById("conteudo-dados");
+        const conteudoCarrinhoCadastrados = document.querySelector(".conteudo-carrinho-cadastrados");
+        const botõesEditar = document.querySelectorAll(".editar-tabela-carrinho");
+        const formulários = document.querySelectorAll(".container-editar-produto");
+        const chevronCarrinho = document.getElementById("chevron-carrinho");
+        const chevronDados = document.getElementById("chevron-dados");
+        const chevronCadastrados = document.getElementById("chevron-cadastrados");
 
-            function removeActiveClasses() {
-                cardCarrinho.classList.remove('active');
-                cardDados.classList.remove('active');
-                cardCadastrados.classList.remove('active');
-                conteudoCarrinho.style.display = "none";
-                conteudoDados.style.display = "none";
-                conteudoCarrinhoCadastrados.style.display = "none";
-                formulários.forEach(form => {
-                    form.style.display = "none";
-                });
-                chevronCarrinho.classList.remove('rotate-down');
-                chevronDados.classList.remove('rotate-down');
-                chevronCadastrados.classList.remove('rotate-down');
-            }
-
-            cardCarrinho.addEventListener("click", function() {
-                if (cardCarrinho.classList.contains('active')) {
-                    removeActiveClasses();
-                } else {
-                    removeActiveClasses();
-                    cardCarrinho.classList.add('active');
-                    chevronCarrinho.classList.add('rotate-down');
-                    conteudoCarrinho.style.display = "block";
-                }
+        function removeActiveClasses() {
+            cardCarrinho.classList.remove('active');
+            cardDados.classList.remove('active');
+            cardCadastrados.classList.remove('active');
+            conteudoCarrinho.style.display = "none";
+            conteudoDados.style.display = "none";
+            conteudoCarrinhoCadastrados.style.display = "none";
+            formulários.forEach(form => {
+                form.style.display = "none";
             });
-
-            cardDados.addEventListener("click", function() {
-                if (cardDados.classList.contains('active')) {
-                    removeActiveClasses();
-                } else {
-                    removeActiveClasses();
-                    cardDados.classList.add('active');
-                    chevronDados.classList.add('rotate-down');
-                    conteudoDados.style.display = "block";
-                }
-            });
-
-            cardCadastrados.addEventListener("click", function() {
-                if (cardCadastrados.classList.contains('active')) {
-                    removeActiveClasses();
-                } else {
-                    removeActiveClasses();
-                    cardCadastrados.classList.add('active');
-                    chevronCadastrados.classList.add('rotate-down');
-                    conteudoCarrinhoCadastrados.style.display = "block";
-                }
-            });
-
-            botõesEditar.forEach((botão, index) => {
-                botão.addEventListener("click", function(e) {
-                    e.preventDefault();
-
-                    if (formulários[index].style.display === "block") {
-                        formulários[index].style.display = "none";
-                    } else {
-                        formulários.forEach(form => {
-                            form.style.display = "none";
-                        });
-                        formulários[index].style.display = "block";
-                    }
-                });
-            });
-        });
-
-        document.addEventListener("DOMContentLoaded", function() {
-            // Código para desktop
-            const cardCarrinho = document.querySelector(".card-carrinho-desktop");
-            const cardDados = document.querySelector(".card-dados-desktop");
-            const cardCadastrados = document.querySelector(".card-cadastrados-desktop");
-            const conteudoCarrinho = document.getElementById("conteudo-carrinho-desktop");
-            const conteudoDados = document.getElementById("conteudo-dados-desktop");
-            const conteudoCarrinhoCadastrados = document.querySelector(".conteudo-carrinho-cadastrados-desktop");
-            const botõesEditar = document.querySelectorAll(".editar-tabela-carrinho-desktop");
-            const formulários = document.querySelectorAll(".container-editar-produto-desktop");
-
-            function removeActiveClasses() {
-                cardCarrinho.classList.remove('active');
-                cardDados.classList.remove('active');
-                cardCadastrados.classList.remove('active');
-                conteudoCarrinho.style.display = "none";
-                conteudoDados.style.display = "none";
-                conteudoCarrinhoCadastrados.style.display = "none";
-                formulários.forEach(form => {
-                    form.style.display = "none";
-                });
-            }
-
-            cardCarrinho.addEventListener("click", function() {
-                if (cardCarrinho.classList.contains('active')) {
-                    removeActiveClasses();
-                } else {
-                    removeActiveClasses();
-                    cardCarrinho.classList.add('active');
-                    conteudoCarrinho.style.display = "block";
-                }
-            });
-
-            cardDados.addEventListener("click", function() {
-                if (cardDados.classList.contains('active')) {
-                    removeActiveClasses();
-                } else {
-                    removeActiveClasses();
-                    cardDados.classList.add('active');
-                    conteudoDados.style.display = "block";
-                }
-            });
-
-            cardCadastrados.addEventListener("click", function() {
-                if (cardCadastrados.classList.contains('active')) {
-                    removeActiveClasses();
-                } else {
-                    removeActiveClasses();
-                    cardCadastrados.classList.add('active');
-                    conteudoCarrinhoCadastrados.style.display = "block";
-                }
-            });
-
-            botõesEditar.forEach((botão, index) => {
-                botão.addEventListener("click", function(e) {
-                    e.preventDefault();
-
-                    if (formulários[index].style.display === "block") {
-                        formulários[index].style.display = "none";
-                    } else {
-                        formulários.forEach(form => {
-                            form.style.display = "none";
-                        });
-                        formulários[index].style.display = "block";
-                    }
-                });
-            });
-        });
-
-        function submitForm() {
-            document.getElementById("uploadForm").submit();
+            chevronCarrinho.classList.remove('rotate-down');
+            chevronDados.classList.remove('rotate-down');
+            chevronCadastrados.classList.remove('rotate-down');
         }
-    </script>
+
+        cardCarrinho.addEventListener("click", function() {
+            if (cardCarrinho.classList.contains('active')) {
+                removeActiveClasses();
+            } else {
+                removeActiveClasses();
+                cardCarrinho.classList.add('active');
+                chevronCarrinho.classList.add('rotate-down');
+                conteudoCarrinho.style.display = "block";
+            }
+        });
+
+        cardDados.addEventListener("click", function() {
+            if (cardDados.classList.contains('active')) {
+                removeActiveClasses();
+            } else {
+                removeActiveClasses();
+                cardDados.classList.add('active');
+                chevronDados.classList.add('rotate-down');
+                conteudoDados.style.display = "block";
+            }
+        });
+
+        cardCadastrados.addEventListener("click", function() {
+            if (cardCadastrados.classList.contains('active')) {
+                removeActiveClasses();
+            } else {
+                removeActiveClasses();
+                cardCadastrados.classList.add('active');
+                chevronCadastrados.classList.add('rotate-down');
+                conteudoCarrinhoCadastrados.style.display = "block";
+            }
+        });
+
+        botõesEditar.forEach((botão, index) => {
+            botão.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                if (formulários[index].style.display === "block") {
+                    formulários[index].style.display = "none";
+                } else {
+                    formulários.forEach(form => {
+                        form.style.display = "none";
+                    });
+                    formulários[index].style.display = "block";
+                }
+            });
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Código para desktop
+        const cardCarrinho = document.querySelector(".card-carrinho-desktop");
+        const cardDados = document.querySelector(".card-dados-desktop");
+        const cardCadastrados = document.querySelector(".card-cadastrados-desktop");
+        const conteudoCarrinho = document.getElementById("conteudo-carrinho-desktop");
+        const conteudoDados = document.getElementById("conteudo-dados-desktop");
+        const conteudoCarrinhoCadastrados = document.querySelector(".conteudo-carrinho-cadastrados-desktop");
+        const botõesEditar = document.querySelectorAll(".editar-tabela-carrinho-desktop");
+        const formulários = document.querySelectorAll(".container-editar-produto-desktop");
+
+        function removeActiveClasses() {
+            cardCarrinho.classList.remove('active');
+            cardDados.classList.remove('active');
+            cardCadastrados.classList.remove('active');
+            conteudoCarrinho.style.display = "none";
+            conteudoDados.style.display = "none";
+            conteudoCarrinhoCadastrados.style.display = "none";
+            formulários.forEach(form => {
+                form.style.display = "none";
+            });
+        }
+
+        cardCarrinho.addEventListener("click", function() {
+            if (cardCarrinho.classList.contains('active')) {
+                removeActiveClasses();
+            } else {
+                removeActiveClasses();
+                cardCarrinho.classList.add('active');
+                conteudoCarrinho.style.display = "block";
+            }
+        });
+
+        cardDados.addEventListener("click", function() {
+            if (cardDados.classList.contains('active')) {
+                removeActiveClasses();
+            } else {
+                removeActiveClasses();
+                cardDados.classList.add('active');
+                conteudoDados.style.display = "block";
+            }
+        });
+
+        cardCadastrados.addEventListener("click", function() {
+            if (cardCadastrados.classList.contains('active')) {
+                removeActiveClasses();
+            } else {
+                removeActiveClasses();
+                cardCadastrados.classList.add('active');
+                conteudoCarrinhoCadastrados.style.display = "block";
+            }
+        });
+
+        botõesEditar.forEach((botão, index) => {
+            botão.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                if (formulários[index].style.display === "block") {
+                    formulários[index].style.display = "none";
+                } else {
+                    formulários.forEach(form => {
+                        form.style.display = "none";
+                    });
+                    formulários[index].style.display = "block";
+                }
+            });
+        });
+    });
+
+    function submitForm() {
+        document.getElementById("uploadForm").submit();
+    }
+</script>
+<?php if(isset($_SESSION['erro_perfil'])):?>
+<script>
+    alert ("Tipo de aquivo não aceito");
+</script>
+<?php endif;
+unset($_SESSION['erro_perfil']);
+?>
 
 
 
 
+</body>
 
-    </body>
-
-    </html>
+</html>
