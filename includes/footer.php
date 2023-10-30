@@ -91,7 +91,7 @@
 
                         <div class="Imagem-exposoft">
 
-                            <a href=""> <img src="imagens/expreta.png" alt="Image" height="80" width="80"> </a>
+                            <a href=""> <img src="imagens/expo-logo.png" alt="Image" height="80" width="80"> </a>
 
                         </div>
                     </div>
