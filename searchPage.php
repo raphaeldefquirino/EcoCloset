@@ -19,7 +19,7 @@ $buscar = mysqli_real_escape_string($conexao, trim($_POST['buscar']));
 	<link rel="stylesheet" href="estilos/style.css">
 	<link rel="stylesheet" href="estilos/media-query.css">
 	<script src="https://kit.fontawesome.com/8ad860e92b.js" crossorigin="anonymous"></script>
-	<title>Document</title>
+	<title>Filtrar</title>
 </head>
 
 <body class="body-searchpage">

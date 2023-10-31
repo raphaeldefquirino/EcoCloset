@@ -43,7 +43,7 @@
   <!-- Inicio da construção do "Atalhos de categorias"-->
 
   <div class="Roupas-Categorias">
-    <h1 style = "text-decoration: none;">ROUPAS</h1>
+    <h1  style="text-decoration:none;">ROUPAS</h1>
     <br>
   </div>
   <div class="container-conteudo-Categorias">

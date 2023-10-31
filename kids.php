@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="estilos/style.css">
   <link rel="stylesheet" href="estilos/media-query.css">
 
-  <title>EcoCloset</title>
+  <title>Kids</title>
 </head>
 
 <body class="bodyprod">

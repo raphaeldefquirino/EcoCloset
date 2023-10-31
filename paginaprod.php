@@ -25,7 +25,7 @@ $produto =  mysqli_fetch_assoc($result);
 	<link rel="stylesheet" href="estilos/style.css">
 	<link rel="stylesheet" href="estilos/media-query.css">
 	<script src="https://kit.fontawesome.com/8ad860e92b.js" crossorigin="anonymous"></script>
-	<title>Pagina Producto</title>
+	<title>Pagina Produto</title>
 	<link rel="stylesheet" href="estilos/style.css" />
 
 </head>

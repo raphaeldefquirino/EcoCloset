@@ -157,7 +157,7 @@ $row = mysqli_fetch_assoc($query);
 
         </div>
 
-        <form action="cad-prod.php" method="post" enctype="multipart/form-data">
+        <form action="compra-finalizada.php" method="post" enctype="multipart/form-data">
             <div class="total-pag-finalizar">
 
                 <p class="TotalFinalizar">TOTAL : R$<?php echo $row['valor'] ?></p>

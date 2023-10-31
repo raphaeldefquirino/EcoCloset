@@ -12,7 +12,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="estilos/style.css">
   <link rel="stylesheet" href="estilos/media-query.css">
-  <title>EcoCloset</title>
+  <title>Masulina</title>
 </head>
 
 <body class="bodyprod">
