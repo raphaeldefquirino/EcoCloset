@@ -308,7 +308,10 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
                     <div class="conteudo-carrinho-cadastrados">
                         <?php if ($id_usuario == 3) : ?>
-                            <?php while ($itemCadProdAdm = mysqli_fetch_assoc($resultadoCadProdAdm)) : ?>
+                    
+                            <?php 
+                                mysqli_data_seek($resultadoCadProdAdm, 0);
+                                while ($itemCadProdAdm = mysqli_fetch_assoc($resultadoCadProdAdm)) : ?>
                                 <?php
                                 $idproduto = $itemCadProdAdm['idproduto'];
                                 ?>
@@ -466,7 +469,9 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
                         <?php else : ?>
 
-                            <?php while ($itemCadProd = mysqli_fetch_assoc($resultadoCadProd)) : ?>
+                            <?php 
+                                mysqli_data_seek($resultadoCadProd, 0);
+                                while ($itemCadProd = mysqli_fetch_assoc($resultadoCadProd)) : ?>
                                 <?php
                                 $idproduto = $itemCadProd['idproduto'];
                                 ?>
@@ -880,8 +885,33 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
                         <div class="conteudo-carrinho-cadastrados-desktop">
 
+                            <?php if (mysqli_num_rows($resultadoCadProdDesk) == 0) {
+                                $_SESSION['carrinho-vazio'] = true;
+                            }
+                            ?>
+
+                            <?php
+
+                            if (isset($_SESSION['carrinho-vazio'])) :
+
+                            ?>
+
+
+                                <div class="carrinho-vazio-desktop">
+                                    <p>Você ainda não cadastrou nenhum produto.</p>
+                                </div>
+
+
+                            <?php
+                            endif;
+                            unset($_SESSION['carrinho-vazio']);
+                            ?>
+
                             <?php if ($id_usuario == 3) : ?>
-                                <?php while ($itemCadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm)) : ?>
+                                
+                                <?php
+                                     mysqli_data_seek($resultadoCadProdDeskAdm, 0);
+                                     while ($itemCadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm)) : ?>
                                     <?php
                                     $idprodutoDesk = $itemCadProdDeskAdm['idproduto'];
                                     ?>
@@ -1028,7 +1058,10 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                                     <!-- Fim de um produto cadastrado -->
                                 <?php endwhile; ?>
                             <?php else : ?>
-                                <?php while ($itemCadProdDesk = mysqli_fetch_assoc($resultadoCadProdDesk)) : ?>
+                                <?php 
+                                    mysqli_data_seek($resultadoCadProdDesk, 0);
+
+                                    while ($itemCadProdDesk = mysqli_fetch_assoc($resultadoCadProdDesk)) : ?>
                                     <?php
                                     $idprodutoDesk = $itemCadProdDesk['idproduto'];
                                     ?>
@@ -1362,10 +1395,10 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
         document.getElementById("uploadForm").submit();
     }
 </script>
-<?php if(isset($_SESSION['erro_perfil'])):?>
-<script>
-    alert ("Tipo de aquivo não aceito");
-</script>
+<?php if (isset($_SESSION['erro_perfil'])) : ?>
+    <script>
+        alert("Tipo de aquivo não aceito");
+    </script>
 <?php endif;
 unset($_SESSION['erro_perfil']);
 ?>
