@@ -141,7 +141,7 @@ $row = mysqli_fetch_assoc($query);
                 </div>
                     <p>Seu boleto será gerado e enviado por email após a finalização da compra.</p>
                     <br>
-                    <p>Todas as informações da sua compra será enviada para o seu email cadastrato</p>
+                    <p>Todas as informações da sua compra será enviada para o seu email cadastrado</p>
                     <br>
                     <button class="pix-finalizar">Finalizar Compra</button>
 
