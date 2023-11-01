@@ -153,26 +153,26 @@ include('includes/verifica-login.php');
                         <br>
                         <label for="">Subcategoria do produto</label>
                         <select name="subcategoria" id="">
-                            <option value="jaqueta">Jaqueta</option>
-                            <br>
-                            <p>
-                                <option value="Camisa">Camisa</option>
-                            </p>
-                            <p>
-                                <option value="Calça">Calça</option>
-                            </p>
-                            <p>
-                                <option value="Vestido">Vestido</option>
-                            </p>
-                            <p>
-                                <option value="Shorts">Shorts</option>
-                            </p>
-                            <p>
-                                <option value="Calçado">Calçado</option>
-                            </p>
-                            <p>
-                                <option value="Acessório">Acessório</option>
-                            </p>
+
+                            <option value="Camisa">Camisa</option>
+                            <option value="Calça">Calça</option>
+                            <option value="Vestido">Vestido</option>
+                            <option value="Shorts">Shorts</option>
+                            <option value="Calçado">Calçado</option>
+                            <option value="Acessório">Acessório</option>
+                            <option value="Saia">Saia</option>
+                            <option value="Blusa">Blusa</option>
+                            <option value="Terno">Terno</option>
+                            <option value="Blazer">Blazer</option>
+                            <option value="Legging">Legging</option>
+                            <option value="Biquini">Bíquini</option>
+                            <option value="Pijama">Pijama</option>
+                            <option value="Sueter">Suéter</option>
+                            <option value="Cinto">Cinto</option>
+                            <option value="Macacao">Macacão</option>
+                            <option value="Cropped">Cropped</option>
+                            <option value="Conjunto">Conjunto</option>
+
                         </select>
                     </div>
                     <div class="custom">

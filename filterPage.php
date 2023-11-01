@@ -61,6 +61,7 @@
 
     include("includes/conexao.php");
 
+
     $page = mysqli_real_escape_string($conexao, trim($_POST['filtrar']));
 
    
@@ -75,6 +76,7 @@
 
     $consultaBarato = "SELECT * FROM cadastro_prod WHERE categoria = '$page' AND subcategoria = '$subcategoria' ORDER BY valor DESC";
     $resultadoBarato = mysqli_query($conexao, $consultaBarato);
+
 
 
     if ($preco == 'caro'){
