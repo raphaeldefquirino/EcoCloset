@@ -429,6 +429,14 @@ margin: 0;
   
 }
 
+.categoria a{
+    text-decoration: none;
+    color: rgb(23, 167, 245);
+    font-weight: 700;
+}
+
+
+
 .checks input[type=checkbox]{
 
 margin-right: 10px;
@@ -580,6 +588,8 @@ color: #f0ffff94;
     vertical-align: middle;
     margin-right: 10px;
   }
+  
+ 
   
   .checks input[type="radio"]:checked::before {
     content: "✔";

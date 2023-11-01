@@ -205,6 +205,22 @@ include('includes/verifica-login.php');
                             <input type="file" name="arquivo">
                         </div>
                     </div>
+<br>
+                    <div class="textfield">
+                           
+
+                            <div class="categoria">
+
+                                <br>
+                                <div class="checks">
+                                    <input type="radio" name="Termo de Uso" value="Usado" id="catinf">
+                                    <label for="Inferior">Declaro que li e concordo integralmente com <a href="">Termo de Uso</a></label>
+                                    <br>
+                                  
+                                </div>
+                                <br>
+                            </div>
+                        </div>
 
                     <button class="btn-login">Cadastrar</button>
             </div>
