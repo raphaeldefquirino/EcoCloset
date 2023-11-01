@@ -88,6 +88,7 @@ $row = mysqli_fetch_assoc($query);
                 <div class="qrcode-container">
                     <img src="imagens/qrcode.png" alt="QR Code PIX" class="pix-qrcode">
                     <br>
+                    
 
                     <div class="pix-copy-btn">
 
@@ -98,7 +99,21 @@ $row = mysqli_fetch_assoc($query);
                     </div>
 
                 </div>
-
+                <div class="form-pix-">
+                
+                <div class="inputBox">
+                <span>Endereço </span>
+                <input type="text" class="card-number-input" placeholder="Endereço">
+            </div>
+            <div class="inputBox">
+                <span>Cep </span>
+                <input type="text" class="card-number-input" placeholder="Cep">
+            </div>
+            <div class="inputBox">
+                <span>Número </span>
+                <input type="text" class="card-number-input" placeholder="Número">
+            </div>
+            </div>
 
                 <button class="pix-finalizar">Finalizar Compra</button>
 
@@ -211,6 +226,18 @@ $row = mysqli_fetch_assoc($query);
                     <span>cvv</span>
                     <input type="text" maxlength="4" class="cvv-input" placeholder="cvv">
                 </div>
+            </div>
+            <div class="inputBox">
+                <span>Endereço </span>
+                <input type="text" class="card-number-input" placeholder="Endereço">
+            </div>
+            <div class="inputBox">
+                <span>Cep </span>
+                <input type="text" class="card-number-input" placeholder="Cep">
+            </div>
+            <div class="inputBox">
+                <span>Número </span>
+                <input type="text" class="card-number-input" placeholder="Número">
             </div>
 
 

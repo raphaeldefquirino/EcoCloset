@@ -2834,6 +2834,34 @@ body{
     color: white;
 }
 
+.form-pix-{
+    background: #000000;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 20px;
+    width: 600px;
+    
+}
+.form-pix- .inputBox{
+    margin-top: 20px;
+}
+
+.form-pix- .inputBox span{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+.form-pix- .inputBox input,
+.form-pix- .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#e7e4e4;
+    background-color: #747474;
+}
+
 
 
 .container-pag-cad form{
@@ -3001,7 +3029,7 @@ border:solid 2px #af00ff;
 
 
 .container-pag-cad .card-container{
-    margin-bottom: 220px;
+    margin-bottom: 450px;
     position: absolute;
     height: 250px;
     width: 400px;
