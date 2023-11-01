@@ -88,11 +88,9 @@ $row = mysqli_fetch_assoc($query);
                 <div class="qrcode-container">
                     <img src="imagens/qrcode.png" alt="QR Code PIX" class="pix-qrcode">
                     <br>
-                    
+
 
                     <div class="pix-copy-btn">
-
-
                         <button data-pix-key="Chave do pixxx"><span class="material-symbols-outlined">
                                 content_copy </span>Pix copia e cola</button>
 
@@ -100,205 +98,215 @@ $row = mysqli_fetch_assoc($query);
 
                 </div>
                 <div class="form-pix-">
-                
-                <div class="inputBox">
-                <span>Endereço </span>
-                <input type="text" class="card-number-input" placeholder="Endereço">
-            </div>
-            <div class="inputBox">
-                <span>Cep </span>
-                <input type="text" class="card-number-input" placeholder="Cep">
-            </div>
-            <div class="inputBox">
-                <span>Número </span>
-                <input type="text" class="card-number-input" placeholder="Número">
-            </div>
-            </div>
 
-                <button class="pix-finalizar">Finalizar Compra</button>
-
-            </div>
-        </div>
-
-        <!-- Formulário Boleto -->
-        <div class="flexbox">
-            <div class="boleto-container">
-                <img src="imagens/boleto.png" alt="">
-                <br>
-                <br>
-                <br>
-                <p>Seu boleto será gerado e enviado por email após a finalização da compra.</p>
-                <br>
-                <p>Todas as informações da sua compra será enviada para o seu email cadastrato</p>
-                <br>
-                <button class="pix-finalizar">Finalizar Compra</button>
-
-
-            </div>
-        </div>
-
-        <div class="card-container">
-
-            <div class="front">
-                <div class="image">
-                    <img src="imagens/chip.png" alt="">
-                    <img src="imagens/visa.png" alt="">
-                </div>
-
-                <div class="card-number-box"></div>
-                <div class="flexbox">
-                    <div class="box">
-                        <span>Número do Cartão</span>
-                        <div class="card-holder-name">Nome do Cartão</div>
+                    <div class="inputBox">
+                        <span>Endereço de Entrega</span>
+                        <select name="" id="" class="month-input">
+                            <option value="month" selected disabled>Endereço de Entrega</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
                     </div>
-                    <div class="box">
-                        <span>expira</span>
-                        <div class="expiration">
-                            <span class="exp-month">mm</span>
-                            <span class="exp-year">aa</span>
+
+                    <button class="pix-finalizar">Finalizar Compra</button>
+
+                </div>
+            </div>
+
+            <!-- Formulário Boleto -->
+            <div class="flexbox">
+                <div class="boleto-container">
+                    <img src="imagens/boleto.png" alt="">
+                    <br>
+                    <br>
+                    <br>
+                    <div class="inputBox">
+                    <span>Endereço de Entrega</span>
+                    <select name="" id="" class="month-input">
+                        <option value="month" selected disabled>Endereço de Entrega</option>
+                        <option value="01">01</option>
+
+                    </select>
+                    <br><br>
+                </div>
+                    <p>Seu boleto será gerado e enviado por email após a finalização da compra.</p>
+                    <br>
+                    <p>Todas as informações da sua compra será enviada para o seu email cadastrato</p>
+                    <br>
+                    <button class="pix-finalizar">Finalizar Compra</button>
+
+
+                </div>
+            </div>
+
+            <div class="card-container">
+
+                <div class="front">
+                    <div class="image">
+                        <img src="imagens/chip.png" alt="">
+                        <img src="imagens/visa.png" alt="">
+                    </div>
+
+                    <div class="card-number-box"></div>
+                    <div class="flexbox">
+                        <div class="box">
+                            <span>Número do Cartão</span>
+                            <div class="card-holder-name">Nome do Cartão</div>
+                        </div>
+                        <div class="box">
+                            <span>expira</span>
+                            <div class="expiration">
+                                <span class="exp-month">mm</span>
+                                <span class="exp-year">aa</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="back">
+                    <div class="stripe"></div>
+                    <div class="box">
+                        <span>cvv</span>
+                        <div class="cvv-box"></div>
+                        <img src="imagens/visa.png" alt="">
+                    </div>
+                </div>
+
             </div>
 
-            <div class="back">
-                <div class="stripe"></div>
-                <div class="box">
-                    <span>cvv</span>
-                    <div class="cvv-box"></div>
-                    <img src="imagens/visa.png" alt="">
+            <form action="compra-finalizada.php" method="post" enctype="multipart/form-data">
+                <div class="total-pag-finalizar">
+
+                    <p class="TotalFinalizar">TOTAL : R$<?php echo $row['valor'] ?></p>
                 </div>
-            </div>
+                <div class="inputBox">
+                    <span>Número do Cartão</span>
+                    <input type="text" maxlength="16" class="card-number-input" placeholder="Número do Cartão">
+                </div>
+                <div class="inputBox">
+                    <span>Nome do Titular</span>
+                    <input type="text" class="card-holder-input" placeholder="Nome do Titular">
+                </div>
+                <div class="flexbox">
+                    <div class="inputBox">
+                        <span>Validade mm</span>
+                        <select name="" id="" class="month-input">
+                            <option value="month" selected disabled>Mês</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <span>Ano</span>
+                        <select name="" id="" class="year-input">
+                            <option value="year" selected disabled>Ano</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>
+                    </div>
+
+
+                    <div class="inputBox">
+                        <span>cvv</span>
+                        <input type="text" maxlength="4" class="cvv-input" placeholder="cvv">
+                    </div>
+                </div>
+                <div class="inputBox">
+                    <span>Endereço de Entrega</span>
+                    <select name="" id="" class="month-input">
+                        <option value="month" selected disabled>Endereço de Entrega</option>
+                        <option value="01">01</option>
+
+                    </select>
+                </div>
+
+
+                <div class="inputBox">
+                    <div class="Parcelas">
+                        <span>Parcelas</span>
+                        <select name="subcategoria" id="">
+                            <option value="1x">1x de R$<?php echo $row['valor'] ?></option>
+
+                            <p>
+                                <option value="2x">2x de R$
+                                    <?php
+                                    $valor = $row['valor'] / 2;
+                                    echo number_format($valor, 2, ',', '.');
+                                    ?>
+                                </option>
+                            </p>
+                            <p>
+                                <option value="3x">3x de R$<?php
+                                                            $valor = $row['valor'] / 3;
+                                                            echo number_format($valor, 2, ',', '.');
+                                                            ?></option>
+                            </p>
+                            <p>
+                                <option value="4x">4x de R$<?php
+                                                            $valor = $row['valor'] / 4;
+                                                            echo number_format($valor, 2, ',', '.');
+                                                            ?></option>
+                            </p>
+                            <p>
+                                <option value="5x">5x de R$<?php
+                                                            $valor = $row['valor'] / 5;
+                                                            echo number_format($valor, 2, ',', '.');
+                                                            ?></option>
+                            </p>
+                            <p>
+                                <option value="6x">6x de R$<?php
+                                                            $valor = $row['valor'] / 6;
+                                                            echo number_format($valor, 2, ',', '.');
+                                                            ?></option>
+                            </p>
+                            <p>
+                                <option value="7x">7x de R$<?php
+                                                            $valor = $row['valor'] / 7;
+                                                            echo number_format($valor, 2, ',', '.');
+                                                            ?></option>
+                            </p>
+                            <p>
+                                <option value="8x">8x de R$<?php
+                                                            $valor = $row['valor'] / 8;
+                                                            echo number_format($valor, 2, ',', '.');
+                                                            ?></option>
+                            </p>
+                        </select>
+                    </div>
+                </div>
+                <input type="submit" value="Finalizar compra" class="submit-btn">
+
+            </form>
 
         </div>
-
-        <form action="compra-finalizada.php" method="post" enctype="multipart/form-data">
-            <div class="total-pag-finalizar">
-
-                <p class="TotalFinalizar">TOTAL : R$<?php echo $row['valor'] ?></p>
-            </div>
-            <div class="inputBox">
-                <span>Número do Cartão</span>
-                <input type="text" maxlength="16" class="card-number-input" placeholder="Número do Cartão">
-            </div>
-            <div class="inputBox">
-                <span>Nome do Titular</span>
-                <input type="text" class="card-holder-input" placeholder="Nome do Titular">
-            </div>
-            <div class="flexbox">
-                <div class="inputBox">
-                    <span>Validade mm</span>
-                    <select name="" id="" class="month-input">
-                        <option value="month" selected disabled>Mês</option>
-                        <option value="01">01</option>
-                        <option value="02">02</option>
-                        <option value="03">03</option>
-                        <option value="04">04</option>
-                        <option value="05">05</option>
-                        <option value="06">06</option>
-                        <option value="07">07</option>
-                        <option value="08">08</option>
-                        <option value="09">09</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select>
-                </div>
-                <div class="inputBox">
-                    <span>Ano</span>
-                    <select name="" id="" class="year-input">
-                        <option value="year" selected disabled>Ano</option>
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option>
-                        <option value="2025">2025</option>
-                        <option value="2026">2026</option>
-                        <option value="2027">2027</option>
-                        <option value="2028">2028</option>
-                        <option value="2029">2029</option>
-                        <option value="2030">2030</option>
-                    </select>
-                </div>
-
-
-                <div class="inputBox">
-                    <span>cvv</span>
-                    <input type="text" maxlength="4" class="cvv-input" placeholder="cvv">
-                </div>
-            </div>
-            <div class="inputBox">
-                <span>Endereço </span>
-                <input type="text" class="card-number-input" placeholder="Endereço">
-            </div>
-            <div class="inputBox">
-                <span>Cep </span>
-                <input type="text" class="card-number-input" placeholder="Cep">
-            </div>
-            <div class="inputBox">
-                <span>Número </span>
-                <input type="text" class="card-number-input" placeholder="Número">
-            </div>
-
-
-            <div class="inputBox">
-                <div class="Parcelas">
-                    <span>Parcelas</span>
-                    <select name="subcategoria" id="">
-                        <option value="1x">1x de R$<?php echo $row['valor'] ?></option>
-
-                        <p>
-                            <option value="2x">2x de R$
-                                <?php
-                                $valor = $row['valor'] / 2;
-                               echo number_format($valor, 2, ',', '.'); 
-                               ?>
-                               </option>
-                        </p>
-                        <p>
-                            <option value="3x">3x de R$<?php
-                                $valor = $row['valor'] / 3;
-                               echo number_format($valor, 2, ',', '.'); 
-                               ?></option>
-                        </p>
-                        <p>
-                            <option value="4x">4x de R$<?php
-                                $valor = $row['valor'] / 4;
-                               echo number_format($valor, 2, ',', '.'); 
-                               ?></option>
-                        </p>
-                        <p>
-                            <option value="5x">5x de R$<?php
-                                $valor = $row['valor'] / 5;
-                               echo number_format($valor, 2, ',', '.'); 
-                               ?></option>
-                        </p>
-                        <p>
-                            <option value="6x">6x de R$<?php
-                                $valor = $row['valor'] / 6;
-                               echo number_format($valor, 2, ',', '.'); 
-                               ?></option>
-                        </p>
-                        <p>
-                            <option value="7x">7x de R$<?php
-                                $valor = $row['valor'] / 7;
-                               echo number_format($valor, 2, ',', '.'); 
-                               ?></option>
-                        </p>
-                        <p>
-                            <option value="8x">8x de R$<?php
-                                $valor = $row['valor'] / 8;
-                               echo number_format($valor, 2, ',', '.'); 
-                               ?></option>
-                        </p>
-                    </select>
-                </div>
-            </div>
-            <input type="submit" value="Finalizar compra" class="submit-btn">
-
-        </form>
-
-    </div>
     </div>
 
 

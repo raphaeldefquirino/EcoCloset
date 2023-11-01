@@ -2790,8 +2790,8 @@ body{
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 8px 3px;
    border-radius: 10px;
+   width: 350px;
    padding: 8px;
-
 }
 .imagem-tabela-carrinho-pag-cad img{
    border-radius: 20px; 
@@ -2832,6 +2832,28 @@ body{
 
 .TotalFinalizar{
     color: white;
+}
+
+
+    
+.boleto-container .inputBox{
+    margin-top: 20px;
+}
+
+.boleto-container .inputBox span{
+    display: block;
+    color:#999;
+    padding-bottom: 5px;
+}
+
+.boleto-container .inputBox input,
+.boleto-container .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#e7e4e4;
+    background-color: #747474;
 }
 
 .form-pix-{
@@ -2967,6 +2989,8 @@ body{
     align-items: center; /* Centraliza os itens horizontalmente */
     justify-content: center; /* Centraliza os itens verticalmente */
     width: 450px;
+    margin: auto;
+    
 }
 
 .pix-qrcode {
@@ -2980,7 +3004,7 @@ body{
 
 .pix-copy-btn button{
     width: 300px;
-    background:linear-gradient(45deg, rgb(178, 147, 206), rgb(95, 61, 173));
+   background: none;
     display: block;
     padding: 5px;
     font-size: 20px;
@@ -2988,7 +3012,7 @@ body{
     border-radius: 10px;
     cursor: pointer;
     transition: .2s linear;
-    border:solid 2px #c777ec;
+   border: none;
     align-items: center;
     }
 
@@ -3029,10 +3053,12 @@ border:solid 2px #af00ff;
 
 
 .container-pag-cad .card-container{
-    margin-bottom: 450px;
+ 
     position: absolute;
     height: 250px;
     width: 400px;
+    margin-left: 100px;
+    margin-top: 20px;
 }
 
 .container-pag-cad .card-container .front{
