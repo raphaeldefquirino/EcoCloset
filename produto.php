@@ -214,7 +214,7 @@ include('includes/verifica-login.php');
                             <br>
                             <div class="checks">
                                 <input type="radio" name="Termo de Uso" value="Usado" id="catinf">
-                                <label for="Inferior">Declaro que li e concordo integralmente com <a href="">Termo de Uso</a></label>
+                                <label for="Inferior">Declaro que li e concordo integralmente com <a href="imagens/termos-ecocloset.pdf" target = "_blank">Termo de Uso</a></label>
                                 <br>
 
                             </div>
