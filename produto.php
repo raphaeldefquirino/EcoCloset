@@ -154,24 +154,24 @@ include('includes/verifica-login.php');
                         <label for="">Subcategoria do produto</label>
                         <select name="subcategoria" id="">
 
-                            <option value="Camisa">Camisa</option>
-                            <option value="Calça">Calça</option>
-                            <option value="Vestido">Vestido</option>
-                            <option value="Shorts">Shorts</option>
-                            <option value="Calçado">Calçado</option>
                             <option value="Acessório">Acessório</option>
-                            <option value="Saia">Saia</option>
-                            <option value="Blusa">Blusa</option>
-                            <option value="Terno">Terno</option>
+                            <option value="Biquíni">Bíquini</option>
                             <option value="Blazer">Blazer</option>
-                            <option value="Legging">Legging</option>
-                            <option value="Biquini">Bíquini</option>
-                            <option value="Pijama">Pijama</option>
-                            <option value="Sueter">Suéter</option>
+                            <option value="Blusa">Blusa</option>
+                            <option value="Calça">Calça</option>
+                            <option value="Calçado">Calçado</option>
+                            <option value="Camisa">Camisa</option>
                             <option value="Cinto">Cinto</option>
-                            <option value="Macacao">Macacão</option>
-                            <option value="Cropped">Cropped</option>
                             <option value="Conjunto">Conjunto</option>
+                            <option value="Cropped">Cropped</option>
+                            <option value="Legging">Legging</option>
+                            <option value="Macacão">Macacão</option>
+                            <option value="Pijama">Pijama</option>
+                            <option value="Saia">Saia</option>
+                            <option value="Shorts">Shorts</option>
+                            <option value="Sueter">Suéter</option>
+                            <option value="Terno">Terno</option>
+                            <option value="Vestido">Vestido</option>
 
                         </select>
                     </div>
@@ -205,22 +205,22 @@ include('includes/verifica-login.php');
                             <input type="file" name="arquivo">
                         </div>
                     </div>
-<br>
+                    <br>
                     <div class="textfield">
-                           
 
-                            <div class="categoria">
 
+                        <div class="categoria">
+
+                            <br>
+                            <div class="checks">
+                                <input type="radio" name="Termo de Uso" value="Usado" id="catinf">
+                                <label for="Inferior">Declaro que li e concordo integralmente com <a href="">Termo de Uso</a></label>
                                 <br>
-                                <div class="checks">
-                                    <input type="radio" name="Termo de Uso" value="Usado" id="catinf">
-                                    <label for="Inferior">Declaro que li e concordo integralmente com <a href="">Termo de Uso</a></label>
-                                    <br>
-                                  
-                                </div>
-                                <br>
+
                             </div>
+                            <br>
                         </div>
+                    </div>
 
                     <button class="btn-login">Cadastrar</button>
             </div>

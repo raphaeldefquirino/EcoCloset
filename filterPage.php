@@ -23,40 +23,42 @@
 
     ?>
 
-<div class="filter-bar">
-    <button class="filter-button mobile-show">Mostrar filtros</button>
-    <form action="filterPage.php" method="post">
-      <label for="subcategory" class="subcategory">Subcategoria:</label>
-      <select name="subcategoria" id="subcategory">
-        <option value="Jaqueta">Jaqueta</option>
-        <option value="Camisa">Camisa</option>
-        <option value="Calça">Calça</option>
-        <option value="Vestido">Vestido</option>
-        <option value="Shorts">Shorts</option>
-        <option value="Calçado">Calçado</option>
-        <option value="Acessório">Acessório</option>
-        <option value="Saia">Saia</option>
-        <option value="Blusa">Blusa</option>
-        <option value="Terno">Terno</option>
-        <option value="Blazer">Blazer</option>
-        <option value="Legging">Legging</option>
-        <option value="Biquini">Bíquini</option>
-        <option value="Pijama">Pijama</option>
-        <option value="Sueter">Suéter</option>
-        <option value="Cinto">Cinto</option>
-        <option value="Macacao">Macacão</option>
-        <option value="Cropped">Cropped</option>
-      </select>
+    <div class="filter-bar">
+        <button class="filter-button mobile-show">Mostrar filtros</button>
+        <form action="filterPage.php" method="post">
+            <label for="subcategory" class="subcategory">Subcategoria:</label>
+            <select name="subcategoria" id="subcategory">
 
-      <label for="sort" class="subcategory">Classificar por:</label>
-      <select name="sort" id="sort">
-        <option value="caro">Menor preço</option>
-        <option value="barato">Maior preço</option>
-      </select>
+                <option value="Acessório">Acessório</option>
+                <option value="Biquíni">Bíquini</option>
+                <option value="Blazer">Blazer</option>
+                <option value="Blusa">Blusa</option>
+                <option value="Calça">Calça</option>
+                <option value="Calçado">Calçado</option>
+                <option value="Camisa">Camisa</option>
+                <option value="Cinto">Cinto</option>
+                <option value="Conjunto">Conjunto</option>
+                <option value="Cropped">Cropped</option>
+                <option value="Legging">Legging</option>
+                <option value="Macacão">Macacão</option>
+                <option value="Pijama">Pijama</option>
+                <option value="Saia">Saia</option>
+                <option value="Shorts">Shorts</option>
+                <option value="Sueter">Suéter</option>
+                <option value="Terno">Terno</option>
+                <option value="Vestido">Vestido</option>
 
-      <button class="filter-button" name="filtrar" value="Masculina"> Filtrar</button>
-    </form>
-  </div>
+            </select>
+
+            <label for="sort" class="subcategory">Classificar por:</label>
+            <select name="sort" id="sort">
+                <option value="caro">Menor preço</option>
+                <option value="barato">Maior preço</option>
+            </select>
+
+            <button class="filter-button" name="filtrar" value="Masculina"> Filtrar</button>
+        </form>
+    </div>
     <?php
 
     include("includes/conexao.php");
@@ -64,11 +66,11 @@
 
     $page = mysqli_real_escape_string($conexao, trim($_POST['filtrar']));
 
-   
+
 
     $subcategoria = mysqli_real_escape_string($conexao, trim($_POST['subcategoria']));
     $preco = mysqli_real_escape_string($conexao, trim($_POST['sort']));
-   
+
 
     $consultaCaro = "SELECT * FROM cadastro_prod WHERE categoria = '$page' AND subcategoria = '$subcategoria' ORDER BY valor ASC";
     $resultadoCaro = mysqli_query($conexao, $consultaCaro);
@@ -79,52 +81,50 @@
 
 
 
-    if ($preco == 'caro'){
-    if (mysqli_num_rows($resultadoCaro) > 0) {
-        echo  ' <div class="container">';
-        while ($produto = mysqli_fetch_assoc($resultadoCaro)) {
+    if ($preco == 'caro') {
+        if (mysqli_num_rows($resultadoCaro) > 0) {
+            echo  ' <div class="container">';
+            while ($produto = mysqli_fetch_assoc($resultadoCaro)) {
 
-            echo '<a href="paginaprod.php?id=' . $produto['idproduto'] . '"><div class="clothing-item">';
-            echo '<img src="' . $produto['path'] . '" alt="Calça jeans">';
-            echo '<br>';
-            echo '<br>';
-            echo '<div class="btncarrinho"><a href="adicionaCarrinho.php?idproduto=' . $produto['idproduto'] . '"><span class="material-symbols-outlined" id="prod-neckklace">add_shopping_cart</span></a></div>';
-            echo '<div class="clothing-details">';
-            echo '<h3 class="h3produtos">' . $produto['nome_prod'] . '</h3>';
-            echo ' <p class="clothing-price"><strong>R$' . $produto['valor'] . ' </strong></p>';
-            echo '</div>';
-            echo '</div>';
-            echo '</a>';
+                echo '<a href="paginaprod.php?id=' . $produto['idproduto'] . '"><div class="clothing-item">';
+                echo '<img src="' . $produto['path'] . '" alt="Calça jeans">';
+                echo '<br>';
+                echo '<br>';
+                echo '<div class="btncarrinho"><a href="adicionaCarrinho.php?idproduto=' . $produto['idproduto'] . '"><span class="material-symbols-outlined" id="prod-neckklace">add_shopping_cart</span></a></div>';
+                echo '<div class="clothing-details">';
+                echo '<h3 class="h3produtos">' . $produto['nome_prod'] . '</h3>';
+                echo ' <p class="clothing-price"><strong>R$' . $produto['valor'] . ' </strong></p>';
+                echo '</div>';
+                echo '</div>';
+                echo '</a>';
+            }
         }
-    }
         echo  '</div>';
-    } else if ($preco == 'barato'){
+    } else if ($preco == 'barato') {
 
-         if (mysqli_num_rows($resultadoBarato) > 0) {
-        echo  ' <div class="container">';
-        while ($produto = mysqli_fetch_assoc($resultadoBarato)) {
+        if (mysqli_num_rows($resultadoBarato) > 0) {
+            echo  ' <div class="container">';
+            while ($produto = mysqli_fetch_assoc($resultadoBarato)) {
 
-            echo '<a href="paginaprod.php?id=' . $produto['idproduto'] . '"><div class="clothing-item">';
-            echo '<img src="' . $produto['path'] . '" alt="Calça jeans">';
-            echo '<br>';
-            echo '<br>';
-            echo '<div class="btncarrinho"><a href="adicionaCarrinho.php?idproduto=' . $produto['idproduto'] . '"><span class="material-symbols-outlined" id="prod-neckklace">add_shopping_cart</span></a></div>';
-            echo '<div class="clothing-details">';
-            echo '<h3 class="h3produtos">' . $produto['nome_prod'] . '</h3>';
-            echo ' <p class="clothing-price"><strong>R$' . $produto['valor'] . ' </strong></p>';
-            echo '</div>';
-            echo '</div>';
-            echo '</a>';
+                echo '<a href="paginaprod.php?id=' . $produto['idproduto'] . '"><div class="clothing-item">';
+                echo '<img src="' . $produto['path'] . '" alt="Calça jeans">';
+                echo '<br>';
+                echo '<br>';
+                echo '<div class="btncarrinho"><a href="adicionaCarrinho.php?idproduto=' . $produto['idproduto'] . '"><span class="material-symbols-outlined" id="prod-neckklace">add_shopping_cart</span></a></div>';
+                echo '<div class="clothing-details">';
+                echo '<h3 class="h3produtos">' . $produto['nome_prod'] . '</h3>';
+                echo ' <p class="clothing-price"><strong>R$' . $produto['valor'] . ' </strong></p>';
+                echo '</div>';
+                echo '</div>';
+                echo '</a>';
+            }
         }
-    }
         echo  '</div>';
+    }
 
-       
-    } 
-
-    if(mysqli_num_rows($resultadoBarato) == 0 &&  mysqli_num_rows($resultadoCaro) == 0){
-        echo '<div class = "product-found">Ops, não encontramos o produto especificado. </div>.'; 
-    } 
+    if (mysqli_num_rows($resultadoBarato) == 0 &&  mysqli_num_rows($resultadoCaro) == 0) {
+        echo '<div class = "product-found">Ops, não encontramos o produto especificado. </div>.';
+    }
 
 
     mysqli_close($conexao);

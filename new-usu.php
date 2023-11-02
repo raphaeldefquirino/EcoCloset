@@ -308,10 +308,10 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
                     <div class="conteudo-carrinho-cadastrados">
                         <?php if ($id_usuario == 3) : ?>
-                    
-                            <?php 
-                                mysqli_data_seek($resultadoCadProdAdm, 0);
-                                while ($itemCadProdAdm = mysqli_fetch_assoc($resultadoCadProdAdm)) : ?>
+
+                            <?php
+                            mysqli_data_seek($resultadoCadProdAdm, 0);
+                            while ($itemCadProdAdm = mysqli_fetch_assoc($resultadoCadProdAdm)) : ?>
                                 <?php
                                 $idproduto = $itemCadProdAdm['idproduto'];
                                 ?>
@@ -440,13 +440,24 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                                                 </div>
                                                 <div class="u-sub">
                                                     <select name="" id="" name="subcategoria">
-                                                        <option value="Jaqueta">Jaqueta</option>
-                                                        <option value="Camisa">Camisa</option>
-                                                        <option value="Calça">Calça</option>
-                                                        <option value="Vestido">Vestido</option>
-                                                        <option value="Shorts">Shorts</option>
-                                                        <option value="Calçado">Calçado</option>
                                                         <option value="Acessório">Acessório</option>
+                                                        <option value="Biquíni">Bíquini</option>
+                                                        <option value="Blazer">Blazer</option>
+                                                        <option value="Blusa">Blusa</option>
+                                                        <option value="Calça">Calça</option>
+                                                        <option value="Calçado">Calçado</option>
+                                                        <option value="Camisa">Camisa</option>
+                                                        <option value="Cinto">Cinto</option>
+                                                        <option value="Conjunto">Conjunto</option>
+                                                        <option value="Cropped">Cropped</option>
+                                                        <option value="Legging">Legging</option>
+                                                        <option value="Macacão">Macacão</option>
+                                                        <option value="Pijama">Pijama</option>
+                                                        <option value="Saia">Saia</option>
+                                                        <option value="Shorts">Shorts</option>
+                                                        <option value="Sueter">Suéter</option>
+                                                        <option value="Terno">Terno</option>
+                                                        <option value="Vestido">Vestido</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -469,9 +480,9 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
                         <?php else : ?>
 
-                            <?php 
-                                mysqli_data_seek($resultadoCadProd, 0);
-                                while ($itemCadProd = mysqli_fetch_assoc($resultadoCadProd)) : ?>
+                            <?php
+                            mysqli_data_seek($resultadoCadProd, 0);
+                            while ($itemCadProd = mysqli_fetch_assoc($resultadoCadProd)) : ?>
                                 <?php
                                 $idproduto = $itemCadProd['idproduto'];
                                 ?>
@@ -600,24 +611,24 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                                                 </div>
                                                 <div class="u-sub">
                                                     <select name="" id="" name="subcategoria">
-                                                        <option value="Jaqueta">Jaqueta</option>
-                                                        <option value="Camisa">Camisa</option>
-                                                        <option value="Calça">Calça</option>
-                                                        <option value="Vestido">Vestido</option>
-                                                        <option value="Shorts">Shorts</option>
-                                                        <option value="Calçado">Calçado</option>
                                                         <option value="Acessório">Acessório</option>
-                                                        <option value="Saia">Saia</option>
-                                                        <option value="Blusa">Blusa</option>
-                                                        <option value="Terno">Terno</option>
+                                                        <option value="Biquíni">Bíquini</option>
                                                         <option value="Blazer">Blazer</option>
-                                                        <option value="Legging">Legging</option>
-                                                        <option value="Biquini">Bíquini</option>
-                                                        <option value="Pijama">Pijama</option>
-                                                        <option value="Sueter">Suéter</option>
+                                                        <option value="Blusa">Blusa</option>
+                                                        <option value="Calça">Calça</option>
+                                                        <option value="Calçado">Calçado</option>
+                                                        <option value="Camisa">Camisa</option>
                                                         <option value="Cinto">Cinto</option>
-                                                        <option value="Macacao">Macacão</option>
+                                                        <option value="Conjunto">Conjunto</option>
                                                         <option value="Cropped">Cropped</option>
+                                                        <option value="Legging">Legging</option>
+                                                        <option value="Macacão">Macacão</option>
+                                                        <option value="Pijama">Pijama</option>
+                                                        <option value="Saia">Saia</option>
+                                                        <option value="Shorts">Shorts</option>
+                                                        <option value="Sueter">Suéter</option>
+                                                        <option value="Terno">Terno</option>
+                                                        <option value="Vestido">Vestido</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -908,10 +919,10 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                             ?>
 
                             <?php if ($id_usuario == 3) : ?>
-                                
+
                                 <?php
-                                     mysqli_data_seek($resultadoCadProdDeskAdm, 0);
-                                     while ($itemCadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm)) : ?>
+                                mysqli_data_seek($resultadoCadProdDeskAdm, 0);
+                                while ($itemCadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm)) : ?>
                                     <?php
                                     $idprodutoDesk = $itemCadProdDeskAdm['idproduto'];
                                     ?>
@@ -1035,13 +1046,24 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                                                     </div>
                                                     <div class="u-sub-desktop">
                                                         <select name="subcategoria" id="">
-                                                            <option value="Jaqueta">Jaqueta</option>
-                                                            <option value="Camisa">Camisa</option>
-                                                            <option value="Calça">Calça</option>
-                                                            <option value="Vestido">Vestido</option>
-                                                            <option value="Shorts">Shorts</option>
-                                                            <option value="Calçado">Calçado</option>
                                                             <option value="Acessório">Acessório</option>
+                                                            <option value="Biquíni">Bíquini</option>
+                                                            <option value="Blazer">Blazer</option>
+                                                            <option value="Blusa">Blusa</option>
+                                                            <option value="Calça">Calça</option>
+                                                            <option value="Calçado">Calçado</option>
+                                                            <option value="Camisa">Camisa</option>
+                                                            <option value="Cinto">Cinto</option>
+                                                            <option value="Conjunto">Conjunto</option>
+                                                            <option value="Cropped">Cropped</option>
+                                                            <option value="Legging">Legging</option>
+                                                            <option value="Macacão">Macacão</option>
+                                                            <option value="Pijama">Pijama</option>
+                                                            <option value="Saia">Saia</option>
+                                                            <option value="Shorts">Shorts</option>
+                                                            <option value="Sueter">Suéter</option>
+                                                            <option value="Terno">Terno</option>
+                                                            <option value="Vestido">Vestido</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -1058,10 +1080,10 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                                     <!-- Fim de um produto cadastrado -->
                                 <?php endwhile; ?>
                             <?php else : ?>
-                                <?php 
-                                    mysqli_data_seek($resultadoCadProdDesk, 0);
+                                <?php
+                                mysqli_data_seek($resultadoCadProdDesk, 0);
 
-                                    while ($itemCadProdDesk = mysqli_fetch_assoc($resultadoCadProdDesk)) : ?>
+                                while ($itemCadProdDesk = mysqli_fetch_assoc($resultadoCadProdDesk)) : ?>
                                     <?php
                                     $idprodutoDesk = $itemCadProdDesk['idproduto'];
                                     ?>
@@ -1186,24 +1208,24 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                                                     <div class="u-sub-desktop">
                                                         <select name="subcategoria" id="">
 
-                                                            <option value="Jaqueta">Jaqueta</option>
-                                                            <option value="Camisa">Camisa</option>
-                                                            <option value="Calça">Calça</option>
-                                                            <option value="Vestido">Vestido</option>
-                                                            <option value="Shorts">Shorts</option>
-                                                            <option value="Calçado">Calçado</option>
                                                             <option value="Acessório">Acessório</option>
-                                                            <option value="Saia">Saia</option>
-                                                            <option value="Blusa">Blusa</option>
-                                                            <option value="Terno">Terno</option>
+                                                            <option value="Biquíni">Bíquini</option>
                                                             <option value="Blazer">Blazer</option>
-                                                            <option value="Legging">Legging</option>
-                                                            <option value="Biquini">Bíquini</option>
-                                                            <option value="Pijama">Pijama</option>
-                                                            <option value="Sueter">Suéter</option>
+                                                            <option value="Blusa">Blusa</option>
+                                                            <option value="Calça">Calça</option>
+                                                            <option value="Calçado">Calçado</option>
+                                                            <option value="Camisa">Camisa</option>
                                                             <option value="Cinto">Cinto</option>
-                                                            <option value="Macacao">Macacão</option>
+                                                            <option value="Conjunto">Conjunto</option>
                                                             <option value="Cropped">Cropped</option>
+                                                            <option value="Legging">Legging</option>
+                                                            <option value="Macacão">Macacão</option>
+                                                            <option value="Pijama">Pijama</option>
+                                                            <option value="Saia">Saia</option>
+                                                            <option value="Shorts">Shorts</option>
+                                                            <option value="Sueter">Suéter</option>
+                                                            <option value="Terno">Terno</option>
+                                                            <option value="Vestido">Vestido</option>
 
                                                         </select>
                                                     </div>

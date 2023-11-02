@@ -28,24 +28,26 @@
     <form action="filterPage.php" method="post">
       <label for="subcategory" class="subcategory">Subcategoria:</label>
       <select name="subcategoria" id="subcategory">
-        <option value="Jaqueta">Jaqueta</option>
-        <option value="Camisa">Camisa</option>
-        <option value="Calça">Calça</option>
-        <option value="Vestido">Vestido</option>
-        <option value="Shorts">Shorts</option>
-        <option value="Calçado">Calçado</option>
+
         <option value="Acessório">Acessório</option>
-        <option value="Saia">Saia</option>
-        <option value="Blusa">Blusa</option>
-        <option value="Terno">Terno</option>
+        <option value="Biquíni">Bíquini</option>
         <option value="Blazer">Blazer</option>
-        <option value="Legging">Legging</option>
-        <option value="Biquini">Bíquini</option>
-        <option value="Pijama">Pijama</option>
-        <option value="Sueter">Suéter</option>
+        <option value="Blusa">Blusa</option>
+        <option value="Calça">Calça</option>
+        <option value="Calçado">Calçado</option>
+        <option value="Camisa">Camisa</option>
         <option value="Cinto">Cinto</option>
-        <option value="Macacao">Macacão</option>
+        <option value="Conjunto">Conjunto</option>
         <option value="Cropped">Cropped</option>
+        <option value="Legging">Legging</option>
+        <option value="Macacão">Macacão</option>
+        <option value="Pijama">Pijama</option>
+        <option value="Saia">Saia</option>
+        <option value="Shorts">Shorts</option>
+        <option value="Sueter">Suéter</option>
+        <option value="Terno">Terno</option>
+        <option value="Vestido">Vestido</option>
+        
       </select>
 
       <label for="sort" class="subcategory">Classificar por:</label>
