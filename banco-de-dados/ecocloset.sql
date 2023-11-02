@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01/11/2023 às 20:57
+-- Tempo de geração: 02/11/2023 às 02:48
 -- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.2.4
+-- Versão do PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -56,18 +56,17 @@ INSERT INTO `cadastro_prod` (`idproduto`, `nome_prod`, `descricao_prod`, `valor`
 (18, 'Saia plissada', 'Saia plissada, cor preta, comprimento midi, tamanho M.', 150.99, 'Feminina', '', '', 'uploads/64891a7bee38d.jpg', 'plissada.jpg', 1),
 (19, 'Vestido de festa', 'Vestido longo de festa, cor preto, decote em ligeiro, tamanho P.', 449.99, 'Feminina', '', '', 'uploads/64891acf268bb.jpg', 'festa.jpg', 1),
 (21, 'Macacão pantacourt', 'Macacão pantacourt, cor preta, alças ajustáveis, tamanho M.', 300.00, 'Feminina', '', '', 'uploads/64891b5116eb3.jpg', 'pantacourt.jpg', 1),
-(23, 'Body de vaquinha', 'Body estilo vaquinha super fofo e confortável', 70.00, 'Kids', 'Macacao', 'Usado', 'uploads/6514ad06cfa72.jpg', 'bodyvaquinha.jpg', 1),
-(25, 'tdt', '42', 1243.00, 'Masculina', 'jaqueta', 'Novo', 'uploads/652ebc597898e.jpg', 'microsoft-design-3840x2160-10782.jpg', 2),
+(23, 'Body de vaquinha', 'Body estilo vaquinha super fofo e confortável', 70.00, 'Kids', 'Macacão', 'Usado', 'uploads/6514ad06cfa72.jpg', 'bodyvaquinha.jpg', 1),
 (28, 'teset', 'teste', 50.00, 'Masculina', 'Calça', 'Pouco usado', 'uploads/6531699d57995.png', 'Captura de Tela (1).png', 2),
 (29, 'teste', 'teste', 899.00, 'Feminina', 'Calça', 'Usado', 'uploads/65316fd761082.jpg', 'pexels-ray-piedra-1464625.jpg', 1),
 (30, 'teste', 'teset', 75.00, 'Feminina', 'Calça', 'Usado', 'uploads/6531700d70743.jpg', 'pexels-ray-piedra-1464625.jpg', 1),
 (35, 'teste', '432', 432.00, 'Masculina', 'Shorts', 'Novo', 'uploads/6542608ca7c6b.png', 'Captura de Tela (1).png', 4),
 (36, 'Conjunto do barcelona', 'conjunto infantil Barcelona, usado apenas 2x composição do tecido: 100', 500.00, 'Kids', 'Camisa', 'Pouco usado', 'uploads/65429f5800061.jpg', 'conjunto-barcelona.jpg', 1),
-(37, 'Kit 2 macacões', 'kit 2 macacão carte\'s 6-9m  novo com etiqueta', 179.99, 'Kids', 'Macacao', 'Novo', 'uploads/6542a0693f0c2.jpg', 'macacão.jpg', 1),
+(37, 'Kit 2 macacões', 'kit 2 macacão carte\'s 6-9m  novo com etiqueta', 179.99, 'Kids', 'Macacão', 'Novo', 'uploads/6542a0693f0c2.jpg', 'macacão.jpg', 1),
 (38, 'Boneco do stich', 'personagem stitch em pelúcia antialérgico, super fofo', 80.00, 'Kids', 'Acessório', 'Pouco', 'uploads/6542a2fa6b749.jpg', 'stich.jpg', 1),
 (42, 'Sapatinho do Mickey Mouse', 'tamanho 23. usado poucas x , possui marcas de uso no Mickey do pé esqu', 35.90, 'Kids', 'Calçado', 'Usado', 'uploads/6542aa64ecd84.jpg', 'tenis-mickey.jpg', 1),
 (43, 'Vestido vermelho', 'vestido infantil vermelho marca colorittá tamanho 4', 20.00, 'Kids', 'Vestido', 'Pouco', 'uploads/6542ab92430df.png', 'vestido infantil.png', 1),
-(44, 'Macacão Jeans', 'jardineira jeans infantil usada, sem detalhes! com lindos bordados.', 50.00, 'Kids', 'Macacao', 'Pouco', 'uploads/6542ad2899ca4.jpg', 'macacao jeans.jpg', 1),
+(44, 'Macacão Jeans', 'jardineira jeans infantil usada, sem detalhes! com lindos bordados.', 50.00, 'Kids', 'Macacão', 'Pouco', 'uploads/6542ad2899ca4.jpg', 'macacao jeans.jpg', 1),
 (45, 'Legging', 'Kit com duas calças legging, usado algumas vezes porém em perfeito est', 20.00, 'Kids', 'Legging', 'Usado', 'uploads/6542ad87b63cc.jpg', 'calças-legging.jpg', 1);
 
 -- --------------------------------------------------------
@@ -97,7 +96,26 @@ INSERT INTO `cadastro_usuario` (`idusuario`, `email`, `senha`, `nome`, `sobrenom
 (1, 'rapha@gmail.com', '123', 'Raphael', 'de França Quirino', '(11)98670022', '05445-020', 'Rua do sobe e desce, Número 2000, Santa Paula, São', 'Ap 530, Bloco A', 'uploads/65428335c6247.jpg'),
 (2, 'arthur@gmail.com', '123', 'Arthur', 'Bergamaço Alves', '(11)  98967033', '04303-150', 'Rua dos Guararapes, Vila Formosa, São Paulo, Númer', 'Casa 3', 'uploads/6531695eec41a.png'),
 (3, 'kaue@gmail.com', '123', 'Kaue', 'Fedido', '45909', '48946549', 'rua', 'casa 2', ''),
-(4, 'nicolas@gmail.com', '123', 'Nicolas', 'de Lima', '(11) 989898989', '09560-010', 'Rua do gurarapis', 'Barraco 2', 'uploads/foto-user-exe.png');
+(4, 'nicolas@gmail.com', '123', 'Nicolas', 'de Lima', '(11) 989898989', '09560-010', 'Rua do gurarapis', 'Barraco 2', 'uploads/foto-user-exe.png'),
+(5, 'gil@gmail.com', '123', 'Gil', 'Gil', '(11)8998898', '06590-040', 'Rua do sobe e desce', 'Ap 2', 'uploads/foto-user-exe.png');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `enderecos`
+--
+
+CREATE TABLE `enderecos` (
+  `idendereco` int(11) NOT NULL,
+  `nome_end` varchar(35) NOT NULL,
+  `cep` varchar(45) NOT NULL,
+  `cidade` varchar(55) NOT NULL,
+  `bairro` varchar(55) NOT NULL,
+  `rua` varchar(100) NOT NULL,
+  `numero` varchar(15) NOT NULL,
+  `complemento` varchar(35) NOT NULL,
+  `idusuario` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -117,8 +135,9 @@ CREATE TABLE `pedidos` (
 --
 
 INSERT INTO `pedidos` (`idpedido`, `idusuario`, `status`, `idproduto`) VALUES
-(43, 2, 'carrinho', 8),
-(58, 1, 'carrinho', 7);
+(58, 1, 'carrinho', 7),
+(62, 0, 'carrinho', 23),
+(67, 5, 'carrinho', 36);
 
 --
 -- Índices para tabelas despejadas
@@ -136,6 +155,12 @@ ALTER TABLE `cadastro_prod`
 --
 ALTER TABLE `cadastro_usuario`
   ADD PRIMARY KEY (`idusuario`);
+
+--
+-- Índices de tabela `enderecos`
+--
+ALTER TABLE `enderecos`
+  ADD PRIMARY KEY (`idendereco`);
 
 --
 -- Índices de tabela `pedidos`
@@ -157,13 +182,19 @@ ALTER TABLE `cadastro_prod`
 -- AUTO_INCREMENT de tabela `cadastro_usuario`
 --
 ALTER TABLE `cadastro_usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de tabela `enderecos`
+--
+ALTER TABLE `enderecos`
+  MODIFY `idendereco` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `idpedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `idpedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- Restrições para tabelas despejadas
