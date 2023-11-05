@@ -187,7 +187,7 @@ include('includes/verifica-login.php');
                                     <input type="radio" name="condicao" value="Usado" id="catinf">
                                     <label for="Inferior">Usado</label>
                                     <br>
-                                    <input type="radio" name="condicao" value="Pouco" id="catsup">
+                                    <input type="radio" name="condicao" value="Pouco Usado" id="catsup">
                                     <label for="Superior">Pouco usado</label>
                                     <br>
                                     <input type="radio" name="condicao" value="Novo" id="catsup">

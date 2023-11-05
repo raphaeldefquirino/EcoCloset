@@ -58,7 +58,7 @@ $produto =  mysqli_fetch_assoc($result);
 
 
 				<div class="container-add-cart">
-					<?php echo '<a style="text-decoration:none;" href="adicionaCarrinho.php?idproduto = ' . $produto['idproduto'] . '">' ?>
+					<?php echo '<a href="adicionaCarrinho.php?idproduto=' . $produto['idproduto'] . '" style = "text-decoration: none">' ?>
 					<button class="btn-add-to-cart">
 						<i class="fa-solid fa-plus"></i>
 						  Adicionar ao carrinho
