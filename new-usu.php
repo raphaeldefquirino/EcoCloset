@@ -895,6 +895,18 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
             </div>
 
+            <div class="card-enderecos-desktop">
+
+            <div class="card-enderecos-desktop" id="card-enderecos-desktop">
+                <span class="material-symbols-outlined" id="enderecos">
+                    location_on
+                    </span>
+                <p>Endereços</p>
+                <span class="material-symbols-outlined chevron" id="chevron-enderecos-desktop">chevron_right</span>
+            </div>
+
+        </div>
+
             <div class="card-cadastrados-desktop">
 
                 <div class="card-cadastrados-desktop" id="card-cadastrados-desktop">
