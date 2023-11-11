@@ -289,7 +289,211 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
         </div>
         <!-- Fim da parte dados -->
 
-        <!-- Começo da parte cadastrados -->
+        <!-- Começo da parte enderecos -->
+
+        <div class="enderecos">
+
+
+
+
+<div class="card-enderecos" id="card-enderecos">
+    <span class="material-symbols-outlined" id="enderecos">
+        location_on
+        </span>
+    <p>Endereços</p>
+    <span class="material-symbols-outlined chevron" id="chevron-enderecos">chevron_right</span>
+</div>
+
+
+
+
+
+<div class="tudo-conteudo-enderecos">
+
+
+    <div class="adicionar-enderecos">
+        <a href=""><p>Adicionar um novo endereço</p></a>
+    </div>
+
+
+
+
+<!-- Uma parte dos enderecos -->
+
+<div class="tabela-carrinho">
+
+    <div class="nome-enderecos-cadastrados">
+        <p>Casa de Arthur</p>
+    </div>
+
+    
+    
+    <div class="editar-tabela-carrinho">
+        <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
+    </div>
+    
+    <div class="excluir-tabela-cad">
+        <a href=""><span class="material-symbols-outlined" id="delete-cad">delete</span></a>
+    </div>
+    
+    </div>
+
+
+<!-- Começo do editar cadastrados -->
+
+<div class="container-editar-produto">
+
+    
+
+        
+    
+    
+    <div class="conteudo-re-enderecos">
+    
+        <div class="re-enderecos">
+    
+            <div class="e-enderecos">
+            <p>Nome do endereço: </p>
+            </div>
+            <div class="u-enderecos">
+            <p>Casa de Arthur</p>
+            </div>
+            
+                </div>
+    
+        <div class="caixa-conteudo-re-enderecos">
+            <input type="text" id="u-nomesS" placeholder="Digite o novo nome">
+        </div>
+    
+    </div>
+    
+    <div class="conteudo-re-cep-enderecos">
+    
+        <div class="re-cep-enderecos">
+    
+            <div class="e-cep-enderecos">
+            <p>CEP: </p>
+            </div>
+            <div class="u-cep-enderecos">
+            <p>09061580</p>
+            </div>
+                    
+                </div>
+    
+                <div class="caixa-conteudo-re-enderecos">
+                    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite o novo CEP">
+                </div>
+    
+    </div>
+    
+    <div class="conteudo-re-cidade">
+    <div class="re-cidade">
+    
+    <div class="e-cidade">
+    <p>Cidade: </p>
+    </div>
+    <div class="u-cidade">
+    <p>São Jose dos Campos</p>
+    </div>
+    
+    </div>
+    
+    <div class="caixa-conteudo-re-enderecos">
+        <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite a nova cidade">
+    </div>
+    
+    </div>
+    
+    <div class="conteudo-re-bairro">
+    <div class="re-bairro">
+    
+        <div class="e-bairro">
+        <p>Bairro: </p>
+        </div>
+        <div class="u-bairro">
+        <p>Santa Paula</p>
+        </div>
+        
+            </div>
+    
+            <div class="caixa-conteudo-re-enderecos">
+                <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite o novo bairro">
+            </div>
+    
+        </div>
+    
+        <div class="conteudo-re-rua">
+    <div class="re-rua">
+    
+    <div class="e-rua">
+    <p>Rua: </p>
+    </div>
+    <div class="u-rua">
+    <p>Rua Epitácio Pessoa</p>
+    </div>
+    
+    </div>
+    
+    <div class="caixa-conteudo-re-enderecos">
+    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite a nova rua">
+    </div>
+    
+    </div>
+    
+    <div class="conteudo-re-numero">
+    <div class="re-numero">
+    
+    <div class="e-numero">
+    <p>Número: </p>
+    </div>
+    <div class="u-numero">
+    <p>216</p>
+    </div>
+    </div>
+    
+    <div class="caixa-conteudo-re-enderecos">
+    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite o novo número">
+    </div>
+    
+    </div>
+    
+    <div class="conteudo-complemento-enderecos">
+    <div class="re-complemento-enderecos">
+    
+    <div class="e-complemento-enderecos">
+    <p>Complemento: </p>
+    </div>
+    <div class="u-complemento-enderecos">
+    <p>Apto. 31</p>
+    </div>
+    
+    </div>
+    
+    <div class="caixa-conteudo-re-enderecos">
+    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite o novo complemento">
+    </div>
+    
+    </div>
+    
+    <div class="editar-enderecos">
+    
+    <a href=""><p>Salvar alterações</p></a>
+    
+    </div>
+    
+    
+    
+    
+    
+    
+
+</div>
+<!-- Fim / Fim de Uma parte dos enderecos -->
+</div>
+</div>
+
+        <!-- Fim da parte enderecos -->
+
         <!-- Começo da parte cadastrados -->
         <div class="cadastrados">
             <div class="card-cadastrados" id="card-cadastrados">
@@ -890,6 +1094,219 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
                 <!-- Fim dados -->
 
+                <!-- Começo da parte enderecos desktop -->
+
+                <div class="enderecos-desktop">
+
+
+
+    
+
+
+
+<div class="adicionar-enderecos-desktop">
+    <a href=""><p>Adicionar um novo endereço</p></a>
+</div>
+
+
+
+
+<!-- Uma parte dos enderecos -->
+
+<div class="conteudo-re-cep-enderecos-desktop">
+
+<div class="tabela-carrinho-desktop" id="tabela-carrinho-desktop-ENDERECO">
+        
+<div class="nome-enderecos-cadastrados-desktop">
+    <p>Casa de Arthur</p>
+</div>
+
+<div class="editar-tabela-carrinho-desktop">
+    <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
+</div>
+
+<div class="excluir-tabela-cad-desktop">
+    <a href=""><span class="material-symbols-outlined" id="delete-cad">delete</span></a>
+</div>
+
+</div>
+
+
+<!-- Começo do editar cadastrados -->
+
+<div class="container-editar-produto-desktop">
+
+
+
+
+
+
+<div class="conteudo-re-enderecos-desktop">
+
+<div class="re-enderecos-desktop">
+
+    <div class="e-enderecos-desktop">
+    <p>Nome do endereço: </p>
+    </div>
+    <div class="u-enderecos-desktop">
+    <p>Casa de Arthur</p>
+    </div>
+    
+        </div>
+
+<div class="caixa-conteudo-re-enderecos-desktop">
+    <input type="text" id="u-nomesS" placeholder="Digite o novo nome">
+</div>
+
+</div>
+
+<div class="conteudo-re-cep-enderecos-desktop">
+
+<div class="re-cep-enderecos-desktop">
+
+    <div class="e-cep-enderecos-desktop">
+    <p>CEP: </p>
+    </div>
+    <div class="u-cep-enderecos-desktop">
+    <p>09061580</p>
+    </div>
+            
+        </div>
+
+        <div class="caixa-conteudo-re-enderecos-desktop">
+            <input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite o novo CEP">
+        </div>
+
+</div>
+
+<div class="conteudo-re-cidade-desktop">
+<div class="re-cidade-desktop">
+
+<div class="e-cidade-desktop">
+<p>Cidade: </p>
+</div>
+<div class="u-cidade-desktop">
+<p>São Jose dos Campos</p>
+</div>
+
+</div>
+
+<div class="caixa-conteudo-re-enderecos-desktop">
+<input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite a nova cidade">
+</div>
+
+</div>
+
+<div class="conteudo-re-bairro-desktop">
+<div class="re-bairro-desktop">
+
+<div class="e-bairro-desktop">
+<p>Bairro: </p>
+</div>
+<div class="u-bairro-desktop">
+<p>Santa Paula</p>
+</div>
+
+    </div>
+
+    <div class="caixa-conteudo-re-enderecos-desktop">
+        <input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite o novo bairro">
+    </div>
+
+</div>
+
+<div class="conteudo-re-rua-desktop">
+<div class="re-rua-desktop">
+
+<div class="e-rua-desktop">
+<p>Rua: </p>
+</div>
+<div class="u-rua-desktop">
+<p>Rua Epitácio Pessoa</p>
+</div>
+
+</div>
+
+<div class="caixa-conteudo-re-enderecos-desktop">
+<input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite a nova rua">
+</div>
+
+</div>
+
+<div class="conteudo-re-numero-desktop">
+<div class="re-numero-desktop">
+
+<div class="e-numero-desktop">
+<p>Número: </p>
+</div>
+<div class="u-numero-desktop">
+<p>216</p>
+</div>
+</div>
+
+<div class="caixa-conteudo-re-enderecos-desktop">
+<input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite o novo número">
+</div>
+
+</div>
+
+<div class="conteudo-complemento-enderecos-desktop">
+<div class="re-complemento-enderecos-desktop">
+
+<div class="e-complemento-enderecos-desktop">
+<p>Complemento: </p>
+</div>
+<div class="u-complemento-enderecos-desktop">
+<p>Apto. 31</p>
+</div>
+
+</div>
+
+<div class="caixa-conteudo-re-enderecos-desktop">
+<input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite o novo complemento">
+</div>
+
+</div>
+
+<div class="editar-enderecos-desktop">
+
+<a href=""><p>Salvar alterações</p></a>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+<!-- Fim/fim de Uma parte dos enderecos -->
+
+
+
+
+
+
+</div>
+
+                <!-- Fim da parte enderecos desktop -->
+
+
+
+
+
+
+
+
+
+
                 <div class="conteudo-cadastrados-desktop" id="conteudo-cadastrados-desktop">
 
                     <div class="tabela-cadastrados-desktop" id="tabela-cadastrados-desktop">
@@ -1266,152 +1683,196 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Código para dispositivos móveis
-        const cardCarrinho = document.querySelector(".card-carrinho");
-        const cardDados = document.querySelector(".card-dados");
-        const cardCadastrados = document.querySelector(".card-cadastrados");
-        const conteudoCarrinho = document.getElementById("conteudo-carrinho");
-        const conteudoDados = document.getElementById("conteudo-dados");
-        const conteudoCarrinhoCadastrados = document.querySelector(".conteudo-carrinho-cadastrados");
-        const botõesEditar = document.querySelectorAll(".editar-tabela-carrinho");
-        const formulários = document.querySelectorAll(".container-editar-produto");
-        const chevronCarrinho = document.getElementById("chevron-carrinho");
-        const chevronDados = document.getElementById("chevron-dados");
-        const chevronCadastrados = document.getElementById("chevron-cadastrados");
+     document.addEventListener("DOMContentLoaded", function () {
+     // Código para dispositivos móveis
+     const cardCarrinho = document.querySelector(".card-carrinho");
+     const cardDados = document.querySelector(".card-dados");
+     const cardCadastrados = document.querySelector(".card-cadastrados");
+     const cardEnderecos = document.querySelector(".card-enderecos");
+     const conteudoCarrinho = document.getElementById("conteudo-carrinho");
+     const conteudoDados = document.getElementById("conteudo-dados");
+     const conteudoCarrinhoCadastrados = document.querySelector(".conteudo-carrinho-cadastrados");
+     const conteudoEnderecos = document.querySelector(".tudo-conteudo-enderecos");
+     const botõesEditar = document.querySelectorAll(".editar-tabela-carrinho");
+     const formulários = document.querySelectorAll(".container-editar-produto");
+     const chevronCarrinho = document.getElementById("chevron-carrinho");
+     const chevronDados = document.getElementById("chevron-dados");
+     const chevronCadastrados = document.getElementById("chevron-cadastrados");
+     const chevronEnderecos = document.getElementById("chevron-enderecos");
+ 
+     function removeActiveClasses() {
+         cardCarrinho.classList.remove('active');
+         cardDados.classList.remove('active');
+         cardCadastrados.classList.remove('active');
+         cardEnderecos.classList.remove('active');
+         conteudoCarrinho.style.display = "none";
+         conteudoDados.style.display = "none";
+         conteudoCarrinhoCadastrados.style.display = "none";
+         conteudoEnderecos.style.display = "none";
+         formulários.forEach(form => {
+             form.style.display = "none";
+         });
+         chevronCarrinho.classList.remove('rotate-down');
+         chevronDados.classList.remove('rotate-down');
+         chevronCadastrados.classList.remove('rotate-down');
+         chevronEnderecos.classList.remove('rotate-down');
+     }
+ 
+     cardCarrinho.addEventListener("click", function () {
+         if (cardCarrinho.classList.contains('active')) {
+             removeActiveClasses();
+         } else {
+             removeActiveClasses();
+             cardCarrinho.classList.add('active');
+             chevronCarrinho.classList.add('rotate-down');
+             conteudoCarrinho.style.display = "block";
+         }
+     });
+ 
+     cardDados.addEventListener("click", function () {
+         if (cardDados.classList.contains('active')) {
+             removeActiveClasses();
+         } else {
+             removeActiveClasses();
+             cardDados.classList.add('active');
+             chevronDados.classList.add('rotate-down');
+             conteudoDados.style.display = "block";
+         }
+     });
+ 
+     cardCadastrados.addEventListener("click", function () {
+         if (cardCadastrados.classList.contains('active')) {
+             removeActiveClasses();
+         } else {
+             removeActiveClasses();
+             cardCadastrados.classList.add('active');
+             chevronCadastrados.classList.add('rotate-down');
+             conteudoCarrinhoCadastrados.style.display = "block";
+         }
+     });
+ 
+     botõesEditar.forEach((botão, index) => {
+         botão.addEventListener("click", function(e) {
+             e.preventDefault();
+ 
+             if (formulários[index].style.display === "block") {
+                 formulários[index].style.display = "none";
+             } else {
+                 formulários.forEach(form => {
+                     form.style.display = "none";
+                 });
+                 formulários[index].style.display = "block";
+             }
+         });
+     });
 
-        function removeActiveClasses() {
-            cardCarrinho.classList.remove('active');
-            cardDados.classList.remove('active');
-            cardCadastrados.classList.remove('active');
-            conteudoCarrinho.style.display = "none";
-            conteudoDados.style.display = "none";
-            conteudoCarrinhoCadastrados.style.display = "none";
-            formulários.forEach(form => {
-                form.style.display = "none";
-            });
-            chevronCarrinho.classList.remove('rotate-down');
-            chevronDados.classList.remove('rotate-down');
-            chevronCadastrados.classList.remove('rotate-down');
+     cardEnderecos.addEventListener("click", function () {
+         if (cardEnderecos.classList.contains('active')) {
+             removeActiveClasses();
+         } else {
+             removeActiveClasses();
+             cardEnderecos.classList.add('active');
+             chevronEnderecos.classList.add('rotate-down');
+             conteudoEnderecos.style.display = "block";
+         }
+     });
+
+ });
+ 
+ document.addEventListener("DOMContentLoaded", function () {
+    // Código para desktop
+    const cardCarrinhoDesktop = document.querySelector(".card-carrinho-desktop");
+    const cardDadosDesktop = document.querySelector(".card-dados-desktop");
+    const cardCadastradosDesktop = document.querySelector(".card-cadastrados-desktop");
+    const conteudoCarrinhoDesktop = document.getElementById("conteudo-carrinho-desktop");
+    const conteudoDadosDesktop = document.getElementById("conteudo-dados-desktop");
+    const conteudoCarrinhoCadastradosDesktop = document.querySelector(".conteudo-carrinho-cadastrados-desktop");
+    const botõesEditarDesktop = document.querySelectorAll(".editar-tabela-carrinho-desktop");
+    const formuláriosDesktop = document.querySelectorAll(".container-editar-produto-desktop");
+    
+
+
+    const cardEnderecosDesktop = document.querySelector(".card-enderecos-desktop");
+const enderecosDesktop = document.querySelector(".enderecos-desktop");
+const editarEnderecosCadastradosDesktop = document.querySelector(".editar-enderecos-cadastrados-desktop");
+const tabelaEnderecosDesktop = document.querySelector(".tabela-enderecos-desktop");
+
+
+
+
+    function removeActiveClassesDesktop() {
+        cardCarrinhoDesktop.classList.remove('active');
+        cardDadosDesktop.classList.remove('active');
+        cardCadastradosDesktop.classList.remove('active');
+        cardEnderecosDesktop.classList.remove('active');
+        conteudoCarrinhoDesktop.style.display = "none";
+        conteudoDadosDesktop.style.display = "none";
+        conteudoCarrinhoCadastradosDesktop.style.display = "none";
+        enderecosDesktop.style.display = "none";
+        formuláriosDesktop.forEach(form => {
+            form.style.display = "none";
+        });
+    }
+
+    cardCarrinhoDesktop.addEventListener("click", function () {
+        if (cardCarrinhoDesktop.classList.contains('active')) {
+            removeActiveClassesDesktop();
+        } else {
+            removeActiveClassesDesktop();
+            cardCarrinhoDesktop.classList.add('active');
+            conteudoCarrinhoDesktop.style.display = "block";
         }
-
-        cardCarrinho.addEventListener("click", function() {
-            if (cardCarrinho.classList.contains('active')) {
-                removeActiveClasses();
-            } else {
-                removeActiveClasses();
-                cardCarrinho.classList.add('active');
-                chevronCarrinho.classList.add('rotate-down');
-                conteudoCarrinho.style.display = "block";
-            }
-        });
-
-        cardDados.addEventListener("click", function() {
-            if (cardDados.classList.contains('active')) {
-                removeActiveClasses();
-            } else {
-                removeActiveClasses();
-                cardDados.classList.add('active');
-                chevronDados.classList.add('rotate-down');
-                conteudoDados.style.display = "block";
-            }
-        });
-
-        cardCadastrados.addEventListener("click", function() {
-            if (cardCadastrados.classList.contains('active')) {
-                removeActiveClasses();
-            } else {
-                removeActiveClasses();
-                cardCadastrados.classList.add('active');
-                chevronCadastrados.classList.add('rotate-down');
-                conteudoCarrinhoCadastrados.style.display = "block";
-            }
-        });
-
-        botõesEditar.forEach((botão, index) => {
-            botão.addEventListener("click", function(e) {
-                e.preventDefault();
-
-                if (formulários[index].style.display === "block") {
-                    formulários[index].style.display = "none";
-                } else {
-                    formulários.forEach(form => {
-                        form.style.display = "none";
-                    });
-                    formulários[index].style.display = "block";
-                }
-            });
-        });
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
-        // Código para desktop
-        const cardCarrinho = document.querySelector(".card-carrinho-desktop");
-        const cardDados = document.querySelector(".card-dados-desktop");
-        const cardCadastrados = document.querySelector(".card-cadastrados-desktop");
-        const conteudoCarrinho = document.getElementById("conteudo-carrinho-desktop");
-        const conteudoDados = document.getElementById("conteudo-dados-desktop");
-        const conteudoCarrinhoCadastrados = document.querySelector(".conteudo-carrinho-cadastrados-desktop");
-        const botõesEditar = document.querySelectorAll(".editar-tabela-carrinho-desktop");
-        const formulários = document.querySelectorAll(".container-editar-produto-desktop");
-
-        function removeActiveClasses() {
-            cardCarrinho.classList.remove('active');
-            cardDados.classList.remove('active');
-            cardCadastrados.classList.remove('active');
-            conteudoCarrinho.style.display = "none";
-            conteudoDados.style.display = "none";
-            conteudoCarrinhoCadastrados.style.display = "none";
-            formulários.forEach(form => {
-                form.style.display = "none";
-            });
+    cardDadosDesktop.addEventListener("click", function () {
+        if (cardDadosDesktop.classList.contains('active')) {
+            removeActiveClassesDesktop();
+        } else {
+            removeActiveClassesDesktop();
+            cardDadosDesktop.classList.add('active');
+            conteudoDadosDesktop.style.display = "block";
         }
-
-        cardCarrinho.addEventListener("click", function() {
-            if (cardCarrinho.classList.contains('active')) {
-                removeActiveClasses();
-            } else {
-                removeActiveClasses();
-                cardCarrinho.classList.add('active');
-                conteudoCarrinho.style.display = "block";
-            }
-        });
-
-        cardDados.addEventListener("click", function() {
-            if (cardDados.classList.contains('active')) {
-                removeActiveClasses();
-            } else {
-                removeActiveClasses();
-                cardDados.classList.add('active');
-                conteudoDados.style.display = "block";
-            }
-        });
-
-        cardCadastrados.addEventListener("click", function() {
-            if (cardCadastrados.classList.contains('active')) {
-                removeActiveClasses();
-            } else {
-                removeActiveClasses();
-                cardCadastrados.classList.add('active');
-                conteudoCarrinhoCadastrados.style.display = "block";
-            }
-        });
-
-        botõesEditar.forEach((botão, index) => {
-            botão.addEventListener("click", function(e) {
-                e.preventDefault();
-
-                if (formulários[index].style.display === "block") {
-                    formulários[index].style.display = "none";
-                } else {
-                    formulários.forEach(form => {
-                        form.style.display = "none";
-                    });
-                    formulários[index].style.display = "block";
-                }
-            });
-        });
     });
+
+    cardCadastradosDesktop.addEventListener("click", function () {
+        if (cardCadastradosDesktop.classList.contains('active')) {
+            removeActiveClassesDesktop();
+        } else {
+            removeActiveClassesDesktop();
+            cardCadastradosDesktop.classList.add('active');
+            conteudoCarrinhoCadastradosDesktop.style.display = "block";
+        }
+    });
+
+    botõesEditarDesktop.forEach((botão, index) => {
+        botão.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            if (formuláriosDesktop[index].style.display === "block") {
+                formuláriosDesktop[index].style.display = "none";
+            } else {
+                formuláriosDesktop.forEach(form => {
+                    form.style.display = "none";
+                });
+                formuláriosDesktop[index].style.display = "block";
+            }
+        });
+
+    });
+
+    
+
+    cardEnderecosDesktop.addEventListener("click", function () {
+        if (cardEnderecosDesktop.classList.contains('active')) {
+            removeActiveClassesDesktop();
+        } else {
+            removeActiveClassesDesktop();
+            cardEnderecosDesktop.classList.add('active');
+            enderecosDesktop.style.display = "block";
+        }
+    });
+
+});
 
     function submitForm() {
         document.getElementById("uploadForm").submit();

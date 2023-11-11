@@ -2789,6 +2789,530 @@ body{
     font-size: 30px;
 }
 
+
+
+
+
+
+
+#enderecos{
+    margin-right: 10px;
+    font-size: 30px;
+}
+.enderecos-cadastrados{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+.nome-enderecos-cadastrados{
+    margin-left: 20px;
+    width: 205px;
+}
+.nome-enderecos-cadastrados p{
+    font-weight: 600;
+    font-size: 20px
+}
+.botoes-endecos-cadastrados{
+    display: flex;
+    
+}
+.editar-enderecos-cadastrados{
+    margin-left: 10px;
+}
+.editar-enderecos-cadastrados span{
+    color: #af00ff;
+}
+#edit{
+    font-size: 30px;
+}
+#delete-enderecos{
+    font-size: 35px;
+}
+#delete-enderecos:hover{
+    color: red;
+}
+.excluir-enderecos-cadastrados{
+    margin-left: 15px;
+}
+.excluir-enderecos-cadastrados span{
+    color: black;
+}
+
+.enderecos{
+    margin-top: 20px;
+}
+.tudo-conteudo-enderecos{
+    display: none;  /* Display: none; para a tela de "dados" não aparecer. */
+}
+.card-enderecos{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 190px;
+}
+.card-enderecos p{
+    font-size: 20px;
+    font-weight: 600;
+}
+.card-enderecos.active {
+    color: #af00ff;
+    /* Adicione outras propriedades de estilo conforme necessário */
+}
+.rotated-chevronEnderecos {
+    transform: rotate(90deg); /* Rotaciona o elemento em 90 graus */
+}
+#database{
+    margin-right: 10px;
+    font-size: 30px;
+}
+.tabela-enderecos{
+    display: none;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+.re-enderecos{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.e-enderecos p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-enderecos{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-cep-enderecos{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.e-cep-enderecos p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-cep-enderecos{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-cidade{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.e-cidade p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-cidade{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-bairro{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.e-bairro p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-bairro{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-rua{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.e-rua p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-rua{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-numero{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.e-numero p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-numero{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-complemento-enderecos{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+.e-complemento-enderecos p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-complemento-enderecos{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.editar-enderecos {
+    background-color: white;
+    border: #af00ff solid 2px;
+    width: 155px;
+    height: 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.editar-enderecos a{
+    text-decoration: none;
+}
+.editar-enderecos p{
+    color: #af00ff;
+    font-size: 17px;
+    font-weight: 300;
+    height: 26px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
+    padding-top: 2px;
+}
+.editar-enderecos p:hover{
+    color: white;
+    transition: background-color 0.4s ease;
+    background-color: #af00ff;
+}
+.adicionar-enderecos{
+    background-color: white;
+    border: #af00ff solid 2px;
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.adicionar-enderecos a{
+    text-decoration: none;
+}
+.adicionar-enderecos p{
+    color: #af00ff;
+    font-size: 17px;
+    font-weight: 300;
+    height: 32px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
+    padding-top: 5px;
+}
+.adicionar-enderecos p:hover{
+    color: white;
+    transition: background-color 0.4s ease;
+    background-color: #af00ff;
+}
+.caixa-conteudo-re-enderecos input[type="text"]{
+    background-color: #e6e6e6;
+    width: 290px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card-enderecos-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    cursor: pointer;
+    width: 190px;
+    margin-top: 10px;
+}
+.card-enderecos-desktop p{
+    font-size: 20px;
+    font-weight: 600;
+    width: 150px;
+}
+.card-enderecos-desktop.active {
+    color: #af00ff;
+    /* Adicione outras propriedades de estilo conforme necessário */
+}
+#database{
+    margin-right: 10px;
+    font-size: 30px;
+}
+#chevron-enderecos-desktop{
+    margin-left: 5px;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+
+
+.enderecos-desktop{
+    display: none;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#tabela-carrinho-desktop-ENDERECO{
+    margin-top: 20px;
+}
+.tabela-enderecos-desktop{
+    display: none;
+    margin-top: 15px;
+}
+.nome-enderecos-cadastrados-desktop{
+    margin-left: 20px;
+    width: 265px;
+}
+.nome-enderecos-cadastrados-desktop{
+    font-weight: 600;
+    font-size: 20px
+}
+.botoes-endecos-cadastrados-desktop{
+    display: flex;
+    
+}
+.editar-enderecos-cadastrados-desktop{
+    margin-left: 10px;
+}
+.editar-enderecos-cadastrados-desktop span{
+    color: #af00ff;
+}
+#edit{
+    font-size: 30px;
+}
+#delete-enderecos{
+    font-size: 35px;
+}
+#delete-enderecos:hover{
+    color: red;
+}
+.excluir-enderecos-cadastrados-desktop{
+    margin-left: 15px;
+}
+.excluir-enderecos-cadastrados-desktop span{
+    color: black;
+}
+
+
+#database{
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+.re-enderecos-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.e-enderecos-desktop p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-enderecos-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-cep-enderecos-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.e-cep-enderecos-desktop p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-cep-enderecos-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-cidade-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.e-cidade-desktop p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-cidade-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-bairro-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.e-bairro-desktop p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-bairro-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-rua-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.e-rua-desktop p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-rua-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-numero-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.e-numero-desktop p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-numero-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+.re-complemento-enderecos-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+.e-complemento-enderecos-desktop p{
+    font-weight: 600;
+    font-size: 16px
+}
+.u-complemento-enderecos-desktop{
+    margin-left: 10px;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.editar-enderecos-desktop {
+    background-color: white;
+    border: #af00ff solid 2px;
+    width: 155px;
+    height: 30px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.editar-enderecos-desktop a{
+    text-decoration: none;
+}
+.editar-enderecos-desktop p{
+    color: #af00ff;
+    font-size: 17px;
+    font-weight: 300;
+    height: 26px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
+    padding-top: 2px;
+}
+.editar-enderecos-desktop p:hover{
+    color: white;
+    transition: background-color 0.4s ease;
+    background-color: #af00ff;
+}
+.adicionar-enderecos-desktop{
+    background-color: white;
+    border: #af00ff solid 2px;
+    width: 250px;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+}
+.adicionar-enderecos-desktop a{
+    text-decoration: none;
+}
+.adicionar-enderecos-desktop p{
+    color: #af00ff;
+    font-size: 17px;
+    font-weight: 300;
+    height: 32px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
+    padding-top: 5px;
+}
+.adicionar-enderecos-desktop p:hover{
+    color: white;
+    transition: background-color 0.4s ease;
+    background-color: #af00ff;
+}
+.caixa-conteudo-re-enderecos-desktop input[type="text"]{
+    background-color: #e6e6e6;
+    width: 350px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 25px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
 /*finalizar-compra----------------------------------------------- */
 
 
