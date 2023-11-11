@@ -2172,16 +2172,15 @@ body{
 
 .tudo-tudo-desktop{
     display: flex;
-    width: 780px;
+    width: 825px;
     height: auto;
     margin: auto;
     display: none;
-    margin-bottom: 50px;
 }
 .tudo-card-desktop{
     background-color: #f1f1f1;
-    width: auto;
-    height: 165px;
+    width: 330px;
+    height: 225px;
     border: 3px solid black;
 }
 .card-carrinho-desktop{
@@ -2273,12 +2272,11 @@ body{
     display: none; /* para não aparecer esta parte*/
     border-radius: 20px;
     padding-top: 10px;
-    padding-bottom: 10PX;
     padding-left: 10px;
 }
 .tabela-carrinho-desktop{
     background-color: white;
-    margin-bottom: 1Opx;
+    margin-bottom: 1px;
     display: flex;
     align-items: center;
     border-radius: 20px 20px 20px 20px;
@@ -2303,7 +2301,6 @@ body{
 .desc-tabela-carrinho-desktop{
     font-size: 20px;
     margin-top: 15px;
-    width: 158px;
 }
 .excluir-tabela-carrinho-desktop{
     margin-left: 40px;
@@ -2363,17 +2360,6 @@ body{
     display: none;  /* Display: none; para a tela de "dados" não aparecer. */
     padding-bottom: 10px;
     border-radius: 20px;
-}
-.card-dados-desktop{
-    display: flex;
-    align-items: center;
-    margin-left: 5px;
-    cursor: pointer;
-    width: 190px;
-}
-.card-dados-desktop p{
-    font-size: 20px;
-    font-weight: 600;
 }
 #database{
     margin-right: 10px;
@@ -2524,15 +2510,7 @@ body{
     transition: background-color 0.4s ease;
     background-color: #af00ff;
 }
-.carrinho-vazio{
-    text-align: center;
-    margin-top: 12px;
-    font-size: 18px;
-}
-.carrinho-vazio-desktop{
-    text-align: center;
-    font-size: 18px;
-}
+
 
 
 
@@ -2788,6 +2766,7 @@ body{
 #edit{
     font-size: 30px;
 }
+
 
 
 
