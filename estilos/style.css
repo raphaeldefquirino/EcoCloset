@@ -2180,7 +2180,7 @@ body{
 }
 .tudo-card-desktop{
     background-color: #f1f1f1;
-    width: 330px;
+    width: auto;
     height: 165px;
     border: 3px solid black;
 }
