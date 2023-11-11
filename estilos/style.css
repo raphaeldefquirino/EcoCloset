@@ -1348,11 +1348,91 @@ height: 600px;
 body{
     background-color: #f1f1f1;
 }
+
+.tudo-perfil-usuario{
+    margin-top: 50px;
+    margin-bottom: 45px;
+}
+.parte-perfil-usuario{
+    display: flex;
+    align-items: center;
+}
+.container-imagem-usuario{
+    width: 200px;
+    height: 200px;
+}
+.container-imagem-sair-perfil-usuario{
+    text-align: center;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.imagem-perfil-usuario{
+    border-radius: 50%;
+    position: absolute;
+    margin-right: 500px;
+}
+.imagem-perfil-usuario img{
+    border-radius: 50%;
+}
+.sobrepondo-imagem-perfil-usuario {
+    text-align: center;
+    margin-top: 80%;
+    margin-left: 75%;
+    background-color: #af00ff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    z-index: 2;
+    position: relative; /* Adicione esta linha */
+}
+
+#edit-perfil-usuario {
+    margin-top: 2px;
+    font-size: 30px;
+    font-weight: 100;
+    color: white;
+}
+
+.file-upload {
+    position: absolute;
+    top: -20px;
+    right: 0; /* Mudança aqui para direita */
+    width: 40px;
+    height: 60px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3; /* Garante que o input esteja acima do ícone de edição */
+}
+.textos-perfil-usuario{
+    margin-left: 20px;
+}
+.ola-perfil-usuario p{
+    font-size: 30px;
+    font-weight: 600;
+}
+.mensagem-perfil-usuario{
+    margin-top: 10px;
+}
+.mensagem-perfil-usuario p{
+    font-size: 18px;
+}
+.btn-sair-perfil-usuario{
+    margin-top: 20px;
+}
+.btn-sair-perfil-usuario a{
+    
+    font-size: 18px; 
+}
+
+
 .tudo{
     background-color: white;
     width: 330px;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 10px; 
+    margin-bottom: 50px;
 }
 .carrinho{
     margin-top: 20px;
@@ -1364,6 +1444,7 @@ body{
     display: flex;
     align-items: center;
     margin-left: 10px;
+    padding-top: 8px;
     cursor: pointer;
     width: 317px;
 }
@@ -1375,7 +1456,6 @@ body{
     color: #af00ff;
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-
 #shopping_cart{
     margin-right: 10px;
     font-size: 30px;
@@ -1390,17 +1470,7 @@ body{
     font-size: 30px;
     margin-top: 5px;
 }
-#chevron-dados{
-    margin-left: 5px;
-    font-size: 30px;
-    margin-top: 5px;
-}
 #chevron-cadastrados{
-    margin-left: 5px;
-    font-size: 30px;
-    margin-top: 5px;
-}
-#chevron-enderecos{
     margin-left: 5px;
     font-size: 30px;
     margin-top: 5px;
@@ -1440,6 +1510,7 @@ body{
 .desc-tabela-carrinho{
     font-size: 20px;
     margin-top: 15px;
+    
 }
 .excluir-tabela-carrinho{
     margin-left: 35px;
@@ -1661,6 +1732,7 @@ body{
     display: flex;
     align-items: center;
     margin-left: 10px;
+    padding-bottom: 8px;
     cursor: pointer;
     width: 281px;
 }
@@ -1682,7 +1754,17 @@ body{
     padding-bottom: 10px;
     border-radius: 20px;
 }
-
+.card-dados{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 190px;
+}
+.card-dados p{
+    font-size: 20px;
+    font-weight: 600;
+}
 #database{
     margin-right: 10px;
     font-size: 30px;
@@ -2088,48 +2170,18 @@ body{
     font-size: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .tudo-tudo-desktop{
     display: flex;
-    width: 825px;
+    width: 780px;
     height: auto;
     margin: auto;
     display: none;
+    margin-bottom: 50px;
 }
 .tudo-card-desktop{
     background-color: #f1f1f1;
     width: 330px;
-    height: 225px;
+    height: 165px;
     border: 3px solid black;
 }
 .card-carrinho-desktop{
@@ -2221,11 +2273,12 @@ body{
     display: none; /* para não aparecer esta parte*/
     border-radius: 20px;
     padding-top: 10px;
+    padding-bottom: 10PX;
     padding-left: 10px;
 }
 .tabela-carrinho-desktop{
     background-color: white;
-    margin-bottom: 1px;
+    margin-bottom: 1Opx;
     display: flex;
     align-items: center;
     border-radius: 20px 20px 20px 20px;
@@ -2250,6 +2303,7 @@ body{
 .desc-tabela-carrinho-desktop{
     font-size: 20px;
     margin-top: 15px;
+    width: 158px;
 }
 .excluir-tabela-carrinho-desktop{
     margin-left: 40px;
@@ -2309,6 +2363,17 @@ body{
     display: none;  /* Display: none; para a tela de "dados" não aparecer. */
     padding-bottom: 10px;
     border-radius: 20px;
+}
+.card-dados-desktop{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    cursor: pointer;
+    width: 190px;
+}
+.card-dados-desktop p{
+    font-size: 20px;
+    font-weight: 600;
 }
 #database{
     margin-right: 10px;
@@ -2459,7 +2524,15 @@ body{
     transition: background-color 0.4s ease;
     background-color: #af00ff;
 }
-
+.carrinho-vazio{
+    text-align: center;
+    margin-top: 12px;
+    font-size: 18px;
+}
+.carrinho-vazio-desktop{
+    text-align: center;
+    font-size: 18px;
+}
 
 
 
@@ -2715,9 +2788,6 @@ body{
 #edit{
     font-size: 30px;
 }
-
-
-
 
 
 
@@ -3242,7 +3312,6 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
-
 
 /*finalizar-compra----------------------------------------------- */
 
