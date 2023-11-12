@@ -2175,6 +2175,7 @@ body{
     width: 825px;
     height: auto;
     margin: auto;
+    margin-bottom: 50px;
     display: none;
 }
 .tudo-card-desktop{
