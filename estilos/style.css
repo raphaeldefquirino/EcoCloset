@@ -2262,6 +2262,11 @@ body{
     font-size: 30px;
     margin-top: 5px;
 }
+#chevron-enderecos{
+    margin-left: 5px;
+    font-size: 30px;
+    margin-top: 5px;
+}
 .tabelas-desktop{
     width:400px;
     margin-left: 50px;
