@@ -213,8 +213,8 @@ include('includes/verifica-login.php');
 
                             <br>
                             <div class="checks">
-                                <input type="radio" name="Termo de Uso" value="Usado" id="catinf">
-                                <label for="Inferior">Declaro que li e concordo integralmente com <a href="imagens/termos-ecocloset.pdf" target = "_blank">Termo de Uso</a></label>
+                                <input type="checkbox" name="termo" value="checked" id="catinf">
+                                <label for="Inferior">Declaro que li e concordo integralmente com <a href="imagens/termos-ecocloset.pdf" target="_blank">Termo de Uso</a></label>
                                 <br>
 
                             </div>
@@ -227,6 +227,23 @@ include('includes/verifica-login.php');
         </div>
     </div>
     </form>
+
+    <?php
+
+    if (isset($_SESSION['erroTermo'])) :
+
+    ?>
+
+        <script>
+            alert("Para cadastrar um produto você deve concordar com os termos de uso!");
+        </script>
+
+    <?php
+
+    endif;
+    unset($_SESSION['erroTermo']);
+
+    ?>
 
     <?php
 

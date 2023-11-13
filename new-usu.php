@@ -16,6 +16,10 @@ $consultaDados = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'
 $resultadoDados = mysqli_query($conexao, $consultaDados);
 $dados = mysqli_fetch_assoc($resultadoDados);
 
+$consultaEnd = "SELECT * FROM enderecos WHERE idusuario = '$id_usuario'";
+$resultadoEnd = mysqli_query($conexao, $consultaEnd);
+$end = mysqli_fetch_assoc($resultadoEnd);
+
 $consultaCadProdAdm = "SELECT * FROM cadastro_prod";
 $resultadoCadProdAdm = mysqli_query($conexao, $consultaCadProdAdm);
 $CadProdAdm = mysqli_fetch_assoc($resultadoCadProdAdm);
@@ -32,6 +36,10 @@ $CadProdDesk = mysqli_fetch_assoc($resultadoCadProdDesk);
 $consultaDadosDesk = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
 $resultadoDadosDesk = mysqli_query($conexao, $consultaDadosDesk);
 $dadosDesk = mysqli_fetch_assoc($resultadoDadosDesk);
+
+$consultaEndDesk = "SELECT * FROM enderecos WHERE idusuario = '$id_usuario'";
+$resultadoEndDesk = mysqli_query($conexao, $consultaEndDesk);
+$endDesk = mysqli_fetch_assoc($resultadoEndDesk);
 
 $consultaCadProdDeskAdm = "SELECT * FROM cadastro_prod";
 $resultadoCadProdDeskAdm = mysqli_query($conexao, $consultaCadProdDeskAdm);
@@ -296,201 +304,231 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
 
 
-<div class="card-enderecos" id="card-enderecos">
-    <span class="material-symbols-outlined" id="enderecos">
-        location_on
-        </span>
-    <p>Endereços</p>
-    <span class="material-symbols-outlined chevron" id="chevron-enderecos">chevron_right</span>
-</div>
-
-
-
-
-
-<div class="tudo-conteudo-enderecos">
-
-
-    <div class="adicionar-enderecos">
-        <a href=""><p>Adicionar um novo endereço</p></a>
-    </div>
-
-
-
-
-<!-- Uma parte dos enderecos -->
-
-<div class="tabela-carrinho">
-
-    <div class="nome-enderecos-cadastrados">
-        <p>Casa de Arthur</p>
-    </div>
-
-    
-    
-    <div class="editar-tabela-carrinho">
-        <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
-    </div>
-    
-    <div class="excluir-tabela-cad">
-        <a href=""><span class="material-symbols-outlined" id="delete-cad">delete</span></a>
-    </div>
-    
-    </div>
-
-
-<!-- Começo do editar cadastrados -->
-
-<div class="container-editar-produto">
-
-    
-
-        
-    
-    
-    <div class="conteudo-re-enderecos">
-    
-        <div class="re-enderecos">
-    
-            <div class="e-enderecos">
-            <p>Nome do endereço: </p>
+            <div class="card-enderecos" id="card-enderecos">
+                <span class="material-symbols-outlined" id="enderecos">
+                    location_on
+                </span>
+                <p>Endereços</p>
+                <span class="material-symbols-outlined chevron" id="chevron-enderecos">chevron_right</span>
             </div>
-            <div class="u-enderecos">
-            <p>Casa de Arthur</p>
-            </div>
-            
+
+
+
+
+
+            <div class="tudo-conteudo-enderecos">
+
+
+                <div class="adicionar-enderecos">
+                    <a href="adicionaEndereco.php">
+                        <p>Adicionar um novo endereço</p>
+                    </a>
                 </div>
-    
-        <div class="caixa-conteudo-re-enderecos">
-            <input type="text" id="u-nomesS" placeholder="Digite o novo nome">
-        </div>
-    
-    </div>
-    
-    <div class="conteudo-re-cep-enderecos">
-    
-        <div class="re-cep-enderecos">
-    
-            <div class="e-cep-enderecos">
-            <p>CEP: </p>
-            </div>
-            <div class="u-cep-enderecos">
-            <p>09061580</p>
-            </div>
-                    
-                </div>
-    
-                <div class="caixa-conteudo-re-enderecos">
-                    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite o novo CEP">
-                </div>
-    
-    </div>
-    
-    <div class="conteudo-re-cidade">
-    <div class="re-cidade">
-    
-    <div class="e-cidade">
-    <p>Cidade: </p>
-    </div>
-    <div class="u-cidade">
-    <p>São Jose dos Campos</p>
-    </div>
-    
-    </div>
-    
-    <div class="caixa-conteudo-re-enderecos">
-        <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite a nova cidade">
-    </div>
-    
-    </div>
-    
-    <div class="conteudo-re-bairro">
-    <div class="re-bairro">
-    
-        <div class="e-bairro">
-        <p>Bairro: </p>
-        </div>
-        <div class="u-bairro">
-        <p>Santa Paula</p>
-        </div>
-        
-            </div>
-    
-            <div class="caixa-conteudo-re-enderecos">
-                <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite o novo bairro">
-            </div>
-    
-        </div>
-    
-        <div class="conteudo-re-rua">
-    <div class="re-rua">
-    
-    <div class="e-rua">
-    <p>Rua: </p>
-    </div>
-    <div class="u-rua">
-    <p>Rua Epitácio Pessoa</p>
-    </div>
-    
-    </div>
-    
-    <div class="caixa-conteudo-re-enderecos">
-    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite a nova rua">
-    </div>
-    
-    </div>
-    
-    <div class="conteudo-re-numero">
-    <div class="re-numero">
-    
-    <div class="e-numero">
-    <p>Número: </p>
-    </div>
-    <div class="u-numero">
-    <p>216</p>
-    </div>
-    </div>
-    
-    <div class="caixa-conteudo-re-enderecos">
-    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite o novo número">
-    </div>
-    
-    </div>
-    
-    <div class="conteudo-complemento-enderecos">
-    <div class="re-complemento-enderecos">
-    
-    <div class="e-complemento-enderecos">
-    <p>Complemento: </p>
-    </div>
-    <div class="u-complemento-enderecos">
-    <p>Apto. 31</p>
-    </div>
-    
-    </div>
-    
-    <div class="caixa-conteudo-re-enderecos">
-    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite o novo complemento">
-    </div>
-    
-    </div>
-    
-    <div class="editar-enderecos">
-    
-    <a href=""><p>Salvar alterações</p></a>
-    
-    </div>
-    
-    
-    
-    
-    
-    
+                <?php if (mysqli_num_rows($resultadoEnd) == 0) {
+                    $_SESSION['end-vazio'] = true;
+                }
+                ?>
 
-</div>
-<!-- Fim / Fim de Uma parte dos enderecos -->
-</div>
-</div>
+                <?php
+
+                if (isset($_SESSION['end-vazio'])) :
+
+                ?>
+
+
+                    <div class="carrinho-vazio">
+                        <p>Você não tem endereços cadastrados!</p>
+                    </div>
+
+
+                <?php
+                endif;
+                unset($_SESSION['end-vazio']);
+                ?>
+
+                <!-- Uma parte dos enderecos -->
+                <?php
+                mysqli_data_seek($resultadoEnd, 0);
+                while ($endereco = mysqli_fetch_assoc($resultadoEnd)) :
+                ?>
+
+                    <div class="tabela-carrinho">
+
+                        <div class="nome-enderecos-cadastrados">
+                            <p><?= $endereco['nome_end'] ?></p>
+                        </div>
+
+
+
+                        <div class="editar-tabela-carrinho">
+                            <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
+                        </div>
+
+                        <div class="excluir-tabela-cad">
+                        <?php echo '<a href="includes/deletaEndereco.php?id=' . $endereco['idendereco'] .  '">' ?><span class="material-symbols-outlined" id="delete-cad">delete</span></a></a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Começo do editar cadastrados -->
+
+                    <div class="container-editar-produto">
+
+
+
+                        <form action="includes/editaEnderecoBanco.php?id=<?php echo $id_usuario ?>" method="post">
+
+
+                            <div class="conteudo-re-enderecos">
+
+                                <div class="re-enderecos">
+
+                                    <div class="e-enderecos">
+                                        <p>Nome do endereço: </p>
+                                    </div>
+                                    <div class="u-enderecos">
+                                        <p><?= $endereco['nome_end'] ?></p>
+                                    </div>
+
+                                </div>
+
+                                <div class="caixa-conteudo-re-enderecos">
+                                    <input type="text" id="u-nomesS" placeholder="Digite o novo nome" name="nome">
+                                </div>
+
+                            </div>
+
+                            <div class="conteudo-re-cep-enderecos">
+
+                                <div class="re-cep-enderecos">
+
+                                    <div class="e-cep-enderecos">
+                                        <p>CEP: </p>
+                                    </div>
+                                    <div class="u-cep-enderecos">
+                                        <p><?= $endereco['cep'] ?></p>
+                                    </div>
+
+                                </div>
+
+                                <div class="caixa-conteudo-re-enderecos">
+                                    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite o novo CEP" name="cep">
+                                </div>
+
+                            </div>
+
+                            <div class="conteudo-re-cidade">
+                                <div class="re-cidade">
+
+                                    <div class="e-cidade">
+                                        <p>Cidade: </p>
+                                    </div>
+                                    <div class="u-cidade">
+                                        <p><?= $endereco['cidade'] ?></p>
+                                    </div>
+
+                                </div>
+
+                                <div class="caixa-conteudo-re-enderecos">
+                                    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite a nova cidade" name="cidade">
+                                </div>
+
+                            </div>
+
+                            <div class="conteudo-re-bairro">
+                                <div class="re-bairro">
+
+                                    <div class="e-bairro">
+                                        <p>Bairro: </p>
+                                    </div>
+                                    <div class="u-bairro">
+                                        <p><?= $endereco['bairro'] ?></p>
+                                    </div>
+
+                                </div>
+
+                                <div class="caixa-conteudo-re-enderecos">
+                                    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite o novo bairro" name="bairro">
+                                </div>
+
+                            </div>
+
+                            <div class="conteudo-re-rua">
+                                <div class="re-rua">
+
+                                    <div class="e-rua">
+                                        <p>Rua: </p>
+                                    </div>
+                                    <div class="u-rua">
+                                        <p><?= $endereco['rua'] ?></p>
+                                    </div>
+
+                                </div>
+
+                                <div class="caixa-conteudo-re-enderecos">
+                                    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite a nova rua" name="rua">
+                                </div>
+
+                            </div>
+
+                            <div class="conteudo-re-numero">
+                                <div class="re-numero">
+
+                                    <div class="e-numero">
+                                        <p>Número: </p>
+                                    </div>
+                                    <div class="u-numero">
+                                        <p><?= $endereco['numero'] ?></p>
+                                    </div>
+                                </div>
+
+                                <div class="caixa-conteudo-re-enderecos">
+                                    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite o novo número" name="numero">
+                                </div>
+
+                            </div>
+
+                            <div class="conteudo-complemento-enderecos">
+                                <div class="re-complemento-enderecos">
+
+                                    <div class="e-complemento-enderecos">
+                                        <p>Complemento: </p>
+                                    </div>
+                                    <div class="u-complemento-enderecos">
+                                        <p><?= $endereco['complemento'] ?></p>
+                                    </div>
+
+                                </div>
+
+                                <div class="caixa-conteudo-re-enderecos">
+                                    <input type="text" id="caixa-conteudo-re-enderecos" placeholder="Digite o novo complemento" name="complemento">
+                                </div>
+
+                            </div>
+
+                            <div class="salvar-alt-prod">
+                                <div class="btn-slavar-alt-prod">
+                                    <input type="submit" value="Salvar alterações">
+                                </div>
+                            </div>
+                        </form>
+
+
+
+
+
+
+
+                    </div>
+
+                <?php
+                endwhile;
+                ?>
+
+                <!-- Fim / Fim de Uma parte dos enderecos -->
+            </div>
+        </div>
 
         <!-- Fim da parte enderecos -->
 
@@ -897,15 +935,15 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
             <div class="card-enderecos-desktop">
 
-            <div class="card-enderecos-desktop" id="card-enderecos-desktop">
-                <span class="material-symbols-outlined" id="enderecos">
-                    location_on
+                <div class="card-enderecos-desktop" id="card-enderecos-desktop">
+                    <span class="material-symbols-outlined" id="enderecos">
+                        location_on
                     </span>
-                <p>Endereços</p>
-                <span class="material-symbols-outlined chevron" id="chevron-enderecos-desktop">chevron_right</span>
-            </div>
+                    <p>Endereços</p>
+                    <span class="material-symbols-outlined chevron" id="chevron-enderecos-desktop">chevron_right</span>
+                </div>
 
-        </div>
+            </div>
 
             <div class="card-cadastrados-desktop">
 
@@ -1112,201 +1150,238 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
 
 
-    
 
 
 
-<div class="adicionar-enderecos-desktop">
-    <a href=""><p>Adicionar um novo endereço</p></a>
-</div>
 
+                    <div class="adicionar-enderecos-desktop">
+                        <a href="adicionaEndereco.php">
+                            <p>Adicionar um novo endereço</p>
+                        </a>
+                    </div>
 
 
 
-<!-- Uma parte dos enderecos -->
 
-<div class="conteudo-re-cep-enderecos-desktop">
+                    <!-- Uma parte dos enderecos -->
 
-<div class="tabela-carrinho-desktop" id="tabela-carrinho-desktop-ENDERECO">
-        
-<div class="nome-enderecos-cadastrados-desktop">
-    <p>Casa de Arthur</p>
-</div>
+                    <?php if (mysqli_num_rows($resultadoEndDesk) == 0) {
+                        $_SESSION['end-vazioDesk'] = true;
+                    }
+                    ?>
 
-<div class="editar-tabela-carrinho-desktop">
-    <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
-</div>
+                    <?php
 
-<div class="excluir-tabela-cad-desktop">
-    <a href=""><span class="material-symbols-outlined" id="delete-cad">delete</span></a>
-</div>
+                    if (isset($_SESSION['end-vazioDesk'])) :
 
-</div>
+                    ?>
 
 
-<!-- Começo do editar cadastrados -->
+                        <div class="carrinho-vazio">
+                            <p>Você não tem endereços cadastrados!</p>
+                        </div>
 
-<div class="container-editar-produto-desktop">
 
+                    <?php
+                    endif;
+                    unset($_SESSION['end-vazioDesk']);
+                    ?>
 
 
+                    <div class="conteudo-re-cep-enderecos-desktop">
 
+                        <?php
+                        mysqli_data_seek($resultadoEndDesk, 0);
+                        while ($enderecoDesk = mysqli_fetch_assoc($resultadoEndDesk)) :
+                        ?>
 
+                            <div class="tabela-carrinho-desktop" id="tabela-carrinho-desktop-ENDERECO">
 
-<div class="conteudo-re-enderecos-desktop">
+                                <div class="nome-enderecos-cadastrados-desktop">
+                                    <p><?= $enderecoDesk['nome_end'] ?></p>
+                                </div>
 
-<div class="re-enderecos-desktop">
+                                <div class="editar-tabela-carrinho-desktop">
+                                    <a href=""><span class="material-symbols-outlined" id="edit">edit</span></a>
+                                </div>
 
-    <div class="e-enderecos-desktop">
-    <p>Nome do endereço: </p>
-    </div>
-    <div class="u-enderecos-desktop">
-    <p>Casa de Arthur</p>
-    </div>
-    
-        </div>
+                                <div class="excluir-tabela-cad-desktop">
+                                    <?php echo '<a href="includes/deletaEndereco.php?id=' . $enderecoDesk['idendereco'] .  '">' ?><span class="material-symbols-outlined" id="delete-cad">delete</span></a>
+                                </div>
 
-<div class="caixa-conteudo-re-enderecos-desktop">
-    <input type="text" id="u-nomesS" placeholder="Digite o novo nome">
-</div>
+                            </div>
 
-</div>
 
-<div class="conteudo-re-cep-enderecos-desktop">
+                            <!-- Começo do editar cadastrados -->
 
-<div class="re-cep-enderecos-desktop">
+                            <div class="container-editar-produto-desktop">
 
-    <div class="e-cep-enderecos-desktop">
-    <p>CEP: </p>
-    </div>
-    <div class="u-cep-enderecos-desktop">
-    <p>09061580</p>
-    </div>
-            
-        </div>
 
-        <div class="caixa-conteudo-re-enderecos-desktop">
-            <input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite o novo CEP">
-        </div>
 
-</div>
 
-<div class="conteudo-re-cidade-desktop">
-<div class="re-cidade-desktop">
 
-<div class="e-cidade-desktop">
-<p>Cidade: </p>
-</div>
-<div class="u-cidade-desktop">
-<p>São Jose dos Campos</p>
-</div>
 
-</div>
+                                <div class="conteudo-re-enderecos-desktop">
+                                    <form action="includes/editaEnderecoBanco.php?id=<?php echo $id_usuario ?>" method="post">
 
-<div class="caixa-conteudo-re-enderecos-desktop">
-<input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite a nova cidade">
-</div>
+                                        <div class="re-enderecos-desktop">
 
-</div>
+                                            <div class="e-enderecos-desktop">
+                                                <p>Nome do endereço: </p>
+                                            </div>
+                                            <div class="u-enderecos-desktop">
+                                                <p><?= $enderecoDesk['nome_end'] ?></p>
+                                            </div>
 
-<div class="conteudo-re-bairro-desktop">
-<div class="re-bairro-desktop">
+                                        </div>
 
-<div class="e-bairro-desktop">
-<p>Bairro: </p>
-</div>
-<div class="u-bairro-desktop">
-<p>Santa Paula</p>
-</div>
+                                        <div class="caixa-conteudo-re-enderecos-desktop">
+                                            <input type="text" id="u-nomesS" placeholder="Digite o novo nome" name="nome">
+                                        </div>
 
-    </div>
+                                </div>
 
-    <div class="caixa-conteudo-re-enderecos-desktop">
-        <input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite o novo bairro">
-    </div>
+                                <div class="conteudo-re-cep-enderecos-desktop">
 
-</div>
+                                    <div class="re-cep-enderecos-desktop">
 
-<div class="conteudo-re-rua-desktop">
-<div class="re-rua-desktop">
+                                        <div class="e-cep-enderecos-desktop">
+                                            <p>CEP: </p>
+                                        </div>
+                                        <div class="u-cep-enderecos-desktop">
+                                            <p><?= $enderecoDesk['cep'] ?></p>
+                                        </div>
 
-<div class="e-rua-desktop">
-<p>Rua: </p>
-</div>
-<div class="u-rua-desktop">
-<p>Rua Epitácio Pessoa</p>
-</div>
+                                    </div>
 
-</div>
+                                    <div class="caixa-conteudo-re-enderecos-desktop">
+                                        <input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite o novo CEP" name="cep">
+                                    </div>
 
-<div class="caixa-conteudo-re-enderecos-desktop">
-<input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite a nova rua">
-</div>
+                                </div>
 
-</div>
+                                <div class="conteudo-re-cidade-desktop">
+                                    <div class="re-cidade-desktop">
 
-<div class="conteudo-re-numero-desktop">
-<div class="re-numero-desktop">
+                                        <div class="e-cidade-desktop">
+                                            <p>Cidade: </p>
+                                        </div>
+                                        <div class="u-cidade-desktop">
+                                            <p><?= $enderecoDesk['cidade'] ?></p>
+                                        </div>
 
-<div class="e-numero-desktop">
-<p>Número: </p>
-</div>
-<div class="u-numero-desktop">
-<p>216</p>
-</div>
-</div>
+                                    </div>
 
-<div class="caixa-conteudo-re-enderecos-desktop">
-<input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite o novo número">
-</div>
+                                    <div class="caixa-conteudo-re-enderecos-desktop">
+                                        <input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite a nova cidade" name="cidade">
+                                    </div>
 
-</div>
+                                </div>
 
-<div class="conteudo-complemento-enderecos-desktop">
-<div class="re-complemento-enderecos-desktop">
+                                <div class="conteudo-re-bairro-desktop">
+                                    <div class="re-bairro-desktop">
 
-<div class="e-complemento-enderecos-desktop">
-<p>Complemento: </p>
-</div>
-<div class="u-complemento-enderecos-desktop">
-<p>Apto. 31</p>
-</div>
+                                        <div class="e-bairro-desktop">
+                                            <p>Bairro: </p>
+                                        </div>
+                                        <div class="u-bairro-desktop">
+                                            <p><?= $enderecoDesk['bairro'] ?></p>
+                                        </div>
 
-</div>
+                                    </div>
 
-<div class="caixa-conteudo-re-enderecos-desktop">
-<input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite o novo complemento">
-</div>
+                                    <div class="caixa-conteudo-re-enderecos-desktop">
+                                        <input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite o novo bairro" name="bairro">
+                                    </div>
 
-</div>
+                                </div>
 
-<div class="editar-enderecos-desktop">
+                                <div class="conteudo-re-rua-desktop">
+                                    <div class="re-rua-desktop">
 
-<a href=""><p>Salvar alterações</p></a>
+                                        <div class="e-rua-desktop">
+                                            <p>Rua: </p>
+                                        </div>
+                                        <div class="u-rua-desktop">
+                                            <p>
+                                                <?= $enderecoDesk['rua'] ?></p>
+                                        </div>
 
-</div>
+                                    </div>
 
+                                    <div class="caixa-conteudo-re-enderecos-desktop">
+                                        <input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite a nova rua" name="rua">
+                                    </div>
 
+                                </div>
 
+                                <div class="conteudo-re-numero-desktop">
+                                    <div class="re-numero-desktop">
 
+                                        <div class="e-numero-desktop">
+                                            <p>Número: </p>
+                                        </div>
+                                        <div class="u-numero-desktop">
+                                            <p><?= $enderecoDesk['numero'] ?></p>
+                                        </div>
+                                    </div>
 
+                                    <div class="caixa-conteudo-re-enderecos-desktop">
+                                        <input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite o novo número" name="numero">
+                                    </div>
 
+                                </div>
 
+                                <div class="conteudo-complemento-enderecos-desktop">
+                                    <div class="re-complemento-enderecos-desktop">
 
-</div>
+                                        <div class="e-complemento-enderecos-desktop">
+                                            <p>Complemento: </p>
+                                        </div>
+                                        <div class="u-complemento-enderecos-desktop">
+                                            <p><?= $enderecoDesk['complemento'] ?></p>
+                                        </div>
 
+                                    </div>
 
+                                    <div class="caixa-conteudo-re-enderecos-desktop">
+                                        <input type="text" id="caixa-conteudo-re-enderecos-desktop" placeholder="Digite o novo complemento" name="complemento">
+                                    </div>
 
-</div>
+                                </div>
 
-<!-- Fim/fim de Uma parte dos enderecos -->
+                                <div class="salvar-alt-prod">
+                                    <div class="btn-slavar-alt-prod">
+                                        <input type="submit" value="Salvar alterações">
+                                    </div>
+                                </div>
+                                </form>
 
 
 
 
 
 
-</div>
+                            <?php
+                        endwhile
+                            ?>
+
+
+                            </div>
+
+
+
+                    </div>
+
+
+                    <!-- Fim/fim de Uma parte dos enderecos -->
+
+
+
+
+
+
+                </div>
 
                 <!-- Fim da parte enderecos desktop -->
 
@@ -1695,196 +1770,196 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
 
 <script>
-     document.addEventListener("DOMContentLoaded", function () {
-     // Código para dispositivos móveis
-     const cardCarrinho = document.querySelector(".card-carrinho");
-     const cardDados = document.querySelector(".card-dados");
-     const cardCadastrados = document.querySelector(".card-cadastrados");
-     const cardEnderecos = document.querySelector(".card-enderecos");
-     const conteudoCarrinho = document.getElementById("conteudo-carrinho");
-     const conteudoDados = document.getElementById("conteudo-dados");
-     const conteudoCarrinhoCadastrados = document.querySelector(".conteudo-carrinho-cadastrados");
-     const conteudoEnderecos = document.querySelector(".tudo-conteudo-enderecos");
-     const botõesEditar = document.querySelectorAll(".editar-tabela-carrinho");
-     const formulários = document.querySelectorAll(".container-editar-produto");
-     const chevronCarrinho = document.getElementById("chevron-carrinho");
-     const chevronDados = document.getElementById("chevron-dados");
-     const chevronCadastrados = document.getElementById("chevron-cadastrados");
-     const chevronEnderecos = document.getElementById("chevron-enderecos");
- 
-     function removeActiveClasses() {
-         cardCarrinho.classList.remove('active');
-         cardDados.classList.remove('active');
-         cardCadastrados.classList.remove('active');
-         cardEnderecos.classList.remove('active');
-         conteudoCarrinho.style.display = "none";
-         conteudoDados.style.display = "none";
-         conteudoCarrinhoCadastrados.style.display = "none";
-         conteudoEnderecos.style.display = "none";
-         formulários.forEach(form => {
-             form.style.display = "none";
-         });
-         chevronCarrinho.classList.remove('rotate-down');
-         chevronDados.classList.remove('rotate-down');
-         chevronCadastrados.classList.remove('rotate-down');
-         chevronEnderecos.classList.remove('rotate-down');
-     }
- 
-     cardCarrinho.addEventListener("click", function () {
-         if (cardCarrinho.classList.contains('active')) {
-             removeActiveClasses();
-         } else {
-             removeActiveClasses();
-             cardCarrinho.classList.add('active');
-             chevronCarrinho.classList.add('rotate-down');
-             conteudoCarrinho.style.display = "block";
-         }
-     });
- 
-     cardDados.addEventListener("click", function () {
-         if (cardDados.classList.contains('active')) {
-             removeActiveClasses();
-         } else {
-             removeActiveClasses();
-             cardDados.classList.add('active');
-             chevronDados.classList.add('rotate-down');
-             conteudoDados.style.display = "block";
-         }
-     });
- 
-     cardCadastrados.addEventListener("click", function () {
-         if (cardCadastrados.classList.contains('active')) {
-             removeActiveClasses();
-         } else {
-             removeActiveClasses();
-             cardCadastrados.classList.add('active');
-             chevronCadastrados.classList.add('rotate-down');
-             conteudoCarrinhoCadastrados.style.display = "block";
-         }
-     });
- 
-     botõesEditar.forEach((botão, index) => {
-         botão.addEventListener("click", function(e) {
-             e.preventDefault();
- 
-             if (formulários[index].style.display === "block") {
-                 formulários[index].style.display = "none";
-             } else {
-                 formulários.forEach(form => {
-                     form.style.display = "none";
-                 });
-                 formulários[index].style.display = "block";
-             }
-         });
-     });
+    document.addEventListener("DOMContentLoaded", function() {
+        // Código para dispositivos móveis
+        const cardCarrinho = document.querySelector(".card-carrinho");
+        const cardDados = document.querySelector(".card-dados");
+        const cardCadastrados = document.querySelector(".card-cadastrados");
+        const cardEnderecos = document.querySelector(".card-enderecos");
+        const conteudoCarrinho = document.getElementById("conteudo-carrinho");
+        const conteudoDados = document.getElementById("conteudo-dados");
+        const conteudoCarrinhoCadastrados = document.querySelector(".conteudo-carrinho-cadastrados");
+        const conteudoEnderecos = document.querySelector(".tudo-conteudo-enderecos");
+        const botõesEditar = document.querySelectorAll(".editar-tabela-carrinho");
+        const formulários = document.querySelectorAll(".container-editar-produto");
+        const chevronCarrinho = document.getElementById("chevron-carrinho");
+        const chevronDados = document.getElementById("chevron-dados");
+        const chevronCadastrados = document.getElementById("chevron-cadastrados");
+        const chevronEnderecos = document.getElementById("chevron-enderecos");
 
-     cardEnderecos.addEventListener("click", function () {
-         if (cardEnderecos.classList.contains('active')) {
-             removeActiveClasses();
-         } else {
-             removeActiveClasses();
-             cardEnderecos.classList.add('active');
-             chevronEnderecos.classList.add('rotate-down');
-             conteudoEnderecos.style.display = "block";
-         }
-     });
-
- });
- 
- document.addEventListener("DOMContentLoaded", function () {
-    // Código para desktop
-    const cardCarrinhoDesktop = document.querySelector(".card-carrinho-desktop");
-    const cardDadosDesktop = document.querySelector(".card-dados-desktop");
-    const cardCadastradosDesktop = document.querySelector(".card-cadastrados-desktop");
-    const conteudoCarrinhoDesktop = document.getElementById("conteudo-carrinho-desktop");
-    const conteudoDadosDesktop = document.getElementById("conteudo-dados-desktop");
-    const conteudoCarrinhoCadastradosDesktop = document.querySelector(".conteudo-carrinho-cadastrados-desktop");
-    const botõesEditarDesktop = document.querySelectorAll(".editar-tabela-carrinho-desktop");
-    const formuláriosDesktop = document.querySelectorAll(".container-editar-produto-desktop");
-    
-
-
-    const cardEnderecosDesktop = document.querySelector(".card-enderecos-desktop");
-const enderecosDesktop = document.querySelector(".enderecos-desktop");
-const editarEnderecosCadastradosDesktop = document.querySelector(".editar-enderecos-cadastrados-desktop");
-const tabelaEnderecosDesktop = document.querySelector(".tabela-enderecos-desktop");
-
-
-
-
-    function removeActiveClassesDesktop() {
-        cardCarrinhoDesktop.classList.remove('active');
-        cardDadosDesktop.classList.remove('active');
-        cardCadastradosDesktop.classList.remove('active');
-        cardEnderecosDesktop.classList.remove('active');
-        conteudoCarrinhoDesktop.style.display = "none";
-        conteudoDadosDesktop.style.display = "none";
-        conteudoCarrinhoCadastradosDesktop.style.display = "none";
-        enderecosDesktop.style.display = "none";
-        formuláriosDesktop.forEach(form => {
-            form.style.display = "none";
-        });
-    }
-
-    cardCarrinhoDesktop.addEventListener("click", function () {
-        if (cardCarrinhoDesktop.classList.contains('active')) {
-            removeActiveClassesDesktop();
-        } else {
-            removeActiveClassesDesktop();
-            cardCarrinhoDesktop.classList.add('active');
-            conteudoCarrinhoDesktop.style.display = "block";
+        function removeActiveClasses() {
+            cardCarrinho.classList.remove('active');
+            cardDados.classList.remove('active');
+            cardCadastrados.classList.remove('active');
+            cardEnderecos.classList.remove('active');
+            conteudoCarrinho.style.display = "none";
+            conteudoDados.style.display = "none";
+            conteudoCarrinhoCadastrados.style.display = "none";
+            conteudoEnderecos.style.display = "none";
+            formulários.forEach(form => {
+                form.style.display = "none";
+            });
+            chevronCarrinho.classList.remove('rotate-down');
+            chevronDados.classList.remove('rotate-down');
+            chevronCadastrados.classList.remove('rotate-down');
+            chevronEnderecos.classList.remove('rotate-down');
         }
-    });
 
-    cardDadosDesktop.addEventListener("click", function () {
-        if (cardDadosDesktop.classList.contains('active')) {
-            removeActiveClassesDesktop();
-        } else {
-            removeActiveClassesDesktop();
-            cardDadosDesktop.classList.add('active');
-            conteudoDadosDesktop.style.display = "block";
-        }
-    });
-
-    cardCadastradosDesktop.addEventListener("click", function () {
-        if (cardCadastradosDesktop.classList.contains('active')) {
-            removeActiveClassesDesktop();
-        } else {
-            removeActiveClassesDesktop();
-            cardCadastradosDesktop.classList.add('active');
-            conteudoCarrinhoCadastradosDesktop.style.display = "block";
-        }
-    });
-
-    botõesEditarDesktop.forEach((botão, index) => {
-        botão.addEventListener("click", function(e) {
-            e.preventDefault();
-
-            if (formuláriosDesktop[index].style.display === "block") {
-                formuláriosDesktop[index].style.display = "none";
+        cardCarrinho.addEventListener("click", function() {
+            if (cardCarrinho.classList.contains('active')) {
+                removeActiveClasses();
             } else {
-                formuláriosDesktop.forEach(form => {
-                    form.style.display = "none";
-                });
-                formuláriosDesktop[index].style.display = "block";
+                removeActiveClasses();
+                cardCarrinho.classList.add('active');
+                chevronCarrinho.classList.add('rotate-down');
+                conteudoCarrinho.style.display = "block";
+            }
+        });
+
+        cardDados.addEventListener("click", function() {
+            if (cardDados.classList.contains('active')) {
+                removeActiveClasses();
+            } else {
+                removeActiveClasses();
+                cardDados.classList.add('active');
+                chevronDados.classList.add('rotate-down');
+                conteudoDados.style.display = "block";
+            }
+        });
+
+        cardCadastrados.addEventListener("click", function() {
+            if (cardCadastrados.classList.contains('active')) {
+                removeActiveClasses();
+            } else {
+                removeActiveClasses();
+                cardCadastrados.classList.add('active');
+                chevronCadastrados.classList.add('rotate-down');
+                conteudoCarrinhoCadastrados.style.display = "block";
+            }
+        });
+
+        botõesEditar.forEach((botão, index) => {
+            botão.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                if (formulários[index].style.display === "block") {
+                    formulários[index].style.display = "none";
+                } else {
+                    formulários.forEach(form => {
+                        form.style.display = "none";
+                    });
+                    formulários[index].style.display = "block";
+                }
+            });
+        });
+
+        cardEnderecos.addEventListener("click", function() {
+            if (cardEnderecos.classList.contains('active')) {
+                removeActiveClasses();
+            } else {
+                removeActiveClasses();
+                cardEnderecos.classList.add('active');
+                chevronEnderecos.classList.add('rotate-down');
+                conteudoEnderecos.style.display = "block";
             }
         });
 
     });
 
-    
+    document.addEventListener("DOMContentLoaded", function() {
+        // Código para desktop
+        const cardCarrinhoDesktop = document.querySelector(".card-carrinho-desktop");
+        const cardDadosDesktop = document.querySelector(".card-dados-desktop");
+        const cardCadastradosDesktop = document.querySelector(".card-cadastrados-desktop");
+        const conteudoCarrinhoDesktop = document.getElementById("conteudo-carrinho-desktop");
+        const conteudoDadosDesktop = document.getElementById("conteudo-dados-desktop");
+        const conteudoCarrinhoCadastradosDesktop = document.querySelector(".conteudo-carrinho-cadastrados-desktop");
+        const botõesEditarDesktop = document.querySelectorAll(".editar-tabela-carrinho-desktop");
+        const formuláriosDesktop = document.querySelectorAll(".container-editar-produto-desktop");
 
-    cardEnderecosDesktop.addEventListener("click", function () {
-        if (cardEnderecosDesktop.classList.contains('active')) {
-            removeActiveClassesDesktop();
-        } else {
-            removeActiveClassesDesktop();
-            cardEnderecosDesktop.classList.add('active');
-            enderecosDesktop.style.display = "block";
+
+
+        const cardEnderecosDesktop = document.querySelector(".card-enderecos-desktop");
+        const enderecosDesktop = document.querySelector(".enderecos-desktop");
+        const editarEnderecosCadastradosDesktop = document.querySelector(".editar-enderecos-cadastrados-desktop");
+        const tabelaEnderecosDesktop = document.querySelector(".tabela-enderecos-desktop");
+
+
+
+
+        function removeActiveClassesDesktop() {
+            cardCarrinhoDesktop.classList.remove('active');
+            cardDadosDesktop.classList.remove('active');
+            cardCadastradosDesktop.classList.remove('active');
+            cardEnderecosDesktop.classList.remove('active');
+            conteudoCarrinhoDesktop.style.display = "none";
+            conteudoDadosDesktop.style.display = "none";
+            conteudoCarrinhoCadastradosDesktop.style.display = "none";
+            enderecosDesktop.style.display = "none";
+            formuláriosDesktop.forEach(form => {
+                form.style.display = "none";
+            });
         }
-    });
 
-});
+        cardCarrinhoDesktop.addEventListener("click", function() {
+            if (cardCarrinhoDesktop.classList.contains('active')) {
+                removeActiveClassesDesktop();
+            } else {
+                removeActiveClassesDesktop();
+                cardCarrinhoDesktop.classList.add('active');
+                conteudoCarrinhoDesktop.style.display = "block";
+            }
+        });
+
+        cardDadosDesktop.addEventListener("click", function() {
+            if (cardDadosDesktop.classList.contains('active')) {
+                removeActiveClassesDesktop();
+            } else {
+                removeActiveClassesDesktop();
+                cardDadosDesktop.classList.add('active');
+                conteudoDadosDesktop.style.display = "block";
+            }
+        });
+
+        cardCadastradosDesktop.addEventListener("click", function() {
+            if (cardCadastradosDesktop.classList.contains('active')) {
+                removeActiveClassesDesktop();
+            } else {
+                removeActiveClassesDesktop();
+                cardCadastradosDesktop.classList.add('active');
+                conteudoCarrinhoCadastradosDesktop.style.display = "block";
+            }
+        });
+
+        botõesEditarDesktop.forEach((botão, index) => {
+            botão.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                if (formuláriosDesktop[index].style.display === "block") {
+                    formuláriosDesktop[index].style.display = "none";
+                } else {
+                    formuláriosDesktop.forEach(form => {
+                        form.style.display = "none";
+                    });
+                    formuláriosDesktop[index].style.display = "block";
+                }
+            });
+
+        });
+
+
+
+        cardEnderecosDesktop.addEventListener("click", function() {
+            if (cardEnderecosDesktop.classList.contains('active')) {
+                removeActiveClassesDesktop();
+            } else {
+                removeActiveClassesDesktop();
+                cardEnderecosDesktop.classList.add('active');
+                enderecosDesktop.style.display = "block";
+            }
+        });
+
+    });
 
     function submitForm() {
         document.getElementById("uploadForm").submit();

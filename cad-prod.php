@@ -3,6 +3,12 @@ session_start();
 
 include("includes/conexao.php");
 
+if (!isset($_POST['termo'])) {
+    $_SESSION['erroTermo'] = true;
+    header('Location: produto.php');
+    exit;
+}
+
 $nome_prod = mysqli_real_escape_string($conexao, trim($_POST['nome_prod']));
 $valor = mysqli_real_escape_string($conexao, trim($_POST['valor']));
 $descr = mysqli_real_escape_string($conexao, trim($_POST['descr']));
