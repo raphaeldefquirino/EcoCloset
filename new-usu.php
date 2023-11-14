@@ -240,36 +240,6 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
                     </div>
 
-                    <div class="re-cep">
-
-                        <div class="e-cep">
-                            <p>CEP: </p>
-                        </div>
-                        <div class="u-cep">
-                            <p><?= $dados['CEP'] ?></p>
-                        </div>
-
-                    </div>
-
-                    <div class="re-endereco">
-
-                        <div class="e-endereco">
-                            <p>Endereço: </p>
-                        </div>
-                        <div class="u-endereco">
-                            <p><?= $dados['endereco'] ?></p>
-                        </div>
-
-                    </div>
-                    <div class="re-complemento">
-
-                        <div class="e-complemento">
-                            <p>Complemento: </p>
-                        </div>
-                        <div class="u-complemento">
-                            <p><?= $dados['complemento'] ?></p>
-                        </div>
-                    </div>
 
                     <div class="re-tel">
 
@@ -1084,37 +1054,6 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                             </div>
 
                         </div>
-                        <div class="re-cep-desktop">
-
-                            <div class="e-cep-desktop">
-                                <p>CEP: </p>
-                            </div>
-                            <div class="u-cep-desktop">
-                                <p><?= $dadosDesk['CEP'] ?></p>
-                            </div>
-
-                        </div>
-
-                        <div class="re-endereco-desktop">
-
-                            <div class="e-endereco-desktop">
-                                <p>Endereço: </p>
-                            </div>
-                            <div class="u-endereco-desktop">
-                                <p><?= $dadosDesk['endereco'] ?></p>
-                            </div>
-
-                        </div>
-
-                        <div class="re-complemento-desktop">
-
-                            <div class="e-complemento-desktop">
-                                <p>Complemento: </p>
-                            </div>
-                            <div class="u-complemento-desktop">
-                                <p><?= $dadosDesk['complemento'] ?></p>
-                            </div>
-                        </div>
 
                         <div class="re-tel-desktop">
 
@@ -1361,13 +1300,13 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
 
 
-
+                                </div>
                             <?php
                         endwhile
                             ?>
 
 
-                            </div>
+                            
 
 
 

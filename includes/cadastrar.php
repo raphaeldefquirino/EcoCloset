@@ -9,10 +9,6 @@ $confirmaSenha = mysqli_real_escape_string($conexao, trim($_POST['confirmaSenha'
 $nome = mysqli_real_escape_string($conexao, trim($_POST['nome']));
 $sobrenome = mysqli_real_escape_string($conexao, trim($_POST['sobrenome']));
 $telefone = mysqli_real_escape_string($conexao, $_POST['telefone']);
-$cep = mysqli_real_escape_string($conexao, $_POST['cep']);
-$endereco = mysqli_real_escape_string($conexao, $_POST['endereco']);
-$complemento = mysqli_real_escape_string($conexao, $_POST['complemento']);
-
 
 $sql="SELECT COUNT(*) AS TOTAL FROM cadastro_usuario WHERE email = '$email'";
 $result = mysqli_query($conexao, $sql);
@@ -27,7 +23,7 @@ if ($row['TOTAL'] == 1) {
     header('Location: ../cadastro.php');
     exit;
 } else {
-    $sql = "INSERT INTO cadastro_usuario (idusuario, email, senha, nome, sobrenome,telefone, CEP, endereco, complemento, path_user) VALUES ('', '$email', '$senha', '$nome', '$sobrenome', '$telefone', '$cep', '$endereco', '$complemento', 'uploads/foto-user-exe.png')";
+    $sql = "INSERT INTO cadastro_usuario (idusuario, email, senha, nome, sobrenome,telefone, path_user) VALUES ('', '$email', '$senha', '$nome', '$sobrenome', '$telefone', 'uploads/foto-user-exe.png')";
     if ($conexao->query($sql) === TRUE) {
         $_SESSION['status_cadastro'] = true;
         $conexao->close();
@@ -37,7 +33,5 @@ if ($row['TOTAL'] == 1) {
         echo "Erro ao inserir no banco de dados: " . $conexao->error;
     }
 }
-
-
 
 ?>

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06/11/2023 às 00:23
+-- Tempo de geração: 14/11/2023 às 02:38
 -- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.2.4
+-- Versão do PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -45,7 +45,7 @@ CREATE TABLE `cadastro_prod` (
 --
 
 INSERT INTO `cadastro_prod` (`idproduto`, `nome_prod`, `descricao_prod`, `valor`, `categoria`, `subcategoria`, `condicao`, `path`, `nome_og_arq`, `id_usu`) VALUES
-(36, 'Conjunto do barcelona', 'conjunto infantil Barcelona, usado apenas 2x composição do tecido: 100', 500.00, 'Kids', 'Camisa', 'Pouco usado', 'uploads/65429f5800061.jpg', 'conjunto-barcelona.jpg', 1),
+(36, 'Camisa do marcão', 'aletaria', 35.00, 'Kids', 'Macacão', 'Pouco usado', 'uploads/65429f5800061.jpg', 'conjunto-barcelona.jpg', 1),
 (37, 'Kit 2 macacões', 'kit 2 macacão carte\'s 6-9m  novo com etiqueta', 179.99, 'Kids', 'Macacão', 'Novo', 'uploads/6542a0693f0c2.jpg', 'macacão.jpg', 1),
 (38, 'Boneco do stich', 'personagem stitch em pelúcia antialérgico, super fofo', 80.00, 'Kids', 'Acessório', 'Pouco', 'uploads/6542a2fa6b749.jpg', 'stich.jpg', 1),
 (42, 'Sapatinho do Mickey Mouse', 'tamanho 23. usado poucas x , possui marcas de uso no Mickey do pé esqu', 35.90, 'Kids', 'Calçado', 'Usado', 'uploads/6542aa64ecd84.jpg', 'tenis-mickey.jpg', 1),
@@ -95,9 +95,6 @@ CREATE TABLE `cadastro_usuario` (
   `nome` varchar(45) NOT NULL,
   `sobrenome` varchar(50) NOT NULL,
   `telefone` varchar(15) NOT NULL,
-  `CEP` varchar(9) NOT NULL,
-  `endereco` varchar(50) NOT NULL,
-  `complemento` varchar(25) NOT NULL,
   `path_user` varchar(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -105,12 +102,11 @@ CREATE TABLE `cadastro_usuario` (
 -- Despejando dados para a tabela `cadastro_usuario`
 --
 
-INSERT INTO `cadastro_usuario` (`idusuario`, `email`, `senha`, `nome`, `sobrenome`, `telefone`, `CEP`, `endereco`, `complemento`, `path_user`) VALUES
-(1, 'rapha@gmail.com', '123', 'Raphael', 'de França Quirino', '(11)98670022', '05445-020', 'Rua do sobe e desce, Número 2000, Santa Paula, São', 'Ap 530, Bloco A', 'uploads/65428335c6247.jpg'),
-(2, 'arthur@gmail.com', '123', 'Arthur', 'Bergamaço Alves', '(11)  98967033', '04303-150', 'Rua dos Guararapes, Vila Formosa, São Paulo, Númer', 'Casa 3', 'uploads/6531695eec41a.png'),
-(3, 'adm@gmail.com', 'adm123adm', 'adm', 'adm', '(11)90909090', '90990-91', 'Rua do adm', 'casa do adm ', 'uploads/foto-user-exe.png'),
-(4, 'nicolas@gmail.com', '123', 'Nicolas', 'de Lima', '(11) 989898989', '09560-010', 'Rua do gurarapis', 'Barraco 2', 'uploads/foto-user-exe.png'),
-(5, 'gil@gmail.com', '123', 'Gil', 'Gil', '(11)8998898', '06590-040', 'Rua do sobe e desce', 'Ap 2', 'uploads/foto-user-exe.png');
+INSERT INTO `cadastro_usuario` (`idusuario`, `email`, `senha`, `nome`, `sobrenome`, `telefone`, `path_user`) VALUES
+(1, 'rapha@gmail.com', 'raphael@123', 'Raphael', 'de França Quirino', '(11)98670022', 'uploads/foto-user-exe.png'),
+(2, 'arthur@gmail.com', 'arthur@123', 'Arthur', 'Bergamaço Alves', '(11)  98967033', 'uploads/foto-user-exe.png'),
+(3, 'adm@gmail.com', 'adm123adm', 'adm', 'adm', '(11)90909090', 'uploads/foto-user-exe.png'),
+(4, 'nicolas@gmail.com', '123', 'Nicolas', 'de Lima', '(11) 989898989', 'uploads/foto-user-exe.png');
 
 -- --------------------------------------------------------
 
@@ -130,6 +126,14 @@ CREATE TABLE `enderecos` (
   `idusuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Despejando dados para a tabela `enderecos`
+--
+
+INSERT INTO `enderecos` (`idendereco`, `nome_end`, `cep`, `cidade`, `bairro`, `rua`, `numero`, `complemento`, `idusuario`) VALUES
+(1, 'Minha casa', '09561-085', 'São José do Rio Preto', 'Águas Claras', 'Av. Dos Guararapis', '2000', 'Bloco C', 1),
+(4, 'Trabalho', '09054-10', 'São Leopoldo', 'Surupá do Norte', 'Rua do Kennedy', '2000', 'Ap 21', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -148,7 +152,7 @@ CREATE TABLE `pedidos` (
 --
 
 INSERT INTO `pedidos` (`idpedido`, `idusuario`, `status`, `idproduto`) VALUES
-(80, 1, 'carrinho', 61);
+(81, 1, 'carrinho', 48);
 
 --
 -- Índices para tabelas despejadas
@@ -193,19 +197,19 @@ ALTER TABLE `cadastro_prod`
 -- AUTO_INCREMENT de tabela `cadastro_usuario`
 --
 ALTER TABLE `cadastro_usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `enderecos`
 --
 ALTER TABLE `enderecos`
-  MODIFY `idendereco` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idendereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `idpedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `idpedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- Restrições para tabelas despejadas

@@ -133,21 +133,8 @@ session_start();
                         <label for="telefone">Telefone</label>
                         <input type="text" name="telefone" id="telefone" placeholder="Telefone" required>
                     </div>
-                    <div class="textfield">
-                        <br>
-                        <label for="cep">CEP</label>
-                        <input type="text" name="cep" id="cep" placeholder="CEP" required>
-                    </div>
-                    <div class="textfield">
-                        <br>
-                        <label for="endereco">Endereço</label>
-                        <input type="text" name="endereco" id="endereco" placeholder="Endereço" required>
-                    </div>
-                    <div class="textfield">
-                        <br>
-                        <label for="complemento">Complemento</label>
-                        <input type="text" name="complemento" id="complemento" placeholder="Complemento" required>
-                    </div>
+                    
+                    
                     <button class="btn-login">Cadastrar</button>
             </div>
         </div>

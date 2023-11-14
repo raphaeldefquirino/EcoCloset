@@ -130,21 +130,7 @@ $dados = mysqli_fetch_assoc($resultadoDados);
                         <label for="telefone">Telefone</label>
                         <input type="text" name="telefone" id="telefone" placeholder="Telefone" required value="<?= $dados['telefone']?>">
                     </div>
-                    <div class="textfield">
-                        <br>
-                        <label for="cep">CEP</label>
-                        <input type="text" name="cep" id="cep" placeholder="CEP" required value="<?= $dados['CEP']?>">
-                    </div>
-                    <div class="textfield">
-                        <br>
-                        <label for="endereco">Endereço</label>
-                        <input type="text" name="endereco" id="endereco" placeholder="Endereço" required value="<?= $dados['endereco']?>">
-                    </div>
-                    <div class="textfield">
-                        <br>
-                        <label for="complemento">Complemento</label>
-                        <input type="text" name="complemento" id="complemento" placeholder="Complemento" required value="<?= $dados['complemento']?>">
-                    </div>
+
                     <button class="btn-login">Editar</button>
             </div>
         </div>

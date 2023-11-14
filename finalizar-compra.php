@@ -8,6 +8,13 @@ $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 $sql = "SELECT * FROM cadastro_prod WHERE idproduto = '$id'";
 $query = mysqli_query($conexao, $sql);
 $row = mysqli_fetch_assoc($query);
+
+$id_usuario = $_SESSION['id_usuario'];
+
+$consultaEnd = "SELECT * FROM enderecos WHERE idusuario = '$id_usuario'";
+$resultadoEnd = mysqli_query($conexao, $consultaEnd);
+$end = mysqli_fetch_assoc($resultadoEnd);
+
 ?>
 
 <!DOCTYPE html>
@@ -135,7 +142,6 @@ $row = mysqli_fetch_assoc($query);
                     <select name="" id="" class="month-input">
                         <option value="month" selected disabled>Endereço de Entrega</option>
                         <option value="01">01</option>
-
                     </select>
                     <br><br>
                 </div>
