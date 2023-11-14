@@ -35,7 +35,7 @@ $dados = mysqli_fetch_assoc($resultadoDados);
     <div class="main-login">
         <div class="left-login">
 
-            <img src="imagens/shopping-animate.svg" class="img-cad" alt="">
+            <img src="imagens/address-animate.svg" class="img-cad" alt="">
 
         </div>
         <div class="right-login">

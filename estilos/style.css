@@ -2279,6 +2279,23 @@ body{
     border-radius: 20px;
     padding-top: 10px;
     padding-left: 10px;
+    padding-bottom: 20px;
+}
+.carrinho-vazio-desktop{
+    text-align: center;
+    margin-top: 0px;
+    font-size: 20px;
+}
+.cadastrados-vazio-desktop{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.carrinho-vazio{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
 }
 .tabela-carrinho-desktop{
     background-color: white;
@@ -2299,6 +2316,10 @@ body{
 }
 .texto-tabela-carrinho-desktop{
     margin-left: 8px;
+    width: 180px;
+}
+#primeiro-card{
+    width: 220px;
 }
 .preco-tabela-carrinho-desktop{
     font-size: 20px;
@@ -2309,7 +2330,7 @@ body{
     margin-top: 15px;
 }
 .excluir-tabela-carrinho-desktop{
-    margin-left: 40px;
+    margin-left: 0px;
 }
 .excluir-tabela-carrinho-desktop span{
     color: black;
@@ -2535,10 +2556,10 @@ body{
     padding-top: 10px;
     padding-bottom: 5px;
     padding-left: 10px;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 .editar-tabela-carrinho-desktop{
-    margin-left: 20px;
+    margin-left: 0px;
 }
 .editar-tabela-carrinho-desktop span{
     color: #af00ff;

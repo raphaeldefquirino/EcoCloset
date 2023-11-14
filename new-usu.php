@@ -978,7 +978,7 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                     ?>
 
 
-                        <div class="carrinho-vazio-desktop">
+                        <div class="cadastrados-vazio-desktop" id="carrinho-vazio-cadastrados-desktop">
                             <p>O seu carrinho está vazio!</p>
                         </div>
 
@@ -1008,7 +1008,7 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                                     <?php echo '<a href="">' ?><img src="<?= $produtoDesk['path'] ?>" alt="" height="110px" width="100px"></a>
                                 </div>
 
-                                <div class="texto-tabela-carrinho-desktop">
+                                <div class="texto-tabela-carrinho-desktop" id="primeiro-card">
                                     <div class="preco-tabela-carrinho-desktop">
                                         <p>R$ <?= $produtoDesk['valor'] ?></p>
                                     </div>
