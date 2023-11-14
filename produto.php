@@ -17,6 +17,8 @@ include('includes/verifica-login.php');
     <link rel="stylesheet" href="estilos/media-query.css">
     <script src="https://kit.fontawesome.com/8ad860e92b.js" crossorigin="anonymous"></script>
     <title>Cadastro do Produto</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 
 <body class="cad">
@@ -110,7 +112,7 @@ include('includes/verifica-login.php');
 
                 ?>
 
-                <form action="cad-prod.php" method="post" enctype="multipart/form-data">
+                <form action="cad-prod.php" method="post" enctype="multipart/form-data" id="meuFormulario">
                     <div class="textfield">
                         <br>
                         <label for="usuario">Nome simples</label>
@@ -119,7 +121,7 @@ include('includes/verifica-login.php');
                     <div class="textfield">
                         <br>
                         <label for="senha">Valor do produto</label>
-                        <input type="text" name="valor" placeholder="Valor">
+                        <input type="text" name="valor" placeholder="Valor" id="valor">
                     </div>
                     <div class="textfield">
                         <br>
@@ -250,6 +252,24 @@ include('includes/verifica-login.php');
     include("includes/footer.php");
 
     ?>
+
+
+    <script>
+        $(document).ready(function() {
+
+            $('#meuFormulario').submit(function(event) {
+                // Adicione aqui outras validações se necessário
+
+                // Verifica o tamanho do campo "Nome simples"
+                var nomeSimples = $('input[name="nome_prod"]').val();
+                if (nomeSimples.length > 25) {
+                    alert("O campo Nome simples deve ter no máximo 25 caracteres.");
+                    event.preventDefault(); // Impede o envio do formulário
+                }
+            });
+
+        });
+    </script>
 
 </body>
 

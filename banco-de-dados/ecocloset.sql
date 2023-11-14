@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14/11/2023 às 02:38
+-- Tempo de geração: 14/11/2023 às 20:56
 -- Versão do servidor: 10.4.28-MariaDB
--- Versão do PHP: 8.0.28
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -103,7 +103,7 @@ CREATE TABLE `cadastro_usuario` (
 --
 
 INSERT INTO `cadastro_usuario` (`idusuario`, `email`, `senha`, `nome`, `sobrenome`, `telefone`, `path_user`) VALUES
-(1, 'rapha@gmail.com', 'raphael@123', 'Raphael', 'de França Quirino', '(11)98670022', 'uploads/foto-user-exe.png'),
+(1, 'rapha@gmail.com', 'raphael@123', 'Raphael', 'de França Quirino', '(11) 98670-0022', 'uploads/foto-user-exe.png'),
 (2, 'arthur@gmail.com', 'arthur@123', 'Arthur', 'Bergamaço Alves', '(11)  98967033', 'uploads/foto-user-exe.png'),
 (3, 'adm@gmail.com', 'adm123adm', 'adm', 'adm', '(11)90909090', 'uploads/foto-user-exe.png'),
 (4, 'nicolas@gmail.com', '123', 'Nicolas', 'de Lima', '(11) 989898989', 'uploads/foto-user-exe.png');
@@ -132,7 +132,7 @@ CREATE TABLE `enderecos` (
 
 INSERT INTO `enderecos` (`idendereco`, `nome_end`, `cep`, `cidade`, `bairro`, `rua`, `numero`, `complemento`, `idusuario`) VALUES
 (1, 'Minha casa', '09561-085', 'São José do Rio Preto', 'Águas Claras', 'Av. Dos Guararapis', '2000', 'Bloco C', 1),
-(4, 'Trabalho', '09054-10', 'São Leopoldo', 'Surupá do Norte', 'Rua do Kennedy', '2000', 'Ap 21', 1);
+(4, 'Trabalho', '09054-101', 'São Leopoldo', 'Surupá do Norte', 'Rua do Kennedy', '2000', 'Ap 21', 1);
 
 -- --------------------------------------------------------
 
@@ -152,7 +152,9 @@ CREATE TABLE `pedidos` (
 --
 
 INSERT INTO `pedidos` (`idpedido`, `idusuario`, `status`, `idproduto`) VALUES
-(81, 1, 'carrinho', 48);
+(81, 1, 'carrinho', 48),
+(85, 1, 'carrinho', 73),
+(86, 1, 'carrinho', 57);
 
 --
 -- Índices para tabelas despejadas
@@ -191,7 +193,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de tabela `cadastro_prod`
 --
 ALTER TABLE `cadastro_prod`
-  MODIFY `idproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `idproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT de tabela `cadastro_usuario`
@@ -209,7 +211,7 @@ ALTER TABLE `enderecos`
 -- AUTO_INCREMENT de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `idpedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `idpedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- Restrições para tabelas despejadas

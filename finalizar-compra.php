@@ -13,7 +13,12 @@ $id_usuario = $_SESSION['id_usuario'];
 
 $consultaEnd = "SELECT * FROM enderecos WHERE idusuario = '$id_usuario'";
 $resultadoEnd = mysqli_query($conexao, $consultaEnd);
-$end = mysqli_fetch_assoc($resultadoEnd);
+
+$consultaEnd1 = "SELECT * FROM enderecos WHERE idusuario = '$id_usuario'";
+$resultadoEnd1 = mysqli_query($conexao, $consultaEnd1);
+
+$consultaEnd2 = "SELECT * FROM enderecos WHERE idusuario = '$id_usuario'";
+$resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
 
 ?>
 
@@ -110,18 +115,10 @@ $end = mysqli_fetch_assoc($resultadoEnd);
                         <span>Endereço de Entrega</span>
                         <select name="" id="" class="month-input">
                             <option value="month" selected disabled>Endereço de Entrega</option>
-                            <option value="01">01</option>
-                            <option value="02">02</option>
-                            <option value="03">03</option>
-                            <option value="04">04</option>
-                            <option value="05">05</option>
-                            <option value="06">06</option>
-                            <option value="07">07</option>
-                            <option value="08">08</option>
-                            <option value="09">09</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
+                            <?php while ($end = mysqli_fetch_assoc($resultadoEnd)) : ?>
+                                <option value="01"><?= $end['nome_end'] ?></option>
+                            <?php endwhile; ?>
+
                         </select>
                     </div>
 
@@ -138,13 +135,15 @@ $end = mysqli_fetch_assoc($resultadoEnd);
                     <br>
                     <br>
                     <div class="inputBox">
-                    <span>Endereço de Entrega</span>
-                    <select name="" id="" class="month-input">
-                        <option value="month" selected disabled>Endereço de Entrega</option>
-                        <option value="01">01</option>
-                    </select>
-                    <br><br>
-                </div>
+                        <span>Endereço de Entrega</span>
+                        <select name="" id="" class="month-input">
+                            <option value="month" selected disabled>Endereço de Entrega</option>
+                            <?php while ($end2 = mysqli_fetch_assoc($resultadoEnd2)) : ?>
+                                <option value="01"><?= $end2['nome_end'] ?></option>
+                            <?php endwhile; ?>ion>
+                        </select>
+                        <br><br>
+                    </div>
                     <p>Seu boleto será gerado e enviado por email após a finalização da compra.</p>
                     <br>
                     <p>Todas as informações da sua compra serão enviadas para o seu email cadastrado</p>
@@ -249,7 +248,9 @@ $end = mysqli_fetch_assoc($resultadoEnd);
                     <span>Endereço de Entrega</span>
                     <select name="" id="" class="month-input">
                         <option value="month" selected disabled>Endereço de Entrega</option>
-                        <option value="01">01</option>
+                        <?php while ($end1 = mysqli_fetch_assoc($resultadoEnd1)) : ?>
+                            <option value="01"><?= $end1['nome_end'] ?></option>
+                        <?php endwhile; ?>
 
                     </select>
                 </div>

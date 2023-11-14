@@ -31,7 +31,7 @@
   <ul class="menu">
     <form action="searchPage.php" method="post">
     <div class="serch-box">
-        <input class = "search-txt" name="search"  id="search" type="search" placeholder="Pesquisar..." />
+        <input style="color: black;" class = "search-txt" name="search"  id="search" type="search" placeholder="Pesquisar..." />
         <button class = "search-btn" type="submit" name="buscar"><i class="fa-solid fa-magnifying-glass"></i></button>  
     </form>
     </div>

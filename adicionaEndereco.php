@@ -21,6 +21,10 @@ $dados = mysqli_fetch_assoc($resultadoDados);
   <link rel="stylesheet" href="estilos/style.css">
   <link rel="stylesheet" href="estilos/media-query.css">
     <script src="https://kit.fontawesome.com/8ad860e92b.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+</head>
+
     <title>Cadastro</title>
 </head>
 
@@ -114,6 +118,12 @@ $dados = mysqli_fetch_assoc($resultadoDados);
     include_once('includes/footer.php');
 
     ?>
+
+<script>
+ $(document).ready(function () {
+      $('#cep').mask('00000-000');
+    });
+</script>
 
 </body>
 
