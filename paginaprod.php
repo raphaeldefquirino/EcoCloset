@@ -48,6 +48,9 @@ $produto =  mysqli_fetch_assoc($result);
 				<?php echo '<img src="' . $produto['path'] . '" />'; ?>
 			</div>
 			<div class="container-info-product">
+				<div class="nome-prod">
+					<p ><?php echo $produto['nome_prod'] ?></p>
+				</div>
 				<div class="container-price">
 					<span>R$ <?php echo $produto['valor'] ?></span>
 
@@ -88,15 +91,7 @@ $produto =  mysqli_fetch_assoc($result);
 
 
 
-				<div class="container-social">
-					<span>Compartilhar</span>
-					<div class="container-buttons-social">
-						<a href="#"><i class="fa-solid fa-envelope"></i></a>
-						<a href="#"><i class="fa-brands fa-facebook"></i></a>
-						<a href="#"><i class="fa-brands fa-instagram"></i></a>
-
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</main>

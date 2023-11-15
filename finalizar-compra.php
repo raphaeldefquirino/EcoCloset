@@ -121,6 +121,17 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
 
                         </select>
                     </div>
+                    <div id="textfield-finalizar-prod" class="textfield">
+                        <div class="categoria">
+                            <br>
+                            <div class="checks">
+                                <input type="checkbox" name="termo" value="checked" id="catinf">
+                                <label for="Inferior">Declaro que li e concordo integralmente com <a href="imagens/termos-ecocloset.pdf" target="_blank">Termo de Uso</a></label>
+                                <br>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
 
                     <button class="pix-finalizar">Finalizar Compra</button>
 
@@ -148,6 +159,17 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
                     <br>
                     <p>Todas as informações da sua compra serão enviadas para o seu email cadastrado</p>
                     <br>
+                    <div id="textfield-finalizar-prod" class="textfield">
+                        <div class="categoria">
+                            <br>
+                            <div class="checks">
+                                <input type="checkbox" name="termo" value="checked" id="catinf">
+                                <label for="Inferior">Declaro que li e concordo integralmente com <a href="imagens/termos-ecocloset.pdf" target="_blank">Termo de Uso</a></label>
+                                <br>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
                     <button class="pix-finalizar">Finalizar Compra</button>
 
 
@@ -309,6 +331,17 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
                         </select>
                     </div>
                 </div>
+                <div id="textfield-finalizar-prod" class="textfield">
+                        <div class="categoria">
+                            <br>
+                            <div class="checks">
+                                <input type="checkbox" name="termo" value="checked" id="catinf">
+                                <label for="Inferior">Declaro que li e concordo integralmente com <a href="imagens/termos-ecocloset.pdf" target="_blank">Termo de Uso</a></label>
+                                <br>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
                 <input type="submit" value="Finalizar compra" class="submit-btn">
 
             </form>

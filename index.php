@@ -145,9 +145,9 @@
                   
                  
 									<h6 class="socials">
-									    <i class="fa fa-instagram"></i>
-									    <i class="fa fa-facebook"></i>
-									    <i class="fa fa-linkedin"></i>
+									    <a href="https://instagram.com/abergamaco?igshid=MW5rb3lhdnV6NjJ5OQ%3D%3D&utm_source=qr"><i class="fa fa-instagram"></i></a>
+									    <a href="https://www.facebook.com/profile.php?id=100092252831400"><i class="fa fa-facebook"></i></a>
+									    <a href="https://www.linkedin.com/in/arthur-bergama%C3%A7o-alves-08948329b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa fa-linkedin"></i></a>
 									   
 									</h6>
 								</div> 
@@ -165,9 +165,9 @@
 								
 									</p>
 									<h6 class="socials">
-									    <i class="fa fa-instagram"></i>
-									    <i class="fa fa-facebook"></i>
-									    <i class="fa fa-linkedin"></i>
+                  <a href="https://instagram.com/niicks_pinheiro?igshid=NGVhN2U2NjQ0Yg=="><i class="fa fa-instagram"></i></a>
+									    <a href="https://www.facebook.com/profile.php?id=100092252831400"><i class="fa fa-facebook"></i></a>
+									    <a href="https://br.linkedin.com/in/nicolas-pinheiro-596b97298"><i class="fa fa-linkedin"></i></a>
 									  
 									</h6>
 								</div> 
@@ -185,9 +185,9 @@
 									
 									</p>
 									<h6 class="socials">
-									    <i class="fa fa-instagram"></i>
-									    <i class="fa fa-facebook"></i>
-									    <i class="fa fa-linkedin"></i>
+                  <a href="https://instagram.com/raphael_rwl?igshid=M2RkZGJiMzhjOQ%3D%3D&utm_source=qr"><i class="fa fa-instagram"></i></a>
+									    <a href="https://www.facebook.com/profile.php?id=100092252831400"><i class="fa fa-facebook"></i></a>
+									    <a href="https://www.linkedin.com/in/raphael-de-fran%C3%A7a-quirino-54647329a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fa fa-linkedin"></i></a>
 									   
 									</h6>
 								</div> 
