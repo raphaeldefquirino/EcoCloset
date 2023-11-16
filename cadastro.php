@@ -5,13 +5,13 @@ session_start();
 <html lang="pt-br">
 
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilos/style.css">
-  <link rel="stylesheet" href="estilos/media-query.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
     <script src="https://kit.fontawesome.com/8ad860e92b.js" crossorigin="anonymous"></script>
     <title>Cadastro</title>
 </head>
@@ -106,7 +106,7 @@ session_start();
                     <div class="textfield">
                         <br>
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="email" placeholder="Email" required >
+                        <input type="text" name="email" id="email" placeholder="Email" required>
                     </div>
                     <div class="textfield">
                         <br>
@@ -128,13 +128,28 @@ session_start();
                         <label for="sobrenome">Sobrenome</label>
                         <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome" required>
                     </div>
+
                     <div class="textfield">
                         <br>
                         <label for="telefone">Telefone</label>
                         <input type="text" name="telefone" id="telefone" placeholder="Telefone" required>
                     </div>
-                    
-                    
+
+                    <div class="textfield">
+                        <br>
+
+                        <div class="categoria">
+                             <br>
+                            <div class="checks">
+                                <input type="checkbox" name="termo" value="checked" id="catinf">
+                                <label for="Inferior">Declaro que li e concordo integralmente com <a href="imagens/termos-ecocloset.pdf" target="_blank">Termo de Uso</a></label>
+                                <br>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+
+
                     <button class="btn-login">Cadastrar</button>
             </div>
         </div>
