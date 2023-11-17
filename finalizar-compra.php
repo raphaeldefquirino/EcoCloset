@@ -35,6 +35,8 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
 </head>
 
@@ -133,7 +135,7 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
                         </div>
                     </div>
 
-                    <button class="pix-finalizar">Finalizar Compra</button>
+                    <button class="pix-finalizar"><a href="compra-finalizada.php" style="text-decoration: none; color: rgb(175, 0, 255);">Finalizar Compra</a></button>
 
                 </div>
             </div>
@@ -151,7 +153,7 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
                             <option value="month" selected disabled>Endereço de Entrega</option>
                             <?php while ($end2 = mysqli_fetch_assoc($resultadoEnd2)) : ?>
                                 <option value="01"><?= $end2['nome_end'] ?></option>
-                            <?php endwhile; ?>ion>
+                                <?php endwhile; ?>ion>
                         </select>
                         <br><br>
                     </div>
@@ -170,7 +172,7 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
                             <br>
                         </div>
                     </div>
-                    <button class="pix-finalizar">Finalizar Compra</button>
+                    <button class="pix-finalizar"><a href="compra-finalizada.php" style="text-decoration: none; color: rgb(175, 0, 255);"> Finalizar Compra </a></button>
 
 
                 </div>
@@ -211,14 +213,14 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
 
             </div>
 
-            <form action="compra-finalizada.php" method="post" enctype="multipart/form-data">
+            <form action="compra-finalizada.php" method="post" enctype="multipart/form-data" id="form">
                 <div class="total-pag-finalizar">
 
                     <p class="TotalFinalizar">TOTAL : R$<?php echo $row['valor'] ?></p>
                 </div>
                 <div class="inputBox">
                     <span>Número do Cartão</span>
-                    <input type="text" maxlength="16" class="card-number-input" placeholder="Número do Cartão">
+                    <input type="text" maxlength="16" class="card-number-input" placeholder="Número do Cartão" id="numeroCartao">
                 </div>
                 <div class="inputBox">
                     <span>Nome do Titular</span>
@@ -332,16 +334,16 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
                     </div>
                 </div>
                 <div id="textfield-finalizar-prod" class="textfield">
-                        <div class="categoria">
-                            <br>
-                            <div class="checks">
-                                <input type="checkbox" name="termo" value="checked" id="catinf">
-                                <label for="Inferior">Declaro que li e concordo integralmente com <a href="imagens/termos-ecocloset.pdf" target="_blank">Termo de Uso</a></label>
-                                <br>
-                            </div>
+                    <div class="categoria">
+                        <br>
+                        <div class="checks">
+                            <input type="checkbox" name="termo" value="checked" id="catinf">
+                            <label for="Inferior">Declaro que li e concordo integralmente com <a href="imagens/termos-ecocloset.pdf" target="_blank">Termo de Uso</a></label>
                             <br>
                         </div>
+                        <br>
                     </div>
+                </div>
                 <input type="submit" value="Finalizar compra" class="submit-btn">
 
             </form>
@@ -349,11 +351,20 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
         </div>
     </div>
 
+    <script>
+        $(document).ready(function() {
 
+            $('#form').submit(function(event) {
+                var numeroCartao = $('#numeroCartao').val();
+                var numeroCartaoSemEspacos = numeroCartao.replace(/\s/g, ''); // Remove espaços em branco
+                if (!(/^\d{16}$/.test(numeroCartaoSemEspacos))) {
+                    alert("O número do cartão deve ter 16 dígitos numéricos.");
+                    event.preventDefault(); // Impede o envio do formulário
+                }
+            });
 
-
-
-
+        });
+    </script>
 
     <script>
         document.querySelector('.card-number-input').oninput = () => {

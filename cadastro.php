@@ -13,6 +13,8 @@ session_start();
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
     <script src="https://kit.fontawesome.com/8ad860e92b.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <title>Cadastro</title>
 </head>
 
@@ -100,7 +102,7 @@ session_start();
                 unset($_SESSION['status_cadastro']);
                 ?>
 
-                <form action="includes/cadastrar.php" method="post">
+                <form action="includes/cadastrar.php" method="post" id="form">
 
 
                     <div class="textfield">
@@ -139,7 +141,7 @@ session_start();
                         <br>
 
                         <div class="categoria">
-                             <br>
+                            <br>
                             <div class="checks">
                                 <input type="checkbox" name="termo" value="checked" id="catinf">
                                 <label for="Inferior">Declaro que li e concordo integralmente com <a href="imagens/termos-ecocloset.pdf" target="_blank">Termo de Uso</a></label>
@@ -161,11 +163,58 @@ session_start();
 
     <?php
 
+    if (isset($_SESSION['erroTermo1'])) :
+
+    ?>
+
+        <script>
+            alert("Para realizar o cadastro você deve concordar com os termos de uso!");
+        </script>
+
+    <?php
+
+    endif;
+    unset($_SESSION['erroTermo1']);
+
+    ?>
+
+    <?php
+
     include_once('includes/footer.php');
 
     ?>
 
 </body>
+
+<script>
+
+    $(document).ready(function () {
+      // Adiciona validação básica de formato de e-mail
+      $('#email').on('input', function () {
+        var email = $(this).val();
+        if (/^\S+@\S+\.\S+$/.test(email)) {
+          // E-mail válido
+          $(this).removeClass('invalid').addClass('valid');
+        } else {
+          // E-mail inválido
+          $(this).removeClass('valid').addClass('invalid');
+        }
+      });
+
+      $('#telefone').mask('(00) 00000-0000');
+    
+      // Adiciona evento de submit para o formulário
+      $('#form').submit(function (event) {
+        var email = $('#email').val();
+
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+          // E-mail inválido
+          alert("O campo e-mail deve ser no formato exigido.");
+          event.preventDefault(); // Impede o envio do formulário
+        }
+      });
+    });
+  </script>
 
 </html>
 

@@ -3,6 +3,13 @@ session_start();
 
 include("conexao.php");
 
+if (!isset($_POST['termo'])) {
+    $_SESSION['erroTermo1'] = true;
+    header('Location: ../cadastro.php');
+    exit;
+}
+
+
 $email = mysqli_real_escape_string($conexao, trim($_POST['email']));
 $senha = mysqli_real_escape_string($conexao, trim($_POST['senha']));
 $confirmaSenha = mysqli_real_escape_string($conexao, trim($_POST['confirmaSenha']));
