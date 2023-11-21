@@ -1,14 +1,3 @@
-<?php
-session_start();
-
-include('includes/conexao.php');
-
-$id_usuario = $_SESSION['id_usuario'];
-
-$consultaDados = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
-$resultadoDados = mysqli_query($conexao, $consultaDados);
-$dados = mysqli_fetch_assoc($resultadoDados);
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,8 +20,8 @@ $dados = mysqli_fetch_assoc($resultadoDados);
 <body class="cad">
 
     <?php
-
-    include_once('menu.php');
+    //inclui o arquivo do menu
+    include('menu.php');
 
     ?>
 
@@ -47,7 +36,7 @@ $dados = mysqli_fetch_assoc($resultadoDados);
                 <h1>Adicionar endereço</h1>
 
                 <?php
-
+                //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                 if (isset($_SESSION['status_endereco'])) :
 
                 ?>
@@ -62,6 +51,7 @@ $dados = mysqli_fetch_assoc($resultadoDados);
 
 
                 <?php
+                //encerra a condição 'if' e encerra a variável de sessão para que a mensagem não só seja exibida assim que for chamada 
                 endif;
                 unset($_SESSION['status_endereco']);
                 ?>
@@ -114,7 +104,7 @@ $dados = mysqli_fetch_assoc($resultadoDados);
     </form>
 
     <?php
-
+    //inclui o arquivo do rodapé
     include_once('includes/footer.php');
 
     ?>

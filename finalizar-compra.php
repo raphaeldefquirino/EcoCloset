@@ -1,22 +1,31 @@
 <?php
+//inicia a sessão para navegar com as variáveis entre as páginas 
 session_start();
+
+//inclui o arquivo que faz a conexão com o banco de dados
 include('includes/conexao.php');
+//arquivo para verificar se o usuário está logado, serve para impedir que usuários não logados acessem a página
 include('includes/verifica-login.php');
 
+//variável para armazenar o id do usuário que será passado via URL da página 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
+//comando SQL para consultar a tabela de produtos cadastrados com base no id do usuário 
 $sql = "SELECT * FROM cadastro_prod WHERE idproduto = '$id'";
 $query = mysqli_query($conexao, $sql);
 $row = mysqli_fetch_assoc($query);
 
 $id_usuario = $_SESSION['id_usuario'];
 
+//comando SQL para consultar a tabela de endereços cadastrados com base no id do usuário para que o usuário possa selecionar o endereço de entrega, sessão do cartão de crédito
 $consultaEnd = "SELECT * FROM enderecos WHERE idusuario = '$id_usuario'";
 $resultadoEnd = mysqli_query($conexao, $consultaEnd);
 
+//comando SQL para consultar a tabela de endereços cadastrados com base no id do usuário para que o usuário possa selecionar o endereço de entrega, sessão do pix
 $consultaEnd1 = "SELECT * FROM enderecos WHERE idusuario = '$id_usuario'";
 $resultadoEnd1 = mysqli_query($conexao, $consultaEnd1);
 
+//comando SQL para consultar a tabela de endereços cadastrados com base no id do usuário para que o usuário possa selecionar o endereço de entrega, sessão do boleto
 $consultaEnd2 = "SELECT * FROM enderecos WHERE idusuario = '$id_usuario'";
 $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
 
@@ -117,9 +126,13 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
                         <span>Endereço de Entrega</span>
                         <select name="" id="" class="month-input">
                             <option value="month" selected disabled>Endereço de Entrega</option>
-                            <?php while ($end = mysqli_fetch_assoc($resultadoEnd)) : ?>
+                            <?php
+                            //loop para percorrer todos os endereços do usuário e exibi-los na página
+                            while ($end = mysqli_fetch_assoc($resultadoEnd)) : ?>
                                 <option value="01"><?= $end['nome_end'] ?></option>
-                            <?php endwhile; ?>
+                            <?php
+                            //fim do loop
+                            endwhile; ?>
 
                         </select>
                     </div>
@@ -151,9 +164,13 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
                         <span>Endereço de Entrega</span>
                         <select name="" id="" class="month-input">
                             <option value="month" selected disabled>Endereço de Entrega</option>
-                            <?php while ($end2 = mysqli_fetch_assoc($resultadoEnd2)) : ?>
+                            <?php
+                            //loop para percorrer todos os endereços do usuário e exibi-los na página
+                            while ($end2 = mysqli_fetch_assoc($resultadoEnd2)) : ?>
                                 <option value="01"><?= $end2['nome_end'] ?></option>
-                                <?php endwhile; ?>ion>
+                            <?php
+                            //fim do loop
+                            endwhile; ?>
                         </select>
                         <br><br>
                     </div>
@@ -272,9 +289,13 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
                     <span>Endereço de Entrega</span>
                     <select name="" id="" class="month-input">
                         <option value="month" selected disabled>Endereço de Entrega</option>
-                        <?php while ($end1 = mysqli_fetch_assoc($resultadoEnd1)) : ?>
+                        <?php
+                        //loop para percorrer todos os endereços do usuário e exibi-los na página
+                        while ($end1 = mysqli_fetch_assoc($resultadoEnd1)) : ?>
                             <option value="01"><?= $end1['nome_end'] ?></option>
-                        <?php endwhile; ?>
+                        <?php
+                        //fim do loop
+                        endwhile; ?>
 
                     </select>
                 </div>

@@ -1,7 +1,13 @@
 <?php
+//inicia a sessão para navegar com as variáveis entre as páginas 
 session_start();
+
+//inclui o arquivo que faz a conexão com o banco de dados
 include('includes/conexao.php');
+
+//obtem a pesquisa do feita na barra de pesquisa pelo usuário 
 $search = mysqli_real_escape_string($conexao, trim($_POST['search']));
+
 $buscar = mysqli_real_escape_string($conexao, trim($_POST['buscar']));
 ?>
 
@@ -24,14 +30,18 @@ $buscar = mysqli_real_escape_string($conexao, trim($_POST['buscar']));
 
 <body class="body-searchpage">
 	<?php
+	//inclui o arquivo do menu
 	include("menu.php")
 	?>
 	<?php
+	//comando SQL que faz uma consulta na tabela de cadastro de produto com base na pesquisa do usuário
 	$consulta = "SELECT * FROM cadastro_prod WHERE nome_prod LIKE '%" .$search. "%'";
 	$resultado = mysqli_query($conexao, $consulta);
 
+	//condição para verificar se algum produto foi encontrado na tabela
 	if (mysqli_num_rows($resultado) > 0) {
 		echo  ' <div class="container">';
+		//loop para percorrer todos os produtos encontrados na base de dados e exibir para o usuário
 		while ($produto = mysqli_fetch_assoc($resultado)) {
 
 			echo '<a href="paginaprod.php?id=' . $produto['idproduto'] . '"><div class="clothing-item">';
@@ -47,17 +57,20 @@ $buscar = mysqli_real_escape_string($conexao, trim($_POST['buscar']));
 			echo '</a>';
 		}
 		echo  '</div>';
-	} else {
+	} 
+	//condição para caso o nunhum produto seja encontrado na base de dados
+	else {
 		echo '<div class = "erro-prod-search">';
 		echo '<p>Ops, parece que não encontramos nenhum produto com nome especificado!</p>';
 		echo '</div>';
 	}
 
-
+	//encerra a conexão com o banco de dados
 	mysqli_close($conexao);
 	?>
 
 	<?php
+	//inclui o arquivo do radapé
 	include('includes/footer.php');
 	?>
 </body>

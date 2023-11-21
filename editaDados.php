@@ -1,10 +1,14 @@
 <?php
+//inicia a sessão para navegar com as variáveis entre as páginas 
 session_start();
 
+//inclui o arquivo que faz a conexão com o banco de dados
 include('includes/conexao.php');
 
+//armazena o id do usuário
 $id_usuario = $_SESSION['id_usuario'];
 
+//consulta SQL que serve para puxar os dados do usuário com base no id dele
 $consultaDados = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
 $resultadoDados = mysqli_query($conexao, $consultaDados);
 $dados = mysqli_fetch_assoc($resultadoDados);
@@ -29,7 +33,7 @@ $dados = mysqli_fetch_assoc($resultadoDados);
 <body class="cad">
 
     <?php
-
+    //inclui o arquivo do menu
     include_once('menu.php');
 
     ?>
@@ -43,9 +47,10 @@ $dados = mysqli_fetch_assoc($resultadoDados);
         <div class="right-login">
             <div class="card-login">
                 <h1>Cadastro</h1>
-
+                
                 <?php
 
+                //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                 if (isset($_SESSION['usuario_existe'])) :
 
                 ?>
@@ -62,12 +67,13 @@ $dados = mysqli_fetch_assoc($resultadoDados);
                     </div>
 
                 <?php
+                //encerra a condição 'if' e encerra a variável de sessão para que a mensagem não só seja exibida assim que for chamada 
                 endif;
                 unset($_SESSION['usuario_existe']);
                 ?>
 
                 <?php
-
+                //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                 if (isset($_SESSION['senhas_divergem'])) :
 
                 ?>
@@ -84,13 +90,14 @@ $dados = mysqli_fetch_assoc($resultadoDados);
                     </div>
 
                 <?php
+                //encerra a condição 'if' e encerra a variável de sessão para que a mensagem não só seja exibida assim que for chamada 
                 endif;
                 unset($_SESSION['senhas_divergem']);
                 ?>
 
 
                 <?php
-
+                //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                 if (isset($_SESSION['status_cadastro'])) :
 
                 ?>
@@ -105,6 +112,7 @@ $dados = mysqli_fetch_assoc($resultadoDados);
 
 
                 <?php
+                //encerra a condição 'if' e encerra a variável de sessão para que a mensagem não só seja exibida assim que for chamada 
                 endif;
                 unset($_SESSION['status_cadastro']);
                 ?>
@@ -143,7 +151,7 @@ $dados = mysqli_fetch_assoc($resultadoDados);
     </form>
 
     <?php
-
+    //inclui o arquivo do radapé
     include_once('includes/footer.php');
 
     ?>

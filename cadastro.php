@@ -1,4 +1,5 @@
 <?php
+//inicia a sessão para navegar com as variáveis entre as páginas 
 session_start();
 ?>
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ session_start();
 <body class="cad">
 
     <?php
-
+    //inclui o arquivo do menu 
     include_once('menu.php');
 
     ?>
@@ -38,7 +39,7 @@ session_start();
                 <h1>Cadastro</h1>
 
                 <?php
-
+                //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                 if (isset($_SESSION['usuario_existe'])) :
 
                 ?>
@@ -55,12 +56,13 @@ session_start();
                     </div>
 
                 <?php
+                //encerra a condição 'if' e encerra a variável de sessão para que a mensagem não só seja exibida assim que for chamada 
                 endif;
                 unset($_SESSION['usuario_existe']);
                 ?>
 
                 <?php
-
+                //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                 if (isset($_SESSION['senhas_divergem'])) :
 
                 ?>
@@ -77,6 +79,7 @@ session_start();
                     </div>
 
                 <?php
+                //encerra a condição 'if' e encerra a variável de sessão para que a mensagem não só seja exibida assim que for chamada 
                 endif;
                 unset($_SESSION['senhas_divergem']);
                 ?>
@@ -98,6 +101,7 @@ session_start();
 
 
                 <?php
+                //encerra a condição 'if' e encerra a variável de sessão para que a mensagem não só seja exibida assim que for chamada 
                 endif;
                 unset($_SESSION['status_cadastro']);
                 ?>
@@ -162,7 +166,7 @@ session_start();
     </form>
 
     <?php
-
+    //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
     if (isset($_SESSION['erroTermo1'])) :
 
     ?>
@@ -172,14 +176,14 @@ session_start();
         </script>
 
     <?php
-
+    //encerra a condição 'if' e encerra a variável de sessão para que a mensagem não só seja exibida assim que for chamada 
     endif;
     unset($_SESSION['erroTermo1']);
 
     ?>
 
     <?php
-
+    //inclui o arquivo do rodapé
     include_once('includes/footer.php');
 
     ?>

@@ -1,5 +1,8 @@
 <?php
+//inicia a sessão para navegar com as variáveis entre as páginas 
 session_start();
+
+//inclui o arquivo que faz a conexão com o banco de dados
 include('includes/verifica-login.php');
 ?>
 
@@ -24,7 +27,7 @@ include('includes/verifica-login.php');
 <body class="cad">
 
     <?php
-
+	//inclui o arquivo do menu
     include("menu.php");
 
     ?>
@@ -43,7 +46,7 @@ include('includes/verifica-login.php');
                 <h1>Cadastro</h1>
 
                 <?php
-
+                //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                 if (isset($_SESSION['erro_prod'])) :
 
                 ?>
@@ -60,7 +63,7 @@ include('includes/verifica-login.php');
                     </div>
 
                 <?php
-
+                //encerra a condição 'if' e encerra a variável de sessão para que a mensagem não só seja exibida assim que for chamada 
                 endif;
                 unset($_SESSION['erro_prod']);
 
@@ -68,7 +71,7 @@ include('includes/verifica-login.php');
 
 
                 <?php
-
+                //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                 if (isset($_SESSION['error_arquivo'])) :
 
                 ?>
@@ -84,7 +87,7 @@ include('includes/verifica-login.php');
                     </div>
 
                 <?php
-
+                //encerra a condição 'if' e encerra a variável de sessão para que a mensagem não só seja exibida assim que for chamada 
                 endif;
                 unset($_SESSION['error_arquivo']);
 
@@ -92,7 +95,7 @@ include('includes/verifica-login.php');
 
 
                 <?php
-
+                //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                 if (isset($_SESSION['prod_cadastrado'])) :
 
                 ?>
@@ -106,7 +109,7 @@ include('includes/verifica-login.php');
                     </div>
 
                 <?php
-
+                //encerra a condição 'if' e encerra a variável de sessão para que a mensagem não só seja exibida assim que for chamada 
                 endif;
                 unset($_SESSION['prod_cadastrado']);
 
@@ -231,7 +234,7 @@ include('includes/verifica-login.php');
     </form>
 
     <?php
-
+    //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
     if (isset($_SESSION['erroTermo'])) :
 
     ?>
@@ -241,14 +244,14 @@ include('includes/verifica-login.php');
         </script>
 
     <?php
-
+    //encerra a condição 'if' e encerra a variável de sessão para que a mensagem não só seja exibida assim que for chamada 
     endif;
     unset($_SESSION['erroTermo']);
 
     ?>
 
     <?php
-
+    //inclui o arquivo do rodapé
     include("includes/footer.php");
 
     ?>

@@ -1,4 +1,5 @@
 <?php
+//inicia a sessão para navegar com as variáveis entre as páginas 
 session_start();
 ?>
 
@@ -21,7 +22,8 @@ session_start();
 <body>
 
     <?php
-
+    
+    //inclui o arquivo do menu
     include("menu.php");
 
     ?>
@@ -63,6 +65,7 @@ session_start();
 
     <?php
 
+    //inclui o arquivo do rodapé
     include("includes/footer.php");
 
     ?>

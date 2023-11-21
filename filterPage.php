@@ -18,7 +18,7 @@
 <body class="bodyprod">
 
     <?php
-
+    //adiciona o arquivo do menu
     include("menu.php");
 
     ?>
@@ -60,30 +60,31 @@
         </form>
     </div>
     <?php
-
+    //adiciona o arquivo de conexão com o banco de dados
     include("includes/conexao.php");
 
-
+    //está variável é que vai me dizer em qual página o usuário está, Feminia, Masculina ou Kids
     $page = mysqli_real_escape_string($conexao, trim($_POST['filtrar']));
 
-
-
+    //obtem a opção do filtro escolhido pelo usuário 
     $subcategoria = mysqli_real_escape_string($conexao, trim($_POST['subcategoria']));
     $preco = mysqli_real_escape_string($conexao, trim($_POST['sort']));
 
-
+    //consulta SQL na tebela de produtos cadastrados para encontrar os produtos do filtro que o usuário escolheu (VAI ORDENAR OS PRODUTOS MAIS CAROS PRIMEIRO)
     $consultaCaro = "SELECT * FROM cadastro_prod WHERE categoria = '$page' AND subcategoria = '$subcategoria' ORDER BY valor ASC";
     $resultadoCaro = mysqli_query($conexao, $consultaCaro);
 
-
+    //consulta SQL na tabela de produtos cadastrados para encontrar os produtos que o usuário escolheu (VAI ORDENAR OS PRODUTOS MAIS BARATOS PRIMEIRO)
     $consultaBarato = "SELECT * FROM cadastro_prod WHERE categoria = '$page' AND subcategoria = '$subcategoria' ORDER BY valor DESC";
     $resultadoBarato = mysqli_query($conexao, $consultaBarato);
 
 
-
+    //Condição para os produtos caros
     if ($preco == 'caro') {
+        //condição para caso a consutla retornar algum valor 
         if (mysqli_num_rows($resultadoCaro) > 0) {
             echo  ' <div class="container">';
+            //loop para percorrer todos os produtos encontrados no banco de dados e exibir para o usuário
             while ($produto = mysqli_fetch_assoc($resultadoCaro)) {
 
                 echo '<a href="paginaprod.php?id=' . $produto['idproduto'] . '"><div class="clothing-item">';
@@ -100,10 +101,12 @@
             }
         }
         echo  '</div>';
+        //condição para os produtos baratos
     } else if ($preco == 'barato') {
-
+        //condição para caso a consutla retornar algum valor 
         if (mysqli_num_rows($resultadoBarato) > 0) {
             echo  ' <div class="container">';
+            //loop para percorrer todos os produtos encotrados no banco de dados e exibir para o usuário
             while ($produto = mysqli_fetch_assoc($resultadoBarato)) {
 
                 echo '<a href="paginaprod.php?id=' . $produto['idproduto'] . '"><div class="clothing-item">';
@@ -121,19 +124,19 @@
         }
         echo  '</div>';
     }
-
+    //condição para caso a consulta não encontre nenhum dos dois resultados, e exibe uma mensagem para o usuário 
     if (mysqli_num_rows($resultadoBarato) == 0 &&  mysqli_num_rows($resultadoCaro) == 0) {
         echo '<div class = "product-found">Ops, não encontramos o produto especificado. </div>.';
     }
 
-
+    //encerra a conexão com o banco de dados
     mysqli_close($conexao);
     ?>
 
 
 
     <?php
-
+    //inclui o arquivo do rodapé 
     include("includes/footer.php");
 
     ?>

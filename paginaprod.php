@@ -1,10 +1,14 @@
 <?php
+//inicia a sessão para navegar com as variáveis entre as páginas 
 session_start();
 
+//inclui o arquivo que faz a conexão com o banco de dados
 include("includes/conexao.php");
 
+//armazena o id do produto
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
+//comando SQL para fazer uma consulta na tabela de produtos cadastrados com base no id do produto
 $sql = "SELECT * FROM cadastro_prod WHERE idproduto = '{$id}'";
 $result = mysqli_query($conexao, $sql);
 $produto =  mysqli_fetch_assoc($result);
@@ -33,7 +37,7 @@ $produto =  mysqli_fetch_assoc($result);
 <body>
 
 	<?php
-
+	//inclui o arquivo do menu
 	include('menu.php');
 
 	?>
@@ -104,7 +108,7 @@ $produto =  mysqli_fetch_assoc($result);
 	<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
 
 	<?php
-
+	//inclui o arquivo do rodapé 
 	include('includes/footer.php');
 
 	?>

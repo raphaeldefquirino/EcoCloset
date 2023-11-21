@@ -18,7 +18,7 @@
 <body class="bodyprod">
 
   <?php
-
+  //inclui o menu por meio do PHP 
   include("menu.php");
 
   ?>
@@ -47,7 +47,7 @@
         <option value="Sueter">Suéter</option>
         <option value="Terno">Terno</option>
         <option value="Vestido">Vestido</option>
-        
+
       </select>
 
       <label for="sort" class="subcategory">Classificar por:</label>
@@ -61,15 +61,17 @@
   </div>
 
   <?php
-
+  //inclui o arquivo de conexão com o banco de dados
   include("includes/conexao.php");
 
+  //consulta SQL para obter os produtos da tebela de produtos cadastrados que sejam da categoria Masculina
   $consulta = "SELECT * FROM cadastro_prod WHERE categoria = 'Masculina'";
   $resultado = mysqli_query($conexao, $consulta);
 
-
+  //verifica se a consulta SQL retornou algum resultado
   if (mysqli_num_rows($resultado) > 0) {
     echo  ' <div class="container">';
+    //loop para exibir os produtos encontrados no banco de dados
     while ($produto = mysqli_fetch_assoc($resultado)) {
 
       echo '<a href="paginaprod.php?id=' . $produto['idproduto'] . '"><div class="clothing-item">';
@@ -86,18 +88,18 @@
     }
     echo  '</div>';
   } else {
-
+    //se nenhum produto for encontrado retorna uma mensagem de erro
     echo '<p>Nenhum produto encontrado.</p>';
   }
 
-
+  //encerra a conexão com o banco de dados
   mysqli_close($conexao);
   ?>
 
 
 
   <?php
-
+  //inclui o rodapé por meio do PHP
   include("includes/footer.php");
 
   ?>

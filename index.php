@@ -21,7 +21,7 @@
 <body>
 
   <?php
-
+  //incluindo o arquivo do menu 
   include("menu.php");
 
   ?>
@@ -238,7 +238,7 @@
      
   <!-- Fim da construção do "Carrossel de criadores" -->
   <?php
-
+  //incluindo o arquivo do rodapé
   include("includes/footer.php")
 
   ?>

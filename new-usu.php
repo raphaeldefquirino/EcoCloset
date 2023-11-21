@@ -1,46 +1,61 @@
 <?php
+//inicia a sessão para navegar com as variáveis entre as páginas 
 session_start();
+
+//inclui o arquivo que faz a conexão com o banco de dados
 include('includes/conexao.php');
+
+//arquivo para verificar se o usuário está logado, serve para impedir que usuários não logados acessem a página
 include('includes/verifica-login.php');
 
+//armazena o id do usuário
 $id_usuario = $_SESSION['id_usuario'];
 
+//comando SQL que vai fazer uma consulta na tabela do carrinho com base do id do usuário (versão para mobile)
 $consultaCarrinho = "SELECT * FROM pedidos WHERE idusuario = '$id_usuario' AND status = 'carrinho'";
 $resultadoCarrinho = mysqli_query($conexao, $consultaCarrinho);
 
+//comando SQL que vai fazer uma consulta na tabela do cadastro de produtos para ver quais produtos o usuário já cadastrou no banco de dados (versão para mobile)  
 $consultaCadProd = "SELECT * FROM cadastro_prod WHERE id_usu = '$id_usuario'";
 $resultadoCadProd = mysqli_query($conexao, $consultaCadProd);
 $CadProd = mysqli_fetch_assoc($resultadoCadProd);
 
+//comando SQL que vai fazer uma consulta na tabela do cadastro de usuário para exibir o dados do usuário (versão para mobile)  
 $consultaDados = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
 $resultadoDados = mysqli_query($conexao, $consultaDados);
 $dados = mysqli_fetch_assoc($resultadoDados);
 
+//comando SQL que vai fazer uma consulta na tabela do cadastro de endereços para ver quais endereços o usuário já cadastrou no banco de dados (versão para mobile)  
 $consultaEnd = "SELECT * FROM enderecos WHERE idusuario = '$id_usuario'";
 $resultadoEnd = mysqli_query($conexao, $consultaEnd);
 $end = mysqli_fetch_assoc($resultadoEnd);
 
+//comando SQL que vai fazer uma consulta na tabela do cadastro de produtos e vai exibir todos os produtos cadastrados para o usuário administrador (versão para mobile)  
 $consultaCadProdAdm = "SELECT * FROM cadastro_prod";
 $resultadoCadProdAdm = mysqli_query($conexao, $consultaCadProdAdm);
 $CadProdAdm = mysqli_fetch_assoc($resultadoCadProdAdm);
 
 /*-------------------------------DESK----------------------*/
-
+//comando SQL que vai fazer uma consulta na tabela do carrinho com base do id do usuário (versão para desktop)
 $consultaCarrinhoDesk = "SELECT * FROM pedidos WHERE idusuario = '$id_usuario' AND status = 'carrinho'";
 $resultadoCarrinhoDesk = mysqli_query($conexao, $consultaCarrinhoDesk);
 
+//comando SQL que vai fazer uma consulta na tabela do cadastro de produtos para ver quais produtos o usuário já cadastrou no banco de dados (versão para desktop)  
 $consultaCadProdDesk = "SELECT * FROM cadastro_prod WHERE id_usu = '$id_usuario'";
 $resultadoCadProdDesk = mysqli_query($conexao, $consultaCadProdDesk);
 $CadProdDesk = mysqli_fetch_assoc($resultadoCadProdDesk);
 
+//comando SQL que vai fazer uma consulta na tabela do cadastro de usuário para exibir o dados do usuário (versão para desktop)  
 $consultaDadosDesk = "SELECT * FROM cadastro_usuario WHERE idusuario = '$id_usuario'";
 $resultadoDadosDesk = mysqli_query($conexao, $consultaDadosDesk);
 $dadosDesk = mysqli_fetch_assoc($resultadoDadosDesk);
 
+//comando SQL que vai fazer uma consulta na tabela do cadastro de endereços para ver quais endereços o usuário já cadastrou no banco de dados (versão para desktop)  
 $consultaEndDesk = "SELECT * FROM enderecos WHERE idusuario = '$id_usuario'";
 $resultadoEndDesk = mysqli_query($conexao, $consultaEndDesk);
 $endDesk = mysqli_fetch_assoc($resultadoEndDesk);
 
+//comando SQL que vai fazer uma consulta na tabela do cadastro de produtos e vai exibir todos os produtos cadastrados para o usuário administrador (versão para desktop)  
 $consultaCadProdDeskAdm = "SELECT * FROM cadastro_prod";
 $resultadoCadProdDeskAdm = mysqli_query($conexao, $consultaCadProdDeskAdm);
 $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
