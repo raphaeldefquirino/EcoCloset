@@ -79,6 +79,7 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
 <body>
     <?php
+    //inclui o arquivo de conexão com o banco de dados
     include('menu.php');
     ?>
 
@@ -143,13 +144,16 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
             </div>
 
             <div class="conteudo-carrinho" id="conteudo-carrinho">
-                <?php if (mysqli_num_rows($resultadoCarrinhoDesk) == 0) {
+
+                <?php 
+                //condição para caso a consulta do carrinho no banco retorne vazia (exibe uma mensagem de erro para o usuário)
+                if (mysqli_num_rows($resultadoCarrinhoDesk) == 0) {
                     $_SESSION['carrinho-vazio'] = true;
                 }
                 ?>
 
                 <?php
-
+                //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                 if (isset($_SESSION['carrinho-vazio'])) :
 
                 ?>
@@ -161,10 +165,13 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
 
                 <?php
+                //encerra a condição 'if' e encerra a variável de sessão para que a mensagem não só seja exibida assim que for chamada 
                 endif;
                 unset($_SESSION['carrinho-vazio']);
                 ?>
-                <?php while ($itemCarrinho = mysqli_fetch_assoc($resultadoCarrinho)) : ?>
+                <?php 
+                //loop para percorrer todas as informaçãoes retornardas do banco de dados e exibi-las para o usuário
+                while ($itemCarrinho = mysqli_fetch_assoc($resultadoCarrinho)) : ?>
                     <?php
                     $idproduto = $itemCarrinho['idproduto'];
                     $consultaProduto = "SELECT * FROM cadastro_prod WHERE idproduto = '$idproduto'";
@@ -203,7 +210,9 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                             </a>
                         </div>
                     </div>
-                <?php endwhile; ?>
+                <?php 
+                //encerra o loop
+                endwhile; ?>
                 <!-- Parte do botão de fechar compra -->
                 <!-- Fim parte do botão de fechar compra -->
             </div>
@@ -315,7 +324,7 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                 ?>
 
                 <?php
-
+                //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                 if (isset($_SESSION['end-vazio'])) :
 
                 ?>
@@ -957,7 +966,7 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                     ?>
 
                     <?php
-
+                    //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                     if (isset($_SESSION['carrinho-vazio'])) :
 
                     ?>
@@ -1125,7 +1134,7 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                     ?>
 
                     <?php
-
+                    //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                     if (isset($_SESSION['end-vazioDesk'])) :
 
                     ?>
@@ -1317,7 +1326,7 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
                                 </div>
                             <?php
-                        endwhile
+                            endwhile
                             ?>
 
 
@@ -1360,7 +1369,7 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
                             ?>
 
                             <?php
-
+                            //verifica se a várivel de sessão existe, servirá para exbir uma mensagem para o usuário 
                             if (isset($_SESSION['carrinho-vazio'])) :
 
                             ?>
