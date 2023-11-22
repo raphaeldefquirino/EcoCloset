@@ -18,7 +18,7 @@ body{
 /* ----------------------------------------------- */
 
 /*-------------------------------------------MENU----------------------------------------------------*/ 
-
+/*Este bloco de código CSS estiliza um cabeçalho em uma página web, utilizando um layout flexível, espaçamento uniforme entre os elementos, fundo branco e uma transição suave de 0.3 segundos para propriedades animáveis.*/
 .header{
 
     position: relative;
@@ -54,7 +54,7 @@ align-items: center;
 z-index: 10;
 
 }
-
+/*alinha os itens no meio e um do lado do outro, adiciona um animação breve de 0.5sec */
 .menu {
 
     display: flex;
@@ -73,7 +73,7 @@ z-index: 10;
 
 
 }
-
+/*estiliza os titluos dos atalhos */
 .menu li a {
 
     color: black;
@@ -96,6 +96,7 @@ z-index: 10;
 
 
 }
+/*Esse bloco de código CSS estiliza um ícone de "hamburger" para interfaces de usuário, definindo suas características visuais, como largura, altura, cor preta, bordas arredondadas, cursor interativo, índice de empilhamento para aparecer acima de outros elementos e uma transição suave de 0.3 segundos para efeitos visuais durante interações.*/
 
 .hamburger{
 
@@ -109,7 +110,7 @@ z-index: 10;
     transition: 0.3s;
 
 }
-
+/*Este trecho de código CSS estiliza pseudo-elementos (:before e :after) associados a um ícone de "hamburger". Esses elementos adicionais são posicionados absolutamente em relação ao ícone principal, têm altura fixa, são alinhados à direita, possuem cor de fundo preta, bordas arredondadas e uma transição suave de 0.4 segundos.*/
 .hamburger:before,
 .hamburger:after {
 
@@ -190,7 +191,7 @@ z-index: 10;
     box-shadow: -20px 0 40px rgba(0,0,0,0.3);
     ;
 }
-
+/*todas as funções acima são para definir como as barras pretas ao virar hambuerguer vão ter uma animação de rotate. */
 
 /*-------------------------------------------END MENU----------------------------------------------------*/ 
 
@@ -332,7 +333,7 @@ footer {
 
  
 
-
+/*Define um contêiner principal que ocupa 100% da largura e altura da tela. Tem um fundo de cor #f8f8f8 e usa flexbox para centralizar itens horizontal e verticalmente.*/
   .main-login{
     width: 100%;
     height: 100%;
@@ -342,7 +343,7 @@ footer {
     align-items: center;
 
 }
-
+/*Outro contêiner que ocupa 100% da largura e altura, usando flexbox para centralizar itens na coluna (flex-direction: column).*/
 .left-login{
     width: 100%;
     height: 100%;
@@ -356,7 +357,7 @@ footer {
 .left-login > h1{
     color: black;
 }
-
+/*ocupa todo o lado direito e deixa do meio  */
 .right-login{
     width: 100%;
     height: 100%;
@@ -365,7 +366,7 @@ footer {
     align-items: center;
 
 }
-
+/*Um cartão de login com largura de 70%, centralizado e estilizado com cor de fundo preta, bordas arredondadas, sombra e margens.*/
 .card-login{
     width: 70%;
     display: flex;
@@ -406,7 +407,7 @@ margin: 0;
 
 }
 
-
+/*Estilo para um elemento de classe "categoria". Define largura, borda, borda arredondada, preenchimento, cor de fundo, cor do texto, sombra e margem.*/
 
 .categoria{
 
@@ -444,7 +445,7 @@ margin-right: 10px;
 }
 
 
-
+/*Estilo para um campo de texto. Define largura, exibição flexível, alinhamento e margens.*/
 .textfield{
     width: 30vw;
     display: flex;
@@ -454,7 +455,7 @@ margin-right: 10px;
     margin: 10px 0x;
     
 }
-
+/*Define largura, exibição flexível, alinhamento e margens.*/
 .card-cvv-mes-ano{
 
   width: 30vw;
@@ -464,7 +465,7 @@ margin-right: 10px;
     margin: 10px 0x;
     
 }
-
+/*Estilo para campos de entrada dentro do cartão mencionado. Define largura, borda, preenchimento, cor de fundo, cor do texto e sombra.*/
 .card-cvv-mes-ano > input{
 
   width: 100%;
@@ -482,7 +483,7 @@ margin-right: 10px;
 
 
 }
-
+/*Estilo para elementos de seleção (<select>) dentro do cartão. Define largura, borda, preenchimento, cor de fundo, cor do texto e sombra.*/
 .card-cvv-mes-ano > select {
 
   width: 100%;
@@ -506,7 +507,7 @@ margin-right: 10px;
 
 
 
-
+/*Estilo para campos de entrada dentro do .textfield. Define largura, borda, preenchimento, cor de fundo, cor do texto e sombra.*/
 
 .textfield > input{
     width: 100%;
@@ -522,7 +523,7 @@ margin-right: 10px;
 
 }
 
-
+/*Estilo para elementos de seleção dentro do .textfield.*/
 .textfield > select{
   width: 100%;
   border:none;
@@ -546,7 +547,7 @@ margin-right: 10px;
 .textfield > input::placeholder{
 color: #f0ffff94;
 }
-
+/*Estilo para um botão de login. Define largura, preenchimento, margem superior, borda, borda arredondada, texto em maiúsculas, peso da fonte, espaçamento de letras, cor do texto, cor de fundo, cursor e sombra.*/
 .btn-login{
     width: 100%;
     padding: 15px;
@@ -574,7 +575,7 @@ color: #f0ffff94;
 .cad{
     background-color: rgb(0, 0, 0);
 }
-
+/*Estilo para botões de rádio. Define a aparência, cor de fundo, borda, largura, altura e posição.*/
 .checks input[type="radio"] {
     appearance: none;
     -webkit-appearance: none;
@@ -590,7 +591,7 @@ color: #f0ffff94;
   }
   
  
-  
+ /*Estilo para o estado marcado dos botões de rádio. Adiciona um marcador de seleção ("✔").*/ 
   .checks input[type="radio"]:checked::before {
     content: "✔";
     position: absolute;
@@ -599,15 +600,15 @@ color: #f0ffff94;
     font-size: 16px;
     color: #333;
   }
-  
+  /*Estilo para o estado focado dos botões de rádio.*/
   .checks input[type="radio"]:focus {
     outline: none;
   }
-  
+  /*Estilo para o estado ativo dos botões de rádio.*/
   .checks input[type="radio"]:active {
     transform: scale(0.9);
   }
-
+/* Estilo para uma caixa que parece ser usada para exibir mensagens de erro. Define fonte, tamanho, peso, fundo, alinhamento, largura, altura, borda arredondada, margens e preenchimento.*/
   .caixa-CadastroErro{
     font-family: 'Noto Sans', sans-serif;
     font-size: 15px;
@@ -629,7 +630,7 @@ color: #f0ffff94;
     color: #ffffff;
    
 }
-
+/*Estilo para uma caixa que parece ser usada para exibir mensagens de sucesso. Define fonte, tamanho, peso, fundo, alinhamento, largura, altura, borda arredondada, margens, preenchimento e exibição flexível.*/
 .caixa-CadastroCerto{
   font-family: 'Noto Sans', sans-serif;
   font-size: 15px;
