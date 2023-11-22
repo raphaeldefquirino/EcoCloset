@@ -235,92 +235,74 @@ z-index: 10;
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
-
-
-footer {
-    background-color: white;
-    padding-top: 40px;
+footer{
     text-align: center;
-    width: 100%;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 2px;
 }
-
-.footer-col {
-    order: 1;
-}
-
-.footer-col:nth-child(2) {
-    order: 2;
-}
-
-.footer-col:nth-child(3) {
-    order: 3;
-}
-
-.footer-col:nth-child(4) {
-    order: 4;
-}
-
-.logo-title {
-    align-items: end;
-    justify-content: center;
-}
-
-.logo-title img {
-    margin-bottom: 1%;
-}
-.logo-title h4 {
-    padding-left: 3%;
-}
-.logo-title a {
+footer a{
     text-decoration: none;
-    list-style-type: none;
     color: black;
 }
-
-.footer-col {
+.footer-col{
     margin-bottom: 5%;
 }
-
-.footer-col ul li {
-    text-decoration: none;
-    list-style-type: none;
-    padding-bottom: 10px;
+.expo-title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    width: 160px;
+    margin: auto;
 }
-
-.footer-col ul li a {
+.paginas-title{
+    margin-bottom: 10px;
+    font-size: 24px;
+    margin-top: 12px;
+}
+.contato-title{
+    margin-bottom: 10px;
+    font-size: 24px;
+    margin-top: 12px;
+}
+.mensagens-title a{
     font-size: 16px;
-    text-transform: capitalize;
-    color: black;
-    text-decoration: none;
-    font-weight: 300;
-    display: block;
+    line-height: 25px;
     transition: all 0.3s ease
 }
-
-.footer-col ul li a:hover {
+.mensagens-title a:hover{  
     color: #af00ff;
-    padding-left: 10px;
+    padding-left: 7px;
 }
-
-.footer-col h4 {
-    font-size: 22px;
-    text-transform: uppercase;
-    margin-bottom: 3%;
+.paginas-buton a{
+    font-size: 16px;
+    line-height: 25px;
+    transition: all 0.3s ease
 }
-
-.container-imagens-footer {
+.paginas-buton a:hover{
+    color: #af00ff;
+    padding-left: 7px;
+}
+.contato-expo a{
+    font-size: 16px;
+    line-height: 25px;
+    transition: all 0.3s ease;
+}
+.contato-expo a:hover{
+    color: #af00ff;
+    padding-left: 7px;
+}
+.container-imagens-footer{
+    width: 170px;
+    margin: auto;
     display: flex;
-    justify-content: center;
 }
-
-.Imagem-alcina {
-    padding-right: 2%;
+.contato-expo i{
+    margin-right: 10px;
 }
-
-.Imagem-exposoft {
-    padding-left: 2%;
+.Imagem-alcina{
+    margin-right: 5px;
 }
 
 

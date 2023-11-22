@@ -73,84 +73,31 @@
 
 /*---------------------- media query footer------------------- */
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
+  footer{
+  }
+  
+  .row-footer{
+      display: flex;
+  }
+  .footer-col{
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+  }
+  ul{
+      list-style: none;
+  }
+  .container-imagens-footer{
+      margin: auto;
+      padding-left: 45px;
+  }
+  
 
-    .container-footer {
-        display: flex;
-        justify-content: center;
-    }
 
-    .row-footer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        text-align: left;
-    }
-
-    .footer-col {
-        order: 1;
-    }
-
-    .footer-col:nth-child(2) {
-        order: 3;
-    }
-
-    .footer-col:nth-child(3) {
-        order: 2;
-    }
-
-    .footer-col:nth-child(4) {
-        order: 4;
-        flex: 0 0 100%;
-    }
-
-    .footer-col:nth-child(1) ul li {
-        padding-left: 30%;
-    }
-
-    .footer-col {
-        margin-bottom: 1%;
-    }
-    .footer-col h4{
-        margin-bottom: 6%;
-    }
-    .footer-col ul li{
-        padding-bottom: 5px;
-    }
-
-    .container-imagens-footer {
-        display: flex;
-        justify-content: baseline;
-    }
-
-    .Imagem-alcina {
-        padding-right: 0%;
-    }
-
-    .Imagem-exposoft {
-        padding-left: 0%;
-    }
-
-    .logo-title a{
-        display: flex;
-    }
-
+ 
+  
 }
-
-@media screen and (min-width: 950px) {
-    .footer-col {
-        width: 33.33%;
-        padding: 0 150px;
-    }
-    .footer-col:nth-child(1) ul li{
-        padding-left: 50px;
-    }
-    .footer-col ul li{
-        padding-bottom: 3px;
-    }
-    
-
-}    
 
 
 /* -------------------------Fim media query footer----------------------- */

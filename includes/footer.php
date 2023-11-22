@@ -13,93 +13,124 @@
 </head>
 <body>
 
-    <footer>
+<footer>
 
-        <div class="container-footer">
-            <div class="row-footer">
+<div class="container-footer">
+    <div class="row-footer">
 
-                <!-- coluna footer -->
+        <!-- coluna footer -->
 
-                <div class="footer-col">
-                    <div class="logo-title">
+        <div class="footer-col">
+            
+            <div class="expo-title">
 
-                        <a href=""><img src="imagens/logoroxamenor.png" alt="Image" height="50" width="50">
-                        <h4>EcoCloset</h4></a>
-
-                    </div>
-
-                    <ul class="EcoCloset">
-
-                        <li> <a href="index.php"> Seu Brechó online</a> </li>
-                        <li> <a href="index.php"> "Roupas usadas<br>histórias renovadas"</a> </li>
+                
+                <div class="img-logo">
+                    <a href=""><img src="logoroxamenor.png" alt="Image" height="50" width="50">
+                </div>
+                
+                <div class="texto-logo">
+                    <h4>EcoCloset</h4></a>
+                </div>
                     
-                    </ul>
+
+            </div>
+
+            <div class="mensagens-title">
+            <ul class="EcoCloset">
+
+                <li> <a href="index.php">"Seu brechó<br> online"</a> </li>
+                <li> <a href="index.php">"Roupas usadas,<br> Histórias renovadas"</a> </li>
+            
+            </ul>
+
+            </div>
+
+        </div>
+
+        <!-- fim coluna footer -->
+
+        <!-- coluna footer-->
+
+        <div class="footer-col">
+
+            <div class="contato-title">
+
+                <h4>Contato</h4>
+
+            </div>
+            
+            <div class="contato-expo">
+
+            <ul>
+                <li> <a href="mailto:eme.alcinadantas@scseduca.com.br?subject=&body=">ecocloset23@gmail.com</a> 
+                </li>
+            </ul>
+
+
+            <ul class="social-icons">
+
+                <li><a href="#">
+                    <i class="fa fa-facebook"></i>Facebook</a></li>
+                    
+                <li><a href="#">
+                    <i class="fa fa-instagram"></i>Instagram</a></li>
+            </ul>
+
+            </div>
+
+        </div>
+
+        <!-- fim coluna footer-->
+
+        <!-- coluna footer-->
+
+        <div class="footer-col">
+
+            <div class="paginas-title">
+
+                <h4>Páginas</h4>
+        
+            </div>
+            
+            <div class="paginas-buton">
+
+            <ul>
+                <li> <a href="">Home</a> </li>
+                <li> <a href="">Femininas</a> </li>
+                <li> <a href="">Masculinas</a> </li>
+                <li> <a href="">Kids</a> </li>
+                <li> <a href="">Sobre nós</a> </li>
+                <li> <a href="">Venda</a> </li>
+                <li> <a href="">Perfil</a> </li>
+            </ul>
+
+            </div>
+
+        </div>
+        
+
+        </div>
+
+        <!-- fim coluna footer-->
+
+        <div class="footer-col">
+            <div class="container-imagens-footer">
+
+                <div class="Imagem-alcina">
+                    <a href=""> <img src="alcina.jpg" alt="Image" height="80" width="80"> </a>
                 </div>
 
-                <!-- fim coluna footer -->
-
-                <!-- coluna footer-->
-
-                <div class="footer-col">
-                    <h4>Páginas</h4>
-
-                    <ul>
-                        <li> <a href="index.php"> Home</a> </li>
-                        <li> <a href="feminina.php"> Femininas</a> </li>
-                        <li> <a href="masculina.php"> Masculinas</a> </li>
-                        <li> <a href="kids.php"> Kids</a> </li>
-                        <li> <a href="index.php #sobrenos"> Sobre nós</a> </li>
-                        <li> <a href="produto.php"> Venda</a> </li>
-                        <li> <a href="new-usu.php"> Perfil</a> </li>
-                    </ul>
-
+                <div class="Imagem-exposoft">
+                    <a href=""> <img src="expo-logo-preta-perfeita.png" alt="Image" height="80" width="80"> </a>
                 </div>
 
-                <!-- fim coluna footer-->
-
-                <!-- coluna footer-->
-
-                <div class="footer-col">
-
-                    <h4>Contato</h4>
-
-                    <ul>
-
-                        <li> <a href="mailto:ecocloset23@gmail.com?subject=&body="> ecocloset23@gmail.com</a> </li>
-
-                        <ul class="social-icons">
-
-                            <li><a href="https://www.facebook.com/profile.php?id=100092252831400"><i
-                                        class="fa fa-facebook"></i> Facebook</a></li>
-                            <li><a href="https://www.instagram.com/eco_closet23/"><i class="fa fa-instagram"></i>
-                                    Instagram</a></li>
-
-                        </ul>
-                    </ul>
-
-                </div>
-
-                <!-- fim coluna footer-->
-
-                <div class="footer-col">
-                    <div class="container-imagens-footer">
-                        <div class="Imagem-alcina">
-
-                            <a href=""> <img src="imagens/alcina.jpg" alt="Image" height="80" width="80"> </a>
-
-                        </div>
-
-                        <div class="Imagem-exposoft">
-
-                            <a href=""> <img src="imagens/expo-logo.png" alt="Image" height="80" width="80"> </a>
-
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
-    </footer>
+    </div>
+
+</footer>
 
 </body>
 </html>
