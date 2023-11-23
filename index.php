@@ -89,8 +89,6 @@
   <div class="SobrenosTexto" id="sobrenos">
     <br>
     <h1>Sobre nós</h1>
-    <br>
-    <br>
   </div>
 
   <div class="conteudo-container-sobrenos">
@@ -131,7 +129,7 @@
 									<div class="img-area">
 										<img src="imagens/criador1.jpg" alt="">
 									</div>	
-                  <br>
+                  <br><br>
 								
 									<h5>Arthur Bergamaço Alves</h5>
                   
