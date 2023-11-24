@@ -208,7 +208,7 @@
 				loop: true,
 				nav:true,
 				navText:['<i class="fa fa-arrow-left"></i>','<i class="fa fa-arrow-right"></i>'],
-				margin: 30,
+				margin: 10,
 				dots: true,
 				responsive:{
 					320:{

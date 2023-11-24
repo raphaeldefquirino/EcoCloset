@@ -3881,23 +3881,25 @@ border:solid 2px #af00ff;
 	
 
 	.container-pag-criadores{
-		width: 480px;
+		width: 440px;
 		align-items: center;
 		margin: auto;
 		height: 350px;
         margin-bottom: 80px;
-        margin-left: 10px;
+        box-shadow: none;
+       margin-left: 20px;
 		
        
 	}
 
 	.box-area {
 		
-		width: 460px;
+		width: 440px;
 		height: 370px;
 		margin: auto;
         margin-top: 50px;
-        margin-bottom: 280px;
+        box-shadow: none;
+        
         
    
     
