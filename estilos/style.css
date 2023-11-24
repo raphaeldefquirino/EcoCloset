@@ -3846,10 +3846,22 @@ border:solid 2px #af00ff;
 }
 @media only screen and (max-width: 991px) {
 
+    .owl-nav {
+		display: none;
+	}
+
+    .socials {
+        margin-top: 30px;
+    }
+
+    .img-area {
+        padding: 10px;
+    }
+	
+
 	.container-pag-criadores{
-		width: 700px;
+		width: 600px;
 		align-items: center;
-		
 		margin: auto;
 		height: 550px;
 		
@@ -3857,17 +3869,17 @@ border:solid 2px #af00ff;
 
 	.box-area {
 		
-		width: 690px;
+		width: 540px;
 		height: 540px;
 		margin: auto;
         margin-top: 20px;
-    margin-bottom: 20px;
+        margin-bottom: 20px;
 		
 	}
 	
 }
-@media only screen and (max-width: 767px) {
-	.owl-nav {
+@media only screen and (max-width: 540px) {
+    .owl-nav {
 		display: none;
 	}
 
@@ -3930,8 +3942,9 @@ border:solid 2px #af00ff;
 		
 		font-size: 17px;
 	}
-	
+
 }
+
 /*END PáGIANa CRIADORES_________________________________________________*/
 
 /* começo compra finalizada */
