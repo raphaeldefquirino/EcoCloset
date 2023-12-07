@@ -196,9 +196,23 @@
 					</div>
 				</div>
 			</section>
-		
-		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+      <!--  Script jQuery para inicializar o carrossel de depoimentos usando o plugin Owl Carousel.
+  O seletor $(".testmonial_slider_area") seleciona o contêiner que envolve os depoimentos.
+
+  Configurações do Owl Carousel:
+  - slideSpeed: Velocidade da transição entre slides (1 segundo).
+  - items: Número de itens exibidos por vez (1).
+  - loop: Ativa o looping contínuo do carrossel.
+  - nav: Ativa a navegação (setas).
+  - navText: Ícones das setas de navegação.
+  - margin: Margem entre os itens (10 pixels).
+  - dots: Ativa os pontos indicadores de navegação.
+  - responsive: Configurações específicas para diferentes larguras de tela.
+    - 320px, 767px, 600px, 1000px: Ajusta a quantidade de itens visíveis em diferentes tamanhos de tela. -->
+ 
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 		<script>
         $(".testmonial_slider_area").owlCarousel({

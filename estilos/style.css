@@ -686,7 +686,8 @@ color: #f0ffff94;
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-.titulo-perfil{
+/* Estilo para a seção de título do perfil */
+.titulo-perfil {
   background-color: white;
   margin: auto;
   height: 100vh;
@@ -696,36 +697,47 @@ color: #f0ffff94;
   margin-bottom: 50px;
   margin-top: 50px;
 }
-.titulo-perfil h1{
+
+/* Estilo para o título dentro da seção de perfil */
+.titulo-perfil h1 {
   font-family: 'Noto Sans', sans-serif;
   text-align: center;
   margin-top: 50px;
   font-size: 40px;
   color: black;
 }
-.slide-row{
+
+/* Estilo para a linha de slides na seção de perfil */
+.slide-row {
   display: flex;
   width: 2400px;
   transition: 0.45s;
 }
-.slide-col{
-width: 800px;
-height: 400px;
-position: relative;
+
+/* Estilo para a coluna de cada slide na seção de perfil */
+.slide-col {
+  width: 800px;
+  height: 400px;
+  position: relative;
 }
-.perfil-imagem{
+
+/* Estilo para a imagem do perfil dentro de cada slide */
+.perfil-imagem {
   position: absolute;
   top: 40px;
   right: 41%;
   margin-top: 40px;
   height: 100%;
 }
-.perfil-imagem img{
+
+.perfil-imagem img {
   height: 40%;
   width: 110%;
   border-radius: 50%;
 }
-.perfil-text{
+
+/* Estilo para o texto do perfil dentro de cada slide */
+.perfil-text {
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.5vw;
   width: 500px;
@@ -741,20 +753,25 @@ position: relative;
   padding-right: 25px;
   box-sizing: border-box;
 }
-.perfil-text p{
+
+.perfil-text p {
   font-size: 15px;
   line-height: 24px;
 }
-.perfil-text p p2{
+
+.perfil-text p p2 {
   font-size: 15px;
-font-weight: 800;
+  font-weight: 800;
 }
-.perfil-text h3{
+
+.perfil-text h3 {
   font-size: 15px;
   margin: 20px 0 5px;
   font-weight: 600;
 }
-.container-perfil{
+
+/* Estilo para o container que envolve cada slide na seção de perfil */
+.container-perfil {
   width: 800px;
   height: 500px;
   position: absolute;
@@ -762,13 +779,17 @@ font-weight: 800;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.indicador-perfil{
+
+/* Estilo para o indicador de perfil na seção de perfil */
+.indicador-perfil {
   position: absolute;
   left: 43%;
   bottom: -10px;
   z-index: 1;
 }
-.btn-perfil{
+
+/* Estilo para o botão de navegação entre os perfis na seção de perfil */
+.btn-perfil {
   display: inline-block;
   height: 15px;
   width: 15px;
@@ -778,15 +799,18 @@ font-weight: 800;
   cursor: pointer;
   transition: 0.45s;
 }
-.active-perfil{
+
+/* Estilo para o botão de perfil ativo na navegação */
+.active-perfil {
   width: 45px;
 }
-.testimonial-perfil{
+
+/* Estilo para a seção de depoimentos na seção de perfil */
+.testimonial-perfil {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
-
 
 /*-------------------------------------------END CARROSEL CRIADORES----------------------------------------------------*/ 
 
@@ -871,37 +895,40 @@ font-weight: 800;
 
 /*-------------------------------------------SERCH BAR----------------------------------------------------*/ 
 
-.serch-box{
-    border: solid 1px;
-    border-color: #928a8ab9;
-    height: 20px;
-    padding: 20px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .serch-box:hover{
-    border-color: #5f038a;
-  }
-  
-  .search-btn{
-    color: #5f038a;
-    width: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-  }
-  
-  .search-txt{
-    border: none;
-    background: none;
-    outline: none;
-    font-size: 16px;
-   
-  }
+/* Estilo para a caixa de pesquisa */
+.search-box {
+  border: solid 1px;
+  border-color: #928a8ab9;
+  height: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Efeito de hover na caixa de pesquisa */
+.search-box:hover {
+  border-color: #5f038a;
+}
+
+/* Estilo para o botão de pesquisa */
+.search-btn {
+  color: #5f038a;
+  width: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Estilo para o campo de texto de pesquisa */
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+}
   
   /*-------------------------------------------END SERCH BAR----------------------------------------------------*/ 
   
@@ -922,70 +949,75 @@ font-weight: 800;
 
   /*-------------------------------------------FILTER----------------------------------------------------*/ 
 
+/* Estilo para a barra de filtros */
 .filter-bar {
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  padding-top: 40px;
+  display: block;
+  text-align: center;
+  flex-direction: column;
+}
 
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    padding-top: 40px;
-    display: block;
-    text-align: center;
-    flex-direction: column;
-  }
-  
-  
-  .filter-bar select,
-  .filter-bar button {
-    margin-left: 10px;
-    font-size: 14px;
-    padding: 3px;
-    margin-right: 10px;
-    
-  }
-  
-  .filter-button {
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s;
-    border-radius: 10px;
-    width: 90px;
-    height: 30px;
-  
-  }
+/* Estilo para selects e botões dentro da barra de filtros */
+.filter-bar select,
+.filter-bar button {
+  margin-left: 10px;
+  font-size: 14px;
+  padding: 3px;
+  margin-right: 10px;
+}
+
+/* Estilo para o botão de filtro */
+.filter-button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 10px;
+  width: 90px;
+  height: 30px;
+}
+
+/* Estilo para ocultar o formulário de filtro por padrão */
+.filter-bar form {
+  display: none;
+}
+
+/* Estilo para exibir o formulário em dispositivos móveis */
+.filter-bar .mobile-show {
+  display: block;
+}
+
+/* Estilos para dispositivos com largura mínima de 768px */
+@media (min-width: 768px) {
   .filter-bar form {
+    display: block;
+  }
+
+  .filter-bar .mobile-show {
     display: none;
   }
-  
-  .filter-bar .mobile-show {
+}
+
+/* Estilos para dispositivos móveis com largura máxima de 767px */
+@media (max-width: 767px) {
+  .filter-bar label,
+  .filter-bar select,
+  .filter-bar button {
     display: block;
+    width: 100%;
+    margin: 10px 0; /* Adiciona margens para espaçar os itens verticalmente */
   }
-  
-  @media (min-width: 768px) {
-    .filter-bar form {
-      display: block;
-    }
-  
-    .filter-bar .mobile-show {
-      display: none;
-    }
+
+  /* Ajuste de altura para o botão de filtro em dispositivos móveis */
+  .filter-button {
+    height: 40px;
   }
-  
-  /* Estilos para dispositivos móveis */
-  @media (max-width: 767px) {
-    .filter-bar label,
-    .filter-bar select,
-    .filter-bar button {
-        display: block;
-        width: 100%;
-        margin: 10px 0; /* Adiciona margens para espaçar os itens verticalmente */
-    }
-  
-    .filter-button {
-      height: 40px;
-    }
-  }
+}
+
   
   
   /*-------------------------------------------END FILTER----------------------------------------------------*/ 
@@ -994,245 +1026,253 @@ font-weight: 800;
   /*-------------------------------------------CARD PRODUTO NICOLAS----------------------------------------------------*/ 
 
 
+/* Estilos para a área de produtos (corpo) */
 .bodyprod {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  h1 {
-    margin: 0;
-  }
-  
-  .h3produtos {
-    font-size: 17px;
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1300px;
-    margin: 20px auto;
-    padding: 30px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos para o cabeçalho da página */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Estilos para o título principal */
+h1 {
+  margin: 0;
+}
+
+/* Estilos para os subtítulos de produtos */
+.h3produtos {
+  font-size: 17px;
+}
+
+/* Estilos para o container principal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+/* Estilos para cada item de vestuário na página de produtos */
+.clothing-item {
+  width: 250px;
+  margin: 8px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilos para a imagem de cada item de vestuário */
+.clothing-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+/* Efeito de zoom ao passar o mouse sobre a imagem */
+.clothing-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Estilos para o botão de carrinho em cada item de vestuário */
+.btncarrinho .material-symbols-outlined {
+  background-color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 24px;
+  position: absolute;
+  top: 248px; /* Posição em relação ao topo */
+  right: 20px; /* Posição em relação à direita */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: #AF00FF;
+}
+
+/* Estilos para os detalhes do item de vestuário */
+.clothing-details {
+  text-align: left;
+  align-items: left;
+  font-size: 12px;
+  margin-top: -7px;
+}
+
+/* Estilos para o preço do item de vestuário */
+.clothing-price {
+  font-weight: bolder;
+  font-size: 14px;
+  color: #AF00FF;
+  margin-bottom: 5px;
+}
+
+/* Media query para telas com largura máxima de 768px */
+@media screen and (max-width: 768px) {
   .clothing-item {
-    width: 250px;
-    margin: 8px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    text-align: center;
-    padding: 15px;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+    flex: 0 0 calc(50% - 20px);
+    width: calc(50% - 20px);
   }
-  
-  .clothing-item img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    transition: transform 0.4s ease;
-    
+}
+
+/* Media query para telas com largura máxima de 480px */
+@media screen and (max-width: 480px) {
+  .clothing-item {
+    flex: 0 0 100%;
+    width: 100%;
   }
-  
-  .clothing-item:hover img {
-    transform: scale(1.1);
-  }
-  
-  .btncarrinho .material-symbols-outlined{
-    background-color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 24px;
-    position: absolute;
-    top: 248px; /* Posição em relação ao topo */
-    right: 20px; /* Posição em relação à direita */
-    cursor: pointer;
-     transition: transform 0.3s ease;
-     text-decoration: none;
-     color: #AF00FF;
-  }
-  
-  .clothing-details {
-    text-align: left;
-    align-items: left;
-    font-size: 12px;
-    margin-top: -7px;
-    
-  }
-  
-  .clothing-price {
-    font-weight: bolder;
-    font-size: 14px;
-    color: #AF00FF;
-    margin-bottom: 5px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .clothing-item {
-        flex: 0 0 calc(50% - 20px);
-        width: calc(50% - 20px);
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .clothing-item {
-        flex: 0 0 100%;
-        width: 100%;
-    }
-  }
-  
+}
+
   /*-------------------------------------------END CARD NICOLAS----------------------------------------------------*/ 
 
+
+
+
+
+
+  /*-------------------------------------------COMEÇO PAGAMENTOS PRODUTOS NICOLAS----------------------------------------------------------------------------------------*/ 
+
   
+/* Estilos para a seção principal da página de produtos */
 .mainpagprod {
-display: flex;
-border-radius: 10px;
-background-color: #ffffff;
-align-items: center;
-margin-right: 20px;
-max-width: 1200px;
-margin: 0 auto;
-margin-top: 50px;
-padding: 10px;
-  
-
-	
+  display: flex;
+  border-radius: 10px;
+  background-color: #ffffff;
+  align-items: center;
+  margin-right: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
 }
 
-.allcontainer{
-
-	
-	border-radius: 10px;
-	display: flex;
-	padding: 5px;
-    width: 1200px;
-    height: auto;
-    
-  
-
-
+/* Estilos para o container geral da página de produtos */
+.allcontainer {
+  border-radius: 10px;
+  display: flex;
+  padding: 5px;
+  width: 1200px;
+  height: auto;
 }
 
-.allcontainer img{
-
-	border-radius: 10px;
-	display: flex;
-	border-radius: 15px;
-	width:360px;
-	height: 500px;
-	margin: auto;
-    margin-top: 30px;
+/* Estilos para a imagem do produto */
+.allcontainer img {
+  border-radius: 10px;
+  display: flex;
+  border-radius: 15px;
+  width: 360px;
+  height: 500px;
+  margin: auto;
+  margin-top: 30px;
 }
 
-.container-img{
-
-
-align-items: center;
-width: 400px;
-height: 560px;
+/* Estilos para o container da imagem do produto */
+.container-img {
+  align-items: center;
+  width: 400px;
+  height: 560px;
 }
 
-
-
- 
+/* Estilos para o container de informações do produto */
 .container-info-product {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	padding: 10px;
-    width: 100%;
-    margin-top: 13px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  margin-top: 13px;
 }
 
+/* Estilos para o container de preço do produto */
 .container-price {
-	padding-bottom: 20px;
-	border-bottom: 1px solid #e4e4e4;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e4e4e4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+/* Estilos para o preço do produto */
 .container-price span {
-	font-size: 20px;
-	font-weight: 300;
+  font-size: 20px;
+  font-weight: 300;
 }
-.nome-prod p{
-    
-    font-size: 25px;
-	font-weight: 300;
-    padding-bottom: 15px;
 
+/* Estilos para o nome do produto */
+.nome-prod p {
+  font-size: 25px;
+  font-weight: 300;
+  padding-bottom: 15px;
 }
+
+/* Estilos para o container de detalhes do produto */
 .container-details-product {
-	padding: 30px 0;
+  padding: 30px 0;
 }
 
-
+/* Estilos para o container de adição ao carrinho */
 .container-add-cart {
-	display: flex;
-	padding-bottom: 30px;
-	margin-bottom: 10px;
-	margin-top: 10px;
-    color: none;
+  display: flex;
+  padding-bottom: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: none;
 }
 
+/* Estilos para o botão de adição ao carrinho */
 .btn-add-to-cart {
-	
-	background-color: rgb(255, 255, 255);
-	padding: 10px;
-	color: #AF00FF;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: 700;
-	cursor: pointer;
-	border-radius: 5px;
-	transition: transform 0.7s ease;
-    border-color: #AF00FF;
-    
-	
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  color: #AF00FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.7s ease;
+  border-color: #AF00FF;
 }
 
+/* Efeito de hover para o botão de adição ao carrinho */
 .btn-add-to-cart:hover {
   background-color: #AF00FF;
   color: #ffffff;
 }
 
-.condicaoprod{
-
+/* Estilos para a condição do produto */
+.condicaoprod {
   padding-bottom: 20px;
-	border-bottom: 1px solid #e4e4e4;
-	display: flex;
-	align-items: center;
+  border-bottom: 1px solid #e4e4e4;
+  display: flex;
+  align-items: center;
   text-align: center;
-  
-
-  
 }
-.condicaoprod span{
 
+/* Estilos para o texto da condição do produto */
+.condicaoprod span {
   font-size: 24px;
-	font-weight: 300;
-
-
+  font-weight: 300;
 }
 
+/* Linha horizontal após a condição do produto */
 .condicaoProd::after {
   content: "";
   display: flex;
@@ -1245,90 +1285,80 @@ height: 560px;
   display: block;
 }
 
-
-
-
-
-
-
+/* Estilos para os containers de descrição, informações adicionais e avaliações */
 .container-description,
 .container-additional-information,
 .container-reviews {
-	display: flex;
-	flex-direction: column;
-	border-bottom: 1px solid #e4e4e4;
-	padding: 10px 0;
-    
-  
- 
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 10px 0;
 }
 
+/* Estilos para o título da descrição do produto */
 .title-description {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	cursor: pointer;
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
-.container-description{
-
-  height: 255px; /* Adjust the height as per your design */
+/* Estilos para o container da descrição do produto */
+.container-description {
+  height: 255px; /* Ajuste a altura conforme o design desejado */
   overflow: hidden;
 }
 
-
-
+/* Estilos para o texto da descrição do produto */
 .text-description {
-	font-size: 16px;
-	color: #252525;
-	line-height: 22px;
-	margin-top: 20px;
-    flex-grow: 1;
-    margin-left: 2px;
-    width: 650px;
-    
- 
+  font-size: 16px;
+  color: #252525;
+  line-height: 22px;
+  margin-top: 20px;
+  flex-grow: 1;
+  margin-left: 2px;
+  width: 650px;
 }
+
+/* Estilos para o título da descrição e span */
 .title-description span {
-	font-size: 20px;
-	
+  font-size: 20px;
 }
 
-.text-description-container {
-  
-  overflow-y: auto;
-}
-
+/* Estilos para o container de redes sociais */
 .container-social {
-	display: flex;
-	justify-content: space-between;
-	padding: 10px 0;
-	align-items: center;
-	border-bottom: 1px solid #e4e4e4;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: center;
+  border-bottom: 1px solid #e4e4e4;
 }
 
+/* Estilos para o texto das redes sociais */
 .container-social span {
-	font-weight: 300;
-	color: #252525;
+  font-weight: 300;
+  color: #252525;
 }
 
+/* Estilos para o container dos botões de redes sociais */
 .container-buttons-social {
-	display: flex;
-	gap: 15px;
-	align-items: center;
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
+/* Estilos para os links dos botões de redes sociais */
 .container-buttons-social a:link,
 .container-buttons-social a:visited {
-	color: #666;
-	font-size: 15px;
+  color: #666;
+  font-size: 15px;
 }
 
+/* Efeito de hover para os links dos botões de redes sociais */
 .container-buttons-social a:hover {
-	color: #AF00FF;
+  color: #AF00FF;
 }
-  
+
 
 
 /*-------------------------------------------PAGINA USUARIO----------------------------------------------------*/ 
@@ -3947,7 +3977,7 @@ border:solid 2px #af00ff;
 
 /*END PáGIANa CRIADORES_________________________________________________*/
 
-/* começo compra finalizada */
+/* começo compra finalizada----------------------------------------------------------------------------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
