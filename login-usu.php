@@ -27,7 +27,11 @@ session_start();
     include("menu.php");
 
     ?>
-
+<!--
+  Página de login dividida em duas seções: left-login (com título e imagem) e right-login (com formulário de login).
+  O formulário utiliza método POST com ação "includes/login.php" e contém campos para email, senha e botão de login.
+  Link "Crie sua conta aqui" direciona para a página de cadastro (cadastro.php).
+-->
     <div class="main-login">
         <div class="left-login">
             <h1>Roupas com história, estilo sem igual.</h1>

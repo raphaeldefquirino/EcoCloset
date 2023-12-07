@@ -107,7 +107,11 @@ session_start();
                 ?>
 
                 <form action="includes/cadastrar.php" method="post" id="form">
-
+<!--
+  Página de login dividida em duas seções: left-login (com título e imagem) e right-login (com formulário de login).
+  O formulário utiliza método POST com ação "includes/login.php" e contém campos para email, senha e botão de login.
+  Link "Crie sua conta aqui" direciona para a página de cadastro (cadastro.php).
+-->
 
                     <div class="textfield">
                         <br>

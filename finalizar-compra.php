@@ -57,6 +57,15 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
     include("menu.php");
 
     ?>
+    <!--
+    Layout da página de pagamento e finalização de compra.
+    A seção "payment-methods" contém opções de pagamento (cartão, PIX, boleto) com botões de rádio.
+    A seção "tabela-carrinho-pag-cad" exibe detalhes do produto selecionado para compra.
+    As seções "pix-container", "boleto-container" e "card-container" são alternadas dependendo do método de pagamento escolhido.
+    O formulário de finalização de compra é exibido para o método de pagamento com cartão.
+    A função JavaScript verifica e formata os campos do cartão em tempo real.
+    Ao selecionar o método de pagamento PIX, um botão de cópia da chave PIX é exibido.
+    -->
 
     <div class="container-pag-cad">
 
@@ -371,7 +380,14 @@ $resultadoEnd2 = mysqli_query($conexao, $consultaEnd2);
 
         </div>
     </div>
-
+<!--
+    Funções JavaScript para validação e formatação dinâmica de campos no formulário de pagamento.
+    1. O trecho verifica se o número do cartão tem 16 dígitos numéricos ao enviar o formulário, exibindo um alerta em caso de erro.
+    2. As funções a seguir atualizam dinamicamente a exibição dos dados do cartão enquanto o usuário digita.
+    3. A transformação do cartão ao focar e desfocar o campo CVV é realizada para simular o efeito de virar o cartão.
+    4. O evento de troca de método de pagamento controla a visibilidade dos formulários de acordo com a escolha (cartão, PIX, boleto).
+    5. A função copia a chave PIX para a área de transferência quando o usuário clica no botão correspondente.
+-->
     <script>
         $(document).ready(function() {
 
