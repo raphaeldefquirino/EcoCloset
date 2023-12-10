@@ -83,56 +83,67 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
     include('menu.php');
     ?>
 
-    <div class="tudo-perfil-usuario">
 
-        <div class="container-perfil-usuario">
+    <!-- Início da Div com todos os conteudos da parte da foto do usuário -->
+<div class="tudo-perfil-usuario">
 
-            <div class="parte-perfil-usuario">
+<!-- Início da Div com todos os conteudos da parte com a foto do usuário, para modificar (display: flex;) no CSS em alguns tamanhos de telas -->
+    <div class="parte-perfil-usuario">
+        
+        <!-- Container da foto do usuário e botão de editar -->
+            <div class="container-imagem-sair-perfil-usuario">
 
-                <div class="container-imagem-usuario">
-
-                    <div class="container-imagem-sair-perfil-usuario">
-
-                        <div class="imagem-perfil-usuario">
-
-                            <img src="<?= $dados['path_user'] ?>" alt="imagem de usuário" height="200px" width="200px">
-
-                        </div>
-
-                        <div class="sobrepondo-imagem-perfil-usuario">
-                            <form id="uploadForm" action="editaImagemUser.php" method="POST" enctype="multipart/form-data">
-                                <input type="file" class="file-upload" name="imagemUser" id="fileInput" onchange="submitForm()">
-                                <span class="material-symbols-outlined" id="edit-perfil-usuario">edit</span>
-                            </form>
-                        </div>
-
-                    </div>
+                <!-- Imagem superfícial -->
+                <div class="imagem-perfil-usuario">
+                    <img src="<?= $dados['path_user'] ?>" alt="imagem de usuário" height="200px" width="200px">
                 </div>
+                <!-- Fim Imagem superfícial -->
 
-                <div class="textos-perfil-usuario">
-
-                    <div class="ola-perfil-usuario">
-                        <p>Olá, <?= $dados['nome'] ?></p>
-                    </div>
-
-                    <div class="mensagem-perfil-usuario">
-                        <p>"Seja a moda sustentável que você quer ver no mundo. Escolha o EcoCloset!"</p>
-                    </div>
-
-                    <div class="btn-sair-perfil-usuario">
-
-                        <a href="includes/logout.php">
-                            <p>Sair</p>
-                        </a>
-
-                    </div>
-
+                <!-- Botão para fazer o upload da imagem do perfil -->
+                <div class="sobrepondo-imagem-perfil-usuario">
+                    <form id="uploadForm" action="editaImagemUser.php" method="POST" enctype="multipart/form-data">
+                        <input type="file" class="file-upload" name="imagemUser" id="fileInput" onchange="submitForm()">
+                        <span class="material-symbols-outlined" id="edit-perfil-usuario">edit</span>
+                    </form>
                 </div>
+                <!-- Fim Botão para fazer o upload da imagem do perfil -->
+
             </div>
+        <!-- Fim Container da foto do usuário e botão de editar -->
+
+        <!-- Container do testo da parte com a foto do usuário -->
+        <div class="textos-perfil-usuario">
+
+            <!-- Parte para dizer Olá e o nome do usuário -->
+            <div class="ola-perfil-usuario">
+                <p>Olá, <?= $dados['nome'] ?></p>
+            </div>
+            <!-- Fim Parte para dizer Olá e o nome do usuário -->
+
+            <!-- Mensagem do Ecocloset -->
+            <div class="mensagem-perfil-usuario">
+                <p>"Seja a moda sustentável que você quer ver no mundo. Escolha o EcoCloset!"</p>
+            </div>
+            <!-- Fim Mensagem do Ecocloset -->
+
+            <!-- Botão sair do usuário -->
+            <div class="btn-sair-perfil-usuario">
+                <a href="includes/logout.php">
+                    <p>Sair</p>
+                </a>
+            </div>
+            <!-- Fim Botão sair do usuário -->
+
         </div>
+        <!-- Fim Container do testo da parte com a foto do usuário -->
 
     </div>
+    <!-- Início da Div com todos os conteudos da parte com a foto do usuário, para modificar (display: flex;) no CSS em alguns tamanhos de telas -->
 
+</div>
+<!-- Fim Início da Div com todos os conteudos da parte Perfil usuário -->
+
+<!-- C -->
     <div class="tudo">
 
         <!-- Começo da parte carrinho -->

@@ -149,21 +149,27 @@
 
 
       /*---------------------------- Inicio media query "Sobre nós" ------------------------*/
-      @media screen and (max-width:1030px) {
-        .ImagemSobrenos{
-            display: none;
-        }
-        .conteudo-container-sobrenos{
-            height: 750px;
-            padding-right: 0px;
-        }
-        .TextoSobrenos{
-            border-radius: 10px;
-            width: 100%;
-        }
-     }
 
-    /* ------------------------im media query "Sobre nós" -------------------*/
+      /* Estilos para telas com largura máxima de 1030 pixels */
+      
+@media screen and (max-width: 1030px) {
+  
+  .ImagemSobrenos {
+      display: none; /* Oculta a classe ImagemSobrenos */
+  }
+
+  .conteudo-container-sobrenos {
+      height: 750px; /* Reduz a altura do contêiner */
+      padding-right: 0px; /* Remove o espaçamento à direita */
+  }
+
+  .TextoSobrenos {
+      border-radius: 10px; /* Adiciona borda arredondada */
+      width: 100%; /* Define a largura como 100% para ocupar a largura total */
+  }
+}
+
+    /* ------------------------ Fim media query "Sobre nós" -------------------*/
 
     /* --------------------Início media query "Carrossel de criadores" ---------------------------*/
 
@@ -211,99 +217,100 @@
 
     /*----------------- Fim media query "Carrossel de criadores" ----------------*/
 
-    /*--------------------Inicio media query "Atalhos de categorias"-------------- */
+    /*-------------------- Inicio media query "Atalhos de categorias" -------------- */
 
-    @media screen and (min-width:768px) {
-      .container-conteudo-Categorias{
-        display: flex;
-        padding-top: 20px;
-    }
-      .Imagem1-Categorias{
-        width: 220px;
-      }
-      .Imagem2-Categorias{
-        width: 220px;
-        margin-top: 0px;
-        margin-left: -30px;
-      }
-      .Imagem1-Categorias img{
-        width: 250px;
-        height: 220px;
-      }
-      .Imagem2-Categorias img{
-        width: 220px;
-        height: 220px;
-      }
-    }
+    /* Estilos para telas com largura minima de 768 pixels */
 
-    @media screen and (min-width:1200px) {
-      .Imagem2-Categorias{
-        width: 280px;
-        margin-top: 0px;
-        margin-left: -90px;
-      }
+@media screen and (min-width: 768px) {
+  .container-conteudo-Categorias {
+    display: flex; /* Utiliza layout um do lado do outro (flexivel) para container-conteudo-Categorias */
+    padding-top: 20px; /* Adiciona espaço acima do conteúdo */
+  }
+  .Imagem1-Categorias {
+    width: 220px; /* Largura específica para Imagem1-Categorias */
+  }
+  .Imagem2-Categorias {
+    width: 220px; /* Largura específica para Imagem2-Categorias */
+    margin-top: 0px; /* Remove margem superior */
+    margin-left: -30px; /* Ajusta margem à esquerda */
+  }
+  .Imagem1-Categorias img {
+    width: 250px; /* Largura específica para a imagem dentro de Imagem1-Categorias */
+    height: 220px; /* Altura específica para a imagem dentro de Imagem1-Categorias */
+  }
+  .Imagem2-Categorias img {
+    width: 220px; /* Largura específica para a imagem dentro de Imagem2-Categorias */
+    height: 220px; /* Altura específica para a imagem dentro de Imagem2-Categorias */
+  }
+}
 
-      .Imagem1-Categorias{
-        width: 280px;
-      }
-      
-      .Imagem1-Categorias img{
-        width: 280px;
-        height: 280px;
-      }
-      .Imagem2-Categorias img{
-        width: 280px;
-        height: 280px;
-      }
-    }
+/* Estilos para telas com largura minima de 1000 pixels */
 
-    @media screen and (min-width:1000px) {
-      .Imagem2-Categorias{
-        width: 270px;
-        margin-top: 0px;
-        margin-left: -70px;
-      }
+@media screen and (min-width: 1000px) {
+  .Imagem2-Categorias {
+    width: 270px; /* Largura específica para Imagem2-Categorias */
+    margin-top: 0px; /* Remove margem superior */
+    margin-left: -70px; /* Ajusta margem à esquerda */
+  }
+  .Imagem1-Categorias {
+    width: 270px; /* Largura específica para Imagem1-Categorias */
+  }
+  .Imagem1-Categorias img {
+    width: 270px; /* Largura específica para a imagem dentro de Imagem1-Categorias */
+    height: 270px; /* Altura específica para a imagem dentro de Imagem1-Categorias */
+  }
+  .Imagem2-Categorias img {
+    width: 270px; /* Largura específica para a imagem dentro de Imagem2-Categorias */
+    height: 270px; /* Altura específica para a imagem dentro de Imagem2-Categorias */
+  }
+}
 
-      .Imagem1-Categorias{
-        width: 270px;
-      }
-      
-      .Imagem1-Categorias img{
-        width: 270px;
-        height: 270px;
-      }
-      .Imagem2-Categorias img{
-        width: 270px;
-        height: 270px;
-      }
-    }
-    
-    
-    
-    @media screen and (min-width:1500px) {
-      .Imagem2-Categorias{
-        margin-left: -60px;
-      }
-      .Imagem1-Categorias{
-        width: 300px;
-      }
-      .Imagem2-Categorias{
-        width: 300px;
-        margin-top: 0px;
-        margin-left: -180px;
-      }
-      .Imagem1-Categorias img{
-        width: 300px;
-        height: 300px;
-      }
-      .Imagem2-Categorias img{
-        width: 300px;
-        height: 300px;
-      }
-    }
-    
+/* Estilos para telas com largura minima de 1200 pixels */
 
-    /* ---------------Fim media query "Atalhos de categorias" ------------------*/
+@media screen and (min-width: 1200px) {
+  .Imagem2-Categorias {
+    width: 280px; /* Largura específica para Imagem2-Categorias */
+    margin-top: 0px; /* Remove margem superior */
+    margin-left: -90px; /* Ajusta margem à esquerda */
+  }
+  .Imagem1-Categorias {
+    width: 280px; /* Largura específica para Imagem1-Categorias */
+  }
+  .Imagem1-Categorias img {
+    width: 280px; /* Largura específica para a imagem dentro de Imagem1-Categorias */
+    height: 280px; /* Altura específica para a imagem dentro de Imagem1-Categorias */
+  }
+  .Imagem2-Categorias img {
+    width: 280px; /* Largura específica para a imagem dentro de Imagem2-Categorias */
+    height: 280px; /* Altura específica para a imagem dentro de Imagem2-Categorias */
+  }
+}
+
+/* Estilos para telas com largura minima de 1500 pixels */
+
+@media screen and (min-width: 1500px) {
+  .Imagem2-Categorias {
+    margin-left: -60px; /* Ajusta margem à esquerda */
+  }
+  .Imagem1-Categorias {
+    width: 300px; /* Largura específica para Imagem1-Categorias */
+  }
+  .Imagem2-Categorias {
+    width: 300px; /* Largura específica para Imagem2-Categorias */
+    margin-top: 0px; /* Remove margem superior */
+    margin-left: -180px; /* Ajusta margem à esquerda */
+  }
+  .Imagem1-Categorias img {
+    width: 300px; /* Largura específica para a imagem dentro de Imagem1-Categorias */
+    height: 300px; /* Altura específica para a imagem dentro de Imagem1-Categorias */
+  }
+  .Imagem2-Categorias img {
+    width: 300px; /* Largura específica para a imagem dentro de Imagem2-Categorias */
+    height: 300px; /* Altura específica para a imagem dentro de Imagem2-Categorias */
+  }
+}
+
+    /* --------------- Fim media query "Atalhos de categorias" ------------------*/
 
 /* Media-query da página de roupas masculinas e femininas  */
 

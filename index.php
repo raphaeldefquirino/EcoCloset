@@ -40,13 +40,18 @@
     </div>
   </div>
 
-  <!-- Inicio da construção do "Atalhos de categorias"-->
+ <!-------------- Início da construção do "Atalhos de categorias" -------------->
 
+  <!-- Título ROUPAS -->
   <div class="Roupas-Categorias">
     <h1  style="text-decoration:none;">ROUPAS</h1>
     <br>
   </div>
+  <!-- Fim Título ROUPAS -->
+
+  <!-- Container das categorias -->
   <div class="container-conteudo-Categorias">
+    <!-- Categoria Feminina -->
     <div class="Imagem1-Categorias">
       <a href="feminina.php">
         <div class="Imagem-container-Categorias">
@@ -57,7 +62,9 @@
         </div>
       </a>
     </div>
+    <!-- Fim Categoria Feminina -->
 
+    <!-- Categoria Kids -->
     <div class="Imagem2-Categorias">
       <a href="kids.php">
         <div class="Imagem-container-Categorias">
@@ -68,7 +75,9 @@
         </div>
       </a>
     </div>
+    <!-- Fim Categoria Kids -->
 
+    <!-- Categoria Masculina -->
     <div class="Imagem2-Categorias">
       <a href="masculina.php">
         <div class="Imagem-container-Categorias">
@@ -79,20 +88,26 @@
         </div>
       </a>
     </div>
+    <!-- Fim Categoria Masculina -->
 
   </div>
+  <!-- Fim Container das categorias -->
 
-  <!-------------- Fim da construção do "Atalhos de categorias"-------------->
+  <!-------------- Fim da construção do "Atalhos de categorias" -------------->
 
-  <!-- Inicio da construção do "Sobre nós"-->
+  <!-------------- Início da construção do "Sobre nós" -------------->
 
+  <!-- Título Sobre nós -->
   <div class="SobrenosTexto" id="sobrenos">
     <br>
     <h1>Sobre nós</h1>
   </div>
+  <!-- Fim Título Sobre nós -->
 
+  <!-- Conteudo Sobre nós -->
   <div class="conteudo-container-sobrenos">
 
+  <!-- Texto Sobre nós -->
     <div class="TextoSobrenos">
 
       <p>Nosso projeto é uma iniciativa escolar de uma plataforma online para compras e vendas de roupas e acessórios de segunda mão, com o objetivo de incentivar um consumo mais consciente e sustentável. Ao comprar roupas usadas, os usuários podem economizar dinheiro e ter acesso a peças únicas e de qualidade, ao mesmo tempo em que contribuem para a redução do impacto ambiental causado pelo consumo excessivo de roupas.
@@ -104,16 +119,22 @@
         Com o nosso projeto, esperamos contribuir para um mundo mais sustentável e consciente, oferecendo aos usuários uma alternativa acessível e prática para o consumo de roupas e acessórios.
       </p>
     </div>
+    <!-- Fim Texto Sobre nós -->
 
+    <!-- Imagem Sobre nós -->
     <div class="ImagemSobrenos">
 
       <img src="imagens/pexels-david-bartus-615003.jpg" alt="Image" height="850" width="550">
 
     </div>
+    <!-- Fim Imagem Sobre nós -->
+
   </div>
+  <!-- Conteudo Sobre nós -->
+
   <br>
 
-  <!-- Fim da construção do "Sobre nós"-->
+  <!-------------- Fim da construção do "Sobre nós" -------------->
 
    <!-- Início da construção do "Carrossel de criadores" -->
    <div class="textocriadores">
