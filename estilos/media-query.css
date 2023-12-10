@@ -461,39 +461,46 @@ main {
 
 
 
-/* Media-query da página dos usuario  */
+/*---------------------------- Inicio media query "Página do usuário" ------------------------*/
 
-@media screen and (max-width:810px) {
-  .parte-perfil-usuario{
-   flex-direction: column;
+/* Estilos aplicados quando a largura da tela é no máximo 810px */
+@media screen and (max-width: 810px) {
+  .parte-perfil-usuario {
+    flex-direction: column; /* Altera a direção do flex container para coluna */
   }
-  .textos-perfil-usuario{
-   margin-top: 30px;
+
+  .textos-perfil-usuario {
+    margin-top: 30px; /* Adiciona margem superior de 30 pixels */
   }
-  .btn-sair-perfil-usuario{
-     margin-top: 20px;
-     text-align: center;
- }
+
+  .btn-sair-perfil-usuario {
+    margin-top: 20px; /* Adiciona margem superior de 20 pixels */
+    text-align: center; /* Centraliza o texto */
+  }
 }
 
-@media screen and (min-width:880px) {
-  .tudo-perfil-usuario{
-     margin: auto;
-     margin-top: 50px;
-     margin-bottom: 50px;
-   width: 900px;
- }
+/* Estilos aplicados quando a largura da tela é no mínimo 880px */
+@media screen and (min-width: 880px) {
+  .tudo-perfil-usuario {
+    margin: auto; /* Centraliza o elemento horizontalmente */
+    margin-top: 50px; /* Adiciona margem superior de 50 pixels */
+    margin-bottom: 50px; /* Adiciona margem inferior de 50 pixels */
+    width: 900px; /* Define a largura do elemento como 900 pixels */
+  }
 }
 
-@media screen and (min-width:850px) {
-    .tudo-tudo-desktop{
-        display: block;
-        display: flex;
-    }
-    .tudo{
-        display: none;
-    }
+/* Estilos aplicados quando a largura da tela é no mínimo 850px */
+@media screen and (min-width: 850px) {
+  .tudo-tudo-desktop {
+    display: block; /* Exibição como bloco */
+    display: flex; /* Exibição como flex container */
+  }
+
+  .tudo {
+    display: none; /* Oculta o elemento com a classe "tudo" */
+  }
 }
+
 
 /*-------------------------------------------ERROR MENSAGE SEARCH PAGE----------------------------------------------------*/ 
 

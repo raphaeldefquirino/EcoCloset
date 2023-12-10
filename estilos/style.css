@@ -1362,596 +1362,799 @@ h1 {
 
 
 
-/*-------------------------------------------PAGINA USUARIO----------------------------------------------------*/ 
+/*------------------------------------------- Início "Página do usuário" ----------------------------------------------------*/ 
 
+/* Importa a fonte 'Noto Sans' do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
+/* Define estilos padrão para todo o documento */
 * {
-    font-family: 'Noto Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: #f1f1f1;
+    font-family: 'Noto Sans', sans-serif; /* Define a fonte padrão para todo o documento */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    box-sizing: border-box; /* Garante que as dimensões incluam borda e preenchimento */
 }
 
-.tudo-perfil-usuario{
-    margin-top: 50px;
-    margin-bottom: 45px;
+/* Estilos específicos para o corpo da página */
+body {
+    background-color: #f1f1f1; /* Cor de fundo do corpo da página */
 }
-.parte-perfil-usuario{
-    display: flex;
-    align-items: center;
+
+/* Estilos para a seção de perfil do usuário */
+.tudo-perfil-usuario {
+    margin-top: 50px; /* Margem superior para a seção de perfil */
+    margin-bottom: 45px; /* Margem inferior para a seção de perfil */
 }
-.container-imagem-usuario{
-    width: 200px;
-    height: 200px;
+
+/* Estilos para a parte interna da seção de perfil do usuário */
+.parte-perfil-usuario {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
 }
-.container-imagem-sair-perfil-usuario{
-    text-align: center;
-    display: flex;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+
+/* Estilos para o contêiner da imagem do usuário */
+.container-imagem-usuario {
+    width: 200px; /* Largura fixa do contêiner de imagem */
+    height: 200px; /* Altura fixa do contêiner de imagem */
 }
-.imagem-perfil-usuario{
-    border-radius: 50%;
-    position: absolute;
-    margin-right: 500px;
+
+/* Estilos para o contêiner da imagem do usuário e botão de sair */
+.container-imagem-sair-perfil-usuario {
+    text-align: center; /* Alinha o texto ao centro */
+    display: flex; /* Usa um layout flexível */
+    width: 200px; /* Largura fixa do contêiner de imagem e botão de sair */
+    height: 200px; /* Altura fixa do contêiner de imagem e botão de sair */
+    border-radius: 50%; /* Borda circular */
 }
-.imagem-perfil-usuario img{
-    border-radius: 50%;
+
+/* Estilos para a imagem do perfil do usuário */
+.imagem-perfil-usuario {
+    border-radius: 50%; /* Borda circular para a imagem do perfil */
+    position: absolute; /* Posicionamento absoluto em relação ao contêiner pai */
+    margin-right: 500px; /* Margem à direita para sobrepor a imagem de perfil */
 }
+
+/* Estilos para a imagem dentro da imagem do perfil do usuário */
+.imagem-perfil-usuario img {
+    border-radius: 50%; /* Borda circular para a imagem do perfil */
+}
+
+/* Estilos para a sobreposição na imagem do perfil do usuário */
 .sobrepondo-imagem-perfil-usuario {
-    text-align: center;
-    margin-top: 80%;
-    margin-left: 75%;
-    background-color: #af00ff;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    z-index: 2;
-    position: relative; /* Adicione esta linha */
+    text-align: center; /* Alinha o texto ao centro */
+    margin-top: 80%; /* Margem superior para ajustar a posição vertical */
+    margin-left: 75%; /* Margem esquerda para ajustar a posição horizontal */
+    background-color: #af00ff; /* Cor de fundo da sobreposição */
+    width: 35px; /* Largura da sobreposição */
+    height: 35px; /* Altura da sobreposição */
+    border-radius: 50%; /* Borda circular para a sobreposição */
+    z-index: 2; /* Posiciona a sobreposição acima da imagem de perfil */
+    position: relative; /* Define o contexto de posicionamento */
 }
 
+/* Estilos para o ícone de edição na sobreposição da imagem do perfil do usuário */
 #edit-perfil-usuario {
-    margin-top: 2px;
-    font-size: 30px;
-    font-weight: 100;
-    color: white;
+    margin-top: 2px; /* Margem superior para ajustar a posição vertical */
+    font-size: 30px; /* Tamanho da fonte do ícone de edição */
+    font-weight: 100; /* Peso da fonte do ícone de edição */
+    color: white; /* Cor do ícone de edição */
 }
 
+/* Estilos para o input de upload de arquivo */
 .file-upload {
-    position: absolute;
-    top: -20px;
-    right: 0; /* Mudança aqui para direita */
-    width: 40px;
-    height: 60px;
-    opacity: 0;
-    cursor: pointer;
+    position: absolute; /* Posicionamento absoluto em relação ao contêiner pai */
+    top: -20px; /* Posiciona o input acima do contêiner pai */
+    right: 0; /* Posiciona o input à direita do contêiner pai */
+    width: 40px; /* Largura do input */
+    height: 60px; /* Altura do input */
+    opacity: 0; /* Torna o input invisível */
+    cursor: pointer; /* Define o cursor como ponteiro para indicar a interação */
     z-index: 3; /* Garante que o input esteja acima do ícone de edição */
 }
-.textos-perfil-usuario{
-    margin-left: 20px;
+
+/* Estilos para o texto da seção de perfil do usuário */
+.textos-perfil-usuario {
+    margin-left: 20px; /* Margem à esquerda para o texto da seção de perfil do usuário */
 }
-.ola-perfil-usuario p{
-    font-size: 30px;
-    font-weight: 600;
+
+/* Estilos para a saudação na seção de perfil do usuário */
+.ola-perfil-usuario p {
+    font-size: 30px; /* Tamanho da fonte para a saudação */
+    font-weight: 600; /* Peso da fonte para a saudação */
 }
-.mensagem-perfil-usuario{
-    margin-top: 10px;
+
+/* Estilos para a mensagem na seção de perfil do usuário */
+.mensagem-perfil-usuario {
+    margin-top: 10px; /* Margem superior para a mensagem na seção de perfil do usuário */
 }
-.mensagem-perfil-usuario p{
-    font-size: 18px;
+
+/* Estilos para o texto da mensagem na seção de perfil do usuário */
+.mensagem-perfil-usuario p {
+    font-size: 18px; /* Tamanho da fonte para o texto da mensagem */
 }
-.btn-sair-perfil-usuario{
-    margin-top: 20px;
+
+/* Estilos para o botão de sair na seção de perfil do usuário */
+.btn-sair-perfil-usuario {
+    margin-top: 20px; /* Margem superior para o botão de sair */
 }
-.btn-sair-perfil-usuario a{
-    
-    font-size: 18px; 
+
+/* Estilos para o link dentro do botão de sair na seção de perfil do usuário */
+.btn-sair-perfil-usuario a {
+    font-size: 18px; /* Tamanho da fonte para o link do botão de sair */
 }
 
 
-.tudo{
-    background-color: white;
-    width: 330px;
-    margin: auto;
-    border-radius: 10px; 
-    margin-bottom: 50px;
+
+/* Estilos para a seção "tudo" */
+.tudo {
+    background-color: white; /* Cor de fundo branca */
+    width: 330px; /* Largura fixa */
+    margin: auto; /* Centraliza o bloco na horizontal */
+    border-radius: 10px; /* Borda arredondada */
+    margin-bottom: 50px; /* Margem inferior */
 }
-.carrinho{
-    margin-top: 20px;
+
+/* Estilos para a classe "carrinho" */
+.carrinho {
+    margin-top: 20px; /* Margem superior */
 }
-.conteudo-carrinho{
-    display: none; /* Display: none; para a tela de "carrinho" não aparecer. */
+
+/* Estilos para o conteúdo do carrinho */
+.conteudo-carrinho {
+    display: none; /* Inicialmente, oculta o conteúdo do carrinho */
 }
-.card-carrinho{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    padding-top: 8px;
-    cursor: pointer;
-    width: 317px;
+
+/* Estilos para o card do carrinho */
+.card-carrinho {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    padding-top: 8px; /* Preenchimento superior */
+    cursor: pointer; /* Transforma o cursor em ponteiro quando passa sobre */
+    width: 317px; /* Largura do card do carrinho */
 }
-.card-carrinho p{
-    font-size: 20px;
-    font-weight: 600;
+
+/* Estilos para o texto dentro do card do carrinho */
+.card-carrinho p {
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
 }
+
+/* Estilos para o card do carrinho quando está ativo (clicado) */
 .card-carrinho.active {
-    color: #af00ff;
+    color: #af00ff; /* Cor do texto quando ativo */
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-#shopping_cart{
-    margin-right: 10px;
-    font-size: 30px;
+
+/* Estilos para o ícone de carrinho e seta para baixo */
+#shopping_cart, #chevron-carrinho, #chevron-dados, #chevron-cadastrados {
+    font-size: 30px; /* Tamanho do ícone */
+    margin-left: 5px; /* Margem à esquerda */
+    margin-top: 5px; /* Margem superior */
 }
-#chevron-carrinho{
-    margin-left: 5px;
-    font-size: 30px;
-    margin-top: 5px;
-}
-#chevron-dados{
-    margin-left: 5px;
-    font-size: 30px;
-    margin-top: 5px;
-}
-#chevron-cadastrados{
-    margin-left: 5px;
-    font-size: 30px;
-    margin-top: 5px;
-}
+
 /* Define a classe para girar as setas para baixo */
 .rotate-down {
-    transform: rotate(90deg);
-    transition: transform 0.3s ease; /* Adicione uma transição suave para a animação */
+    transform: rotate(90deg); /* Gira a seta para baixo */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para a animação */
 }
 
+/* Estilos para o contêiner de edição do produto */
+.container-editar-produto {
+    margin-top: 20px; /* Margem superior */
+}
 
-.container-editar-produto{
-    margin-top: 20px;
+/* Estilos para a tabela do carrinho */
+.tabela-carrinho {
+    background-color: white; /* Cor de fundo branca */
+    margin-top: 15px; /* Margem superior */
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
 }
-.tabela-carrinho{
-    background-color: white;
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
+
+/* Estilos para a imagem na tabela do carrinho */
+.imagem-tabela-carrinho img {
+    border-radius: 20px; /* Borda arredondada */
+    margin-top: 10px; /* Margem superior */
+    margin-left: 10px; /* Margem à esquerda */
 }
-.imagem-tabela-carrinho img{
-   border-radius: 20px; 
-   margin-top: 10px;
-   margin-left: 10px;
+
+/* Estilos para a imagem na tabela do carrinho ao passar o mouse */
+.imagem-tabela-carrinho img:hover {
+    transition: opacity 0.4s ease; /* Adiciona uma transição suave */
+    opacity: 0.6; /* Reduz a opacidade ao passar o mouse */
 }
-.imagem-tabela-carrinho img:hover{
-    transition: opacity 0.4s ease;
-    opacity: 0.6;
+
+/* Estilos para o texto na tabela do carrinho */
+.texto-tabela-carrinho {
+    margin-left: 8px; /* Margem à esquerda */
 }
-.texto-tabela-carrinho{
-    margin-left: 8px;
+
+/* Estilos para o preço na tabela do carrinho */
+.preco-tabela-carrinho {
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
 }
-.preco-tabela-carrinho{
-    font-size: 20px;
-    font-weight: 600;
+
+/* Estilos para a descrição na tabela do carrinho */
+.desc-tabela-carrinho {
+    font-size: 20px; /* Tamanho da fonte */
+    margin-top: 15px; /* Margem superior */
 }
-.desc-tabela-carrinho{
-    font-size: 20px;
-    margin-top: 15px;
-    
+
+/* Estilos para o botão de excluir na tabela do carrinho */
+.excluir-tabela-carrinho {
+    margin-left: 35px; /* Margem à esquerda */
 }
-.excluir-tabela-carrinho{
-    margin-left: 35px;
+
+/* Estilos para o texto dentro do botão de excluir na tabela do carrinho */
+.excluir-tabela-carrinho span {
+    color: black; /* Cor do texto */
 }
-.excluir-tabela-carrinho span{
-    color: black;
+
+/* Estilos para o ícone de lixeira no botão de excluir */
+#delete {
+    font-size: 40px; /* Tamanho do ícone */
+    color: black; /* Cor do ícone */
 }
-#delete{
-    font-size: 40px;
-    color: black;
-}
+
+/* Estilos para o ícone de lixeira no botão de excluir ao passar o mouse */
 #delete:hover {
     color: red; /* Altera a cor para vermelho quando o cursor está sobre o ícone */
 }
-.total-carrinho{
-    display: flex;
-    margin-top: 20px;
-    margin-left: 10px;
-}
-.total-carrinho p{
-    margin-right: 5px;
-    font-size: 20px;
-    font-weight: 600;
-}
-.confirmar-carrinho a{
-    text-decoration: none;
-}
-.texto-confirmar-carrinho{
-    background-color: white;
-    width: 140px;
-    height: 35px;
-    text-align: center;
-    margin: auto;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: #af00ff solid 2px;
-}
-.texto-confirmar-carrinho p{
-    color: #af00ff;
-    font-size: 17px;
-    font-weight: 300;
-    height: 32px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
-    padding-top: 5px;
-}
-.texto-confirmar-carrinho p:hover{
-    color: white;
-    transition: background-color 0.4s ease;
-    background-color: #af00ff;
+
+/* Estilos para o total do carrinho */
+.total-carrinho {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    margin-top: 20px; /* Margem superior */
+    margin-left: 10px; /* Margem à esquerda */
 }
 
-.dados{
-    margin-top: 20px;
+/* Estilos para o texto dentro do total do carrinho */
+.total-carrinho p {
+    margin-right: 5px; /* Margem à direita */
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
 }
-.conteudo-dados{
-    display: none;  /* Display: none; para a tela de "dados" não aparecer. */
+
+/* Estilos para o link de confirmação do carrinho */
+.confirmar-carrinho a {
+    text-decoration: none; /* Remove a decoração de texto do link */
 }
-.card-dados{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    cursor: pointer;
-    width: 190px;
+
+/* Estilos para o texto de confirmação do carrinho */
+.texto-confirmar-carrinho {
+    background-color: white; /* Cor de fundo branca */
+    width: 140px; /* Largura fixa */
+    height: 35px; /* Altura fixa */
+    text-align: center; /* Alinha o texto ao centro */
+    margin: auto; /* Centraliza o bloco na horizontal */
+    margin-top: 10px; /* Margem superior */
+    border-radius: 5px; /* Borda arredondada */
+    border: #af00ff solid 2px; /* Borda roxa */
 }
-.card-dados p{
-    font-size: 20px;
-    font-weight: 600;
+
+/* Estilos para o texto dentro do bloco de confirmação do carrinho */
+.texto-confirmar-carrinho p {
+    color: #af00ff; /* Cor do texto */
+    font-size: 17px; /* Tamanho da fonte */
+    font-weight: 300; /* Peso da fonte */
+    height: 32px; /* Altura do bloco */
+    padding-top: 5px; /* Preenchimento superior */
 }
+
+/* Estilos para o texto dentro do bloco de confirmação do carrinho ao passar o mouse */
+.texto-confirmar-carrinho p:hover {
+    color: white; /* Altera a cor do texto para branco */
+    transition: background-color 0.4s ease; /* Adiciona uma transição suave para a animação */
+    background-color: #af00ff; /* Altera a cor de fundo para roxo */
+}
+
+
+/* Estilos para a seção de "dados" */
+.dados {
+    margin-top: 20px; /* Margem superior */
+}
+
+/* Estilos para o conteúdo da seção "dados" */
+.conteudo-dados {
+    display: none;  /* Inicialmente, oculta o conteúdo da seção "dados" */
+}
+
+/* Estilos para o card da seção "dados" */
+.card-dados {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    cursor: pointer; /* Transforma o cursor em ponteiro quando passa sobre */
+    width: 190px; /* Largura do card "dados" */
+}
+
+/* Estilos para o texto dentro do card "dados" */
+.card-dados p {
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+}
+
+/* Estilos para o card "dados" quando está ativo (clicado) */
 .card-dados.active {
-    color: #af00ff;
+    color: #af00ff; /* Cor do texto quando ativo */
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-#database{
-    margin-right: 10px;
-    font-size: 30px;
+
+/* Estilos para o ícone de banco de dados e tabela de dados */
+#database {
+    margin-right: 10px; /* Margem à direita */
+    font-size: 30px; /* Tamanho do ícone */
 }
-.tabela-dados{
-    margin-top: 15px;
-    margin-bottom: 30px;
-    background-color: white;
+
+/* Estilos para a tabela de dados */
+.tabela-dados {
+    margin-top: 15px; /* Margem superior */
+    margin-bottom: 30px; /* Margem inferior */
+    background-color: white; /* Cor de fundo branca */
 }
-.re-email{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 15px;
+
+/* Estilos para a seção de redefinição de e-mail */
+.re-email {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    margin-top: 15px; /* Margem superior */
 }
-.e-email p{
-    font-weight: 600;
-    font-size: 20px
+
+/* Estilos para o texto "e-email" dentro da seção de redefinição de e-mail */
+.e-email p {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-email{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-    
+
+/* Estilos para o conteúdo "u-email" dentro da seção de redefinição de e-mail */
+.u-email {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
 }
-.re-nome{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 10px;
+
+/* Estilos para a seção de redefinição de nome */
+.re-nome {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    margin-top: 10px; /* Margem superior */
 }
-.e-nome{
-    font-weight: 600;
-    font-size: 20px;
+
+/* Estilos para o texto "e-nome" dentro da seção de redefinição de nome */
+.e-nome {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-nome{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
+
+/* Estilos para o conteúdo "u-nome" dentro da seção de redefinição de nome */
+.u-nome {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
 }
-.re-sobrenome{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 10px;
+
+/* Estilos para a seção de redefinição de sobrenome */
+.re-sobrenome {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    margin-top: 10px; /* Margem superior */
 }
-.e-sobrenome{
-    font-weight: 600;
-    font-size: 20px;
+
+/* Estilos para o texto "e-sobrenome" dentro da seção de redefinição de sobrenome */
+.e-sobrenome {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-sobrenome{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
+
+/* Estilos para o conteúdo "u-sobrenome" dentro da seção de redefinição de sobrenome */
+.u-sobrenome {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
 }
-.re-endereco{
-    display: flex;
-    align-items: baseline;
-    margin-left: 10px;
-    margin-top: 10px;
+
+/* Estilos para a seção de redefinição de endereço */
+.re-endereco {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: baseline; /* Alinha os itens verticalmente à linha de base */
+    margin-left: 10px; /* Margem à esquerda */
+    margin-top: 10px; /* Margem superior */
 }
-.e-endereco{
-    font-weight: 600;
-    font-size: 20px;
+
+/* Estilos para o texto "e-endereco" dentro da seção de redefinição de endereço */
+.e-endereco {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-endereco{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
+
+/* Estilos para o conteúdo "u-endereco" dentro da seção de redefinição de endereço */
+.u-endereco {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
 }
-.re-cep{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 10px;
+
+/* Estilos para a seção de redefinição de CEP */
+.re-cep {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    margin-top: 10px; /* Margem superior */
 }
-.e-cep{
-    font-weight: 600;
-    font-size: 20px;
+
+/* Estilos para o texto "e-cep" dentro da seção de redefinição de CEP */
+.e-cep {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-cep{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
+
+/* Estilos para o conteúdo "u-cep" dentro da seção de redefinição de CEP */
+.u-cep {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
 }
-.re-complemento{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 10px;
+
+/* Estilos para a seção de redefinição de complemento */
+.re-complemento {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    margin-top: 10px; /* Margem superior */
 }
-.e-complemento{
-    font-weight: 600;
-    font-size: 20px;
+
+/* Estilos para o texto "e-complemento" dentro da seção de redefinição de complemento */
+.e-complemento {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-complemento{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
+
+/* Estilos para o conteúdo "u-complemento" dentro da seção de redefinição de complemento */
+.u-complemento {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
 }
-.re-tel{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 10px;
+
+/* Estilos para a seção de redefinição de telefone */
+.re-tel {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    margin-top: 10px; /* Margem superior */
 }
-.e-tel{
-    font-weight: 600;
-    font-size: 20px;
+
+/* Estilos para o texto "e-tel" dentro da seção de redefinição de telefone */
+.e-tel {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-tel{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
+
+/* Estilos para o conteúdo "u-tel" dentro da seção de redefinição de telefone */
+.u-tel {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
 }
+
+/* Estilos para o botão de edição de dados */
 .editar-dados {
-    background-color: white;
-    border: #af00ff solid 2px;
-    width: 165px;
-    height: 35px;
-    text-align: center;
-    margin: auto;
-    border-radius: 5px;
-    margin-bottom: 30px;
+    background-color: white; /* Cor de fundo branca */
+    border: #af00ff solid 2px; /* Borda roxa */
+    width: 165px; /* Largura fixa */
+    height: 35px; /* Altura fixa */
+    text-align: center; /* Alinha o texto ao centro */
+    margin: auto; /* Centraliza o bloco na horizontal */
+    border-radius: 5px; /* Borda arredondada */
+    margin-bottom: 30px; /* Margem inferior */
 }
-.editar-dados a{
-    text-decoration: none;
+
+/* Estilos para o link dentro do botão de edição de dados */
+.editar-dados a {
+    text-decoration: none; /* Remove a decoração de texto do link */
 }
-.editar-dados p{
-    color: #af00ff;
-    font-size: 17px;
-    font-weight: 300;
-    height: 32px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
-    padding-top: 5px;
+
+/* Estilos para o texto dentro do bloco de edição de dados */
+.editar-dados p {
+    color: #af00ff; /* Cor do texto roxa */
+    font-size: 17px; /* Tamanho da fonte */
+    font-weight: 300; /* Peso da fonte */
+    height: 32px; /* Altura fixa */
+    padding-top: 5px; /* Espaçamento superior */
 }
-.editar-dados p:hover{
-    color: white;
-    transition: background-color 0.4s ease;
-    background-color: #af00ff;
+
+/* Estilos para o texto dentro do bloco de edição de dados quando hover */
+.editar-dados p:hover {
+    color: white; /* Cor do texto branca quando hover */
+    transition: background-color 0.4s ease; /* Transição suave da cor de fundo */
+    background-color: #af00ff; /* Cor de fundo roxa */
 }
 
 
-.cadastrados{
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+/* Estilos para a seção "cadastrados" */
+.cadastrados {
+    margin-top: 20px; /* Margem superior */
+    margin-bottom: 20px; /* Margem inferior */
 }
-.card-cadastrados{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    padding-bottom: 8px;
-    cursor: pointer;
-    width: 281px;
+
+/* Estilos para o cartão "card-cadastrados" na seção "cadastrados" */
+.card-cadastrados {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    padding-bottom: 8px; /* Preenchimento inferior */
+    cursor: pointer; /* Indicador de cursor ao passar sobre o cartão */
+    width: 281px; /* Largura fixa */
 }
-.card-cadastrados p{
-    font-size: 20px;
-    font-weight: 600;
+
+/* Estilos para o texto "p" dentro do cartão "card-cadastrados" */
+.card-cadastrados p {
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
 }
+
+/* Estilos para o cartão "card-cadastrados" quando está ativo */
 .card-cadastrados.active {
-    color: #af00ff;
+    color: #af00ff; /* Cor do texto roxa */
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-#bookmark_manager{
-    margin-right: 10px;
-    font-size: 30px;
+
+/* Estilos para o ícone "bookmark_manager" no cartão "card-cadastrados" */
+#bookmark_manager {
+    margin-right: 10px; /* Margem à direita */
+    font-size: 30px; /* Tamanho do ícone */
 }
-.conteudo-dados{
-    background-color: white;
-    display: none;  /* Display: none; para a tela de "dados" não aparecer. */
-    padding-bottom: 10px;
-    border-radius: 20px;
+
+/* Estilos para o conteúdo "conteudo-dados" na seção "dados" */
+.conteudo-dados {
+    background-color: white; /* Cor de fundo branca */
+    display: none; /* Display: none; para a tela de "dados" não aparecer */
+    padding-bottom: 10px; /* Preenchimento inferior */
+    border-radius: 20px; /* Borda arredondada */
 }
-.card-dados{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    cursor: pointer;
-    width: 190px;
+
+/* Estilos para o cartão "card-dados" na seção "dados" */
+.card-dados {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    cursor: pointer; /* Indicador de cursor ao passar sobre o cartão */
+    width: 190px; /* Largura fixa */
 }
-.card-dados p{
-    font-size: 20px;
-    font-weight: 600;
+
+/* Estilos para o texto "p" dentro do cartão "card-dados" */
+.card-dados p {
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
 }
-#database{
-    margin-right: 10px;
-    font-size: 30px;
+
+/* Estilos para o ícone "database" no cartão "card-dados" */
+#database {
+    margin-right: 10px; /* Margem à direita */
+    font-size: 30px; /* Tamanho do ícone */
 }
-.tabela-dados{
-    margin-bottom: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+
+/* Estilos para a tabela "tabela-dados" na seção "dados" */
+.tabela-dados {
+    margin-bottom: 30px; /* Margem inferior */
+    padding-left: 10px; /* Preenchimento à esquerda */
+    padding-right: 10px; /* Preenchimento à direita */
 }
-.re-email{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 15px;
+
+/* Estilos para a seção de redefinição de e-mail "re-email" */
+.re-email {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    margin-top: 15px; /* Margem superior */
 }
-.e-email p{
-    font-weight: 600;
-    font-size: 20px
+
+/* Estilos para o texto "e-email" dentro da seção de redefinição de e-mail */
+.e-email p {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-email{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-    margin-right: 10px;
+
+/* Estilos para o conteúdo "u-email" dentro da seção de redefinição de e-mail */
+.u-email {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
+    margin-right: 10px; /* Margem à direita */
 }
-.re-nome{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
+
+/* Estilos para a seção de redefinição de nome "re-nome" */
+.re-nome {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
 }
-.e-nome{
-    font-weight: 600;
-    font-size: 20px;
+
+/* Estilos para o texto "e-nome" dentro da seção de redefinição de nome */
+.e-nome {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-nome{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-    margin-right: 10px;
+
+/* Estilos para o conteúdo "u-nome" dentro da seção de redefinição de nome */
+.u-nome {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
+    margin-right: 10px; /* Margem à direita */
 }
-.re-sobrenome{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 10px;
+
+/* Estilos para a seção de redefinição de sobrenome "re-sobrenome" */
+.re-sobrenome {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    margin-top: 10px; /* Margem superior */
 }
-.e-sobrenome{
-    font-weight: 600;
-    font-size: 20px;
+
+/* Estilos para o texto "e-sobrenome" dentro da seção de redefinição de sobrenome */
+.e-sobrenome {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-sobrenome{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-    margin-right: 10px;
+
+/* Estilos para o conteúdo "u-sobrenome" dentro da seção de redefinição de sobrenome */
+.u-sobrenome {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
+    margin-right: 10px; /* Margem à direita */
 }
-.re-endereco{
-    display: flex;
-    align-items: baseline;
-    margin-left: 10px;
-    margin-top: 10px;
+
+/* Estilos para a seção de redefinição de endereço "re-endereco" */
+.re-endereco {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: baseline; /* Alinha os itens verticalmente à linha de base */
+    margin-left: 10px; /* Margem à esquerda */
+    margin-top: 10px; /* Margem superior */
 }
-.e-endereco{
-    font-weight: 600;
-    font-size: 20px;
+
+/* Estilos para o texto "e-endereco" dentro da seção de redefinição de endereço */
+.e-endereco {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-endereco{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-    margin-right: 10px;
+
+/* Estilos para o conteúdo "u-endereco" dentro da seção de redefinição de endereço */
+.u-endereco {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
+    margin-right: 10px; /* Margem à direita */
 }
-.re-cep{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 10px;
+
+/* Estilos para a seção de redefinição de CEP "re-cep" */
+.re-cep {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    margin-top: 10px; /* Margem superior */
 }
-.e-cep{
-    font-weight: 600;
-    font-size: 20px;
+
+/* Estilos para o texto "e-cep" dentro da seção de redefinição de CEP */
+.e-cep {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-cep{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-    margin-right: 10px;
+
+/* Estilos para o conteúdo "u-cep" dentro da seção de redefinição de CEP */
+.u-cep {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
+    margin-right: 10px; /* Margem à direita */
 }
-.re-complemento{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 10px;
+
+/* Estilos para a seção de redefinição de complemento "re-complemento" */
+.re-complemento {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    margin-top: 10px; /* Margem superior */
 }
-.e-complemento{
-    font-weight: 600;
-    font-size: 20px;
+
+/* Estilos para o texto "e-complemento" dentro da seção de redefinição de complemento */
+.e-complemento {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-complemento{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-    margin-right: 10px;
+
+/* Estilos para o conteúdo "u-complemento" dentro da seção de redefinição de complemento */
+.u-complemento {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
+    margin-right: 10px; /* Margem à direita */
 }
-.re-tel{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 10px;
+
+/* Estilos para a seção de redefinição de telefone "re-tel" */
+.re-tel {
+    display: flex; /* Usa um layout flexível para alinhar itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    margin-left: 10px; /* Margem à esquerda */
+    margin-top: 10px; /* Margem superior */
 }
-.e-tel{
-    font-weight: 600;
-    font-size: 20px;
+
+/* Estilos para o texto "e-tel" dentro da seção de redefinição de telefone */
+.e-tel {
+    font-weight: 600; /* Peso da fonte */
+    font-size: 20px; /* Tamanho da fonte */
 }
-.u-tel{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-    margin-right: 10px;
+
+/* Estilos para o conteúdo "u-tel" dentro da seção de redefinição de telefone */
+.u-tel {
+    margin-left: 10px; /* Margem à esquerda */
+    font-size: 15px; /* Tamanho da fonte */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer lugar */
+    margin-right: 10px; /* Margem à direita */
 }
-.espaco-editar-dados{
-    padding-bottom: 10px;
+
+/* Estilos para o espaçamento entre a seção de redefinição e o botão de edição "espaco-editar-dados" */
+.espaco-editar-dados {
+    padding-bottom: 10px; /* Espaçamento na parte inferior */
 }
+
+/* Estilos para o botão de edição "editar-dados" */
 .editar-dados {
-    background-color: white;
-    border: #af00ff solid 2px;
-    width: 165px;
-    height: 35px;
-    text-align: center;
-    margin: auto;
-    border-radius: 5px;
-}
-.editar-dados a{
-    text-decoration: none;
-}
-.editar-dados p{
-    color: #af00ff;
-    font-size: 17px;
-    font-weight: 300;
-    height: 33px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
-    padding-top: 5px;
-}
-.editar-dados p:hover{
-    color: white;
-    transition: background-color 0.4s ease;
-    background-color: #af00ff;
+    background-color: white; /* Cor de fundo branca */
+    border: #af00ff solid 2px; /* Borda com cor da borda específica */
+    width: 165px; /* Largura do botão */
+    height: 35px; /* Altura do botão */
+    text-align: center; /* Alinhamento do texto ao centro */
+    margin: auto; /* Centraliza o botão na tela */
+    border-radius: 5px; /* Borda arredondada */
 }
 
-
-
-
-
-
-.conteudo-carrinho-cadastrados{
-    display: none;   
+/* Estilos para o link dentro do botão de edição "editar-dados a" */
+.editar-dados a {
+    text-decoration: none; /* Remove decoração de link */
 }
-.tabela-cadastrados th{
+
+/* Estilos para o texto dentro do botão de edição "editar-dados p" */
+.editar-dados p {
+    color: #af00ff; /* Cor do texto */
+    font-size: 17px; /* Tamanho da fonte */
+    font-weight: 300; /* Peso da fonte */
+    height: 33px; /* Altura do botão */
+    padding-top: 5px; /* Espaçamento interno superior */
+}
+
+/* Estilos para o texto dentro do botão de edição quando hover "editar-dados p:hover" */
+.editar-dados p:hover {
+    color: white; /* Cor do texto ao passar o mouse */
+    transition: background-color 0.4s ease; /* Transição suave para a mudança de cor de fundo */
+    background-color: #af00ff; /* Nova cor de fundo ao passar o mouse */
+}
+
+
+
+
+
+
+
+/* Oculta o conteúdo da classe .conteudo-carrinho-cadastrados por padrão */
+.conteudo-carrinho-cadastrados {
+    display: none;
+}
+
+/* Define o fluxo da direção da coluna para os elementos th dentro da classe .tabela-cadastrados */
+.tabela-cadastrados th {
     flex-direction: column;
 }
-.conteudo-carrinho-cadastrados{
+
+/* Estilo para o bloco de conteúdo .conteudo-carrinho-cadastrados */
+.conteudo-carrinho-cadastrados {
     background-color: white;
     border-radius: 20px;
     padding-top: 10px;
@@ -1959,43 +2162,65 @@ body{
     padding-left: 10px;
     padding-right: 20px;
 }
-.editar-tabela-carrinho{
+
+/* Adiciona margem à esquerda para elementos com a classe .editar-tabela-carrinho */
+.editar-tabela-carrinho {
     margin-left: 20px;
 }
-.editar-tabela-carrinho span{
+
+/* Estilo para o texto dentro de .editar-tabela-carrinho */
+.editar-tabela-carrinho span {
     color: #af00ff;
 }
-#edit{
+
+/* Estilo para o ícone com o ID edit */
+#edit {
     font-size: 30px;
 }
-#delete-cad{
+
+/* Estilo para o ícone com o ID delete-cad */
+#delete-cad {
     font-size: 35px;
 }
-#delete-cad:hover{
+
+/* Altera a cor do ícone delete-cad ao passar o mouse sobre ele */
+#delete-cad:hover {
     color: red;
 }
-.excluir-tabela-cad{
+
+/* Adiciona margem à esquerda para elementos com a classe .excluir-tabela-cad */
+.excluir-tabela-cad {
     margin-left: 15px;
 }
-.excluir-tabela-cad span{
+
+/* Estilo para o texto dentro de .excluir-tabela-cad */
+.excluir-tabela-cad span {
     color: black;
 }
-.titulo-preco p{
+
+/* Estilo para o bloco de título e preço */
+.titulo-preco p {
     font-weight: 600;
     margin-left: 15px;
     margin-bottom: 10px;
     font-size: 20px;
 }
-.linha1-editar-produtos{
+
+/* Estilo para a primeira linha de elementos com a classe .linha1-editar-produtos */
+.linha1-editar-produtos {
     display: flex;
     margin-bottom: 20px;
 }
-.e-precoO{
+
+/* Estilo para elementos com a classe .e-precoO */
+.e-precoO {
     width: 120px;
     margin-left: 10px;
     text-align: center;
 }
-.u-precoO{
+
+/* Estilo para elementos com a classe .u-precoO */
+.u-precoO {
     background-color: #cfcfcf;
     width: 120px;
     margin-top: 10px;
@@ -2007,15 +2232,21 @@ body{
     border: 2px solid black;
     opacity: 0.6;
 }
-.col-precoN{
+
+/* Adiciona margem à esquerda para elementos com a classe .col-precoN */
+.col-precoN {
     margin-left: 40px;
 }
-.e-precoN{
+
+/* Estilo para elementos com a classe .e-precoN */
+.e-precoN {
     width: 120px;
     margin-left: 10px;
     text-align: center;
 }
-.u-precoN input[type="text"]{
+
+/* Estilo para o input[type="text"] dentro da classe .u-precoN */
+.u-precoN input[type="text"] {
     background-color: #e6e6e6;
     width: 120px;
     margin-top: 10px;
@@ -2025,15 +2256,21 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
-.linha2-editar-produtos{
+
+/* Adiciona margem inferior para elementos com a classe .linha2-editar-produtos */
+.linha2-editar-produtos {
     margin-bottom: 20px;
 }
-.e-nomeS p{
+
+/* Estilo para o texto dentro da classe .e-nomeS */
+.e-nomeS p {
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-nomeS input[type="text"]{
+
+/* Estilo para o input[type="text"] dentro da classe .u-nomeS */
+.u-nomeS input[type="text"] {
     background-color: #e6e6e6;
     width: 290px;
     height: 40px;
@@ -2043,15 +2280,21 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
-.linha3-editar-produtos{
+
+/* Adiciona margem inferior para elementos com a classe .linha3-editar-produtos */
+.linha3-editar-produtos {
     margin-bottom: 20px;
 }
-.e-desc p{
+
+/* Estilo para o texto dentro da classe .e-desc */
+.e-desc p {
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-desc input[type="text"]{
+
+/* Estilo para o input[type="text"] dentro da classe .u-desc */
+.u-desc input[type="text"] {
     background-color: #e6e6e6;
     width: 290px;
     height: 40px;
@@ -2061,23 +2304,31 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
-.linha4-editar-produtos{
+
+/* Adiciona margem inferior para elementos com a classe .linha4-editar-produtos */
+.linha4-editar-produtos {
     margin-bottom: 20px;
 }
-.e-tipo p{
+
+/* Estilo para o texto dentro da classe .e-tipo */
+.e-tipo p {
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-tipo{
+
+/* Estilo para o bloco .u-tipo */
+.u-tipo {
     margin-top: 10px;
 }
-.u-tipo input[type="radio"]{
+
+/* Estilo para o input[type="radio"] dentro da classe .u-tipo */
+.u-tipo input[type="radio"] {
     appearance: none;
     background-color: #e6e6e6;
     border: 2px solid black;
     height: 20px;
-    width:  20px;
+    width: 20px;
     margin-top: 10px;
     margin-left: 10px;
     text-align: center;
@@ -2086,7 +2337,9 @@ body{
     align-items: center; /* Centralizar verticalmente */    
     cursor: pointer;
 }
-.u-tipo input[type="radio"]:checked::before{
+
+/* Estilo para o input[type="radio"]:checked dentro da classe .u-tipo */
+.u-tipo input[type="radio"]:checked::before {
     content: "✔";
     color: #af00ff;
     font-weight: 600;
@@ -2094,6 +2347,8 @@ body{
     text-align: center;
     font-size: 20px;
 }
+
+/* Estilo para o label dentro da classe .u-tipo */
 .u-tipo label {
     cursor: pointer; /* Para mostrar a mão ao passar o mouse sobre o label */
     font-size: 18px;
@@ -2101,23 +2356,31 @@ body{
     margin-left: 5px;
     margin-top: 7px;
 }
-.linha5-editar-produtos{
+
+/* Adiciona margem inferior para elementos com a classe .linha5-editar-produtos */
+.linha5-editar-produtos {
     margin-bottom: 20px;
 }
-.e-cond p{
+
+/* Estilo para o texto dentro da classe .e-cond */
+.e-cond p {
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-cond{
+
+/* Estilo para o bloco .u-cond */
+.u-cond {
     margin-top: 10px;
 }
-.u-cond input[type="radio"]{
+
+/* Estilo para o input[type="radio"] dentro da classe .u-cond */
+.u-cond input[type="radio"] {
     appearance: none;
     background-color: #e6e6e6;
     border: 2px solid black;
     height: 20px;
-    width:  20px;
+    width: 20px;
     margin-top: 10px;
     margin-left: 10px;
     text-align: center;
@@ -2126,7 +2389,9 @@ body{
     align-items: center; /* Centralizar verticalmente */    
     cursor: pointer;
 }
-.u-cond input[type="radio"]:checked::before{
+
+/* Estilo para o input[type="radio"]:checked dentro da classe .u-cond */
+.u-cond input[type="radio"]:checked::before {
     content: "✔";
     color: #af00ff;
     font-weight: 600;
@@ -2134,6 +2399,8 @@ body{
     text-align: center;
     font-size: 20px;
 }
+
+/* Estilo para o label dentro da classe .u-cond */
 .u-cond label {
     cursor: pointer; /* Para mostrar a mão ao passar o mouse sobre o label */
     font-size: 18px;
@@ -2141,18 +2408,26 @@ body{
     margin-left: 5px;
     margin-top: 7px;
 }
-.linha6-editar-produtos{
+
+/* Adiciona margem inferior para elementos com a classe .linha6-editar-produtos */
+.linha6-editar-produtos {
     margin-bottom: 30px;
 }
-.e-sub p{
+
+/* Estilo para o texto dentro da classe .e-sub */
+.e-sub p {
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-sub{
+
+/* Estilo para o bloco .u-sub */
+.u-sub {
     margin-top: 10px;
 }
-.u-sub select{
+
+/* Estilo para o select dentro da classe .u-sub */
+.u-sub select {
     background-color: #e6e6e6;
     border: 2px solid black;
     font-size: 17px;
@@ -2165,12 +2440,16 @@ body{
     align-items: center; /* Centralizar verticalmente */    
     cursor: pointer;
 }
-.btn-slavar-alt-prod{
+
+/* Estilo para o bloco do botão de salvar alterações */
+.btn-slavar-alt-prod {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 10px;
 }
-.btn-slavar-alt-prod input[type="submit"]{
+
+/* Estilo para o botão de submit dentro da classe .btn-slavar-alt-prod */
+.btn-slavar-alt-prod input[type="submit"] {
     background-color: white;
     border: 2px solid #af00ff;
     width: 165px;
@@ -2182,22 +2461,31 @@ body{
     font-size: 17px;
     text-decoration: none;
 }
-.btn-slavar-alt-prod input[type="submit"]:hover{
+
+/* Estilo para o botão de submit ao passar o mouse sobre ele */
+.btn-slavar-alt-prod input[type="submit"]:hover {
     background-color: #af00ff;
     transition: background-color 0.4s ease;
     color: white;
 }
-#delete-cad{
+
+/* Estilo para o ícone delete-cad */
+#delete-cad {
     font-size: 35px;
 }
-#delete-cad:hover{
+
+/* Estilo para o ícone delete-cad ao passar o mouse sobre ele */
+#delete-cad:hover {
     color: red;
 }
-#edit{
+
+/* Estilo para o ícone edit */
+#edit {
     font-size: 30px;
 }
 
-.tudo-tudo-desktop{
+/* Estilo para o bloco .tudo-tudo-desktop */
+.tudo-tudo-desktop {
     display: flex;
     width: 825px;
     height: auto;
@@ -2205,13 +2493,17 @@ body{
     margin-bottom: 50px;
     display: none;
 }
-.tudo-card-desktop{
+
+/* Estilo para o bloco .tudo-card-desktop */
+.tudo-card-desktop {
     background-color: #f1f1f1;
     width: 330px;
     height: 225px;
     border: 3px solid black;
 }
-.card-carrinho-desktop{
+
+/* Estilo para o bloco .card-carrinho-desktop */
+.card-carrinho-desktop {
     display: flex;
     margin-top: 5px;
     align-items: center;
@@ -2219,25 +2511,35 @@ body{
     cursor: pointer;
     width: 317px;
 }
-.card-carrinho-desktop p{
+
+/* Estilo para o texto dentro de .card-carrinho-desktop */
+.card-carrinho-desktop p {
     font-size: 20px;
     font-weight: 600;
     width: 330px;
 }
+
+/* Estilo para o bloco .card-carrinho-desktop quando ativo */
 .card-carrinho-desktop.active {
     color: #af00ff;
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-#shopping_cart{
+
+/* Estilo para o ícone shopping_cart */
+#shopping_cart {
     margin-right: 10px;
     font-size: 30px;
 }
-#chevron-carrinho{
+
+/* Estilo para o ícone chevron-carrinho */
+#chevron-carrinho {
     margin-left: 5px;
     font-size: 30px;
     margin-top: 5px;
 }
-.card-dados-desktop{
+
+/* Estilo para o bloco .card-dados-desktop */
+.card-dados-desktop {
     display: flex;
     align-items: center;
     margin-left: 5px;
@@ -2245,25 +2547,35 @@ body{
     width: 190px;
     margin-top: 10px;
 }
-.card-dados-desktop p{
+
+/* Estilo para o texto dentro da classe .card-dados-desktop */
+.card-dados-desktop p {
     font-size: 20px;
     font-weight: 600;
     width: 150px;
 }
+
+/* Estilo para .card-dados-desktop quando ativo */
 .card-dados-desktop.active {
     color: #af00ff;
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-#database{
+
+/* Estilo para o ícone database */
+#database {
     margin-right: 10px;
     font-size: 30px;
 }
-#chevron-dados{
+
+/* Estilo para o ícone chevron-dados */
+#chevron-dados {
     margin-left: 5px;
     font-size: 30px;
     margin-top: 5px;
 }
-.card-cadastrados-desktop{
+
+/* Estilo para .card-cadastrados-desktop */
+.card-cadastrados-desktop {
     display: flex;
     align-items: center;
     margin-left: 5px;
@@ -2271,119 +2583,166 @@ body{
     width: 281px;
     margin-top: 10px;
 }
-.card-cadastrados-desktop p{
+
+/* Estilo para o texto dentro de .card-cadastrados-desktop */
+.card-cadastrados-desktop p {
     font-size: 20px;
     font-weight: 600;
     width: 300px;
 }
+
+/* Estilo para .card-cadastrados-desktop quando ativo */
 .card-cadastrados-desktop.active {
     color: #af00ff;
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-#bookmark_manager{
+
+/* Estilo para o ícone bookmark_manager */
+#bookmark_manager {
     margin-right: 10px;
     font-size: 30px;
 }
-#chevron-cadastrados{
+
+/* Estilo para o ícone chevron-cadastrados */
+#chevron-cadastrados {
     margin-left: 5px;
     font-size: 30px;
     margin-top: 5px;
 }
-#chevron-enderecos{
+
+/* Estilo para o ícone chevron-enderecos */
+#chevron-enderecos {
     margin-left: 5px;
     font-size: 30px;
     margin-top: 5px;
 }
-.tabelas-desktop{
-    width:400px;
+
+/* Estilo para o bloco .tabelas-desktop */
+.tabelas-desktop {
+    width: 400px;
     margin-left: 50px;
 }
 
-
-.conteudo-carrinho-desktop{
-   background-color: white;
-    display: none; /* para não aparecer esta parte*/
+/* Estilo para o bloco .conteudo-carrinho-desktop */
+.conteudo-carrinho-desktop {
+    background-color: white;
+    display: none; /* para não aparecer esta parte */
     border-radius: 20px;
     padding-top: 10px;
     padding-left: 10px;
     padding-bottom: 20px;
 }
-.carrinho-vazio-desktop{
+
+/* Estilo para o texto dentro da classe .carrinho-vazio-desktop */
+.carrinho-vazio-desktop {
     text-align: center;
     margin-top: 0px;
     font-size: 20px;
 }
-.cadastrados-vazio-desktop{
+
+/* Estilo para o texto dentro da classe .cadastrados-vazio-desktop */
+.cadastrados-vazio-desktop {
     text-align: center;
     margin-top: 10px;
     font-size: 20px;
 }
 
-.carrinho-vazio{
+/* Estilo para o texto dentro da classe .carrinho-vazio */
+.carrinho-vazio {
     text-align: center;
     margin-top: 10px;
     font-size: 20px;
 }
-.tabela-carrinho-desktop{
+
+/* Estilo para o bloco .tabela-carrinho-desktop */
+.tabela-carrinho-desktop {
     background-color: white;
     margin-bottom: 1px;
     display: flex;
     align-items: center;
     border-radius: 20px 20px 20px 20px;
 }
-.imagem-tabela-carrinho-desktop img{
-   border-radius: 20px; 
-   margin-top: 10px;
-   margin-bottom: 10px;
-   margin-left: 10px;
+
+/* Estilo para a imagem dentro da classe .imagem-tabela-carrinho-desktop */
+.imagem-tabela-carrinho-desktop img {
+    border-radius: 20px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
-.imagem-tabela-carrinho-desktop img:hover{
+
+/* Efeito de transição de opacidade ao passar o mouse sobre a imagem */
+.imagem-tabela-carrinho-desktop img:hover {
     transition: opacity 0.4s ease;
     opacity: 0.6;
 }
-.texto-tabela-carrinho-desktop{
+
+/* Estilo para o bloco .texto-tabela-carrinho-desktop */
+.texto-tabela-carrinho-desktop {
     margin-left: 8px;
     width: 180px;
 }
-#primeiro-card{
+
+/* Estilo para o bloco com o ID primeiro-card */
+#primeiro-card {
     width: 220px;
 }
-.preco-tabela-carrinho-desktop{
+
+/* Estilo para a classe .preco-tabela-carrinho-desktop */
+.preco-tabela-carrinho-desktop {
     font-size: 20px;
     font-weight: 600;
 }
-.desc-tabela-carrinho-desktop{
+
+/* Estilo para a classe .desc-tabela-carrinho-desktop */
+.desc-tabela-carrinho-desktop {
     font-size: 20px;
     margin-top: 15px;
 }
-.excluir-tabela-carrinho-desktop{
+
+/* Estilo para o bloco .excluir-tabela-carrinho-desktop */
+.excluir-tabela-carrinho-desktop {
     margin-left: 0px;
 }
-.excluir-tabela-carrinho-desktop span{
+
+/* Estilo para o texto dentro de .excluir-tabela-carrinho-desktop */
+.excluir-tabela-carrinho-desktop span {
     color: black;
 }
-#delete{
+
+/* Estilo para o ícone delete */
+#delete {
     font-size: 40px;
     color: black;
 }
+
+/* Altera a cor do ícone delete ao passar o mouse sobre ele */
 #delete:hover {
-    color: red; /* Altera a cor para vermelho quando o cursor está sobre o ícone */
+    color: red;
 }
-.total-carrinho-desktop{
+
+/* Estilo para o bloco .total-carrinho-desktop */
+.total-carrinho-desktop {
     display: flex;
     margin-top: 20px;
     margin-left: 20px;
     padding-bottom: 20px;
 }
-.total-carrinho-desktop p{
+
+/* Estilo para o texto dentro de .total-carrinho-desktop */
+.total-carrinho-desktop p {
     margin-right: 5px;
     font-size: 20px;
     font-weight: 600;
 }
-.confirmar-carrinho-desktop a{
+
+/* Estilo para o bloco .confirmar-carrinho-desktop a */
+.confirmar-carrinho-desktop a {
     text-decoration: none;
 }
-.texto-confirmar-carrinho-desktop{
+
+/* Estilo para o bloco .texto-confirmar-carrinho-desktop */
+.texto-confirmar-carrinho-desktop {
     background-color: white;
     width: 140px;
     height: 35px;
@@ -2393,14 +2752,18 @@ body{
     border-radius: 5px;
     border: #af00ff solid 2px;
 }
-.texto-confirmar-carrinho-desktop p{
+
+/* Estilo para o texto dentro de .texto-confirmar-carrinho-desktop */
+.texto-confirmar-carrinho-desktop p {
     color: #af00ff;
     font-size: 17px;
     font-weight: 300;
     height: 33px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
     padding-top: 5px;
 }
-.texto-confirmar-carrinho-desktop p:hover{
+
+/* Efeito de transição ao passar o mouse sobre o texto de confirmação */
+.texto-confirmar-carrinho-desktop p:hover {
     color: white;
     transition: background-color 0.4s ease;
     background-color: #af00ff;
@@ -2409,137 +2772,189 @@ body{
 
 
 
-.conteudo-dados-desktop{
+
+/* Estilo para o bloco .conteudo-dados-desktop */
+.conteudo-dados-desktop {
     background-color: white;
     display: none;  /* Display: none; para a tela de "dados" não aparecer. */
     padding-bottom: 10px;
     border-radius: 20px;
 }
-#database{
+
+/* Estilo para o ícone database */
+#database {
     margin-right: 10px;
     font-size: 30px;
 }
-.tabela-dados-desktop{
+
+/* Estilo para o bloco .tabela-dados-desktop */
+.tabela-dados-desktop {
     margin-bottom: 30px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
 }
-.re-email-desktop{
+
+/* Estilo para o bloco .re-email-desktop */
+.re-email-desktop {
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 15px;
 }
-.e-email-desktop p{
+
+/* Estilo para o texto dentro de .e-email-desktop */
+.e-email-desktop p {
     font-weight: 600;
-    font-size: 20px
+    font-size: 20px;
 }
-.u-email-desktop{
+
+/* Estilo para o bloco .u-email-desktop */
+.u-email-desktop {
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-nome-desktop{
+
+/* Estilo para o bloco .re-nome-desktop */
+.re-nome-desktop {
     display: flex;
     align-items: center;
     margin-left: 10px;
     padding-top: 10px;
 }
-.e-nome-desktop{
+
+/* Estilo para o texto dentro de .e-nome-desktop */
+.e-nome-desktop {
     font-weight: 600;
     font-size: 20px;
 }
-.u-nome-desktop{
+
+/* Estilo para o bloco .u-nome-desktop */
+.u-nome-desktop {
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-sobrenome-desktop{
+
+/* Estilo para o bloco .re-sobrenome-desktop */
+.re-sobrenome-desktop {
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-sobrenome-desktop{
+
+/* Estilo para o texto dentro de .e-sobrenome-desktop */
+.e-sobrenome-desktop {
     font-weight: 600;
     font-size: 20px;
 }
-.u-sobrenome-desktop{
+
+/* Estilo para o bloco .u-sobrenome-desktop */
+.u-sobrenome-desktop {
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-endereco-desktop{
+
+/* Estilo para o bloco .re-endereco-desktop */
+.re-endereco-desktop {
     display: flex;
     align-items: baseline;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-endereco-desktop{
+
+/* Estilo para o texto dentro de .e-endereco-desktop */
+.e-endereco-desktop {
     font-weight: 600;
     font-size: 20px;
 }
-.u-endereco-desktop{
+
+/* Estilo para o bloco .u-endereco-desktop */
+.u-endereco-desktop {
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-cep-desktop{
+
+/* Estilo para o bloco .re-cep-desktop */
+.re-cep-desktop {
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-cep-desktop{
+
+/* Estilo para o texto dentro de .e-cep-desktop */
+.e-cep-desktop {
     font-weight: 600;
     font-size: 20px;
 }
-.u-cep-desktop{
+
+/* Estilo para o bloco .u-cep-desktop */
+.u-cep-desktop {
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-complemento-desktop{
+
+/* Estilo para o bloco .re-complemento-desktop */
+.re-complemento-desktop {
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-complemento-desktop{
+
+/* Estilo para o texto dentro de .e-complemento-desktop */
+.e-complemento-desktop {
     font-weight: 600;
     font-size: 20px;
 }
-.u-complemento-desktop{
+
+/* Estilo para o bloco .u-complemento-desktop */
+.u-complemento-desktop {
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.re-tel-desktop{
+
+/* Estilo para o bloco .re-tel-desktop */
+.re-tel-desktop {
     display: flex;
     align-items: center;
     margin-left: 10px;
     margin-top: 10px;
 }
-.e-tel-desktop{
+
+/* Estilo para o texto dentro de .e-tel-desktop */
+.e-tel-desktop {
     font-weight: 600;
     font-size: 20px;
 }
-.u-tel-desktop{
+
+/* Estilo para o bloco .u-tel-desktop */
+.u-tel-desktop {
     margin-left: 10px;
     font-size: 15px;
     overflow-wrap: anywhere;
     margin-right: 10px;
 }
-.espaco-editar-dados-desktop{
+
+/* Estilo para o bloco .espaco-editar-dados-desktop */
+.espaco-editar-dados-desktop {
     padding-bottom: 10px;
 }
+
+/* Estilo para o bloco .editar-dados-desktop */
 .editar-dados-desktop {
     background-color: white;
     border: #af00ff solid 2px;
@@ -2549,17 +2964,23 @@ body{
     margin: auto;
     border-radius: 5px;
 }
-.editar-dados-desktop a{
+
+/* Estilo para o link dentro de .editar-dados-desktop */
+.editar-dados-desktop a {
     text-decoration: none;
 }
-.editar-dados-desktop p{
+
+/* Estilo para o texto dentro de .editar-dados-desktop */
+.editar-dados-desktop p {
     color: #af00ff;
     font-size: 17px;
     font-weight: 300;
     height: 33px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
     padding-top: 5px;
 }
-.editar-dados-desktop p:hover{
+
+/* Efeito de transição ao passar o mouse sobre o texto de edição */
+.editar-dados-desktop p:hover {
     color: white;
     transition: background-color 0.4s ease;
     background-color: #af00ff;
@@ -2570,13 +2991,19 @@ body{
 
 
 
-.container-editar-produto-desktop{
-    display: none;   
+
+/* Estilo para o bloco .container-editar-produto-desktop */
+.container-editar-produto-desktop {
+    display: none;
 }
-.tabela-cadastrados-desktop th{
+
+/* Estilo para as células de cabeçalho na tabela .tabela-cadastrados-desktop */
+.tabela-cadastrados-desktop th {
     flex-direction: column;
 }
-.conteudo-carrinho-cadastrados-desktop{
+
+/* Estilo para o bloco .conteudo-carrinho-cadastrados-desktop */
+.conteudo-carrinho-cadastrados-desktop {
     display: none;
     background-color: white;
     border-radius: 20px;
@@ -2585,43 +3012,65 @@ body{
     padding-left: 10px;
     padding-right: 10px;
 }
-.editar-tabela-carrinho-desktop{
+
+/* Estilo para o bloco .editar-tabela-carrinho-desktop */
+.editar-tabela-carrinho-desktop {
     margin-left: 0px;
 }
-.editar-tabela-carrinho-desktop span{
+
+/* Estilo para o texto dentro de .editar-tabela-carrinho-desktop */
+.editar-tabela-carrinho-desktop span {
     color: #af00ff;
 }
-#edit{
+
+/* Estilo para o ícone de edição */
+#edit {
     font-size: 30px;
 }
-#delete-cad-desktop{
+
+/* Estilo para o ícone de exclusão (.delete) na versão desktop */
+#delete-cad-desktop {
     font-size: 35px;
 }
-#delete-cad-desktop:hover{
+
+/* Efeito de transição de cor ao passar o mouse sobre o ícone de exclusão (.delete) */
+#delete-cad-desktop:hover {
     color: red;
 }
-.excluir-tabela-cad-desktop{
+
+/* Estilo para o bloco .excluir-tabela-cad-desktop */
+.excluir-tabela-cad-desktop {
     margin-left: 15px;
 }
-.excluir-tabela-cad-desktop span{
+
+/* Estilo para o texto dentro de .excluir-tabela-cad-desktop */
+.excluir-tabela-cad-desktop span {
     color: black;
 }
-.titulo-preco-desktop p{
+
+/* Estilo para o título de preço na versão desktop */
+.titulo-preco-desktop p {
     font-weight: 600;
     margin-left: 15px;
     margin-bottom: 10px;
     font-size: 20px;
 }
-.linha1-editar-produtos-desktop{
+
+/* Estilo para a primeira linha de edição de produtos na versão desktop */
+.linha1-editar-produtos-desktop {
     display: flex;
     margin-bottom: 20px;
 }
-.e-precoO-desktop{
+
+/* Estilo para a etiqueta de preço original (.e-precoO-desktop) na versão desktop */
+.e-precoO-desktop {
     width: 120px;
     margin-left: 10px;
     text-align: center;
 }
-.u-precoO-desktop{
+
+/* Estilo para a unidade de preço original (.u-precoO-desktop) na versão desktop */
+.u-precoO-desktop {
     background-color: #cfcfcf;
     width: 120px;
     margin-top: 10px;
@@ -2633,15 +3082,21 @@ body{
     border: 2px solid black;
     opacity: 0.6;
 }
-.col-precoN-desktop{
+
+/* Estilo para a coluna de preço novo (.col-precoN-desktop) na versão desktop */
+.col-precoN-desktop {
     margin-left: 40px;
 }
-.e-precoN-desktop{
+
+/* Estilo para a etiqueta de preço novo (.e-precoN-desktop) na versão desktop */
+.e-precoN-desktop {
     width: 120px;
     margin-left: 10px;
     text-align: center;
 }
-.u-precoN-desktop input[type="text"]{
+
+/* Estilo para a unidade de preço novo (.u-precoN-desktop) na versão desktop */
+.u-precoN-desktop input[type="text"] {
     background-color: #e6e6e6;
     width: 120px;
     margin-top: 10px;
@@ -2651,15 +3106,21 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
-.linha2-editar-produtos-desktop{
+
+/* Estilo para a segunda linha de edição de produtos na versão desktop */
+.linha2-editar-produtos-desktop {
     margin-bottom: 20px;
 }
-.e-nomeS-desktop p{
+
+/* Estilo para a etiqueta de nome singular (.e-nomeS-desktop) na versão desktop */
+.e-nomeS-desktop p {
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-nomeS-desktop input[type="text"]{
+
+/* Estilo para o campo de entrada de nome singular (.u-nomeS-desktop input[type="text"]) na versão desktop */
+.u-nomeS-desktop input[type="text"] {
     background-color: #e6e6e6;
     width: 290px;
     height: 40px;
@@ -2669,15 +3130,21 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
-.linha3-editar-produtos-desktop{
+
+/* Estilo para a terceira linha de edição de produtos na versão desktop */
+.linha3-editar-produtos-desktop {
     margin-bottom: 20px;
 }
-.e-desc-desktop p{
+
+/* Estilo para o texto de descrição (.e-desc-desktop p) na versão desktop */
+.e-desc-desktop p {
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-desc-desktop input[type="text"]{
+
+/* Estilo para o campo de entrada de descrição (.u-desc-desktop input[type="text"]) na versão desktop */
+.u-desc-desktop input[type="text"] {
     background-color: #e6e6e6;
     width: 290px;
     height: 40px;
@@ -2687,32 +3154,42 @@ body{
     border-radius: 5px;
     border: 2px solid black;
 }
-.linha4-editar-produtos-desktop{
+
+/* Estilo para a quarta linha de edição de produtos na versão desktop */
+.linha4-editar-produtos-desktop {
     margin-bottom: 20px;
 }
-.e-tipo-desktop p{
+
+/* Estilo para o texto de tipo (.e-tipo-desktop p) na versão desktop */
+.e-tipo-desktop p {
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-tipo-desktop{
+
+/* Estilo para o bloco .u-tipo-desktop na versão desktop */
+.u-tipo-desktop {
     margin-top: 10px;
 }
-.u-tipo-desktop input[type="radio"]{
+
+/* Estilo para o campo de seleção de tipo (.u-tipo-desktop input[type="radio"]) na versão desktop */
+.u-tipo-desktop input[type="radio"] {
     appearance: none;
     background-color: #e6e6e6;
     border: 2px solid black;
     height: 20px;
-    width:  20px;
+    width: 20px;
     margin-top: 10px;
     margin-left: 10px;
     text-align: center;
     border-radius: 4px;
     display: inline-flex; /* Para alinhar verticalmente o conteúdo */
-    align-items: center; /* Centralizar verticalmente */    
+    align-items: center; /* Centralizar verticalmente */
     cursor: pointer;
 }
-.u-tipo-desktop input[type="radio"]:checked::before{
+
+/* Estilo para o ícone de seleção de tipo quando está marcado (.u-tipo-desktop input[type="radio"]:checked::before) na versão desktop */
+.u-tipo-desktop input[type="radio"]:checked::before {
     content: "✔";
     color: #af00ff;
     font-weight: 600;
@@ -2720,6 +3197,8 @@ body{
     text-align: center;
     font-size: 20px;
 }
+
+/* Estilo para o rótulo de seleção de tipo (.u-tipo-desktop label) na versão desktop */
 .u-tipo-desktop label {
     cursor: pointer; /* Para mostrar a mão ao passar o mouse sobre o label */
     font-size: 18px;
@@ -2727,32 +3206,42 @@ body{
     margin-left: 5px;
     margin-top: 7px;
 }
-.linha5-editar-produtos-desktop{
+
+/* Estilo para a quinta linha de edição de produtos na versão desktop */
+.linha5-editar-produtos-desktop {
     margin-bottom: 20px;
 }
-.e-cond-desktop p{
+
+/* Estilo para o texto de condição (.e-cond-desktop p) na versão desktop */
+.e-cond-desktop p {
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-cond-desktop{
+
+/* Estilo para o bloco .u-cond-desktop na versão desktop */
+.u-cond-desktop {
     margin-top: 10px;
 }
-.u-cond-desktop input[type="radio"]{
+
+/* Estilo para o bloco .u-cond-desktop na versão desktop */
+.u-cond-desktop input[type="radio"] {
     appearance: none;
     background-color: #e6e6e6;
     border: 2px solid black;
     height: 20px;
-    width:  20px;
+    width: 20px;
     margin-top: 10px;
     margin-left: 10px;
     text-align: center;
     border-radius: 4px;
     display: inline-flex; /* Para alinhar verticalmente o conteúdo */
-    align-items: center; /* Centralizar verticalmente */    
+    align-items: center; /* Centralizar verticalmente */
     cursor: pointer;
 }
-.u-cond-desktop input[type="radio"]:checked::before{
+
+/* Estilo para o ícone de seleção de condição quando está marcado (.u-cond-desktop input[type="radio"]:checked::before) na versão desktop */
+.u-cond-desktop input[type="radio"]:checked::before {
     content: "✔";
     color: #af00ff;
     font-weight: 600;
@@ -2760,6 +3249,8 @@ body{
     text-align: center;
     font-size: 20px;
 }
+
+/* Estilo para o rótulo de seleção de condição (.u-cond-desktop label) na versão desktop */
 .u-cond-desktop label {
     cursor: pointer; /* Para mostrar a mão ao passar o mouse sobre o label */
     font-size: 18px;
@@ -2767,18 +3258,26 @@ body{
     margin-left: 5px;
     margin-top: 7px;
 }
-.linha6-editar-produtos-desktop{
+
+/* Estilo para a sexta linha de edição de produtos na versão desktop */
+.linha6-editar-produtos-desktop {
     margin-bottom: 30px;
 }
-.e-sub-desktop p{
+
+/* Estilo para o texto de subcategoria (.e-sub-desktop p) na versão desktop */
+.e-sub-desktop p {
     font-weight: 600;
     margin-left: 15px;
     font-size: 20px;
 }
-.u-sub-desktop{
+
+/* Estilo para o bloco .u-sub-desktop na versão desktop */
+.u-sub-desktop {
     margin-top: 10px;
 }
-.u-sub-desktop select{
+
+/* Estilo para o menu suspenso de subcategoria (.u-sub-desktop select) na versão desktop */
+.u-sub-desktop select {
     background-color: #e6e6e6;
     border: 2px solid black;
     font-size: 17px;
@@ -2788,563 +3287,798 @@ body{
     text-align: center;
     border-radius: 4px;
     display: inline-flex; /* Para alinhar verticalmente o conteúdo */
-    align-items: center; /* Centralizar verticalmente */    
+    align-items: center; /* Centralizar verticalmente */
     cursor: pointer;
 }
-.btn-slavar-alt-prod-desktop{
-    text-align: center;
+
+/* Estilo para o bloco do botão de salvar alterações (.btn-slavar-alt-prod-desktop) na versão desktop */
+.btn-slavar-alt-prod-desktop {
+    text-align: center; /* Centraliza o texto no bloco */
 }
-.btn-slavar-alt-prod-desktop input[type="submit"]{
-    background-color: white;
-    border: 2px solid #af00ff;
-    width: 165px;
-    height: 35px;
-    text-align: center;
-    border-radius: 5px;
-    margin-bottom: 30px;
-    color: #af00ff;
-    font-size: 17px;
-    text-decoration: none;
+
+/* Estilo para o botão de enviar do formulário (.btn-slavar-alt-prod-desktop input[type="submit"]) na versão desktop */
+.btn-slavar-alt-prod-desktop input[type="submit"] {
+    background-color: white; /* Cor de fundo branca */
+    border: 2px solid #af00ff; /* Borda sólida roxa com espessura de 2 pixels */
+    width: 165px; /* Largura de 165 pixels */
+    height: 35px; /* Altura de 35 pixels */
+    text-align: center; /* Texto centralizado */
+    border-radius: 5px; /* Borda arredondada com raio de 5 pixels */
+    margin-bottom: 30px; /* Margem inferior de 30 pixels */
+    color: #af00ff; /* Cor do texto roxa */
+    font-size: 17px; /* Tamanho da fonte de 17 pixels */
+    text-decoration: none; /* Remove a decoração do link */
 }
-.btn-slavar-alt-prod-desktop input[type="submit"]:hover{
-    background-color: #af00ff;
-    transition: background-color 0.4s ease;
-    color: white;
+
+/* Efeito de hover para o botão de enviar na versão desktop */
+.btn-slavar-alt-prod-desktop input[type="submit"]:hover {
+    background-color: #af00ff; /* Nova cor de fundo roxa ao passar o mouse */
+    transition: background-color 0.4s ease; /* Transição de cor de fundo com duração de 0.4 segundos e efeito ease */
+    color: white; /* Cor do texto branca ao passar o mouse */
 }
-#delete-cad{
-    font-size: 35px;
+
+/* Estilo para o ícone de exclusão (#delete-cad) na versão desktop */
+#delete-cad {
+    font-size: 35px; /* Tamanho da fonte de 35 pixels */
 }
-#delete-cad:hover{
-    color: red;
+
+/* Efeito de hover para o ícone de exclusão na versão desktop */
+#delete-cad:hover {
+    color: red; /* Cor vermelha ao passar o mouse */
 }
-#edit{
-    font-size: 30px;
+
+/* Estilo para o ícone de edição (#edit) na versão desktop */
+#edit {
+    font-size: 30px; /* Tamanho da fonte de 30 pixels */
+}
+
+/* Estilo para o ícone de endereços (#enderecos) */
+#enderecos {
+    margin-right: 10px; /* Margem à direita de 10 pixels */
+    font-size: 30px; /* Tamanho da fonte de 30 pixels */
+}
+
+/* Estilo para o bloco de endereços cadastrados (.enderecos-cadastrados) */
+.enderecos-cadastrados {
+    display: flex; /* Exibe o bloco como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro no eixo transversal (vertical) */
+    margin-bottom: 20px; /* Margem inferior de 20 pixels */
+    margin-top: 20px; /* Margem superior de 20 pixels */
+}
+
+/* Estilo para o bloco de nome de endereços cadastrados (.nome-enderecos-cadastrados) */
+.nome-enderecos-cadastrados {
+    margin-left: 20px; /* Margem à esquerda de 20 pixels */
+    width: 205px; /* Largura de 205 pixels */
+}
+
+/* Estilo para o texto dentro do bloco de nome de endereços cadastrados (.nome-enderecos-cadastrados p) */
+.nome-enderecos-cadastrados p {
+    font-weight: 600; /* Peso da fonte bold (negrito) */
+    font-size: 20px; /* Tamanho da fonte de 20 pixels */
+}
+
+/* Estilo para o bloco de botões de endereços cadastrados (.botoes-endecos-cadastrados) */
+.botoes-endecos-cadastrados {
+    display: flex; /* Exibe o bloco como um contêiner flexível */
 }
 
 
-
-
-
-
-
-
-#enderecos{
-    margin-right: 10px;
-    font-size: 30px;
-}
-.enderecos-cadastrados{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-top:20px;
-}
-.nome-enderecos-cadastrados{
-    margin-left: 20px;
-    width: 205px;
-}
-.nome-enderecos-cadastrados p{
-    font-weight: 600;
-    font-size: 20px
-}
-.botoes-endecos-cadastrados{
-    display: flex;
-    
-}
-.editar-enderecos-cadastrados{
-    margin-left: 10px;
-}
-.editar-enderecos-cadastrados span{
-    color: #af00ff;
-}
-#edit{
-    font-size: 30px;
-}
-#delete-enderecos{
-    font-size: 35px;
-}
-#delete-enderecos:hover{
-    color: red;
-}
-.excluir-enderecos-cadastrados{
-    margin-left: 15px;
-}
-.excluir-enderecos-cadastrados span{
-    color: black;
+/* Estilo para o botão de editar endereços cadastrados (.editar-enderecos-cadastrados) */
+.editar-enderecos-cadastrados {
+    margin-left: 10px; /* Adiciona uma margem à esquerda de 10 pixels */
 }
 
-.enderecos{
-    margin-top: 20px;
+/* Estilo para o texto dentro do botão de editar endereços cadastrados (.editar-enderecos-cadastrados span) */
+.editar-enderecos-cadastrados span {
+    color: #af00ff; /* Define a cor do texto como roxo (#af00ff) */
 }
-.tudo-conteudo-enderecos{
-    display: none;  /* Display: none; para a tela de "dados" não aparecer. */
+
+/* Estilo para o ícone de edição (#edit) */
+#edit {
+    font-size: 30px; /* Define o tamanho do ícone como 30 pixels */
 }
-.card-enderecos{
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    cursor: pointer;
-    width: 190px;
+
+/* Estilo para o ícone de exclusão de endereços cadastrados (#delete-enderecos) */
+#delete-enderecos {
+    font-size: 35px; /* Define o tamanho do ícone como 35 pixels */
 }
-.card-enderecos p{
-    font-size: 20px;
-    font-weight: 600;
+
+/* Efeito de hover para o ícone de exclusão de endereços cadastrados */
+#delete-enderecos:hover {
+    color: red; /* Muda a cor do ícone para vermelho (#red) no hover */
 }
+
+/* Estilo para o botão de excluir endereços cadastrados (.excluir-enderecos-cadastrados) */
+.excluir-enderecos-cadastrados {
+    margin-left: 15px; /* Adiciona uma margem à esquerda de 15 pixels */
+}
+
+/* Estilo para o texto dentro do botão de excluir endereços cadastrados (.excluir-enderecos-cadastrados span) */
+.excluir-enderecos-cadastrados span {
+    color: black; /* Define a cor do texto como preto (#000000) */
+}
+
+/* Estilo para o bloco de endereços (.enderecos) */
+.enderecos {
+    margin-top: 20px; /* Adiciona uma margem superior de 20 pixels */
+}
+
+/* Estilo para o bloco de conteúdo de endereços (.tudo-conteudo-enderecos) */
+.tudo-conteudo-enderecos {
+    display: none; /* Define como não visível (display: none) */
+    /* Display: none; para a tela de "dados" não aparecer. */
+}
+
+/* Estilo para o bloco de cartão de endereços (.card-enderecos) */
+.card-enderecos {
+    display: flex; /* Exibição como flex container */
+    align-items: center; /* Alinhamento vertical ao centro */
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    cursor: pointer; /* Altera o cursor para indicar interação clicável */
+    width: 190px; /* Largura do bloco de cartão de endereços */
+}
+
+/* Estilo para o texto dentro do bloco de cartão de endereços (.card-enderecos p) */
+.card-enderecos p {
+    font-size: 20px; /* Tamanho da fonte de 20 pixels */
+    font-weight: 600; /* Peso da fonte bold (600) */
+}
+
+/* Efeito de ativação para o cartão de endereços (.card-enderecos.active) */
 .card-enderecos.active {
-    color: #af00ff;
+    color: #af00ff; /* Define a cor do texto como roxo (#af00ff) no estado ativo */
     /* Adicione outras propriedades de estilo conforme necessário */
 }
+
+/* Estilo para o ícone de chevron rotacionado (.rotated-chevronEnderecos) */
 .rotated-chevronEnderecos {
     transform: rotate(90deg); /* Rotaciona o elemento em 90 graus */
 }
-#database{
-    margin-right: 10px;
-    font-size: 30px;
-}
-.tabela-enderecos{
-    display: none;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    background-color: white;
-}
-.re-enderecos{
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    margin-top: 15px;
-}
-.e-enderecos p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-enderecos{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-}
-.re-cep-enderecos{
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    margin-top: 15px;
-}
-.e-cep-enderecos p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-cep-enderecos{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-}
-.re-cidade{
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    margin-top: 15px;
-}
-.e-cidade p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-cidade{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-}
-.re-bairro{
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    margin-top: 15px;
-}
-.e-bairro p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-bairro{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-}
-.re-rua{
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    margin-top: 15px;
-}
-.e-rua p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-rua{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-}
-.re-numero{
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    margin-top: 15px;
-}
-.e-numero p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-numero{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-}
-.re-complemento-enderecos{
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    margin-top: 15px;
-}
-.e-complemento-enderecos p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-complemento-enderecos{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
+
+/* Estilo para o ícone de banco de dados (#database) */
+#database {
+    margin-right: 10px; /* Adiciona uma margem à direita de 10 pixels */
+    font-size: 30px; /* Define o tamanho do ícone como 30 pixels */
 }
 
+/* Estilo para o bloco de tabela de endereços (.tabela-enderecos) */
+.tabela-enderecos {
+    display: none; /* Define como não visível (display: none) */
+    margin-top: 15px; /* Adiciona uma margem superior de 15 pixels */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20 pixels */
+    background-color: white; /* Define a cor de fundo como branca (#ffffff) */
+}
+
+/* Estilo para o bloco de endereços (.re-enderecos) */
+.re-enderecos {
+    display: flex; /* Exibição como flex container */
+    align-items: center; /* Alinhamento vertical ao centro */
+    margin-left: 20px; /* Margem à esquerda de 20 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+
+/* Estilo para o texto dentro do bloco de endereços (.e-enderecos p) */
+.e-enderecos p {
+    font-weight: 600; /* Peso da fonte bold (600) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o bloco de informações de endereços (.u-enderecos) */
+.u-enderecos {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+/* Estilo para o bloco de CEP de endereços (.re-cep-enderecos) */
+.re-cep-enderecos {
+    display: flex; /* Exibição como flex container */
+    align-items: center; /* Alinhamento vertical ao centro */
+    margin-left: 20px; /* Margem à esquerda de 20 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o texto dentro do bloco de CEP de endereços (.e-cep-enderecos p) */
+.e-cep-enderecos p {
+    font-weight: 600; /* Peso da fonte bold (600) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o bloco de informações de CEP de endereços (.u-cep-enderecos) */
+.u-cep-enderecos {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+/* Estilo para o bloco de cidade (.re-cidade) */
+.re-cidade {
+    display: flex; /* Exibição como flex container */
+    align-items: center; /* Alinhamento vertical ao centro */
+    margin-left: 20px; /* Margem à esquerda de 20 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o texto dentro do bloco de cidade (.e-cidade p) */
+.e-cidade p {
+    font-weight: 600; /* Peso da fonte bold (600) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o bloco de informações de cidade (.u-cidade) */
+.u-cidade {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+/* Estilo para o bloco de bairro (.re-bairro) */
+.re-bairro {
+    display: flex; /* Exibição como flex container */
+    align-items: center; /* Alinhamento vertical ao centro */
+    margin-left: 20px; /* Margem à esquerda de 20 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o texto dentro do bloco de bairro (.e-bairro p) */
+.e-bairro p {
+    font-weight: 600; /* Peso da fonte bold (600) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o bloco de informações de bairro (.u-bairro) */
+.u-bairro {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+
+/* Estilo para o bloco de rua (.re-rua) */
+.re-rua {
+    display: flex; /* Exibição como flex container */
+    align-items: center; /* Alinhamento vertical ao centro */
+    margin-left: 20px; /* Margem à esquerda de 20 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o texto dentro do bloco de rua (.e-rua p) */
+.e-rua p {
+    font-weight: 600; /* Peso da fonte bold (600) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o bloco de informações de rua (.u-rua) */
+.u-rua {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+/* Estilo para o bloco de número (.re-numero) */
+.re-numero {
+    display: flex; /* Exibição como flex container */
+    align-items: center; /* Alinhamento vertical ao centro */
+    margin-left: 20px; /* Margem à esquerda de 20 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o texto dentro do bloco de número (.e-numero p) */
+.e-numero p {
+    font-weight: 600; /* Peso da fonte bold (600) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o bloco de informações de número (.u-numero) */
+.u-numero {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+/* Estilo para o bloco de complemento de endereços (.re-complemento-enderecos) */
+.re-complemento-enderecos {
+    display: flex; /* Exibição como flex container */
+    align-items: center; /* Alinhamento vertical ao centro */
+    margin-left: 20px; /* Margem à esquerda de 20 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o texto dentro do bloco de complemento de endereços (.e-complemento-enderecos p) */
+.e-complemento-enderecos p {
+    font-weight: 600; /* Peso da fonte bold (600) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o bloco de informações de complemento de endereços (.u-complemento-enderecos) */
+.u-complemento-enderecos {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+
+/* Estilo para o botão de editar endereços (.editar-enderecos) */
 .editar-enderecos {
-    background-color: white;
-    border: #af00ff solid 2px;
-    width: 155px;
-    height: 30px;
-    text-align: center;
-    margin: auto;
-    margin-top: 20px;
-    border-radius: 5px;
-    margin-bottom: 30px;
-}
-.editar-enderecos a{
-    text-decoration: none;
-}
-.editar-enderecos p{
-    color: #af00ff;
-    font-size: 17px;
-    font-weight: 300;
-    height: 26px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
-    padding-top: 2px;
-}
-.editar-enderecos p:hover{
-    color: white;
-    transition: background-color 0.4s ease;
-    background-color: #af00ff;
-}
-.adicionar-enderecos{
-    background-color: white;
-    border: #af00ff solid 2px;
-    width: 250px;
-    text-align: center;
-    margin: auto;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-.adicionar-enderecos a{
-    text-decoration: none;
-}
-.adicionar-enderecos p{
-    color: #af00ff;
-    font-size: 17px;
-    font-weight: 300;
-    height: 32px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
-    padding-top: 5px;
-}
-.adicionar-enderecos p:hover{
-    color: white;
-    transition: background-color 0.4s ease;
-    background-color: #af00ff;
-}
-.caixa-conteudo-re-enderecos input[type="text"]{
-    background-color: #e6e6e6;
-    width: 290px;
-    height: 30px;
-    margin-top: 10px;
-    margin-left: 20px;
-    text-align: center;
-    border-radius: 5px;
-    border: 2px solid black;
+    background-color: white; /* Cor de fundo branca */
+    border: #af00ff solid 2px; /* Borda roxa sólida com espessura de 2 pixels */
+    width: 155px; /* Largura de 155 pixels */
+    height: 30px; /* Altura de 30 pixels */
+    text-align: center; /* Texto centralizado */
+    margin: auto; /* Centraliza horizontalmente */
+    margin-top: 20px; /* Margem superior de 20 pixels */
+    border-radius: 5px; /* Borda arredondada com raio de 5 pixels */
+    margin-bottom: 30px; /* Margem inferior de 30 pixels */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.card-enderecos-desktop{
-    display: flex;
-    align-items: center;
-    margin-left: 5px;
-    cursor: pointer;
-    width: 190px;
-    margin-top: 10px;
+/* Estilo para o link dentro do botão de editar endereços (.editar-enderecos a) */
+.editar-enderecos a {
+    text-decoration: none; /* Remove a decoração do link */
 }
-.card-enderecos-desktop p{
-    font-size: 20px;
-    font-weight: 600;
-    width: 150px;
+
+/* Estilo para o texto dentro do botão de editar endereços (.editar-enderecos p) */
+.editar-enderecos p {
+    color: #af00ff; /* Cor do texto roxa */
+    font-size: 17px; /* Tamanho da fonte de 17 pixels */
+    font-weight: 300; /* Peso da fonte regular (300) */
+    height: 26px; /* Altura de 26 pixels */
+    padding-top: 2px; /* Espaçamento interno superior de 2 pixels */
 }
+
+/* Estilo para o hover do botão de editar endereços (.editar-enderecos p:hover) */
+.editar-enderecos p:hover {
+    color: white; /* Cor do texto branca ao passar o mouse */
+    transition: background-color 0.4s ease; /* Transição de cor de fundo com duração de 0.4 segundos e efeito ease */
+    background-color: #af00ff; /* Nova cor de fundo roxa ao passar o mouse */
+}
+
+/* Estilo para o botão de adicionar endereços (.adicionar-enderecos) */
+.adicionar-enderecos {
+    background-color: white; /* Cor de fundo branca */
+    border: #af00ff solid 2px; /* Borda roxa sólida com espessura de 2 pixels */
+    width: 250px; /* Largura de 250 pixels */
+    text-align: center; /* Texto centralizado */
+    margin: auto; /* Centraliza horizontalmente */
+    border-radius: 5px; /* Borda arredondada com raio de 5 pixels */
+    margin-top: 20px; /* Margem superior de 20 pixels */
+}
+
+/* Estilo para remover a decoração de link no botão de adicionar endereços (.adicionar-enderecos a) */
+.adicionar-enderecos a {
+    text-decoration: none; /* Remove a decoração do link */
+}
+
+/* Estilo para o texto dentro do botão de adicionar endereços (.adicionar-enderecos p) */
+.adicionar-enderecos p {
+    color: #af00ff; /* Cor do texto roxa */
+    font-size: 17px; /* Tamanho da fonte de 17 pixels */
+    font-weight: 300; /* Peso da fonte regular (300) */
+    height: 32px; /* Altura de 32 pixels */
+    padding-top: 5px; /* Espaçamento interno superior de 5 pixels */
+}
+
+/* Estilo para o hover do texto no botão de adicionar endereços (.adicionar-enderecos p:hover) */
+.adicionar-enderecos p:hover {
+    color: white; /* Cor do texto branca ao passar o mouse */
+    transition: background-color 0.4s ease; /* Transição de cor de fundo com duração de 0.4 segundos e efeito ease */
+    background-color: #af00ff; /* Nova cor de fundo roxa ao passar o mouse */
+}
+
+/* Estilo para a caixa de entrada de texto dentro do bloco de informações de endereços (.caixa-conteudo-re-enderecos input[type="text"]) */
+.caixa-conteudo-re-enderecos input[type="text"] {
+    background-color: #e6e6e6; /* Cor de fundo cinza claro */
+    width: 290px; /* Largura de 290 pixels */
+    height: 30px; /* Altura de 30 pixels */
+    margin-top: 10px; /* Margem superior de 10 pixels */
+    margin-left: 20px; /* Margem à esquerda de 20 pixels */
+    text-align: center; /* Texto centralizado */
+    border-radius: 5px; /* Borda arredondada com raio de 5 pixels */
+    border: 2px solid black; /* Borda sólida preta com espessura de 2 pixels */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para o bloco de cartão de endereços no desktop (.card-enderecos-desktop) */
+.card-enderecos-desktop {
+    display: flex; /* Exibe o bloco como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro no eixo transversal (vertical) */
+    margin-left: 5px; /* Margem à esquerda de 5 pixels */
+    cursor: pointer; /* Define o cursor como apontador, indicando que é interativo */
+    width: 190px; /* Largura do bloco */
+    margin-top: 10px; /* Margem superior de 10 pixels */
+}
+
+/* Estilo para o texto dentro do bloco de cartão de endereços no desktop (.card-enderecos-desktop p) */
+.card-enderecos-desktop p {
+    font-size: 20px; /* Tamanho da fonte de 20 pixels */
+    font-weight: 600; /* Peso da fonte bold (negrito) */
+    width: 150px; /* Largura do texto dentro do bloco */
+}
+
+/* Estilo para o bloco de endereços no desktop quando está ativo (.card-enderecos-desktop.active) */
 .card-enderecos-desktop.active {
-    color: #af00ff;
+    color: #af00ff; /* Cor do texto quando o bloco está ativo */
     /* Adicione outras propriedades de estilo conforme necessário */
 }
-#database{
-    margin-right: 10px;
-    font-size: 30px;
+
+/* Estilo para o ícone de banco de dados no desktop (#database) */
+#database {
+    margin-right: 10px; /* Margem à direita de 10 pixels */
+    font-size: 30px; /* Tamanho da fonte de 30 pixels */
 }
-#chevron-enderecos-desktop{
-    margin-left: 5px;
-    font-size: 30px;
-    margin-top: 5px;
+
+/* Estilo para o ícone de chevron nos endereços no desktop (#chevron-enderecos-desktop) */
+#chevron-enderecos-desktop {
+    margin-left: 5px; /* Margem à esquerda de 5 pixels */
+    font-size: 30px; /* Tamanho da fonte de 30 pixels */
+    margin-top: 5px; /* Margem superior de 5 pixels */
+}
+
+/* Estilo para o bloco de endereços no desktop (.enderecos-desktop) */
+.enderecos-desktop {
+    display: none; /* Não exibe o bloco de endereços */
+    background-color: white; /* Cor de fundo branca */
+    border-radius: 20px; /* Bordas arredondadas com raio de 20 pixels */
+    padding-top: 20px; /* Espaçamento interno superior de 20 pixels */
+    padding-bottom: 20px; /* Espaçamento interno inferior de 20 pixels */
+}
+
+/* Estilo para a tabela de endereços no desktop (#tabela-carrinho-desktop-ENDERECO) */
+#tabela-carrinho-desktop-ENDERECO {
+    margin-top: 20px; /* Margem superior de 20 pixels */
+}
+
+/* Estilo para a tabela de endereços no desktop (.tabela-enderecos-desktop) */
+.tabela-enderecos-desktop {
+    display: none; /* Não exibe a tabela de endereços */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o nome nos endereços cadastrados no desktop (.nome-enderecos-cadastrados-desktop) */
+.nome-enderecos-cadastrados-desktop {
+    margin-left: 20px; /* Margem à esquerda de 20 pixels */
+    width: 265px; /* Largura do bloco */
+    font-weight: 600; /* Peso da fonte bold (negrito) */
+    font-size: 20px; /* Tamanho da fonte de 20 pixels */
+}
+
+/* Estilo para os botões nos endereços cadastrados no desktop (.botoes-endecos-cadastrados-desktop) */
+.botoes-endecos-cadastrados-desktop {
+    display: flex; /* Exibe os botões como um contêiner flexível */
+}
+
+/* Estilo para o ícone de edição nos endereços cadastrados no desktop (.editar-enderecos-cadastrados-desktop) */
+.editar-enderecos-cadastrados-desktop {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+}
+
+/* Estilo para o texto de edição nos endereços cadastrados no desktop (.editar-enderecos-cadastrados-desktop span) */
+.editar-enderecos-cadastrados-desktop span {
+    color: #af00ff; /* Cor do texto de edição */
+}
+
+/* Estilo para o ícone de edição global no desktop (#edit) */
+#edit {
+    font-size: 30px; /* Tamanho da fonte de 30 pixels */
+}
+
+/* Estilo para o ícone de exclusão nos endereços cadastrados no desktop (#delete-enderecos) */
+#delete-enderecos {
+    font-size: 35px; /* Tamanho da fonte de 35 pixels */
+}
+
+/* Estilo para o ícone de exclusão nos endereços cadastrados no desktop quando hover (#delete-enderecos:hover) */
+#delete-enderecos:hover {
+    color: red; /* Cor do texto de exclusão quando o mouse está sobre o ícone */
+}
+
+/* Estilo para o bloco de exclusão nos endereços cadastrados no desktop (.excluir-enderecos-cadastrados-desktop) */
+.excluir-enderecos-cadastrados-desktop {
+    margin-left: 15px; /* Margem à esquerda de 15 pixels */
+}
+
+/* Estilo para o texto de exclusão nos endereços cadastrados no desktop (.excluir-enderecos-cadastrados-desktop span) */
+.excluir-enderecos-cadastrados-desktop span {
+    color: black; /* Cor do texto de exclusão */
 }
 
 
 
-.enderecos-desktop{
-    display: none;
-    background-color: white;
-    border-radius: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-#tabela-carrinho-desktop-ENDERECO{
-    margin-top: 20px;
-}
-.tabela-enderecos-desktop{
-    display: none;
-    margin-top: 15px;
-}
-.nome-enderecos-cadastrados-desktop{
-    margin-left: 20px;
-    width: 265px;
-}
-.nome-enderecos-cadastrados-desktop{
-    font-weight: 600;
-    font-size: 20px
-}
-.botoes-endecos-cadastrados-desktop{
-    display: flex;
-    
-}
-.editar-enderecos-cadastrados-desktop{
-    margin-left: 10px;
-}
-.editar-enderecos-cadastrados-desktop span{
-    color: #af00ff;
-}
-#edit{
-    font-size: 30px;
-}
-#delete-enderecos{
-    font-size: 35px;
-}
-#delete-enderecos:hover{
-    color: red;
-}
-.excluir-enderecos-cadastrados-desktop{
-    margin-left: 15px;
-}
-.excluir-enderecos-cadastrados-desktop span{
-    color: black;
+/* Estilo para o ícone de banco de dados no desktop (#database) */
+#database {
+    margin-right: 10px; /* Margem à direita de 10 pixels */
+    font-size: 30px; /* Tamanho da fonte de 30 pixels */
 }
 
-
-#database{
-    margin-right: 10px;
-    font-size: 30px;
+/* Estilo para o bloco de endereços no desktop (.re-enderecos-desktop) */
+.re-enderecos-desktop {
+    display: flex; /* Exibe o bloco como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro no eixo transversal (vertical) */
+    margin-left: 25px; /* Margem à esquerda de 25 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
 }
 
-.re-enderecos-desktop{
-    display: flex;
-    align-items: center;
-    margin-left: 25px;
-    margin-top: 15px;
-}
-.e-enderecos-desktop p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-enderecos-desktop{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-}
-.re-cep-enderecos-desktop{
-    display: flex;
-    align-items: center;
-    margin-left: 25px;
-    margin-top: 15px;
-}
-.e-cep-enderecos-desktop p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-cep-enderecos-desktop{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-}
-.re-cidade-desktop{
-    display: flex;
-    align-items: center;
-    margin-left: 25px;
-    margin-top: 15px;
-}
-.e-cidade-desktop p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-cidade-desktop{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-}
-.re-bairro-desktop{
-    display: flex;
-    align-items: center;
-    margin-left: 25px;
-    margin-top: 15px;
-}
-.e-bairro-desktop p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-bairro-desktop{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-}
-.re-rua-desktop{
-    display: flex;
-    align-items: center;
-    margin-left: 25px;
-    margin-top: 15px;
-}
-.e-rua-desktop p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-rua-desktop{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-}
-.re-numero-desktop{
-    display: flex;
-    align-items: center;
-    margin-left: 25px;
-    margin-top: 15px;
-}
-.e-numero-desktop p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-numero-desktop{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
-}
-.re-complemento-enderecos-desktop{
-    display: flex;
-    align-items: center;
-    margin-left: 25px;
-    margin-top: 15px;
-}
-.e-complemento-enderecos-desktop p{
-    font-weight: 600;
-    font-size: 16px
-}
-.u-complemento-enderecos-desktop{
-    margin-left: 10px;
-    font-size: 15px;
-    overflow-wrap: anywhere;
+/* Estilo para o texto "e-enderecos" dentro do bloco de endereços no desktop (.e-enderecos-desktop p) */
+.e-enderecos-desktop p {
+    font-weight: 600; /* Peso da fonte bold (negrito) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
 }
 
+/* Estilo para o texto "u-enderecos" dentro do bloco de endereços no desktop (.u-enderecos-desktop) */
+.u-enderecos-desktop {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+/* Estilo para o bloco de CEP no desktop (.re-cep-enderecos-desktop) */
+.re-cep-enderecos-desktop {
+    display: flex; /* Exibe o bloco como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro no eixo transversal (vertical) */
+    margin-left: 25px; /* Margem à esquerda de 25 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o texto "e-cep-enderecos" dentro do bloco de CEP no desktop (.e-cep-enderecos-desktop p) */
+.e-cep-enderecos-desktop p {
+    font-weight: 600; /* Peso da fonte bold (negrito) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o texto "u-cep-enderecos" dentro do bloco de CEP no desktop (.u-cep-enderecos-desktop) */
+.u-cep-enderecos-desktop {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+/* Estilo para o bloco de cidade no desktop (.re-cidade-desktop) */
+.re-cidade-desktop {
+    display: flex; /* Exibe o bloco como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro no eixo transversal (vertical) */
+    margin-left: 25px; /* Margem à esquerda de 25 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o texto "e-cidade-desktop" dentro do bloco de cidade no desktop (.e-cidade-desktop p) */
+.e-cidade-desktop p {
+    font-weight: 600; /* Peso da fonte bold (negrito) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o texto "u-cidade-desktop" dentro do bloco de cidade no desktop (.u-cidade-desktop) */
+.u-cidade-desktop {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+/* Estilo para o bloco de bairro no desktop (.re-bairro-desktop) */
+.re-bairro-desktop {
+    display: flex; /* Exibe o bloco como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro no eixo transversal (vertical) */
+    margin-left: 25px; /* Margem à esquerda de 25 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o texto "e-bairro-desktop" dentro do bloco de bairro no desktop (.e-bairro-desktop p) */
+.e-bairro-desktop p {
+    font-weight: 600; /* Peso da fonte bold (negrito) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o texto "u-bairro-desktop" dentro do bloco de bairro no desktop (.u-bairro-desktop) */
+.u-bairro-desktop {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+/* Estilo para o bloco de rua no desktop (.re-rua-desktop) */
+.re-rua-desktop {
+    display: flex; /* Exibe o bloco como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro no eixo transversal (vertical) */
+    margin-left: 25px; /* Margem à esquerda de 25 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o texto "e-rua-desktop" dentro do bloco de rua no desktop (.e-rua-desktop p) */
+.e-rua-desktop p {
+    font-weight: 600; /* Peso da fonte bold (negrito) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o bloco de rua no desktop (.re-rua-desktop) */
+.re-rua-desktop {
+    display: flex; /* Exibe o bloco como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro no eixo transversal (vertical) */
+    margin-left: 25px; /* Margem à esquerda de 25 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o texto "e-rua-desktop" dentro do bloco de rua no desktop (.e-rua-desktop p) */
+.e-rua-desktop p {
+    font-weight: 600; /* Peso da fonte bold (negrito) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o texto "u-rua-desktop" dentro do bloco de rua no desktop (.u-rua-desktop) */
+.u-rua-desktop {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+/* Estilo para o bloco de número no desktop (.re-numero-desktop) */
+.re-numero-desktop {
+    display: flex; /* Exibe o bloco como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro no eixo transversal (vertical) */
+    margin-left: 25px; /* Margem à esquerda de 25 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o texto "e-numero-desktop" dentro do bloco de número no desktop (.e-numero-desktop p) */
+.e-numero-desktop p {
+    font-weight: 600; /* Peso da fonte bold (negrito) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o texto "u-numero-desktop" dentro do bloco de número no desktop (.u-numero-desktop) */
+.u-numero-desktop {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+/* Estilo para o bloco de complemento de endereços no desktop (.re-complemento-enderecos-desktop) */
+.re-complemento-enderecos-desktop {
+    display: flex; /* Exibe o bloco como um contêiner flexível */
+    align-items: center; /* Alinha os itens ao centro no eixo transversal (vertical) */
+    margin-left: 25px; /* Margem à esquerda de 25 pixels */
+    margin-top: 15px; /* Margem superior de 15 pixels */
+}
+
+/* Estilo para o texto "e-complemento-enderecos-desktop" dentro do bloco de complemento no desktop (.e-complemento-enderecos-desktop p) */
+.e-complemento-enderecos-desktop p {
+    font-weight: 600; /* Peso da fonte bold (negrito) */
+    font-size: 16px; /* Tamanho da fonte de 16 pixels */
+}
+
+/* Estilo para o texto "u-complemento-enderecos-desktop" dentro do bloco de complemento no desktop (.u-complemento-enderecos-desktop) */
+.u-complemento-enderecos-desktop {
+    margin-left: 10px; /* Margem à esquerda de 10 pixels */
+    font-size: 15px; /* Tamanho da fonte de 15 pixels */
+    overflow-wrap: anywhere; /* Quebra de palavra em qualquer ponto */
+}
+
+/* Estilo para o botão de editar endereços no desktop (.editar-enderecos-desktop) */
 .editar-enderecos-desktop {
-    background-color: white;
-    border: #af00ff solid 2px;
-    width: 155px;
-    height: 30px;
-    text-align: center;
-    margin: auto;
-    margin-top: 20px;
-    border-radius: 5px;
+    background-color: white; /* Cor de fundo branca */
+    border: #af00ff solid 2px; /* Borda sólida com cor #af00ff (roxo) e espessura de 2 pixels */
+    width: 155px; /* Largura de 155 pixels */
+    height: 30px; /* Altura de 30 pixels */
+    text-align: center; /* Texto centralizado */
+    margin: auto; /* Margem automática para centralização horizontal */
+    margin-top: 20px; /* Margem superior de 20 pixels */
+    border-radius: 5px; /* Borda arredondada com raio de 5 pixels */
 }
-.editar-enderecos-desktop a{
-    text-decoration: none;
+
+/* Estilo para o link dentro do botão de editar endereços no desktop (.editar-enderecos-desktop a) */
+.editar-enderecos-desktop a {
+    text-decoration: none; /* Remove a decoração do link */
 }
-.editar-enderecos-desktop p{
-    color: #af00ff;
-    font-size: 17px;
-    font-weight: 300;
-    height: 26px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
-    padding-top: 2px;
+
+/* Estilo para o texto dentro do botão de editar endereços no desktop (.editar-enderecos-desktop p) */
+.editar-enderecos-desktop p {
+    color: #af00ff; /* Cor do texto #af00ff (roxo) */
+    font-size: 17px; /* Tamanho da fonte de 17 pixels */
+    font-weight: 300; /* Peso da fonte normal */
+    height: 26px; /* Altura de 26 pixels */
+    padding-top: 2px; /* Preenchimento superior de 2 pixels */
 }
-.editar-enderecos-desktop p:hover{
-    color: white;
-    transition: background-color 0.4s ease;
-    background-color: #af00ff;
+
+/* Estilo para o hover do texto dentro do botão de editar endereços no desktop (.editar-enderecos-desktop p:hover) */
+.editar-enderecos-desktop p:hover {
+    color: white; /* Cor do texto branco */
+    transition: background-color 0.4s ease; /* Transição de cor de fundo com duração de 0.4 segundos e efeito ease */
+    background-color: #af00ff; /* Nova cor de fundo ao passar o mouse (#af00ff, roxo) */
 }
-.adicionar-enderecos-desktop{
-    background-color: white;
-    border: #af00ff solid 2px;
-    width: 250px;
-    text-align: center;
-    margin: auto;
-    border-radius: 5px;
+
+/* Estilo para o botão de adicionar endereços no desktop (.adicionar-enderecos-desktop) */
+.adicionar-enderecos-desktop {
+    background-color: white; /* Cor de fundo branca */
+    border: #af00ff solid 2px; /* Borda sólida com cor #af00ff (roxo) e espessura de 2 pixels */
+    width: 250px; /* Largura de 250 pixels */
+    text-align: center; /* Texto centralizado */
+    margin: auto; /* Margem automática para centralização horizontal */
+    border-radius: 5px; /* Borda arredondada com raio de 5 pixels */
 }
-.adicionar-enderecos-desktop a{
-    text-decoration: none;
+
+/* Estilo para o link dentro do botão de adicionar endereços no desktop (.adicionar-enderecos-desktop a) */
+.adicionar-enderecos-desktop a {
+    text-decoration: none; /* Remove a decoração do link */
 }
-.adicionar-enderecos-desktop p{
-    color: #af00ff;
-    font-size: 17px;
-    font-weight: 300;
-    height: 32px; /* Alterar valores para o media query caso o hover do botão estiver com problemas*/
-    padding-top: 5px;
+
+/* Estilo para o texto dentro do botão de adicionar endereços no desktop (.adicionar-enderecos-desktop p) */
+.adicionar-enderecos-desktop p {
+    color: #af00ff; /* Cor do texto #af00ff (roxo) */
+    font-size: 17px; /* Tamanho da fonte de 17 pixels */
+    font-weight: 300; /* Peso da fonte normal */
+    height: 32px; /* Altura de 32 pixels */
+    padding-top: 5px; /* Preenchimento superior de 5 pixels */
 }
-.adicionar-enderecos-desktop p:hover{
-    color: white;
-    transition: background-color 0.4s ease;
-    background-color: #af00ff;
+
+/* Estilo para o hover do texto dentro do botão de adicionar endereços no desktop (.adicionar-enderecos-desktop p:hover) */
+.adicionar-enderecos-desktop p:hover {
+    color: white; /* Cor do texto branco */
+    transition: background-color 0.4s ease; /* Transição de cor de fundo com duração de 0.4 segundos e efeito ease */
+    background-color: #af00ff; /* Nova cor de fundo ao passar o mouse (#af00ff, roxo) */
 }
-.caixa-conteudo-re-enderecos-desktop input[type="text"]{
-    background-color: #e6e6e6;
-    width: 350px;
-    height: 30px;
-    margin-top: 10px;
-    margin-left: 25px;
-    text-align: center;
-    border-radius: 5px;
-    border: 2px solid black;
+
+/* Estilo para o campo de entrada de texto dentro da caixa de conteúdo de adicionar endereços no desktop (.caixa-conteudo-re-enderecos-desktop input[type="text"]) */
+.caixa-conteudo-re-enderecos-desktop input[type="text"] {
+    background-color: #e6e6e6; /* Cor de fundo cinza claro (#e6e6e6) */
+    width: 350px; /* Largura de 350 pixels */
+    height: 30px; /* Altura de 30 pixels */
+    margin-top: 10px; /* Margem superior de 10 pixels */
+    margin-left: 25px; /* Margem à esquerda de 25 pixels */
+    text-align: center; /* Texto centralizado */
+    border-radius: 5px; /* Borda arredondada com raio de 5 pixels */
+    border: 2px solid black; /* Borda sólida preta com espessura de 2 pixels */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*finalizar-compra----------------------------------------------- */
 
@@ -3768,6 +4502,7 @@ border:solid 2px #af00ff;
     }
 }
 
+/*------------------------------------------- Fim "Página do usuário" ----------------------------------------------------*/ 
 
 /*Página criadores--------------------------------------------------*/
 
