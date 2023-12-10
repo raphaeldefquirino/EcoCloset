@@ -64,20 +64,35 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="usuario.css">
-    <link rel="stylesheet" href="estilos/style-user.css">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media-query.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <title>Página de usuário</title>
-</head>
+    <!-- Declaração do tipo de documento HTML e definição do idioma -->
+    <!DOCTYPE html>
+    <html lang="pt-br">
 
-<body>
+    <!-- Configuração do cabeçalho da página -->
+    <head>
+        <!-- Codificação de caracteres UTF-8 para suportar caracteres especiais -->
+        <meta charset="UTF-8">
+
+        <!-- Configuração da viewport para controle do layout responsivo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Links para folhas de estilo externas -->
+        <link rel="stylesheet" href="usuario.css">
+        <link rel="stylesheet" href="estilos/style-user.css">
+        <link rel="stylesheet" href="estilos/style.css">
+        <link rel="stylesheet" href="estilos/media-query.css">
+
+        <!-- Link para a fonte "Material Symbols Outlined" do Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+        <!-- Título da página exibido na aba/navegador -->
+        <title>Página de usuário</title>
+    </head>
+
+    <!-- Corpo da página HTML -->
+    <body>
+
     <?php
     //inclui o arquivo de conexão com o banco de dados
     include('menu.php');
@@ -2317,7 +2332,7 @@ $CadProdDeskAdm = mysqli_fetch_assoc($resultadoCadProdDeskAdm);
     include('includes/footer.php');
     ?>
 
-</body>
+
 
 </html>
 
@@ -2537,5 +2552,6 @@ unset($_SESSION['erro_perfil']);
 
 
 </body>
+<!-- Fim Corpo da página HTML -->
 
 </html>
