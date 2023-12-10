@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt_br">
-
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
-  <link rel="stylesheet" href="estilos/style.css">
-  <link rel="stylesheet" href="estilos/media-query.css">
-  <script src="https://kit.fontawesome.com/8ad860e92b.js" crossorigin="anonymous"></script>
-  <title>EcoCloset</title>
-</head>
+    <!-- Declaração do tipo de documento HTML e definição do idioma -->
+    <!DOCTYPE html>
+    <html lang="pt-br">
 
-<body>
+    <!-- Configuração do cabeçalho da página -->
+    <head>
+        <!-- Codificação de caracteres UTF-8 para suportar caracteres especiais -->
+        <meta charset="UTF-8">
+
+        <!-- Configuração da viewport para controle do layout responsivo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Links para folhas de estilo externas -->
+        <link rel="stylesheet" href="usuario.css">
+        <link rel="stylesheet" href="estilos/style-user.css">
+        <link rel="stylesheet" href="estilos/style.css">
+        <link rel="stylesheet" href="estilos/media-query.css">
+
+        <!-- Link para a fonte "Material Symbols Outlined" do Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+        <!-- Título da página exibido na aba/navegador -->
+        <title>Página de usuário</title>
+    </head>
+
+    <!-- Corpo da página HTML -->
+    <body>
 
   <?php
   //incluindo o arquivo do menu 
@@ -277,3 +286,6 @@
   ?>
 
 </body>
+<!-- Fim Corpo da página HTML -->
+
+</html>

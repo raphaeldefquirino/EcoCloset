@@ -71,36 +71,36 @@
 
 /* -----------------------fim media query imagem de fundo ------------------*/
 
-/*---------------------- media query footer------------------- */
+/*---------------------------- Início media query "Footer" ------------------------*/
 
+/* Estilos aplicados apenas para telas com largura maior ou igual a 800 pixels */
 @media screen and (min-width: 800px) {
-  footer{
-  }
-  
-  .row-footer{
-      display: flex;
-  }
-  .footer-col{
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 30px;
-  }
-  ul{
-      list-style: none;
-  }
-  .container-imagens-footer{
-      margin: auto;
-      padding-left: 45px;
-  }
-  
 
+  /* Estilos para a linha do rodapé */
+  .row-footer {
+    display: flex; /* A linha do rodapé será exibida como flex container */
+  }
 
- 
-  
+  /* Estilos para as colunas do rodapé */
+  .footer-col {
+    margin-left: auto; /* Centraliza a coluna à esquerda */
+    margin-right: auto; /* Centraliza a coluna à direita */
+    margin-bottom: 30px; /* Adiciona margem inferior para espaçamento */
+  }
+
+  /* Estilos para listas não ordenadas */
+  ul {
+    list-style: none; /* Remove os marcadores padrão de listas não ordenadas */
+  }
+
+  /* Estilos para o container de imagens no rodapé */
+  .container-imagens-footer {
+    margin: auto; /* Centraliza o container horizontalmente */
+    padding-left: 45px; /* Adiciona um recuo à esquerda para o container de imagens */
+  }
 }
 
-
-/* -------------------------Fim media query footer----------------------- */
+/*---------------------------- Fim media query "Footer" ------------------------*/
 
 /* -----------------------------pagina do cadastro----------------------*/
 
@@ -501,6 +501,7 @@ main {
   }
 }
 
+/*---------------------------- Fim media query "Página do usuário" ------------------------*/
 
 /*-------------------------------------------ERROR MENSAGE SEARCH PAGE----------------------------------------------------*/ 
 

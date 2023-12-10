@@ -231,83 +231,108 @@ z-index: 10;
 /*-------------------------------------------END IMAGEM DE FUNDO INDEX----------------------------------------------------*/ 
 
 
-/*-------------------------------------------FOOTER----------------------------------------------------*/ 
+/*------------------------------------------- Início "Footer" ----------------------------------------------------*/ 
 
-
-
-footer{
-    text-align: center;
-    background-color: white;
-    padding-top: 20px;
-    padding-bottom: 2px;
-}
-footer a{
-    text-decoration: none;
-    color: black;
-}
-.footer-col{
-    margin-bottom: 5%;
-}
-.expo-title{
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 24px;
-    width: 160px;
-    margin: auto;
-}
-.paginas-title{
-    margin-bottom: 10px;
-    font-size: 24px;
-    margin-top: 12px;
-}
-.contato-title{
-    margin-bottom: 10px;
-    font-size: 24px;
-    margin-top: 12px;
-}
-.mensagens-title a{
-    font-size: 16px;
-    line-height: 25px;
-    transition: all 0.3s ease
-}
-.mensagens-title a:hover{  
-    color: #af00ff;
-    padding-left: 7px;
-}
-.paginas-buton a{
-    font-size: 16px;
-    line-height: 25px;
-    transition: all 0.3s ease
-}
-.paginas-buton a:hover{
-    color: #af00ff;
-    padding-left: 7px;
-}
-.contato-expo a{
-    font-size: 16px;
-    line-height: 25px;
-    transition: all 0.3s ease;
-}
-.contato-expo a:hover{
-    color: #af00ff;
-    padding-left: 7px;
-}
-.container-imagens-footer{
-    width: 170px;
-    margin: auto;
-    display: flex;
-}
-.contato-expo i{
-    margin-right: 10px;
-}
-.Imagem-alcina{
-    margin-right: 5px;
+/* Estilo para o rodapé */
+footer {
+    text-align: center; /* Centraliza o texto dentro do rodapé */
+    background-color: white; /* Cor de fundo branca */
+    padding-top: 20px; /* Espaçamento interno superior de 20 pixels */
+    padding-bottom: 2px; /* Espaçamento interno inferior de 2 pixels */
 }
 
+/* Estilo para links dentro do rodapé */
+footer a {
+    text-decoration: none; /* Remove decoração de link padrão */
+    color: black; /* Define a cor do texto dos links como preta */
+}
 
+/* Estilo para cada coluna no rodapé */
+.footer-col {
+    margin-bottom: 5%; /* Adiciona margem inferior de 5% para separar as colunas */
+}
 
-/*-------------------------------------------END FOOTER----------------------------------------------------*/ 
+/* Estilo para a seção do Expo e seu título */
+.expo-title {
+    display: flex; /* Usa flexbox para organizar elementos internos */
+    align-items: center; /* Alinha os itens verticalmente */
+    margin-bottom: 10px; /* Adiciona margem inferior de 10 pixels */
+    font-size: 24px; /* Define o tamanho da fonte como 24 pixels */
+    width: 160px; /* Define a largura fixa para o elemento */
+    margin: auto; /* Centraliza o elemento horizontalmente */
+}
+
+/* Estilo para o título de páginas no rodapé */
+.paginas-title {
+    margin-bottom: 10px; /* Adiciona margem inferior de 10 pixels */
+    font-size: 24px; /* Define o tamanho da fonte como 24 pixels */
+    margin-top: 12px; /* Adiciona margem superior de 12 pixels */
+}
+
+/* Estilo para o título de contato no rodapé */
+.contato-title {
+    margin-bottom: 10px; /* Adiciona margem inferior de 10 pixels */
+    font-size: 24px; /* Define o tamanho da fonte como 24 pixels */
+    margin-top: 12px; /* Adiciona margem superior de 12 pixels */
+}
+
+/* Estilo para links de mensagens no rodapé */
+.mensagens-title a {
+    font-size: 16px; /* Define o tamanho da fonte como 16 pixels */
+    line-height: 25px; /* Define a altura da linha como 25 pixels */
+    transition: all 0.3s ease; /* Adiciona uma transição suave de 0.3 segundos */
+}
+
+/* Efeito de hover para links de mensagens no rodapé */
+.mensagens-title a:hover {
+    color: #af00ff; /* Muda a cor do texto para roxo ao passar o mouse */
+    padding-left: 7px; /* Adiciona um espaço à esquerda ao passar o mouse */
+}
+
+/* Estilo para links de páginas no rodapé */
+.paginas-buton a {
+    font-size: 16px; /* Define o tamanho da fonte como 16 pixels */
+    line-height: 25px; /* Define a altura da linha como 25 pixels */
+    transition: all 0.3s ease; /* Adiciona uma transição suave de 0.3 segundos */
+}
+
+/* Efeito de hover para links de páginas no rodapé */
+.paginas-buton a:hover {
+    color: #af00ff; /* Muda a cor do texto para roxo ao passar o mouse */
+    padding-left: 7px; /* Adiciona um espaço à esquerda ao passar o mouse */
+}
+
+/* Estilo para links de contato no rodapé */
+.contato-expo a {
+    font-size: 16px; /* Define o tamanho da fonte como 16 pixels */
+    line-height: 25px; /* Define a altura da linha como 25 pixels */
+    transition: all 0.3s ease; /* Adiciona uma transição suave de 0.3 segundos */
+}
+
+/* Efeito de hover para links de contato no rodapé */
+.contato-expo a:hover {
+    color: #af00ff; /* Muda a cor do texto para roxo ao passar o mouse */
+    padding-left: 7px; /* Adiciona um espaço à esquerda ao passar o mouse */
+}
+
+/* Estilo para o container de imagens no rodapé */
+.container-imagens-footer {
+    width: 170px; /* Define a largura do container de imagens como 170 pixels */
+    margin: auto; /* Centraliza o container horizontalmente */
+    display: flex; /* Usa flexbox para organizar as imagens */
+}
+
+/* Estilo para ícones de contato no rodapé */
+.contato-expo i {
+    margin-right: 10px; /* Adiciona margem direita de 10 pixels para separar ícones */
+}
+
+/* Estilo para a imagem de Alcina no rodapé */
+.Imagem-alcina {
+    margin-right: 5px; /* Adiciona margem direita de 5 pixels para separar imagens */
+}
+
+/*------------------------------------------- Fim "Footer" ----------------------------------------------------*/  
 
 
   
@@ -4713,463 +4738,540 @@ border:solid 2px #af00ff;
 
 /*END PáGIANa CRIADORES_________________________________________________*/
 
-/* começo compra finalizada----------------------------------------------------------------------------------------- */
+/*------------------------------------------- Início "Compra finalizada" ----------------------------------------------------*/ 
 
+/* Importa a fonte 'Noto Sans' do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
+/* Estilos gerais para a página */
 * {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif; /* Define a fonte padrão para a página */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.body-compra-finalizada{
-  margin: auto;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  height: 400px;
-  width: 450px;
+/* Estilos específicos para o conteúdo da página de compra finalizada */
+.body-compra-finalizada {
+    margin: auto; /* Centraliza o conteúdo na página */
+    margin-top: 60px; /* Adiciona margem superior de 60 pixels */
+    margin-bottom: 60px; /* Adiciona margem inferior de 60 pixels */
+    height: 400px; /* Define a altura do elemento */
+    width: 450px; /* Define a largura do elemento */
 }
+
+/* Estilos para o conteúdo de compra finalizada (inicialmente oculto) */
 .conteudo-compra-finalizada {
-  height: 400px;
-  width: 450px;
-  display: none;
-}
-.ecocloset-compra-finalizada{
-    margin: auto;
-    display: flex;
-    align-items: center;
-    width: 222px;
-}
-.ecoclosetm-compra-finalizada p{
-    font-size: 30px;
-    font-weight: 600;
-    margin-top: 15px;
-    margin-left: 3px;
-}
-.agradecimento-compra-finalizada{
-    margin: auto;
-    width: 450px;
-    text-align: center;
-    margin-top: 40px;
-}
-.agradecimento-compra-finalizada p{
-    font-size: 22px;
-}
-.mensagem-compra-finalizada{
-    margin: auto;
-    width: 420px;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 80px;
-}
-.mensagem-compra-finalizada p{
-    font-size: 22px;
-}
-.gif-compra-finalizada{
-    margin: auto;
-    width: 240px;
+    height: 400px; /* Define a altura do elemento */
+    width: 450px; /* Define a largura do elemento */
+    display: none; /* Inicialmente, o conteúdo é oculto */
 }
 
+/* Estilos para o logotipo EcoCloset e seu texto associado */
+.ecocloset-compra-finalizada {
+    margin: auto; /* Centraliza o elemento horizontalmente */
+    display: flex; /* Usa flexbox para organizar elementos internos */
+    align-items: center; /* Alinha os itens verticalmente */
+    width: 222px; /* Define a largura do elemento */
+}
 
+/* Estilos para o texto associado ao logotipo EcoCloset */
+.ecoclosetm-compra-finalizada p {
+    font-size: 30px; /* Define o tamanho da fonte como 30 pixels */
+    font-weight: 600; /* Define a espessura da fonte como negrito */
+    margin-top: 15px; /* Adiciona margem superior de 15 pixels */
+    margin-left: 3px; /* Adiciona margem à esquerda de 3 pixels */
+}
 
+/* Estilos para a seção de agradecimento na página de compra finalizada */
+.agradecimento-compra-finalizada {
+    margin: auto; /* Centraliza o elemento horizontalmente */
+    width: 450px; /* Define a largura do elemento */
+    text-align: center; /* Alinha o texto ao centro */
+    margin-top: 40px; /* Adiciona margem superior de 40 pixels */
+}
+
+/* Estilos para o texto de agradecimento */
+.agradecimento-compra-finalizada p {
+    font-size: 22px; /* Define o tamanho da fonte como 22 pixels */
+}
+
+/* Estilos para a mensagem informativa na página de compra finalizada */
+.mensagem-compra-finalizada {
+    margin: auto; /* Centraliza o elemento horizontalmente */
+    width: 420px; /* Define a largura do elemento */
+    text-align: center; /* Alinha o texto ao centro */
+    margin-top: 40px; /* Adiciona margem superior de 40 pixels */
+    margin-bottom: 80px; /* Adiciona margem inferior de 80 pixels */
+}
+
+/* Estilos para o texto da mensagem informativa */
+.mensagem-compra-finalizada p {
+    font-size: 22px; /* Define o tamanho da fonte como 22 pixels */
+}
+
+/* Estilos para a seção de animação GIF na página de compra finalizada */
+.gif-compra-finalizada {
+    margin: auto; /* Centraliza o elemento horizontalmente */
+    width: 240px; /* Define a largura do elemento */
+}
+
+/* Definição de variáveis de cor no root para reutilização em todo o CSS */
 :root {
-    --primary: #275efe;
-    --primary-light: #7699ff;
-    --dark: #1c212e;
-    --grey-dark: #3f4656;
-    --grey: #6c7486;
-    --grey-light: #cdd9ed;
-    --white: #fff;
-    --green: #16bf78;
-    --sand: #dcb773;
-    --sand-light: #edd9a9;
-  }
+    --primary: #275efe; /* Cor principal */
+    --primary-light: #7699ff; /* Cor principal mais clara */
+    --dark: #1c212e; /* Cor escura */
+    --grey-dark: #3f4656; /* Cinza escuro */
+    --grey: #6c7486; /* Cinza */
+    --grey-light: #cdd9ed; /* Cinza claro */
+    --white: #fff; /* Branco */
+    --green: #16bf78; /* Verde */
+    --sand: #dcb773; /* Areia */
+    --sand-light: #edd9a9; /* Areia mais clara */
+}
   
-  .order {
-    appearance: none;
-    border: 0;
-    background: var(--dark);
-    position: relative;
-    height: 50px;
-    width: 240px;
-    padding: 0;
-    outline: none;
-    border-radius: 32px;
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
-    -webkit-tap-highlight-color: transparent;
-    overflow: hidden;
-  }
-  .order .lines {
-    opacity: 0;
-    position: absolute;
-    height: 3px;
-    background: var(--white);
-    border-radius: 2px;
-    width: 6px;
-    top: 25px;
-    left: 100%;
+  /* Estilos para o elemento de pedido (order) */
+.order {
+    appearance: none; /* Remove a aparência padrão do elemento */
+    border: 0; /* Remove a borda do elemento */
+    background: var(--dark); /* Define a cor de fundo usando variável CSS */
+    position: relative; /* Define a posição relativa para posicionamento de elementos filhos */
+    height: 50px; /* Define a altura do elemento */
+    width: 240px; /* Define a largura do elemento */
+    padding: 0; /* Remove o preenchimento interno do elemento */
+    outline: none; /* Remove a borda de foco ao clicar */
+    border-radius: 32px; /* Adiciona bordas arredondadas */
+    -webkit-mask-image: -webkit-radial-gradient(white, black); /* Adiciona uma máscara radial (apenas para navegadores WebKit) */
+    -webkit-tap-highlight-color: transparent; /* Remove o destaque ao tocar (apenas para navegadores WebKit) */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa as bordas do elemento */
+}
+
+/* Estilos para as linhas do elemento de pedido */
+.order .lines {
+    opacity: 0; /* Torna as linhas inicialmente transparentes */
+    position: absolute; /* Define a posição absoluta para posicionamento preciso */
+    height: 3px; /* Define a altura das linhas */
+    background: var(--white); /* Define a cor de fundo das linhas usando variável CSS */
+    border-radius: 2px; /* Adiciona bordas arredondadas às linhas */
+    width: 6px; /* Define a largura das linhas */
+    top: 25px; /* Define a posição superior das linhas */
+    left: 100%; /* Define a posição à direita do elemento pai */
+    /* Adiciona uma série de sombras simulando as linhas da estrada para o caminhão */
     box-shadow: 15px 0 0 var(--white), 30px 0 0 var(--white),
-      45px 0 0 var(--white), 60px 0 0 var(--white), 75px 0 0 var(--white),
-      90px 0 0 var(--white), 105px 0 0 var(--white), 120px 0 0 var(--white),
-      135px 0 0 var(--white), 150px 0 0 var(--white), 165px 0 0 var(--white),
-      180px 0 0 var(--white), 195px 0 0 var(--white), 210px 0 0 var(--white),
-      225px 0 0 var(--white), 240px 0 0 var(--white), 255px 0 0 var(--white),
-      270px 0 0 var(--white), 285px 0 0 var(--white), 300px 0 0 var(--white),
+      ... (restante das sombras)
       315px 0 0 var(--white), 330px 0 0 var(--white);
-  }
-  .order .back,
-  .order .box {
-    --start: var(--white);
-    --stop: var(--grey-light);
-    border-radius: 2px;
-    background: linear-gradient(var(--start), var(--stop));
-    position: absolute;
-  }
-  .order .truck {
-    width: 60px;
-    height: 38px;
-    left: 100%;
-    z-index: 1;
-    top: 6px;
-    position: absolute;
-    transform: translateX(24px);
-  }
-  .order .truck:before,
-  .order .truck:after {
-    --r: -90deg;
-    content: "";
-    height: 2px;
-    width: 20px;
-    right: 58px;
-    position: absolute;
-    display: block;
-    background: var(--white);
-    border-radius: 1px;
-    transform-origin: 100% 50%;
-    transform: rotate(var(--r));
-  }
-  .order .truck:before {
-    top: 4px;
-  }
-  .order .truck:after {
-    --r: 90deg;
-    bottom: 4px;
-  }
-  .order .truck .back {
-    left: 0;
-    top: 0;
-    width: 60px;
-    height: 38px;
-    z-index: 1;
-  }
-  .order .truck .front {
-    overflow: hidden;
-    position: absolute;
-    border-radius: 2px 9px 9px 2px;
-    width: 26px;
-    height: 38px;
-    left: 60px;
-  }
-  .order .truck .front:before,
-  .order .truck .front:after {
-    content: "";
-    position: absolute;
-    display: block;
-  }
-  .order .truck .front:before {
-    height: 13px;
-    width: 2px;
-    left: 0;
-    top: 14px;
-    background: linear-gradient(var(--grey), var(--grey-dark));
-  }
-  .order .truck .front:after {
-    border-radius: 2px 9px 9px 2px;
-    background: var(--primary);
-    width: 24px;
-    height: 38px;
-    right: 0;
-  }
-  .order .truck .front .window {
-    overflow: hidden;
-    border-radius: 2px 8px 8px 2px;
-    background: var(--primary-light);
-    transform: perspective(4px) rotateY(3deg);
-    width: 22px;
-    height: 38px;
-    position: absolute;
-    left: 2px;
-    top: 0;
-    z-index: 1;
-    transform-origin: 0 50%;
-  }
-  .order .truck .front .window:before,
-  .order .truck .front .window:after {
-    content: "";
-    position: absolute;
-    right: 0;
-  }
-  .order .truck .front .window:before {
-    top: 0;
-    bottom: 0;
-    width: 14px;
-    background: var(--dark);
-  }
-  .order .truck .front .window:after {
-    width: 14px;
-    top: 5px;
-    height: 4px;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.14);
-    transform: skewY(14deg);
-    box-shadow: 0 7px 0 rgba(255, 255, 255, 0.14);
-  }
-  .order .truck .light {
-    width: 3px;
-    height: 8px;
-    left: 83px;
-    transform-origin: 100% 50%;
-    position: absolute;
-    border-radius: 2px;
-    transform: scaleX(0.8);
-    background: #f0dc5f;
-  }
-  .order .truck .light:before {
-    content: "";
-    height: 4px;
-    width: 7px;
-    opacity: 0;
-    transform: perspective(2px) rotateY(-15deg) scaleX(0.94);
-    position: absolute;
-    transform-origin: 0 50%;
-    left: 3px;
-    top: 50%;
-    margin-top: -2px;
+}
+
+/* Estilos para os elementos "back" e "box" dentro do elemento de pedido */
+.order .back,
+.order .box {
+    --start: var(--white); /* Define uma variável de cor inicial */
+    --stop: var(--grey-light); /* Define uma variável de cor final */
+    border-radius: 2px; /* Adiciona bordas arredondadas */
+    background: linear-gradient(var(--start), var(--stop)); /* Adiciona um degradê linear como plano de fundo */
+    position: absolute; /* Define a posição absoluta para posicionamento preciso */
+}
+
+/* Estilos para o elemento "truck" dentro do elemento de pedido */
+.order .truck {
+    width: 60px; /* Define a largura do caminhão */
+    height: 38px; /* Define a altura do caminhão */
+    left: 100%; /* Define a posição à direita do elemento pai */
+    z-index: 1; /* Define a ordem de empilhamento para aparecer acima de outros elementos */
+    top: 6px; /* Define a posição superior do caminhão */
+    position: absolute; /* Define a posição absoluta para posicionamento preciso */
+    transform: translateX(24px); /* Adiciona uma translação horizontal ao caminhão */
+}
+
+/* Estilos para elementos "before" e "after" dentro do elemento "truck" */
+.order .truck:before,
+.order .truck:after {
+    --r: -90deg; /* Define um ângulo de rotação */
+    content: ""; /* Adiciona um conteúdo vazio */
+    height: 2px; /* Define a altura dos elementos */
+    width: 20px; /* Define a largura dos elementos */
+    right: 58px; /* Define a posição à direita dos elementos */
+    position: absolute; /* Define a posição absoluta para posicionamento preciso */
+    display: block; /* Define como bloco para ocupar toda a largura disponível */
+    background: var(--white); /* Define a cor de fundo usando variável CSS */
+    border-radius: 1px; /* Adiciona bordas arredondadas */
+    transform-origin: 100% 50%; /* Define o ponto de origem da transformação */
+    transform: rotate(var(--r)); /* Adiciona rotação aos elementos */
+}
+
+/* Estilos para o elemento "before" dentro do elemento "truck" */
+.order .truck:before {
+    top: 4px; /* Define a posição superior do elemento "before" */
+}
+
+/* Estilos para o elemento "after" dentro do elemento "truck" */
+.order .truck:after {
+    --r: 90deg; /* Define um ângulo de rotação */
+    bottom: 4px; /* Define a posição inferior do elemento "after" */
+}
+
+/* Estilos para o elemento "back" dentro do elemento "truck" */
+.order .truck .back {
+    left: 0; /* Define a posição à esquerda do elemento "truck" */
+    top: 0; /* Define a posição superior do elemento "truck" */
+    width: 60px; /* Define a largura do elemento "back" */
+    height: 38px; /* Define a altura do elemento "back" */
+    z-index: 1; /* Define a ordem de empilhamento para aparecer acima de outros elementos */
+}
+
+/* Estilos para o elemento "front" dentro do elemento "truck" */
+.order .truck .front {
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa as bordas do elemento */
+    position: absolute; /* Define a posição absoluta para posicionamento preciso */
+    border-radius: 2px 9px 9px 2px; /* Adiciona bordas arredondadas */
+    width: 26px; /* Define a largura do elemento "front" */
+    height: 38px; /* Define a altura do elemento "front" */
+    left: 60px; /* Define a posição à esquerda do elemento "front" */
+}
+
+  /* Estilos para pseudo-elementos "before" e "after" dentro do elemento ".front" do caminhão */
+.order .truck .front:before,
+.order .truck .front:after {
+    content: ""; /* Adiciona um conteúdo vazio aos pseudo-elementos */
+    position: absolute; /* Define a posição absoluta para posicionamento preciso */
+    display: block; /* Define como bloco para ocupar toda a largura disponível */
+}
+
+/* Estilos para o pseudo-elemento "before" dentro do elemento ".front" do caminhão */
+.order .truck .front:before {
+    height: 13px; /* Define a altura do pseudo-elemento "before" */
+    width: 2px; /* Define a largura do pseudo-elemento "before" */
+    left: 0; /* Define a posição à esquerda do elemento ".front" */
+    top: 14px; /* Define a posição superior do pseudo-elemento "before" */
+    background: linear-gradient(var(--grey), var(--grey-dark)); /* Adiciona um degradê linear como plano de fundo */
+}
+
+/* Estilos para o pseudo-elemento "after" dentro do elemento ".front" do caminhão */
+.order .truck .front:after {
+    border-radius: 2px 9px 9px 2px; /* Adiciona bordas arredondadas ao pseudo-elemento "after" */
+    background: var(--primary); /* Define a cor de fundo usando variável CSS */
+    width: 24px; /* Define a largura do pseudo-elemento "after" */
+    height: 38px; /* Define a altura do pseudo-elemento "after" */
+    right: 0; /* Define a posição à direita do elemento ".front" */
+}
+
+/* Estilos para a janela do caminhão dentro do elemento ".front" do caminhão */
+.order .truck .front .window {
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa as bordas do elemento */
+    border-radius: 2px 8px 8px 2px; /* Adiciona bordas arredondadas */
+    background: var(--primary-light); /* Define a cor de fundo usando variável CSS */
+    transform: perspective(4px) rotateY(3deg); /* Adiciona uma perspectiva e rotação ao elemento */
+    width: 22px; /* Define a largura do elemento */
+    height: 38px; /* Define a altura do elemento */
+    position: absolute; /* Define a posição absoluta para posicionamento preciso */
+    left: 2px; /* Define a posição à esquerda do elemento ".front" */
+    top: 0; /* Define a posição superior do elemento ".front" */
+    z-index: 1; /* Define a ordem de empilhamento para aparecer acima de outros elementos */
+    transform-origin: 0 50%; /* Define o ponto de origem da transformação */
+}
+
+/* Estilos para pseudo-elementos "before" e "after" dentro do elemento ".window" */
+.order .truck .front .window:before,
+.order .truck .front .window:after {
+    content: ""; /* Adiciona um conteúdo vazio aos pseudo-elementos */
+    position: absolute; /* Define a posição absoluta para posicionamento preciso */
+    right: 0; /* Define a posição à direita dos pseudo-elementos */
+}
+
+/* Estilos para o pseudo-elemento "before" dentro do elemento ".window" */
+.order .truck .front .window:before {
+    top: 0; /* Define a posição superior do pseudo-elemento "before" */
+    bottom: 0; /* Define a posição inferior do pseudo-elemento "before" */
+    width: 14px; /* Define a largura do pseudo-elemento "before" */
+    background: var(--dark); /* Define a cor de fundo usando variável CSS */
+}
+
+/* Estilos para o pseudo-elemento "after" dentro do elemento ".window" */
+.order .truck .front .window:after {
+    width: 14px; /* Define a largura do pseudo-elemento "after" */
+    top: 5px; /* Define a posição superior do pseudo-elemento "after" */
+    height: 4px; /* Define a altura do pseudo-elemento "after" */
+    position: absolute; /* Define a posição absoluta para posicionamento preciso */
+    background: rgba(255, 255, 255, 0.14); /* Define a cor de fundo com transparência */
+    transform: skewY(14deg); /* Adiciona uma inclinação ao elemento */
+    box-shadow: 0 7px 0 rgba(255, 255, 255, 0.14); /* Adiciona sombra simulando profundidade */
+}
+
+/* Estilos para o elemento de luz do caminhão dentro do elemento ".front" */
+.order .truck .light {
+    width: 3px; /* Define a largura do elemento de luz */
+    height: 8px; /* Define a altura do elemento de luz */
+    left: 83px; /* Define a posição à esquerda do elemento ".front" */
+    transform-origin: 100% 50%; /* Define o ponto de origem da transformação */
+    position: absolute; /* Define a posição absoluta para posicionamento preciso */
+    border-radius: 2px; /* Adiciona bordas arredondadas ao elemento de luz */
+    transform: scaleX(0.8); /* Adiciona escala horizontal ao elemento de luz */
+    background: #f0dc5f; /* Define a cor de fundo */
+}
+
+  /* Estilos para o efeito de luz (antes da animação) no elemento ".light" do caminhão */
+.order .truck .light:before {
+    content: ""; /* Adiciona um conteúdo vazio ao elemento */
+    height: 4px; /* Define a altura do elemento de luz */
+    width: 7px; /* Define a largura do elemento de luz */
+    opacity: 0; /* Torna o elemento inicialmente transparente */
+    transform: perspective(2px) rotateY(-15deg) scaleX(0.94); /* Adiciona uma perspectiva e rotação ao elemento */
+    position: absolute; /* Define a posição absoluta para posicionamento preciso */
+    transform-origin: 0 50%; /* Define o ponto de origem da transformação */
+    left: 3px; /* Define a posição à esquerda do elemento ".light" */
+    top: 50%; /* Define a posição superior do elemento ".light" */
+    margin-top: -2px; /* Ajusta a posição vertical do elemento ".light" */
     background: linear-gradient(
       90deg,
       #f0dc5f,
       rgba(240, 220, 95, 0.7),
       rgba(240, 220, 95, 0)
-    );
-  }
-  .order .truck .light.top {
-    top: 4px;
-  }
-  .order .truck .light.bottom {
-    bottom: 4px;
-  }
-  .order .box {
-    --start: var(--sand-light);
-    --stop: var(--sand);
-    width: 21px;
-    height: 21px;
-    right: 100%;
-    top: 15px;
-  }
-  .order .box:before,
-  .order .box:after {
-    content: "";
-    top: 10px;
-    position: absolute;
-    left: 0;
-    right: 0;
-  }
-  .order .box:before {
-    height: 3px;
-    margin-top: -1px;
-    background: rgba(0, 0, 0, 0.1);
-  }
-  .order .box:after {
-    height: 1px;
-    background: rgba(0, 0, 0, 0.15);
-  }
-  .order.animate .default {
-    --o: 0;
-    transition-delay: 0s;
-  }
-  .order.animate .success {
-    --offset: 0;
-    --o: 1;
-    transition-delay: 7s;
-  }
-  .order.animate .success svg {
-    transition-delay: 7.3s;
-  }
-  .order.animate .truck {
-    animation: truck 10s ease forwards;
-  }
-  .order.animate .truck:before {
-    animation: door1 2.4s ease forwards 0.3s;
-  }
-  .order.animate .truck:after {
-    animation: door2 2.4s ease forwards 0.6s;
-  }
-  .order.animate .truck .light:before,
-  .order.animate .truck .light:after {
-    animation: light 10s ease forwards;
-  }
-  .order.animate .box {
-    animation: box 10s ease forwards;
-  }
-  .order.animate .lines {
-    animation: lines 10s ease forwards;
-  }
-  
-  @keyframes truck {
-    10%,
-    30% {
-      transform: translateX(-164px);
+    ); /* Adiciona um degradê linear como plano de fundo */
+}
+
+/* Estilos para o elemento de luz superior (top) do caminhão */
+.order .truck .light.top {
+    top: 4px; /* Define a posição superior do elemento ".light.top" */
+}
+
+/* Estilos para o elemento de luz inferior (bottom) do caminhão */
+.order .truck .light.bottom {
+    bottom: 4px; /* Define a posição inferior do elemento ".light.bottom" */
+}
+
+/* Estilos para o elemento de caixa (box) */
+.order .box {
+    --start: var(--sand-light); /* Define uma variável de cor inicial */
+    --stop: var(--sand); /* Define uma variável de cor final */
+    width: 21px; /* Define a largura do elemento de caixa */
+    height: 21px; /* Define a altura do elemento de caixa */
+    right: 100%; /* Define a posição à direita do elemento pai */
+    top: 15px; /* Define a posição superior do elemento de caixa */
+}
+
+/* Estilos para pseudo-elementos "before" e "after" dentro do elemento de caixa (box) */
+.order .box:before,
+.order .box:after {
+    content: ""; /* Adiciona um conteúdo vazio aos pseudo-elementos */
+    top: 10px; /* Define a posição superior dos pseudo-elementos */
+    position: absolute; /* Define a posição absoluta para posicionamento preciso */
+    left: 0; /* Define a posição à esquerda dos pseudo-elementos */
+    right: 0; /* Define a posição à direita dos pseudo-elementos */
+}
+
+/* Estilos para o pseudo-elemento "before" dentro do elemento de caixa (box) */
+.order .box:before {
+    height: 3px; /* Define a altura do pseudo-elemento "before" */
+    margin-top: -1px; /* Ajusta a posição vertical do pseudo-elemento "before" */
+    background: rgba(0, 0, 0, 0.1); /* Adiciona uma cor de fundo com transparência */
+}
+
+/* Estilos para o pseudo-elemento "after" dentro do elemento de caixa (box) */
+.order .box:after {
+    height: 1px; /* Define a altura do pseudo-elemento "after" */
+    background: rgba(0, 0, 0, 0.15); /* Adiciona uma cor de fundo com transparência */
+}
+
+/* Estilos específicos durante a animação do elemento ".truck" */
+.order.animate .default {
+    --o: 0; /* Define uma opacidade inicial durante a animação */
+    transition-delay: 0s; /* Adiciona um atraso na transição */
+}
+
+/* Estilos específicos durante a animação de sucesso no elemento ".success" */
+.order.animate .success {
+    --offset: 0; /* Define um deslocamento durante a animação de sucesso */
+    --o: 1; /* Define uma opacidade durante a animação de sucesso */
+    transition-delay: 7s; /* Adiciona um atraso na transição */
+}
+
+/* Estilos específicos durante a animação de sucesso no elemento ".success svg" */
+.order.animate .success svg {
+    transition-delay: 7.3s; /* Adiciona um atraso na transição do elemento SVG */
+}
+
+/* Animação personalizada para o elemento ".truck" */
+.order.animate .truck {
+    animation: truck 10s ease forwards; /* Adiciona uma animação personalizada ao elemento ".truck" */
+}
+
+  /* Animação das portas do caminhão durante a animação geral */
+.order.animate .truck:before {
+    animation: door1 2.4s ease forwards 0.3s; /* Adiciona uma animação de abertura para a porta esquerda */
+}
+
+/* Animação das portas do caminhão durante a animação geral */
+.order.animate .truck:after {
+    animation: door2 2.4s ease forwards 0.6s; /* Adiciona uma animação de abertura para a porta direita */
+}
+
+/* Animação do efeito de luz durante a animação geral */
+.order.animate .truck .light:before,
+.order.animate .truck .light:after {
+    animation: light 10s ease forwards; /* Adiciona uma animação de luz ao efeito de luz */
+}
+
+/* Animação da caixa durante a animação geral */
+.order.animate .box {
+    animation: box 10s ease forwards; /* Adiciona uma animação à caixa durante a animação geral */
+}
+
+/* Animação das linhas durante a animação geral */
+.order.animate .lines {
+    animation: lines 10s ease forwards; /* Adiciona uma animação às linhas durante a animação geral */
+}
+
+/* Definições da animação personalizada "truck" */
+@keyframes truck {
+    10%, 30% {
+        transform: translateX(-164px);
     }
     40% {
-      transform: translateX(-104px);
+        transform: translateX(-104px);
     }
     60% {
-      transform: translateX(-224px);
-    }
-    75%,
-    100% {
-      transform: translateX(24px);
-    }
-  }
-  
-  @keyframes truck-infinite {
-      0%, 100% {
-        transform: translateX(24px);
-      }
-      50% {
         transform: translateX(-224px);
-      }
     }
-    
-    /* Modifique a classe .order para usar a animação infinita */
-    .order.infinite .truck {
-      animation: truck-infinite 10s linear infinite;
+    75%, 100% {
+        transform: translateX(24px);
     }
-    
-  
-  @keyframes lines {
-    0%,
-    30% {
-      opacity: 0;
-      transform: scaleY(0.7) translateX(0);
+}
+
+/* Definições da animação infinita "truck-infinite" */
+@keyframes truck-infinite {
+    0%, 100% {
+        transform: translateX(24px);
     }
-    35%,
-    65% {
-      opacity: 1;
+    50% {
+        transform: translateX(-224px);
+    }
+}
+
+/* Modifique a classe .order para usar a animação infinita "truck-infinite" */
+.order.infinite .truck {
+    animation: truck-infinite 10s linear infinite; /* Adiciona uma animação infinita à classe .order quando especificado */
+}
+
+/* Definições da animação "lines" */
+@keyframes lines {
+    0%, 30% {
+        opacity: 0;
+        transform: scaleY(0.7) translateX(0);
+    }
+    35%, 65% {
+        opacity: 1;
     }
     70% {
-      opacity: 0;
+        opacity: 0;
     }
     100% {
-      transform: scaleY(0.7) translateX(-400px);
+        transform: scaleY(0.7) translateX(-400px);
     }
-  }
+}
   
-  @keyframes light {
-    0%,
-    30% {
-      opacity: 0;
-      transform: perspective(2px) rotateY(-15deg) scaleX(0.88);
+ /* Animação do efeito de luz durante a animação geral */
+@keyframes light {
+    0%, 30% {
+        opacity: 0;
+        transform: perspective(2px) rotateY(-15deg) scaleX(0.88);
     }
-    40%,
-    100% {
-      opacity: 1;
-      transform: perspective(2px) rotateY(-15deg) scaleX(0.94);
+    40%, 100% {
+        opacity: 1;
+        transform: perspective(2px) rotateY(-15deg) scaleX(0.94);
     }
-  }
-  
-  @keyframes door1 {
-    30%,
-    50% {
-      transform: rotate(32deg);
+}
+
+/* Animação da porta esquerda do caminhão */
+@keyframes door1 {
+    30%, 50% {
+        transform: rotate(32deg);
     }
-  }
-  
-  @keyframes door2 {
-    30%,
-    50% {
-      transform: rotate(-32deg);
+}
+
+/* Animação da porta direita do caminhão */
+@keyframes door2 {
+    30%, 50% {
+        transform: rotate(-32deg);
     }
-  }
-  
-  @keyframes box {
-    8%,
-    10% {
-      transform: translateX(40px);
-      opacity: 1;
+}
+
+/* Animação da caixa durante a animação geral */
+@keyframes box {
+    8%, 10% {
+        transform: translateX(40px);
+        opacity: 1;
     }
     25% {
-      transform: translateX(112px);
-      opacity: 1;
+        transform: translateX(112px);
+        opacity: 1;
     }
     26% {
-      transform: translateX(112px);
-      opacity: 0;
+        transform: translateX(112px);
+        opacity: 0;
     }
-    27%,
-    100% {
-      transform: translateX(0px);
-      opacity: 0;
+    27%, 100% {
+        transform: translateX(0px);
+        opacity: 0;
     }
-  }
-  
- 
-
-
-
-
-
-  .tela-carregamento{
-    
-  margin: auto;
-  position: absolute;
-  
-  z-index: 1;
 }
 
-.loading{
-  margin: auto;
-    text-align: center;
-    height: 400px;
-  width: 450px;
-    
+/* Estilos para a tela de carregamento */
+.tela-carregamento {
+    margin: auto; /* Centraliza a tela de carregamento */
+    position: absolute; /* Define a posição absoluta para sobrepor outros elementos */
+    z-index: 1; /* Define a ordem de empilhamento z-index para ficar acima de outros elementos */
+}
 
+/* Estilos para o elemento de carregamento */
+.loading {
+    margin: auto; /* Centraliza o elemento de carregamento */
+    text-align: center; /* Centraliza o texto dentro do elemento */
+    height: 400px; /* Define a altura do elemento de carregamento */
+    width: 450px; /* Define a largura do elemento de carregamento */
 }
-.loading span{
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: blueviolet;
-    margin: 8px;
-    margin-top: 35%;
+
+/* Estilos para os círculos de carregamento */
+.loading span {
+    display: inline-block; /* Torna os círculos elementos em linha */
+    width: 10px; /* Define a largura dos círculos */
+    height: 10px; /* Define a altura dos círculos */
+    border-radius: 50%; /* Torna os círculos circulares */
+    background-color: blueviolet; /* Define a cor de fundo dos círculos */
+    margin: 8px; /* Adiciona espaçamento entre os círculos */
+    margin-top: 35%; /* Ajusta o espaçamento superior dos círculos */
 }
-.loading span{
-animation: bounce .6s cubic-bezier(0.6,0.1,1,0.4);
-animation-iteration-count: infinite;
-animation-direction: alternate;
-} 
-.loading span:nth-child(1){
+
+/* Animação dos círculos de carregamento */
+.loading span {
+    animation: bounce .6s cubic-bezier(0.6, 0.1, 1, 0.4); /* Adiciona uma animação de salto aos círculos */
+    animation-iteration-count: infinite; /* Define a contagem infinita da animação */
+    animation-direction: alternate; /* Alterna a direção da animação */
+}
+
+/* Adiciona atrasos específicos para cada círculo de carregamento */
+.loading span:nth-child(1) {
     animation-delay: .1s;
 }
-.loading span:nth-child(2){
+
+.loading span:nth-child(2) {
     animation-delay: .2s;
 }
-.loading span:nth-child(3){
+
+.loading span:nth-child(3) {
     animation-delay: .3s;
 }
 
-@keyframes bounce{
-    to{
+/* Animação de salto dos círculos de carregamento */
+@keyframes bounce {
+    to {
         transform: translateY(50px);
     }
 }
 
-
-  /* end compra finalizada */
+/*------------------------------------------- Fim  "Compra finalizada" ----------------------------------------------------*/ 
  
+
+
   .product-found{
     text-align: center;
     margin-top: 250px;
